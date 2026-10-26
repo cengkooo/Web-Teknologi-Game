@@ -1,0 +1,318 @@
+[
+  {
+    "slug": "kinetic-strata",
+    "title": "Kinetic Strata",
+    "tagline": "Game aksi pertempuran mecha 3D dengan lingkungan voxel yang dinamis dan dapat dihancurkan.",
+    "description": "Kinetic Strata dikembangkan sebagai proyek akhir yang menggabungkan elemen aksi taktis dan fisika interaktif. Tim mahasiswa merancang alur gameplay di mana pemain dapat meruntuhkan struktur arena untuk mengecoh lawan. Proses pengembangannya berfokus pada integrasi algoritma voxel marching cubes di Godot, penyesuaian keseimbangan senjata, serta optimasi performa agar tetap mulus saat dimainkan langsung melalui browser.",
+    "engine": "Godot",
+    "engineVersion": "Godot 4.3 Stable",
+    "genre": ["Voxel Action", "Tactical Combat", "Sci-Fi"],
+    "platform": ["Windows", "Linux"],
+    "batchYear": 2024,
+    "featured": true,
+    "posterImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/kinetic-strata",
+    "contributors": [
+      { "id": "alex-reza", "role": "Lead Gameplay & Systems" },
+      { "id": "budi-setiawan", "role": "Physics & Level Interaction" }
+    ],
+    "metrics": {
+      "polygonCount": "1.2M Tris / Frame",
+      "drawCalls": "180 Max",
+      "tickRate": "60 Hz Stable",
+      "buildSize": "38.4 MB"
+    }
+  },
+  {
+    "slug": "chronovector-subzero",
+    "title": "ChronoVector // SubZero",
+    "tagline": "Fast-paced arena shooter dengan mekanika time-dilation dan respons kontrol instan.",
+    "description": "ChronoVector lahir dari eksplorasi mekanik waktu di mana pergerakan proyektil musuh melambat saat pemain bermanuver lincah. Dalam proses pembuatannya, tim merancang state machine karakter dari dasar, menguji kurva akselerasi pemain, dan menerapkan arsitektur rollback agar kontrol terasa responsif tanpa jeda input.",
+    "engine": "Custom C++",
+    "engineVersion": "C++20 / Raylib 5.0",
+    "genre": ["Tactical Shooter", "Time Manipulation", "Arcade"],
+    "platform": ["Windows", "Linux"],
+    "batchYear": 2024,
+    "featured": true,
+    "posterImage": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/chronovector-subzero",
+    "contributors": [
+      { "id": "alex-reza", "role": "Core Framework & Netcode" },
+      { "id": "dian-kartika", "role": "Gameplay Systems" }
+    ],
+    "metrics": {
+      "polygonCount": "420K Tris",
+      "drawCalls": "65 Peak",
+      "tickRate": "120 Hz Deterministic",
+      "buildSize": "14.2 MB"
+    }
+  },
+  {
+    "slug": "lumina-path-tracing",
+    "title": "Lumina: Underwater World",
+    "tagline": "Eksplorasi visual bawah laut interaktif dengan pencahayaan dinamis yang memikat di WebGL.",
+    "description": "Lumina adalah pengalaman eksplorasi bawah laut yang berfokus pada atmosfer menenangkan dan keindahan bias cahaya air. Mahasiswa merancang alur visual melalui pipeline Unity URP, memadukan efek bias caustics dan godrays dengan navigasi kamera yang halus sehingga pengunjung dapat menikmati visual sinematis secara real-time di browser.",
+    "engine": "Unity",
+    "engineVersion": "Unity 6000.0.18f1 (URP)",
+    "genre": ["Exploration", "Interactive Experience"],
+    "platform": ["Windows", "macOS"],
+    "batchYear": 2025,
+    "featured": true,
+    "posterImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/lumina-caustics",
+    "contributors": [
+      { "id": "farhan-nugraha", "role": "Visual & Lighting Designer" },
+      { "id": "maya-indira", "role": "Environment Artist" }
+    ],
+    "metrics": {
+      "polygonCount": "1.8M Dynamic Quads",
+      "drawCalls": "210",
+      "tickRate": "60 Hz Fixed",
+      "buildSize": "42.5 MB"
+    }
+  },
+  {
+    "slug": "aether-weaver-ecs",
+    "title": "Aether Weaver",
+    "tagline": "Game strategi real-time armada antariksa dengan simulasi ribuan unit tempur simultan.",
+    "description": "Aether Weaver menantang kemampuan perancangan arsitektur data mahasiswa untuk menghadirkan perang armada skala masif. Tim mengimplementasikan pola Entity Component System (ECS) di Bevy (Rust), mendesain kecerdasan buatan kawanan (flocking AI), serta menyeimbangkan sistem ekonomi dan mekanik taktis agar tetap seru dimainkan.",
+    "engine": "Bevy",
+    "engineVersion": "Bevy 0.14 (Rust 1.80)",
+    "genre": ["RTS", "Sci-Fi Strategy"],
+    "platform": ["Windows", "Linux", "macOS"],
+    "batchYear": 2025,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/aether-weaver-ecs",
+    "contributors": [
+      { "id": "alex-reza", "role": "Systems Architect" },
+      { "id": "citra-lestari", "role": "Game Balance & UI" }
+    ],
+    "metrics": {
+      "polygonCount": "650K Instanced Meshes",
+      "drawCalls": "12 Instanced Calls",
+      "tickRate": "60 Hz Multi-Threaded",
+      "buildSize": "22.5 MB"
+    }
+  },
+  {
+    "slug": "orbital-decay-protocol",
+    "title": "Orbital Decay Protocol",
+    "tagline": "Teka-teki manuver orbit satelit antariksa dengan mekanika gravitasi riil di Unreal 5.",
+    "description": "Dalam game teka-teki fiksi ilmiah ini, pemain berperan sebagai operator stasiun ruang angkasa yang harus mengoreksi orbit satelit sebelum terbakar di atmosfer. Proses perancangannya mengombinasikan kalkulasi fisika orbit numerik dengan tata suara atmosferik dan visual ruang angkasa fotorealistis di Unreal Engine 5.",
+    "engine": "Unreal Engine",
+    "engineVersion": "Unreal Engine 5.4.3",
+    "genre": ["Puzzle", "Orbital Simulator", "Sci-Fi"],
+    "platform": ["Windows"],
+    "batchYear": 2024,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/orbital-decay",
+    "contributors": [
+      { "id": "budi-setiawan", "role": "Orbital Physics Dev" },
+      { "id": "dian-kartika", "role": "Controls & Camera System" },
+      { "id": "citra-lestari", "role": "Level & Sound Design" }
+    ],
+    "metrics": {
+      "polygonCount": "3.5M Nanite Meshes",
+      "drawCalls": "350",
+      "tickRate": "60 Hz Physics Tick",
+      "buildSize": "3.2 GB"
+    }
+  },
+  {
+    "slug": "cyber-mesh-rigging",
+    "title": "CyberMesh IK",
+    "tagline": "Game petualangan robot berkaki empat dengan animasi prosedural adaptif di medan terjal.",
+    "description": "Proyek ini memamerkan bagaimana mekanika animasi prosedural dapat menggantikan klip animasi statis. Mahasiswa memprogram sistem Inverse Kinematics (IK) yang secara otomatis menyesuaikan pijakan keempat kaki robot dengan kontur tanah, dilengkapi dengan teka-teki rintangan platformer 3D yang seru diuji langsung via browser.",
+    "engine": "Unity",
+    "engineVersion": "Unity 2023.2.14f1",
+    "genre": ["Platformer", "Adventure"],
+    "platform": ["Windows", "Linux"],
+    "batchYear": 2026,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/cyber-mesh-ik",
+    "contributors": [
+      { "id": "dian-kartika", "role": "IK Programmer & Character Dev" },
+      { "id": "farhan-nugraha", "role": "Shaders & Level Art" }
+    ],
+    "metrics": {
+      "polygonCount": "180K Tris",
+      "drawCalls": "45",
+      "tickRate": "60 Hz Fixed Update",
+      "buildSize": "19.8 MB"
+    }
+  },
+  {
+    "slug": "shadow-protocol-neon",
+    "title": "Shadow Protocol // Neon",
+    "tagline": "Stealth action cyberpunk dengan sistem pencahayaan dinamis dan mekanika hacking terminal.",
+    "description": "Shadow Protocol membawa pemain menyusup ke fasilitas bawah tanah megakorporasi. Game ini memadukan mekanika stealth berbasis radius pandang musuh (field-of-view raycasting), integrasi terminal puzzle logika biner, serta visual bernuansa neon retro yang dioptimalkan di Godot 4.",
+    "engine": "Godot",
+    "engineVersion": "Godot 4.3 Stable",
+    "genre": ["Stealth Action", "Cyberpunk", "Tactical"],
+    "platform": ["Windows", "Linux"],
+    "batchYear": 2025,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/shadow-protocol-neon",
+    "contributors": [
+      { "id": "alex-reza", "role": "Lead Gameplay & AI Behavior" },
+      { "id": "maya-indira", "role": "Lighting & Level Artist" }
+    ],
+    "metrics": {
+      "polygonCount": "850K Tris / Frame",
+      "drawCalls": "120 Peak",
+      "tickRate": "60 Hz Fixed",
+      "buildSize": "48.2 MB"
+    }
+  },
+  {
+    "slug": "chronicles-of-krakatoa",
+    "title": "Chronicles of Krakatoa",
+    "tagline": "Game survival eksplorasi pulau vulkanis dengan simulasi erupsi prosedural di Unreal Engine.",
+    "description": "Dikembangkan dengan Unreal Engine 5, pemain dituntut mengumpulkan sumber daya dan membangun tempat perlindungan sebelum siklus erupsi vulkanik melanda. Menampilkan sistem partikel abu dinamis menggunakan Niagara dan simulasi aliran lava menggunakan displacement shader.",
+    "engine": "Unreal Engine",
+    "engineVersion": "Unreal Engine 5.4.3",
+    "genre": ["Survival", "Open World", "Adventure"],
+    "platform": ["Windows"],
+    "batchYear": 2024,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/chronicles-of-krakatoa",
+    "contributors": [
+      { "id": "budi-setiawan", "role": "Terrain Generation & Physics" },
+      { "id": "farhan-nugraha", "role": "Niagara Particle FX & Shaders" }
+    ],
+    "metrics": {
+      "polygonCount": "4.2M Nanite Meshes",
+      "drawCalls": "290 Max",
+      "tickRate": "60 Hz Stable",
+      "buildSize": "2.8 GB"
+    }
+  },
+  {
+    "slug": "nano-swarm-arena",
+    "title": "NanoSwarm Arena",
+    "tagline": "Top-down shooter serba cepat menghadapi ribuan partikel musuh nanobot berbasis compute shader.",
+    "description": "Menantang batas performa render 2D, proyek ini memanfaatkan Unity Compute Shader untuk mensimulasikan pergerakan 15.000 partikel nanobot secara real-time. Pemain dilengkapi persenjataan medan magnet yang dapat membubarkan atau membalikkan arah kawanan musuh.",
+    "engine": "Unity",
+    "engineVersion": "Unity 6000.0.18f1 (URP)",
+    "genre": ["Top-down Shooter", "Bullet Hell", "Arcade"],
+    "platform": ["Windows", "Linux", "macOS"],
+    "batchYear": 2026,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/nano-swarm-arena",
+    "contributors": [
+      { "id": "dian-kartika", "role": "Gameplay Programming & Controls" },
+      { "id": "farhan-nugraha", "role": "Compute Shader Architect" }
+    ],
+    "metrics": {
+      "polygonCount": "320K Instanced Quads",
+      "drawCalls": "18 Instanced Calls",
+      "tickRate": "120 Hz Target",
+      "buildSize": "31.5 MB"
+    }
+  },
+  {
+    "slug": "echoes-of-sumatra",
+    "title": "Echoes of Sumatra",
+    "tagline": "Eksplorasi naratif teka-teki berlatar mitologi dan cagar budaya Sumatera dalam format 2.5D.",
+    "description": "Sebuah permainan petualangan atmosferik yang menggabungkan elemen visual 2D hand-drawn dengan tata cahaya 3D dinamis. Mengangkat tema pelestarian fauna endemik Sumatera melalui alur cerita yang menyentuh dan teka-teki lingkungan.",
+    "engine": "Godot",
+    "engineVersion": "Godot 4.3 Stable",
+    "genre": ["Puzzle", "Narrative", "Adventure"],
+    "platform": ["Windows", "macOS"],
+    "batchYear": 2025,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/echoes-of-sumatra",
+    "contributors": [
+      { "id": "citra-lestari", "role": "Level Designer & Story Writer" },
+      { "id": "alex-reza", "role": "Audio Engine & Systems" }
+    ],
+    "metrics": {
+      "polygonCount": "140K Tris",
+      "drawCalls": "55 Peak",
+      "tickRate": "60 Hz Stable",
+      "buildSize": "26.4 MB"
+    }
+  },
+  {
+    "slug": "void-drifter-zero",
+    "title": "Void Drifter: Zero",
+    "tagline": "Simulasi balap gravitasi nol di sabuk asteroid antariksa berbasis C++ dan Raylib.",
+    "description": "Dikembangkan murni menggunakan C++ modern dan library grafis Raylib tanpa game engine komersial. Berfokus pada kalkulasi inersia gravitasi Newton tanpa gesekan udara, arsitektur data cache-friendly, dan latency input super rendah.",
+    "engine": "Custom C++",
+    "engineVersion": "C++20 / Raylib 5.0",
+    "genre": ["Racing", "Space Sim", "Arcade"],
+    "platform": ["Windows", "Linux"],
+    "batchYear": 2024,
+    "featured": false,
+    "posterImage": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "itchUrl": "https://itch.io",
+    "githubUrl": "https://github.com/if-itera/void-drifter-zero",
+    "contributors": [
+      { "id": "budi-setiawan", "role": "Physics Integrator & Netcode" },
+      { "id": "dian-kartika", "role": "Input Handler & HUD" }
+    ],
+    "metrics": {
+      "polygonCount": "210K Tris",
+      "drawCalls": "35",
+      "tickRate": "144 Hz Deterministic",
+      "buildSize": "11.8 MB"
+    }
+  }
+]
+
+

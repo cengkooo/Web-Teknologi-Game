@@ -1,0 +1,182 @@
+[
+  {
+    "id": "alex-reza",
+    "name": "Alex Reza Pratama",
+    "batch": 2024,
+    "role": "Engine & Systems Programmer",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "bio": "Pecinta kode tingkat rendah yang hobi meracik arsitektur sistem game, optimasi memori bebas alokasi berlebih, dan arsitektur ECS multi-thread.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "dian-kartika",
+    "name": "Dian Kartika",
+    "batch": 2024,
+    "role": "Lead Gameplay Engineer",
+    "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "bio": "Spesialis gameplay dinamis: mulai dari animasi prosedural berbasis matematika terbalik (IK) sampai perancangan kontrol responsif di Unity dan Godot.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "budi-setiawan",
+    "name": "Budi Setiawan",
+    "batch": 2024,
+    "role": "Physics & Simulation Dev",
+    "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "bio": "Fokus pada solver integrasi fisika, kalkulasi tabrakan dinamis, dan mekanika kehancuran lingkungan terukur di Godot 4 dan Unreal 5.",
+    "githubUrl": "https://github.com"
+  },
+  {
+    "id": "farhan-nugraha",
+    "name": "Farhan Nugraha",
+    "batch": 2025,
+    "role": "Technical Artist & Shader Dev",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "bio": "Merancang shader visual interaktif, simulasi efek partikel, dan pipeline pencahayaan WebGL ringan yang tetap memikat di layar monitor.",
+    "githubUrl": "https://github.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "maya-indira",
+    "name": "Maya Indira",
+    "batch": 2025,
+    "role": "Graphics & Environment Dev",
+    "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    "bio": "Mengeksplorasi teknik pencahayaan deferred, pantulan air real-time (SSR), dan optimasi aset 3D agar game berat tetap stabil di 60 FPS.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "citra-lestari",
+    "name": "Citra Lestari",
+    "batch": 2026,
+    "role": "Game Producer & Level Designer",
+    "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    "bio": "Merancang alur tantangan level, balancing kurva kesulitan, serta koordinasi tim produksi game agar rilis proyek tepat waktu dan terarah.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "kevin-sanjaya",
+    "name": "Kevin Sanjaya",
+    "batch": 2024,
+    "role": "Audio Programmer & Sound FX",
+    "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80",
+    "bio": "Spesialis tata suara dinamis menggunakan FMOD dan spatial reverberation zones untuk menghadirkan atmosfer audio yang hidup.",
+    "githubUrl": "https://github.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "nadia-safira",
+    "name": "Nadia Safira",
+    "batch": 2025,
+    "role": "Gameplay & AI Programmer",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "bio": "Mengembangkan perilaku musuh adaptif menggunakan Behavior Trees dan Finite State Machines untuk pengalaman bermain yang menantang.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "fajar-hidayat",
+    "name": "Fajar Hidayat",
+    "batch": 2025,
+    "role": "Tools & Pipeline Engineer",
+    "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "bio": "Membangun editor plugin kustom dan pipeline kompresi aset otomatis untuk mempercepat proses iterasi tim pengembang game.",
+    "githubUrl": "https://github.com"
+  },
+  {
+    "id": "rachel-amanda",
+    "name": "Rachel Amanda",
+    "batch": 2026,
+    "role": "UI/UX & Frontend Game Dev",
+    "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "bio": "Merancang antarmuka permainan yang intuitif, tata letak HUD minimalis, dan transisi menu responsif di berbagai resolusi layar.",
+    "githubUrl": "https://github.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "gilang-perdana",
+    "name": "Gilang Perdana",
+    "batch": 2026,
+    "role": "Combat Systems Designer",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "bio": "Menyeimbangkan timing serangan, frame data hitbox, dan dampak hantaman fisik untuk mekanika pertarungan yang memuaskan.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "tania-putri",
+    "name": "Tania Putri",
+    "batch": 2026,
+    "role": "Narrative & Quest Designer",
+    "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    "bio": "Merangkai narasi interaktif berbasis pilihan bercabang, dialog dinamis karakter, dan penulisan lore dunia game fiksi ilmiah.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "rendy-pangestu",
+    "name": "Rendy Pangestu",
+    "batch": 2025,
+    "role": "AI & Pathfinding Programmer",
+    "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+    "bio": "Spesialis algoritma navigasi cerdas: Hierarchical Pathfinding (HPA*), Decision Tree, dan Behaviour Tree untuk NPC dinamis di Godot 4.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "siti-nurhaliza",
+    "name": "Siti Nurhaliza",
+    "batch": 2026,
+    "role": "Audio Engineer & Sound Designer",
+    "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+    "bio": "Mengintegrasikan middleware FMOD dan audio prosedural untuk menghasilkan tata suara spasial 3D yang imersif dan responsif.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "dimas-wahyu",
+    "name": "Dimas Wahyu Pratama",
+    "batch": 2024,
+    "role": "Network & Multiplayer Engineer",
+    "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80",
+    "bio": "Berfokus pada arsitektur client-server netcode, sinkronisasi state deterministik, dan rollback kompensasi lag di Raylib dan C++.",
+    "githubUrl": "https://github.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "anissa-tri-lestari",
+    "name": "Anissa Tri Lestari",
+    "batch": 2025,
+    "role": "UI/UX & Accessibility Specialist",
+    "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    "bio": "Merancang antarmuka diegetik futuristik, tata letak HUD minimalis, serta sistem aksesibilitas input kontroler yang ramah pemain.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "fajar-ramadhan",
+    "name": "Fajar Ramadhan",
+    "batch": 2026,
+    "role": "Level Designer & Environmental Artist",
+    "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    "bio": "Mengembangkan alur level vertikal yang menantang, modular kit lingkungan 3D, dan pengaturan pacing eksplorasi di Unreal Engine 5.",
+    "githubUrl": "https://github.com",
+    "linkedinUrl": "https://linkedin.com",
+    "portfolioUrl": "https://example.com"
+  },
+  {
+    "id": "kevin-aditya",
+    "name": "Kevin Aditya",
+    "batch": 2024,
+    "role": "Physics & Combat Mechanics Dev",
+    "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+    "bio": "Pecinta mekanika aksi presisi tinggi: pemrograman hit-box frame-perfect, integrasi ragdoll physics, dan peredam hentakan kamera.",
+    "githubUrl": "https://github.com"
+  }
+]

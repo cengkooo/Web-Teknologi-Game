@@ -1,0 +1,75 @@
+---
+import type { Game, Student } from '../types';
+
+interface Props {
+  game: Game;
+  contributorsList?: { student?: Student; role: string; id: string }[];
+}
+
+const { game, contributorsList = [] } = Astro.props;
+
+const rows = [
+  { label: 'GAME ENGINE', value: game.engine },
+  { label: 'ENGINE VERSION', value: game.engineVersion },
+  { label: 'GENRE & THEME', value: game.genre.join(', ') },
+  { label: 'TARGET PLATFORMS', value: game.platform.join(' // ') },
+  { label: 'COHORT BATCH', value: `CLASS OF ${game.batchYear}` },
+  ...(game.metrics?.polygonCount ? [{ label: 'POLYGON DENSITY', value: game.metrics.polygonCount }] : []),
+  ...(game.metrics?.drawCalls ? [{ label: 'TARGET DRAW CALLS', value: game.metrics.drawCalls }] : []),
+  ...(game.metrics?.tickRate ? [{ label: 'PHYSICS TICK RATE', value: game.metrics.tickRate }] : []),
+  ...(game.metrics?.buildSize ? [{ label: 'COMPILED PAYLOAD', value: game.metrics.buildSize }] : []),
+];
+---
+
+<div class="border border-[#262626] bg-[#0A0A0A] font-mono text-xs">
+  <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between">
+    <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+      <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+      SPESIFIKASI GAME
+    </span>
+    <span class="text-[10px] text-[#737373]">MCMASTER-CARR SPEC</span>
+  </div>
+
+  <div class="divide-y divide-[#1A1A1A]">
+    {rows.map((row) => (
+      <div class="grid grid-cols-1 sm:grid-cols-3 px-4 py-2.5 hover:bg-[#121212] transition-colors">
+        <span class="text-[#737373] uppercase tracking-wider text-[11px] font-medium">{row.label}</span>
+        <span class="sm:col-span-2 text-white font-mono break-all">{row.value}</span>
+      </div>
+    ))}
+
+    <!-- Source Link Row -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 px-4 py-2.5 hover:bg-[#121212] transition-colors">
+      <span class="text-[#737373] uppercase tracking-wider text-[11px] font-medium">SOURCE CODE</span>
+      <span class="sm:col-span-2">
+        <a
+          href={game.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:underline underline-offset-4 inline-flex items-center gap-1.5 font-bold"
+        >
+          <span>{game.githubUrl.replace('https://github.com/', '')}</span>
+          <span class="text-[10px] border border-[#262626] px-1 py-0.2 bg-black">[GITHUB REPO &nearr;]</span>
+        </a>
+      </span>
+    </div>
+
+    <!-- Itch.io Download Row -->
+    {game.itchUrl && (
+      <div class="grid grid-cols-1 sm:grid-cols-3 px-4 py-2.5 hover:bg-[#121212] transition-colors">
+        <span class="text-[#737373] uppercase tracking-wider text-[11px] font-medium">ITCH.IO BUILD</span>
+        <span class="sm:col-span-2">
+          <a
+            href={game.itchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white hover:underline underline-offset-4 inline-flex items-center gap-1.5 font-bold"
+          >
+            <span>itch.io</span>
+            <span class="text-[10px] border border-[#262626] px-1 py-0.2 bg-black">[DOWNLOAD BUILD &nearr;]</span>
+          </a>
+        </span>
+      </div>
+    )}
+  </div>
+</div>

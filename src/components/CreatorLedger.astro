@@ -1,0 +1,440 @@
+---
+import type { Game, Student } from '../types';
+
+interface Props {
+  studentsWithGames: {
+    student: Student;
+    games: Game[];
+  }[];
+  batches: number[];
+  totalStudents: number;
+}
+
+const { studentsWithGames, batches, totalStudents } = Astro.props;
+---
+
+<!-- Control Bar: Filter Tahun & Live Search -->
+<div class="border border-[#262626] bg-[#0A0A0A] p-4 mb-6 font-mono text-xs">
+  <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+    <!-- Filter Tahun -->
+    <div class="flex flex-wrap items-center gap-1.5">
+      <span class="text-[#737373] text-[10px] uppercase tracking-wider font-bold mr-2">
+        TAHUN:
+      </span>
+      <button
+        type="button"
+        data-roster-batch=""
+        class="roster-batch-btn px-2.5 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white"
+      >
+        SEMUA TAHUN
+      </button>
+      {batches.map((batchYear) => (
+        <button
+          type="button"
+          data-roster-batch={String(batchYear)}
+          class="roster-batch-btn px-2.5 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white"
+        >
+          {batchYear}
+        </button>
+      ))}
+    </div>
+
+    <!-- Live Search Input -->
+    <div class="flex items-center gap-3 flex-1 lg:max-w-md">
+      <div class="relative w-full">
+        <input
+          type="text"
+          id="roster-search-input"
+          placeholder="Cari nama, role (engine, gameplay, shader), atau game..."
+          autocomplete="off"
+          spellcheck="false"
+          class="w-full bg-black border border-[#262626] text-white px-3.5 py-1.5 text-xs font-mono placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors pr-16"
+        />
+        <button
+          id="roster-clear-search"
+          type="button"
+          class="hidden absolute right-2 top-1/2 -translate-y-1/2 text-[9px] text-[#A3A3A3] hover:text-white border border-[#262626] bg-[#141414] px-1.5 py-0.5 cursor-pointer uppercase"
+        >
+          [CLEAR &times;]
+        </button>
+      </div>
+
+      <div class="text-[#737373] text-[10px] whitespace-nowrap hidden sm:block border border-[#262626] bg-black px-2.5 py-1.5">
+        <span>SHOWING:</span>
+        <span id="roster-visible-count" class="text-white font-bold ml-1">{totalStudents}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Master Ledger Table -->
+<div class="border border-[#262626] bg-[#0A0A0A] overflow-hidden mb-12">
+  <!-- Ledger Top Diagnostic Ribbon -->
+  <div class="px-4 py-3 border-b border-[#262626] flex items-center justify-between font-mono text-xs" style="background-color: #000000 !important;">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-block w-2 h-2 flex-shrink-0" style="background-color: #FFFFFF !important;"></span>
+      <span class="font-display font-bold text-xs sm:text-sm tracking-widest uppercase" style="color: #FFFFFF !important;">
+        ENGINEERING TALENT ROSTER // MASTER LEDGER
+      </span>
+    </div>
+    <span class="text-[10px] border border-[#333333] px-2 py-0.5 hidden sm:inline uppercase tracking-wider" style="color: #FFFFFF !important; background-color: #141414 !important; border-color: #333333 !important;">
+      FORMAT: HIGH-DENSITY LEDGER
+    </span>
+  </div>
+
+  <!-- Scrollable Dense Table Container -->
+  <div class="overflow-x-auto">
+    <table class="w-full text-left font-mono text-xs border-collapse min-w-[850px]">
+      <thead>
+        <tr class="border-b border-[#262626] text-[10px] uppercase tracking-wider" style="background-color: #0A0A0A !important;">
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-14 text-center" style="color: #FFFFFF !important;">NO</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-72" style="color: #FFFFFF !important;">STUDENT NAME & ID</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-24 text-center" style="color: #FFFFFF !important;">TAHUN</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-56" style="color: #FFFFFF !important;">CORE SPECIALIZATION</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F]" style="color: #FFFFFF !important;">ATTRIBUTED GAMES</th>
+          <th class="py-2.5 px-4 font-bold w-36 text-right" style="color: #FFFFFF !important;">LINKS</th>
+        </tr>
+      </thead>
+      <tbody id="roster-table-body" class="divide-y divide-[#1A1A1A]">
+        {studentsWithGames.map(({ student, games }, index) => {
+          const rowNumber = String(index + 1).padStart(2, '0');
+          const searchHaystack = `${student.name} ${student.id} ${student.role} ${games.map((g) => g.title).join(' ')} ${student.batch}`.toLowerCase();
+          return (
+            <tr
+              class="roster-student-row hover:bg-[#121212] transition-colors duration-100 group"
+              data-batch={String(student.batch)}
+              data-search={searchHaystack}
+            >
+              <!-- Column 1: Number Index -->
+              <td class="py-3 px-4 border-r border-[#1F1F1F] text-center text-[#737373] font-bold text-[11px]">
+                {rowNumber}
+              </td>
+
+              <!-- Column 2: Name & ID -->
+              <td class="py-3 px-4 border-r border-[#1F1F1F]">
+                <div class="min-w-0">
+                  <div class="font-display font-bold text-xs text-white tracking-wide truncate group-hover:text-white">
+                    {student.name}
+                  </div>
+                  <span class="text-[#737373] text-[10px] font-mono block mt-0.5">
+                    id="{student.id}"
+                  </span>
+                </div>
+              </td>
+
+              <!-- Column 3: Tahun -->
+              <td class="py-3 px-4 border-r border-[#1F1F1F] text-center">
+                <span class="inline-block px-1.5 py-0.5 border border-[#262626] bg-black text-white text-[10px] font-bold tracking-wider">
+                  {student.batch}
+                </span>
+              </td>
+
+              <!-- Column 4: Core Role / Specialization -->
+              <td class="py-3 px-4 border-r border-[#1F1F1F]">
+                <span class="text-white text-[11px] block font-medium">
+                  {student.role}
+                </span>
+              </td>
+
+              <!-- Column 5: Attributed Games -->
+              <td class="py-3 px-4 border-r border-[#1F1F1F]">
+                {games.length > 0 ? (
+                  <div class="flex flex-wrap gap-1.5">
+                    {games.map((game) => (
+                      <a
+                        href={`/games/${game.slug}`}
+                        data-astro-prefetch="hover"
+                        class="px-2 py-0.5 text-[10px] font-mono border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                      >
+                        [{game.title.toUpperCase()}]
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <span class="text-[#555555] text-[10px] italic">
+                    [IN PRODUCTION // LAB EXP]
+                  </span>
+                )}
+              </td>
+
+              <!-- Column 6: External Portfolios & Links -->
+              <td class="py-3 px-4 text-right">
+                <div class="flex items-center justify-end gap-2 text-[10px]">
+                  {student.githubUrl && (
+                    <a
+                      href={student.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-[#737373] hover:text-white border border-[#262626] px-1 py-0.5 bg-black hover:border-white transition-colors"
+                      title="GitHub Profile"
+                    >
+                      [GH&nearr;]
+                    </a>
+                  )}
+                  {student.linkedinUrl && (
+                    <a
+                      href={student.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-[#737373] hover:text-white border border-[#262626] px-1 py-0.5 bg-black hover:border-white transition-colors"
+                      title="LinkedIn Profile"
+                    >
+                      [IN&nearr;]
+                    </a>
+                  )}
+                  {student.portfolioUrl && (
+                    <a
+                      href={student.portfolioUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-[#737373] hover:text-white border border-[#262626] px-1 py-0.5 bg-black hover:border-white transition-colors"
+                      title="Portfolio Website"
+                    >
+                      [PF&nearr;]
+                    </a>
+                  )}
+                </div>
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Empty State Inside Ledger -->
+  <div
+    id="roster-empty-state"
+    class="hidden p-12 text-center font-mono text-xs border-t border-[#262626] bg-[#0A0A0A]"
+  >
+    <div class="text-white font-bold text-sm mb-1 uppercase tracking-widest">
+      // NO STUDENT RECORDS MATCH CURRENT SEARCH OR FILTER
+    </div>
+    <p class="text-[#737373] text-[11px] mb-4 max-w-md mx-auto">
+      Tidak ditemukan mahasiswa yang sesuai dengan kata kunci atau filter tahun yang dipilih.
+    </p>
+    <button
+      id="roster-reset-all-btn"
+      type="button"
+      class="px-4 py-2 bg-white text-black font-bold uppercase text-xs border border-white hover:bg-black hover:text-white transition-colors cursor-pointer"
+    >
+      [RESET FILTER & VIEW ALL MAHASISWA]
+    </button>
+  </div>
+
+  <!-- Pagination Controls for Creators Ledger (Limit: 10 per page) -->
+  <div
+    id="roster-pagination"
+    class="border-t border-[#262626] bg-[#0A0A0A] p-3 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs"
+  >
+    <div class="text-[#737373] text-[11px] flex items-center gap-2">
+      <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+      <span>PAGE <span id="roster-page-current" class="text-white font-bold">1</span> / <span id="roster-page-total" class="text-white font-bold">1</span></span>
+      <span class="text-[#444444]">//</span>
+      <span id="roster-page-range" class="text-[#A3A3A3]">VIEWING 1-10</span>
+    </div>
+
+    <div class="flex items-center gap-1.5">
+      <button
+        id="roster-page-prev"
+        type="button"
+        class="px-3 py-1.5 border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors uppercase font-bold text-xs cursor-pointer"
+      >
+        &larr; PREV
+      </button>
+
+      <div id="roster-page-numbers" class="flex items-center gap-1">
+        <!-- Injected via JS -->
+      </div>
+
+      <button
+        id="roster-page-next"
+        type="button"
+        class="px-3 py-1.5 border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors uppercase font-bold text-xs cursor-pointer"
+      >
+        NEXT &rarr;
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Client-side Fast Ledger Filter & Search with Pagination -->
+<script is:inline>
+  function setupRosterLedger() {
+    const PAGE_SIZE = 10;
+    let currentPage = 1;
+
+    const searchInput = document.getElementById('roster-search-input');
+    const clearSearchBtn = document.getElementById('roster-clear-search');
+    const resetAllBtn = document.getElementById('roster-reset-all-btn');
+    const emptyState = document.getElementById('roster-empty-state');
+    const visibleCountEl = document.getElementById('roster-visible-count');
+    const batchButtons = document.querySelectorAll('.roster-batch-btn');
+    const rows = Array.from(document.querySelectorAll('.roster-student-row'));
+
+    const paginationBox = document.getElementById('roster-pagination');
+    const pageCurrentEl = document.getElementById('roster-page-current');
+    const pageTotalEl = document.getElementById('roster-page-total');
+    const pageRangeEl = document.getElementById('roster-page-range');
+    const pagePrevBtn = document.getElementById('roster-page-prev');
+    const pageNextBtn = document.getElementById('roster-page-next');
+    const pageNumbersEl = document.getElementById('roster-page-numbers');
+
+    if (!rows.length) return;
+    const totalRows = rows.length;
+
+    let selectedBatch = '';
+    let searchQuery = '';
+
+    function applyRosterFilters(resetPage = true) {
+      if (resetPage) currentPage = 1;
+
+      const q = searchQuery.toLowerCase().trim();
+
+      // Update clear button
+      if (clearSearchBtn) {
+        clearSearchBtn.classList.toggle('hidden', !q);
+        clearSearchBtn.classList.toggle('block', Boolean(q));
+      }
+
+      // Update batch button active styles
+      batchButtons.forEach((btn) => {
+        const btnBatch = btn.getAttribute('data-roster-batch') || '';
+        const isActive = btnBatch === selectedBatch;
+        if (isActive) {
+          btn.className =
+            'roster-batch-btn px-2.5 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white';
+        } else {
+          btn.className =
+            'roster-batch-btn px-2.5 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white';
+        }
+      });
+
+      // Filter matched rows
+      const matchedRows = [];
+      rows.forEach((row) => {
+        const rowBatch = row.getAttribute('data-batch') || '';
+        const searchContent = row.getAttribute('data-search') || '';
+
+        const matchBatch = !selectedBatch || rowBatch === selectedBatch;
+        const matchSearch = !q || searchContent.includes(q);
+
+        const isVisible = matchBatch && matchSearch;
+        if (isVisible) {
+          matchedRows.push(row);
+        }
+        row.style.display = 'none';
+      });
+
+      const count = matchedRows.length;
+      const totalPages = Math.max(1, Math.ceil(count / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      // Slice current page rows
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const endIndex = Math.min(startIndex + PAGE_SIZE, count);
+      const pagedRows = matchedRows.slice(startIndex, endIndex);
+
+      pagedRows.forEach((row) => {
+        row.style.display = '';
+      });
+
+      // Update count readout
+      if (visibleCountEl) {
+        visibleCountEl.textContent = `${count} / ${totalRows}`;
+      }
+
+      // Show/hide empty state & pagination UI
+      if (count === 0) {
+        if (emptyState) emptyState.classList.remove('hidden');
+        if (paginationBox) paginationBox.classList.add('hidden');
+      } else {
+        if (emptyState) emptyState.classList.add('hidden');
+        if (paginationBox) paginationBox.classList.remove('hidden');
+
+        if (pageCurrentEl) pageCurrentEl.textContent = String(currentPage);
+        if (pageTotalEl) pageTotalEl.textContent = String(totalPages);
+        if (pageRangeEl) {
+          pageRangeEl.textContent = `VIEWING ${startIndex + 1}-${endIndex} OF ${count} MAHASISWA`;
+        }
+
+        if (pagePrevBtn) pagePrevBtn.disabled = currentPage <= 1;
+        if (pageNextBtn) pageNextBtn.disabled = currentPage >= totalPages;
+
+        // Render page numbers
+        if (pageNumbersEl) {
+          pageNumbersEl.innerHTML = '';
+          for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = String(i).padStart(2, '0');
+            const isCurrent = i === currentPage;
+            btn.className = isCurrent
+              ? 'px-2.5 py-1 text-xs font-bold border border-white bg-white text-black'
+              : 'px-2.5 py-1 text-xs border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white transition-colors cursor-pointer';
+            btn.addEventListener('click', () => {
+              currentPage = i;
+              applyRosterFilters(false);
+            });
+            pageNumbersEl.appendChild(btn);
+          }
+        }
+      }
+    }
+
+    // Prev & Next handlers
+    pagePrevBtn?.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        applyRosterFilters(false);
+      }
+    });
+
+    pageNextBtn?.addEventListener('click', () => {
+      currentPage++;
+      applyRosterFilters(false);
+    });
+
+    // Batch button click
+    batchButtons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetBatch = btn.getAttribute('data-roster-batch') || '';
+        selectedBatch = targetBatch;
+        applyRosterFilters(true);
+      });
+    });
+
+    // Search input typing
+    searchInput?.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      applyRosterFilters(true);
+    });
+
+    // Clear search
+    function clearSearch() {
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      applyRosterFilters(true);
+      searchInput?.focus();
+    }
+
+    clearSearchBtn?.addEventListener('click', clearSearch);
+
+    // Reset all filters
+    function resetAll() {
+      selectedBatch = '';
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      applyRosterFilters(true);
+    }
+
+    resetAllBtn?.addEventListener('click', resetAll);
+
+    // Initial run
+    applyRosterFilters(true);
+  }
+
+  setupRosterLedger();
+  document.addEventListener('astro:after-swap', setupRosterLedger);
+</script>

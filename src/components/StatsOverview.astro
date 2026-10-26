@@ -1,0 +1,57 @@
+---
+import { getLibraryStats } from '../lib/data';
+
+interface Props {
+  totalGames?: number;
+}
+
+const stats = getLibraryStats();
+const totalGames = Astro.props.totalGames ?? stats.totalGames;
+---
+
+<!-- Quick Stats Box Grid (PRD 5.1) -->
+<section class="mb-12">
+  <div class="border border-[#262626] bg-[#0A0A0A]">
+    <div class="px-4 py-2.5 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+      <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+        <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+        OVERVIEW METRICS
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#262626]">
+      <!-- Metric 1: Total Games yang Dibuat -->
+      <div class="p-6">
+        <div class="font-mono text-[10px] text-[#737373] tracking-wider uppercase mb-1">
+          TOTAL GAMES PRODUCED // GAMES DIBUAT
+        </div>
+        <div class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
+          {totalGames.toString().padStart(2, '0')}
+        </div>
+        <div class="font-mono text-[10px] text-[#737373] mt-1">PROYEK GAME MAHASISWA TERARSIP</div>
+      </div>
+
+      <!-- Metric 2: Jumlah Mahasiswa yang Lulus -->
+      <div class="p-6">
+        <div class="font-mono text-[10px] text-[#737373] tracking-wider uppercase mb-1">
+          STUDENTS GRADUATED // MAHASISWA LULUS
+        </div>
+        <div class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
+          {stats.graduatesCount}+
+        </div>
+        <div class="font-mono text-[10px] text-[#737373] mt-1">ALUMNI KELAS TEKNIK INFORMATIKA</div>
+      </div>
+
+      <!-- Metric 3: Lama Tahun Mata Kuliah Dibuka -->
+      <div class="p-6">
+        <div class="font-mono text-[10px] text-[#737373] tracking-wider uppercase mb-1">
+          COURSE LIFESPAN // LAMA TAHUN DIBUKA
+        </div>
+        <div class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
+          {stats.courseLifespanYears.toString().padStart(2, '0')} TAHUN
+        </div>
+        <div class="font-mono text-[10px] text-[#737373] mt-1">BERJALAN AKTIF SEJAK TAHUN {stats.foundedYear}</div>
+      </div>
+    </div>
+  </div>
+</section>

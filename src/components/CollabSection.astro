@@ -1,0 +1,224 @@
+---
+import { getSiteConfig } from '../lib/data';
+
+const siteConfig = getSiteConfig();
+---
+
+<!-- Section Industry Collaboration: Direct Inquiry Form -->
+<section id="collaboration" class="mb-12 scroll-mt-20">
+  <div class="border border-[#262626] bg-[#0A0A0A]">
+    <div class="px-4 py-2.5 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+      <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+        <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+        LET'S COLLAB
+      </span>
+      <span class="text-[#737373] text-[10px]">CONNECT WITH OUR CLASS</span>
+    </div>
+
+    <div class="p-6 sm:p-8">
+      <!-- 2-Column Side-by-Side Grid: Headline & Text on Left, Form on Right -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8 font-mono">
+        <!-- Left Column: Headline, Description & Contact Details -->
+        <div class="space-y-6">
+          <div>
+            <div class="text-[#737373] text-[10px] tracking-widest uppercase font-bold mb-2">
+              // PARTNERSHIP & INQUIRY CHANNEL
+            </div>
+            <h2 class="font-display font-black text-2xl sm:text-3xl text-white tracking-wider uppercase leading-tight mb-4">
+              MENGHUBUNGKAN KARYA MAHASISWA DENGAN INDUSTRI GAME.
+            </h2>
+            <p class="text-xs sm:text-sm text-zinc-100 leading-relaxed">
+              Tertarik untuk menjalin kolaborasi, mengundang kuliah tamu praktisi industri, membuka kesempatan magang bagi mahasiswa, atau mengadakan sesi playtest bersama? Silakan kirimkan pesan ajakan kerja sama kamu melalui formulir di samping untuk berdiskusi langsung dengan tim pengampu Mata Kuliah Teknologi Game.
+            </p>
+          </div>
+
+          <!-- Value / Collaboration Points -->
+          <div class="border-t border-[#1F1F1F] pt-5 space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-white font-bold text-xs bg-black border border-[#262626] px-2 py-0.5">01</span>
+              <div>
+                <div class="text-white font-bold text-xs">KULIAH TAMU & SHARING PRAKTISI</div>
+                <p class="text-zinc-300 text-xs leading-relaxed">Berbagi wawasan industri, pipeline produksi game modern, dan studi kasus riil ke mahasiswa.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-white font-bold text-xs bg-black border border-[#262626] px-2 py-0.5">02</span>
+              <div>
+                <div class="text-white font-bold text-xs">TALENTA MAGANG & REKRUTMEN</div>
+                <p class="text-zinc-300 text-xs leading-relaxed">Penyaluran mahasiswa berprestasi dengan portofolio teruji untuk kebutuhan studio game.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-white font-bold text-xs bg-black border border-[#262626] px-2 py-0.5">03</span>
+              <div>
+                <div class="text-white font-bold text-xs">PLAYTEST & REVIEW GAME</div>
+                <p class="text-zinc-300 text-xs leading-relaxed">Uji coba prototipe game mahasiswa atau pertukaran masukan kualitas mekanik gameplay.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Contact Box -->
+          <div class="border border-[#262626] bg-[#0F0F0F] p-4 text-xs space-y-1">
+            <div class="text-white font-bold uppercase text-[11px]">
+              // KONTAK SEKRETARIAT KELAS
+            </div>
+            <p class="text-[#737373] text-[11px]">
+              Program Studi Teknik Informatika (IF) &bull; FTI ITERA<br />
+              Gedung Kuliah Umum (GKU) / Gedung Labtek, Kampus ITERA, Jl. Terusan Ryacudu, Lampung Selatan
+            </p>
+            <div class="pt-1">
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
+                class="text-white font-bold hover:underline inline-flex items-center gap-1"
+              >
+                <span>EMAIL RESMI: {siteConfig.contactEmail}</span>
+                <span>&nearr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Brutalist Form Container -->
+        <div class="border border-[#262626] bg-black p-6 font-mono">
+          <form id="collaboration-form" data-contact-email={siteConfig.contactEmail} class="space-y-5">
+            <!-- Field 1: Nama Lengkap -->
+            <div>
+              <label for="fullName" class="block text-xs uppercase tracking-wider text-white font-bold mb-2">
+                NAMA LENGKAP // FULL NAME <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="John Doe"
+                class="w-full bg-[#0A0A0A] border border-[#262626] text-white px-4 py-2.5 text-xs font-mono placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors"
+              />
+            </div>
+
+            <!-- Field 2: Alamat Email -->
+            <div>
+              <label for="email" class="block text-xs uppercase tracking-wider text-white font-bold mb-2">
+                ALAMAT EMAIL // EMAIL ADDRESS <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="john@example.com"
+                class="w-full bg-[#0A0A0A] border border-[#262626] text-white px-4 py-2.5 text-xs font-mono placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors"
+              />
+            </div>
+
+            <!-- Field 3: Pesan Ajakan Kerja Sama -->
+            <div>
+              <label for="message" class="block text-xs uppercase tracking-wider text-white font-bold mb-2">
+                PESAN AJAKAN KERJA SAMA // COLLABORATION MESSAGE <span class="text-red-500">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Ceritakan rencana kolaborasi, tawaran magang, sesi kuliah tamu, atau proyek yang ingin Anda diskusikan..."
+                class="w-full bg-[#0A0A0A] border border-[#262626] text-white px-4 py-2.5 text-xs font-mono placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors leading-relaxed"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button & Feedback -->
+            <div class="pt-2">
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full px-6 py-3 bg-white text-black font-bold text-xs uppercase tracking-wider border border-white hover:bg-black hover:text-white transition-colors cursor-pointer flex items-center justify-center gap-2"
+              >
+                <span>[KIRIM PESAN]</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+
+            <!-- Success State Box (Hidden by default) -->
+            <div
+              id="form-success"
+              class="hidden border border-white bg-[#0A0A0A] p-4 text-xs font-mono space-y-2 mt-4"
+            >
+              <div class="flex items-center gap-2 text-white font-bold uppercase">
+                <span class="inline-block w-2 h-2 bg-white"></span>
+                <span>PESAN BERHASIL DISIAPKAN // READY TO SEND</span>
+              </div>
+              <p id="success-text" class="text-[#A3A3A3] text-[11px] leading-relaxed"></p>
+              <div class="pt-2">
+                <a
+                  id="direct-mail-link"
+                  href="#"
+                  class="inline-block px-3 py-1.5 bg-white text-black font-bold uppercase text-[10px] hover:bg-black hover:text-white border border-white transition-colors"
+                >
+                  [BUKA EMAIL CLIENT UNTUK MENGIRIM &nearr;]
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Client-side script for Form submission handling -->
+<script is:inline>
+  function setupCollaborationForm() {
+    const form = document.getElementById('collaboration-form');
+    const successBox = document.getElementById('form-success');
+    const successText = document.getElementById('success-text');
+    const directMailLink = document.getElementById('direct-mail-link');
+
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('fullName');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      if (!name || !email || !message) return;
+
+      const subject = encodeURIComponent(`[KOLABORASI] Pesan Kerja Sama dari ${name}`);
+      const body = encodeURIComponent(
+        `Halo Tim Pengampu Mata Kuliah Teknologi Game,\n\n` +
+        `Nama Lengkap: ${name}\n` +
+        `Alamat Email: ${email}\n\n` +
+        `Pesan Ajakan Kerja Sama:\n${message}\n\n` +
+        `---\nDikirim melalui Form Website Game Tech Showcase`
+      );
+
+      const targetEmail = form.getAttribute('data-contact-email') || 'gametech@itera.ac.id';
+      const mailtoUrl = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+
+      if (directMailLink) {
+        directMailLink.href = mailtoUrl;
+      }
+
+      if (successText) {
+        successText.textContent = `Terima kasih, ${name}! Draf pesan kolaborasi Anda telah siap. Klik tombol di bawah untuk mengirimkannya langsung via email client Anda ke ${targetEmail}.`;
+      }
+
+      if (successBox) {
+        successBox.classList.remove('hidden');
+      }
+
+      // Otomatis membuka aplikasi email pengirim
+      window.location.href = mailtoUrl;
+    });
+  }
+
+  setupCollaborationForm();
+  document.addEventListener('astro:after-swap', setupCollaborationForm);
+</script>

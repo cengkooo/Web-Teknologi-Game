@@ -1,0 +1,97 @@
+import { z } from 'zod';
+
+export const ContributorSchema = z.object({
+  id: z.string(),
+  role: z.string(),
+});
+
+export const GameSchema = z.object({
+  slug: z.string(),
+  title: z.string(),
+  tagline: z.string(),
+  description: z.string(),
+  engine: z.string(),
+  engineVersion: z.string(),
+  genre: z.array(z.string()),
+  platform: z.array(z.string()),
+  batchYear: z.number(),
+  featured: z.boolean().default(false),
+  posterImage: z.string(),
+  screenshots: z.array(z.string()).default([]),
+  webglUrl: z.string().optional(),
+  itchUrl: z.string().optional(),
+  githubUrl: z.string(),
+  contributors: z.array(ContributorSchema),
+  metrics: z.object({
+    polygonCount: z.string().optional(),
+    drawCalls: z.string().optional(),
+    tickRate: z.string().optional(),
+    buildSize: z.string().optional(),
+  }).optional(),
+});
+
+export const StudentSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  batch: z.number(),
+  role: z.string(),
+  avatarUrl: z.string(),
+  bio: z.string(),
+  githubUrl: z.string().optional(),
+  linkedinUrl: z.string().optional(),
+  portfolioUrl: z.string().optional(),
+});
+
+export const InstructorSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  role: z.string(),
+  nip: z.string(),
+  nidn: z.string(),
+  avatar: z.string(),
+  profileUrl: z.string(),
+  specialties: z.array(z.string()),
+  bio: z.string(),
+  email: z.string(),
+});
+
+export const CourseSchema = z.object({
+  code: z.string(),
+  name: z.string(),
+  prodi: z.string(),
+  faculty: z.string(),
+  institution: z.string(),
+  credits: z.number(),
+  creditWeight: z.string(),
+  foundedYear: z.number(),
+  estimatedGraduates: z.number(),
+  coreCompetencies: z.array(z.string()),
+  finalDeliverable: z.string(),
+  overview: z.object({
+    headline: z.string(),
+    paragraphs: z.array(z.string()),
+  }),
+});
+
+export const SiteConfigSchema = z.object({
+  siteTitle: z.string(),
+  shortTitle: z.string(),
+  institutionBadge: z.string(),
+  courseBadge: z.string(),
+  contactEmail: z.string(),
+  repoUrl: z.string(),
+  links: z.record(z.string(), z.string()),
+  navItems: z.array(
+    z.object({
+      label: z.string(),
+      href: z.string(),
+    })
+  ),
+});
+
+export type Game = z.infer<typeof GameSchema>;
+export type Student = z.infer<typeof StudentSchema>;
+export type Contributor = z.infer<typeof ContributorSchema>;
+export type Instructor = z.infer<typeof InstructorSchema>;
+export type Course = z.infer<typeof CourseSchema>;
+export type SiteConfig = z.infer<typeof SiteConfigSchema>;

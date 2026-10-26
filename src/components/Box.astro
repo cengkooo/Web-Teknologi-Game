@@ -1,0 +1,35 @@
+---
+interface Props {
+  title?: string;
+  badge?: string;
+  interactive?: boolean;
+  class?: string;
+}
+
+const { title, badge, interactive = false, class: extraClass = '' } = Astro.props;
+---
+
+<div
+  class={`bg-[#0A0A0A] border border-[#262626] flex flex-col ${
+    interactive ? 'hover:border-white transition-colors duration-150' : ''
+  } ${extraClass}`}
+>
+  {(title || badge) && (
+    <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between text-xs font-mono">
+      {title && (
+        <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+          <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+          {title}
+        </span>
+      )}
+      {badge && (
+        <span class="text-[#737373] text-[10px] tracking-wider border border-[#262626] px-1.5 py-0.5 bg-black">
+          {badge}
+        </span>
+      )}
+    </div>
+  )}
+  <div class="p-4 sm:p-5 flex-1 flex flex-col">
+    <slot />
+  </div>
+</div>

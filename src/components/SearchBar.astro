@@ -1,0 +1,45 @@
+---
+interface Props {
+  initialQuery?: string;
+}
+
+const { initialQuery = '' } = Astro.props;
+---
+
+<div class="border border-[#262626] bg-[#0A0A0A] p-3 sm:p-4 mb-6 font-mono text-xs">
+  <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+    <!-- Search Tag Prefix -->
+    <div class="flex items-center gap-2 text-white font-bold whitespace-nowrap pl-1 sm:pl-2">
+      <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+      <span class="uppercase tracking-widest text-[11px]">00 // LIVE SEARCH:</span>
+    </div>
+
+    <!-- Search Input Container -->
+    <div class="relative flex-1">
+      <input
+        type="text"
+        id="catalog-search-input"
+        placeholder="Cari berdasarkan judul game, engine (Godot, Unity, C++), genre, atau angkatan..."
+        value={initialQuery}
+        autocomplete="off"
+        spellcheck="false"
+        class="w-full bg-black border border-[#262626] text-white px-3.5 py-2 text-xs font-mono placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors pr-20"
+      />
+      <button
+        id="clear-search-btn"
+        type="button"
+        class={`absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-[#A3A3A3] hover:text-white border border-[#262626] bg-[#141414] px-2 py-0.5 cursor-pointer uppercase tracking-wider transition-colors ${
+          initialQuery ? 'block' : 'hidden'
+        }`}
+      >
+        [CLEAR &times;]
+      </button>
+    </div>
+
+    <!-- Live Counter Badge -->
+    <div class="hidden sm:flex items-center px-3 py-2 border border-[#262626] bg-black text-[#A3A3A3] text-[11px] whitespace-nowrap">
+      <span>SHOWING:</span>
+      <span id="live-visible-count" class="text-white font-bold ml-1.5">--</span>
+    </div>
+  </div>
+</div>

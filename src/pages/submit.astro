@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Box from '../components/Box.astro';
+
+const sampleJsonCode = `{
+  "slug": "project-quantum-rift",
+  "title": "Quantum Rift",
+  "tagline": "Game teka-teki ruang non-euclidean dengan mekanika portal interaktif.",
+  "description": "Dokumentasi perancangan mekanik portal, perhitungan matriks kamera, serta transisi momentum objek yang melintasi portal secara mulus.",
+  "engine": "Unity",
+  "engineVersion": "Unity 6000.0.2f1",
+  "genre": ["Puzzle", "Sci-Fi", "Adventure"],
+  "platform": ["Windows", "Linux"],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "/assets/games/quantum-rift-poster.webp",
+  "screenshots": [
+    "/assets/games/quantum-rift-shot-1.webp",
+    "/assets/games/quantum-rift-shot-2.webp"
+  ],
+  "itchUrl": "https://itch.io",
+  "githubUrl": "https://github.com/if-itera/quantum-rift",
+  "contributors": [
+    { "id": "namadepan-namabelakang", "role": "Lead Gameplay & Mechanics" }
+  ],
+  "metrics": {
+    "polygonCount": "850K Tris",
+    "drawCalls": "120 Peak",
+    "tickRate": "60 Hz Fixed",
+    "buildSize": "32.0 MB"
+  }
+}`;
+---
+
+<Layout
+  title="TEKNOLOGI GAME - INFORMATIKA ITERA"
+  description="Panduan dan protokol Pull Request Git bagi mahasiswa untuk menambahkan entri game ke direktori resmi."
+>
+  <!-- Header Section -->
+  <div class="border border-[#262626] bg-[#0A0A0A] p-6 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <div class="flex items-center gap-2 mb-2 font-mono text-xs text-[#737373]">
+        <span class="inline-block w-2 h-2 bg-white"></span>
+        <span>INDEX: 04 // SUBMISSION PROTOCOL</span>
+      </div>
+      <h1 class="font-display font-black text-2xl sm:text-4xl text-white tracking-wider uppercase">
+        PROJECT SUBMISSION GUIDELINES
+      </h1>
+      <p class="font-mono text-xs text-[#737373] mt-1">
+        Panduan langkah demi langkah bagi tim mahasiswa untuk menambahkan karya game ke katalog repositori via Git Pull Request.
+      </p>
+    </div>
+
+    <div class="font-mono text-xs border border-[#262626] p-3 bg-black self-start sm:self-auto">
+      <span class="text-[#737373] block text-[10px]">WORKFLOW</span>
+      <span class="text-white font-bold text-sm">GIT PULL REQUEST</span>
+    </div>
+  </div>
+
+  <div class="space-y-8">
+    <!-- Step by Step Workflow Grid -->
+    <div class="border border-[#262626] bg-[#0A0A0A]">
+      <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+        <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+          <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+          GIT PULL REQUEST WORKFLOW // 4-STEP PROCEDURE
+        </span>
+        <span class="text-[10px] text-[#737373]">AUTOMATED CI VALIDATION</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#262626] font-mono text-xs">
+        <!-- Step 1 -->
+        <div class="p-5">
+          <div class="text-[#737373] text-[10px] mb-1">STEP 01</div>
+          <div class="text-white font-bold text-sm mb-2 uppercase">FORK REPOSITORY</div>
+          <p class="text-[#737373] text-[11px] leading-relaxed">
+            Fork repositori ini ke akun GitHub tim kamu. Buat branch baru untuk proyekmu: <code class="text-white bg-black px-1 border border-[#262626]">feat/add-[game-slug]</code>.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-5">
+          <div class="text-[#737373] text-[10px] mb-1">STEP 02</div>
+          <div class="text-white font-bold text-sm mb-2 uppercase">PREPARE ASSETS</div>
+          <p class="text-[#737373] text-[11px] leading-relaxed">
+            Siapkan poster rasio 16:9 dan screenshot gameplay resolusi tinggi. Simpan di folder <code class="text-white bg-black px-1 border border-[#262626]">public/assets/games/</code>.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-5">
+          <div class="text-[#737373] text-[10px] mb-1">STEP 03</div>
+          <div class="text-white font-bold text-sm mb-2 uppercase">APPEND GAME JSON</div>
+          <p class="text-[#737373] text-[11px] leading-relaxed">
+            Data mahasiswa sudah didaftarkan pengampu di <code class="text-white bg-black px-1 border border-[#262626]">students.json</code>. Cari ID kamu di halaman <a href="/creators" class="text-white underline font-bold">03 // CREATORS</a> (format: <code class="text-white bg-black px-1 border border-[#262626]">namadepan-namabelakang</code>), lalu tambahkan game kamu ke <code class="text-white bg-black px-1 border border-[#262626]">src/data/games.json</code>.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-5">
+          <div class="text-[#737373] text-[10px] mb-1">STEP 04</div>
+          <div class="text-white font-bold text-sm mb-2 uppercase">OPEN PULL REQUEST</div>
+          <p class="text-[#737373] text-[11px] leading-relaxed">
+            Jalankan <code class="text-white bg-black px-1 border border-[#262626]">npm run build</code> secara lokal untuk memverifikasi skema data. Buka PR ke branch <code class="text-white bg-black px-1 border border-[#262626]">main</code>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asset Specifications Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Media Specs Box -->
+      <Box title="ASSET CRITERIA & DIMENSIONS" badge="STRICT REQUIREMENTS">
+        <div class="space-y-4 font-mono text-xs">
+          <div class="border-b border-[#1E1E1E] pb-3">
+            <span class="text-white font-bold block mb-1">01. POSTER IMAGE (16:9 ASPECT RATIO)</span>
+            <p class="text-[#737373] text-[11px] leading-relaxed">
+              Resolusi: 1920x1080 atau 1280x720. Format: WebP atau PNG teroptimasi (&lt; 350 KB). Gunakan screenshot gameplay aksi terbaik langsung dari game, bukan konsep buram.
+            </p>
+          </div>
+
+          <div class="border-b border-[#1E1E1E] pb-3">
+            <span class="text-white font-bold block mb-1">02. SCREENSHOT CAPTURES</span>
+            <p class="text-[#737373] text-[11px] leading-relaxed">
+              Minimal 2, maksimal 6 gambar yang memamerkan fitur mekanik unik, antarmuka level permainan, atau visual dunia game yang menarik.
+            </p>
+          </div>
+
+          <div>
+            <span class="text-white font-bold block mb-1">03. REPOSITORI & TAUTAN UNDUHAN (GITHUB & ITCH.IO)</span>
+            <p class="text-[#737373] text-[11px] leading-relaxed">
+              Sediakan repositori source code publik di GitHub dan halaman rilis di itch.io untuk file build binary yang dapat diunduh (Windows/Linux/macOS).
+            </p>
+          </div>
+        </div>
+      </Box>
+
+      <!-- Technical Schema Guide -->
+      <Box title="CONTENT SCHEMA VALIDATION RULES" badge="ZOD SPEC">
+        <div class="space-y-4 font-mono text-xs">
+          <div class="border-b border-[#1E1E1E] pb-3">
+            <span class="text-white font-bold block mb-1">UNIQUE SLUG NAMING</span>
+            <p class="text-[#737373] text-[11px] leading-relaxed">
+              Hanya gunakan karakter huruf kecil dan tanda hubung (<code class="text-white bg-black px-1 border border-[#262626]">[a-z0-9-]+</code>). Contoh: <code class="text-white">kinetic-strata</code>.
+            </p>
+          </div>
+
+          <div class="border-b border-[#1E1E1E] pb-3">
+            <span class="text-white font-bold block mb-1">ENGINE & VERSION STRING</span>
+            <p class="text-[#737373] text-[11px] leading-relaxed">
+              Cantumkan versi lengkap yang dipakai (misal: "Godot 4.3 Stable", "Unity 6000.0.2f1", "Unreal Engine 5.4.3") agar pembaca mengetahui spesifikasi pengembangannya.
+            </p>
+          </div>
+
+          <div>
+            <span class="text-white font-bold block mb-1">CONTRIBUTOR ID (FORMAT: NAMADEPAN-NAMABELAKANG)</span>
+            <p class="text-[#737373] text-[11px] leading-relaxed">
+              Data mahasiswa telah didaftarkan terlebih dahulu oleh tim pengampu di <code class="text-white">students.json</code>. Setiap anggota tim cukup mencari ID mereka masing-masing di halaman <a href="/creators" class="text-white underline font-bold">03 // CREATORS</a> (berformat <code class="text-white bg-black px-1 border border-[#262626]">id="namadepan-namabelakang"</code>) untuk dicantumkan pada array <code class="text-white">contributors</code> di <code class="text-white">games.json</code>.
+            </p>
+          </div>
+        </div>
+      </Box>
+    </div>
+
+    <!-- JSON Schema Template Code Block -->
+    <div class="border border-[#262626] bg-[#0A0A0A]">
+      <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+        <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+          <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+          JSON SPECIFICATION TEMPLATE // SRC/DATA/GAMES.JSON
+        </span>
+        <span class="text-[10px] text-[#737373]">COPY & PASTE</span>
+      </div>
+
+      <div class="p-4 bg-black overflow-x-auto">
+        <pre class="font-mono text-xs text-[#00FF66] leading-relaxed"><code>{sampleJsonCode}</code></pre>
+      </div>
+    </div>
+  </div>
+</Layout>

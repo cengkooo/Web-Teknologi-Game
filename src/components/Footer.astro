@@ -1,0 +1,66 @@
+---
+import { getSiteConfig } from '../lib/data';
+
+const siteConfig = getSiteConfig();
+const navItems = siteConfig.navItems;
+---
+
+<footer class="border-t border-[#262626] bg-[#0A0A0A] mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-12 font-mono text-xs text-[#737373] pb-8 border-b border-[#262626]">
+      <!-- Column 1: Info Mata Kuliah (Kiri) -->
+      <div class="max-w-md">
+        <div class="text-white font-bold tracking-widest uppercase mb-2 font-display text-[11px]">
+          // TEKNOLOGI GAME
+        </div>
+        <p class="leading-relaxed text-[11px]">
+          Institut Teknologi Sumatera (ITERA) &bull; Fakultas Teknologi Industri (FTI) &bull; Program Studi Teknik Informatika (IF).<br />
+          Wadah pameran portofolio dan proses pengembangan game mahasiswa Mata Kuliah Teknologi Game, dari ideasi konsep gameplay hingga build siap rilis.
+        </p>
+      </div>
+
+      <!-- Column 2: Indeks Direktori (Tengah) -->
+      <div class="shrink-0">
+        <div class="text-white font-bold tracking-widest uppercase mb-2 font-display text-[11px]">
+          // INDEKS DIREKTORI
+        </div>
+        <ul class="space-y-1.5 text-[11px]">
+          {navItems.map((item) => (
+            <li>
+              <a href={item.href} data-astro-prefetch="hover" class="hover:text-white transition-colors">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Column 3: Repositori Terbuka (Kanan) -->
+      <div class="max-w-xs md:text-right flex flex-col md:items-end">
+        <div class="text-white font-bold tracking-widest uppercase mb-2 font-display text-[11px]">
+          // REPOSITORI TERBUKA
+        </div>
+        <p class="leading-relaxed text-[11px] mb-3">
+          Repositori terbuka proyek mahasiswa yang dikelola via Git. Setiap entri divalidasi langsung oleh skema Zod otomatis.
+        </p>
+        <a
+          href={siteConfig.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block px-3 py-1.5 border border-[#262626] bg-black text-white hover:bg-white hover:text-black transition-colors"
+        >
+          [LIHAT REPOSITORI GITHUB]
+        </a>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono text-[#737373] gap-3">
+      <div>
+        &copy; 2026 MATA KULIAH TEKNOLOGI GAME
+      </div>
+      <div>
+        TEKNIK INFORMATIKA &bull; FTI ITERA
+      </div>
+    </div>
+  </div>
+</footer>

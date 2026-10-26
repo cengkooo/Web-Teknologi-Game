@@ -1,0 +1,235 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EngineBadge from '../../components/EngineBadge.astro';
+import TechSpecsTable from '../../components/TechSpecsTable.astro';
+import Box from '../../components/Box.astro';
+import { getAllGames, getStudentById, type Game } from '../../lib/data';
+
+export function getStaticPaths() {
+  const games = getAllGames();
+  return games.map((game) => ({
+    params: { slug: game.slug },
+    props: { game },
+  }));
+}
+
+interface Props {
+  game: Game;
+}
+
+const { game } = Astro.props;
+
+// Resolve contributors with student data
+const contributorsList = game.contributors.map((c) => ({
+  id: c.id,
+  role: c.role,
+  student: getStudentById(c.id),
+}));
+---
+
+<Layout
+  title="TEKNOLOGI GAME - INFORMATIKA ITERA"
+  description={game.tagline}
+>
+  <!-- Breadcrumbs & Navigation Bar -->
+  <div class="flex items-center justify-between pb-3 mb-6 border-b border-[#262626] font-mono text-xs">
+    <div class="flex items-center gap-2 text-[#737373]">
+      <a href="/" data-astro-prefetch="hover" class="hover:text-white">HOME</a>
+      <span>/</span>
+      <a href="/games" data-astro-prefetch="hover" class="hover:text-white">GAMES</a>
+      <span>/</span>
+      <span class="text-white uppercase font-bold">{game.slug}</span>
+    </div>
+
+    <a
+      href="/games"
+      data-astro-prefetch="hover"
+      class="text-[#737373] hover:text-white transition-colors"
+    >
+      [&larr; BACK TO CATALOG]
+    </a>
+  </div>
+
+  <!-- Header Block (PRD 5.3) -->
+  <div class="border border-[#262626] bg-[#0A0A0A] p-6 sm:p-8 mb-8">
+    <div class="flex flex-wrap items-center gap-2 mb-3">
+      <EngineBadge engine={game.engine} size="md" />
+      <span class="px-2 py-1 text-xs font-mono border border-[#262626] bg-black text-[#A3A3A3]">
+        VERSION: {game.engineVersion}
+      </span>
+      <span class="px-2 py-1 text-xs font-mono border border-[#262626] bg-black text-[#A3A3A3]">
+        TAHUN: {game.batchYear}
+      </span>
+      {game.featured && (
+        <span class="px-2 py-1 text-xs font-mono font-bold border border-white bg-white text-black uppercase">
+          [FEATURED SPOTLIGHT]
+        </span>
+      )}
+    </div>
+
+    <h1 class="font-display font-black text-2xl sm:text-4xl lg:text-5xl text-white tracking-wider uppercase mb-3 leading-tight">
+      {game.title}
+    </h1>
+
+    <p class="font-mono text-sm sm:text-base text-[#A3A3A3] max-w-4xl leading-relaxed mb-6">
+      {game.tagline}
+    </p>
+
+    <!-- Header Action Links -->
+    <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-[#1F1F1F]">
+      <a
+        href={game.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider border border-white hover:bg-black hover:text-white transition-colors flex items-center gap-2"
+      >
+        <span>[DOWNLOAD / SOURCE ON GITHUB]</span>
+        <span>&nearr;</span>
+      </a>
+
+      {game.itchUrl && (
+        <a
+          href={game.itchUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 bg-black text-white font-mono font-bold text-xs uppercase tracking-wider border border-[#262626] hover:bg-white hover:text-black transition-colors flex items-center gap-2"
+        >
+          <span>[DOWNLOAD ON ITCH.IO]</span>
+          <span>&nearr;</span>
+        </a>
+      )}
+    </div>
+  </div>
+
+  <!-- Main Grid: Media Frame & Specs Sidebar -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+    <!-- Left 2 Cols: Media Frame -->
+    <div class="lg:col-span-2 space-y-8">
+      <!-- Media Box / Gameplay Media Poster -->
+      <div id="media-frame" class="border border-[#262626] bg-[#0A0A0A]">
+        <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+          <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+            <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+            GAMEPLAY MEDIA // PREVIEW POSTER
+          </span>
+          <span class="text-[10px] text-[#737373]">16:9 VIEWPORT</span>
+        </div>
+
+        <div class="p-2 sm:p-4 bg-black">
+          <div class="relative w-full aspect-video border border-[#262626] bg-black overflow-hidden">
+            <img
+              src={game.posterImage}
+              alt={game.title}
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-4 left-4 right-4 p-3 bg-black/90 border border-[#262626] font-mono text-xs text-[#A3A3A3] flex flex-wrap items-center justify-between gap-3">
+              <span>Game build dapat diunduh melalui repositori GitHub atau halaman itch.io.</span>
+              <div class="flex items-center gap-2">
+                <a
+                  href={game.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:underline font-bold"
+                >
+                  [GITHUB &nearr;]
+                </a>
+                {game.itchUrl && (
+                  <a
+                    href={game.itchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white hover:underline font-bold"
+                  >
+                    [ITCH.IO &nearr;]
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Architecture Breakdown -->
+      <Box title="DEVELOPMENT PROCESS & GAMEPLAY DESIGN" badge="PROJECT WRITE-UP">
+        <div class="space-y-4 font-mono text-xs sm:text-sm text-[#CCCCCC] leading-relaxed">
+          <p>
+            {game.description}
+          </p>
+          <div class="pt-4 border-t border-[#1F1F1F]">
+            <h4 class="text-white font-bold tracking-wider uppercase mb-2 text-xs">
+              KEY SYSTEMS & DESIGN HIGHLIGHTS:
+            </h4>
+            <ul class="list-disc pl-5 space-y-1.5 text-xs text-[#A3A3A3]">
+              <li>Mekanika gameplay diuji iteratif untuk memastikan pacing permainan seru dan seimbang.</li>
+              <li>Penyusunan alur kontrol responsif yang disesuaikan dengan masukan keyboard dan gamepad.</li>
+              <li>Integrasi aset visual dan tata suara teroptimasi untuk menjaga stabilitas frame rate.</li>
+              <li>Manajemen versi proyek menggunakan Git untuk kolaborasi tim yang rapi sepanjang semester.</li>
+            </ul>
+          </div>
+        </div>
+      </Box>
+
+      <!-- Screenshot Gallery Grid -->
+      {game.screenshots && game.screenshots.length > 0 && (
+        <div class="border border-[#262626] bg-[#0A0A0A]">
+          <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+            <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+              <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+              IN-GAME SCREENSHOTS & VISUALS
+            </span>
+            <span class="text-[10px] text-[#737373]">{game.screenshots.length} CAPTURES</span>
+          </div>
+          <div class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {game.screenshots.map((shot, i) => (
+              <div class="border border-[#262626] bg-black overflow-hidden group">
+                <img
+                  src={shot}
+                  alt={`${game.title} screenshot ${i + 1}`}
+                  loading="lazy"
+                  class="w-full aspect-video object-cover transition-all duration-200"
+                />
+                <div class="p-2 border-t border-[#262626] font-mono text-[10px] text-[#737373] flex justify-between">
+                  <span>FRAME // {String(i + 1).padStart(2, '0')}</span>
+                  <span>1080P CAPTURE</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- Right 1 Col: Tech Specs Table & Contributor Details -->
+    <div class="space-y-6">
+      <TechSpecsTable game={game} contributorsList={contributorsList} />
+
+      <!-- Contributor Profiles Box -->
+      <div class="border border-[#262626] bg-[#0A0A0A]">
+        <div class="px-4 py-2 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+          <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+            <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+            STUDENT DEVELOPMENT TEAM
+          </span>
+          <span class="text-[10px] text-[#737373]">VERIFIED</span>
+        </div>
+
+        <div class="p-4 space-y-2.5">
+          {contributorsList.map((item) => (
+            <div class="border border-[#262626] bg-black p-3 font-mono flex items-center justify-between gap-3">
+              <a
+                href={`/creators#${item.id}`}
+                data-astro-prefetch="hover"
+                class="text-white font-bold text-xs hover:underline truncate"
+              >
+                {item.student ? item.student.name : item.id}
+              </a>
+              <span class="text-[#A3A3A3] text-[11px] border border-[#262626] px-2 py-0.5 bg-[#0F0F0F] shrink-0 font-medium">
+                {item.role}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

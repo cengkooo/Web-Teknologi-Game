@@ -1,0 +1,19 @@
+[
+  {
+    "id": "radhinka-bagaskara",
+    "name": "Radhinka Bagaskara, S.Si.Kom., M.Si., M.Sc.",
+    "role": "Dosen Pengampu Mata Kuliah Teknologi Game",
+    "nip": "19941127 202012 1 018",
+    "nidn": "0027119401",
+    "avatar": "/radhinka-bagaskara.jpg",
+    "profileUrl": "https://if.itera.ac.id/dosen-radhinka-bagaskara/",
+    "specialties": [
+      "Artificial Intelligence",
+      "Data Engineering",
+      "Game AI & Mechanics",
+      "Computational Science"
+    ],
+    "bio": "Dosen Program Studi Teknik Informatika, Institut Teknologi Sumatera (ITERA) pada Kelompok Keahlian Artificial Intelligence dan Data Engineering. Mengampu mata kuliah Teknologi Game serta membimbing mahasiswa dalam pemahaman seluruh siklus pengembangan game interaktif.",
+    "email": "radhinka.bagaskara@if.itera.ac.id"
+  }
+]

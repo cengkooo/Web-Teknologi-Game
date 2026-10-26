@@ -1,11 +1,50 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import GameCard from '../components/GameCard.astro';
+import Hero from '../components/Hero.astro';
+import StatsOverview from '../components/StatsOverview.astro';
+import CourseCurriculum from '../components/CourseCurriculum.astro';
+import InstructorCard from '../components/InstructorCard.astro';
+import CollabSection from '../components/CollabSection.astro';
+import { getFeaturedGames, getLibraryStats, getAllGames } from '../lib/data';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const featuredGames = getFeaturedGames();
+const stats = getLibraryStats();
+const allGames = getAllGames();
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="TEKNOLOGI GAME - INFORMATIKA ITERA"
+  description="Kumpulan mahakarya game buatan mahasiswa Mata Kuliah Teknologi Game Program Studi Teknik Informatika (IF) FTI ITERA: dari perancangan ide, produksi, hingga build game siap unduh melalui GitHub dan itch.io!"
+>
+  <Hero totalGames={stats.totalGames} />
+  <StatsOverview totalGames={stats.totalGames} />
+
+  <!-- Featured Projects Section -->
+  <section class="mb-14">
+    <div class="flex items-center justify-between pb-3 mb-6 border-b border-[#262626]">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 bg-white"></span>
+        <h2 class="font-display font-bold text-lg sm:text-xl tracking-wider text-white uppercase">
+          SPOTLIGHT GAMES
+        </h2>
+      </div>
+      <a
+        href="/games"
+        data-astro-prefetch="hover"
+        class="font-mono text-xs text-[#737373] hover:text-white uppercase transition-colors"
+      >
+        [VIEW ALL {allGames.length} GAMES &rarr;]
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featuredGames.map((game) => (
+        <GameCard game={game} />
+      ))}
+    </div>
+  </section>
+
+  <CourseCurriculum />
+  <InstructorCard />
+  <CollabSection />
 </Layout>

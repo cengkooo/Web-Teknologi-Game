@@ -1,0 +1,72 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import { getSiteConfig } from '../lib/data';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const siteConfig = getSiteConfig();
+const navItems = siteConfig.navItems;
+---
+
+<header class="border-b border-[#262626] bg-[#0A0A0A] sticky top-0 z-50">
+  <!-- Top System Bar -->
+  <div class="border-b border-[#262626] px-4 py-1.5 flex items-center justify-between text-[11px] font-mono text-[#737373]">
+    <div class="flex items-center space-x-3">
+      <span class="inline-block w-2 h-2 bg-white"></span>
+      <span class="tracking-wider text-white font-bold">GAME TECH SHOWCASE</span>
+      <span class="hidden sm:inline border-l border-[#262626] pl-3">MATA KULIAH TEKNOLOGI GAME</span>
+    </div>
+    <div class="flex items-center space-x-3 sm:space-x-4">
+      <ThemeToggle />
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-stretch justify-between h-14">
+      <!-- Logo / Monogram -->
+      <a
+        href="/"
+        data-astro-prefetch="hover"
+        class="flex items-center gap-3 text-white border-r border-[#262626] pr-6 hover:text-white group"
+      >
+        <div class="w-8 h-8 bg-white text-black font-display font-black flex items-center justify-center text-sm tracking-tighter">
+          TG
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-black text-sm tracking-widest text-white leading-none">
+            TEKNOLOGI GAME
+          </span>
+          <span class="font-mono text-[9px] tracking-widest text-[#737373] group-hover:text-white transition-colors">
+            INFORMATIKA ITERA
+          </span>
+        </div>
+      </a>
+
+      <!-- Nav Items Matrix -->
+      <nav class="flex items-stretch overflow-x-auto">
+        {navItems.map((item) => {
+          const isActive = item.href === '/' 
+            ? currentPath === '/' 
+            : currentPath.startsWith(item.href);
+          return (
+            <a
+              href={item.href}
+              data-astro-prefetch="hover"
+              class={`flex items-center px-4 sm:px-6 text-xs sm:text-sm font-mono tracking-wider border-r border-[#262626] transition-colors whitespace-nowrap ${
+                isActive
+                  ? 'bg-white text-black font-bold border-white'
+                  : 'text-[#737373] hover:text-white hover:bg-[#141414]'
+              }`}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GameCatalog from '../../components/GameCatalog.astro';
+import {
+  getAllGames,
+  getEnginesList,
+  getGenresList,
+  getBatchYearsList,
+} from '../../lib/data';
+
+const allGames = getAllGames();
+const engines = getEnginesList();
+const genres = getGenresList();
+const batches = getBatchYearsList();
+---
+
+<Layout
+  title="TEKNOLOGI GAME - INFORMATIKA ITERA"
+  description="Kompilasi karya game buatan mahasiswa Mata Kuliah Teknologi Game: dari ideasi gameplay, produksi mekanika, hingga download build di GitHub & itch.io."
+>
+  <!-- Page Header Box -->
+  <div class="border border-[#262626] bg-[#0A0A0A] p-6 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <div class="flex items-center gap-2 mb-2 font-mono text-xs text-[#737373]">
+        <span class="inline-block w-2 h-2 bg-white"></span>
+        <span>INDEX: 02 // GAME REPOSITORY</span>
+      </div>
+      <h1 class="font-display font-black text-2xl sm:text-4xl text-white tracking-wider uppercase">
+        GAMES REPOSITORY
+      </h1>
+      <p class="font-mono text-xs text-[#737373] mt-1">
+        Jelajahi seluruh karya game buatan mahasiswa. Seluruh build game dapat diunduh dan dimainkan melalui repositori GitHub dan itch.io.
+      </p>
+    </div>
+
+    <div class="flex items-center gap-4 font-mono text-xs border border-[#262626] p-3 bg-black self-start sm:self-auto">
+      <div>
+        <span class="text-[#737373] block text-[10px]">TOTAL ITEMS</span>
+        <span id="header-total-count" class="text-white font-bold text-lg">{allGames.length} / {allGames.length}</span>
+      </div>
+      <div class="border-l border-[#262626] pl-4">
+        <span class="text-[#737373] block text-[10px]">STATUS</span>
+        <span class="text-white font-bold text-sm">INDEXED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Game Catalog Component -->
+  <GameCatalog
+    games={allGames}
+    engines={engines}
+    genres={genres}
+    batches={batches}
+  />
+</Layout>

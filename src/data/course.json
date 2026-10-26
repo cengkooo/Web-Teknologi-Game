@@ -1,0 +1,25 @@
+{
+  "code": "IF25-40412",
+  "name": "Teknologi Game",
+  "prodi": "Teknik Informatika (IF)",
+  "faculty": "Fakultas Teknologi Industri (FTI)",
+  "institution": "Institut Teknologi Sumatera (ITERA)",
+  "credits": 3,
+  "creditWeight": "3 SKS (KULIAH TEORI & TUGAS BESAR)",
+  "foundedYear": 2018,
+  "estimatedGraduates": 320,
+  "coreCompetencies": [
+    "Game Design",
+    "Gameplay Programming",
+    "Asset Integration",
+    "Multiplatform QA"
+  ],
+  "finalDeliverable": "Playable & Downloadable Game + Dokumentasi Repositori Git",
+  "overview": {
+    "headline": "DARI IDEASI HINGGA RILIS: BELAJAR MEMBUAT GAME SECARA UTUH",
+    "paragraphs": [
+      "Mata Kuliah Teknologi Game diselenggarakan oleh Program Studi Teknik Informatika (IF), Fakultas Teknologi Industri (FTI), Institut Teknologi Sumatera (ITERA). Mata kuliah ini dirancang untuk membekali mahasiswa dengan pemahaman komprehensif mengenai seluruh siklus pengembangan game (game development lifecycle). Di kelas ini, mahasiswa tidak hanya mempelajari konsep teoretis komputasi grafika dan kecerdasan buatan, namun bekerja dalam tim produksi nyata untuk merealisasikan ide dari tahap perancangan konsep hingga menjadi game interaktif yang playable dan berdaya saing.",
+      "Fokus pembelajaran mencakup penyusunan dokumen desain game (Game Design Document), prototyping mekanika gameplay yang adiktif, pemrograman logika interaktif, penyusunan level design yang menantang, hingga pengujian performa agar game dapat dinikmati dengan lancar di berbagai platform dan peramban web."
+    ]
+  }
+}

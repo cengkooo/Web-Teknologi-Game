@@ -1,0 +1,61 @@
+---
+import { getCourseInfo } from '../lib/data';
+
+const course = getCourseInfo();
+---
+
+<!-- Section Pengenalan & Sejarah Mata Kuliah Teknologi Game -->
+<section id="course-story" class="mb-14 scroll-mt-20">
+  <div class="border border-[#262626] bg-[#0A0A0A]">
+    <div class="px-4 py-2.5 border-b border-[#262626] bg-[#0F0F0F] flex items-center justify-between font-mono text-xs">
+      <span class="font-bold text-white tracking-widest uppercase flex items-center gap-2">
+        <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+        {course.name.toUpperCase()}
+      </span>
+      <span class="text-[#737373] text-[10px]">{course.code}</span>
+    </div>
+
+    <div class="p-6 sm:p-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        <!-- Kolom 1 & 2: Pengenalan & Filosofi Pembuatan Game -->
+        <div class="lg:col-span-2 space-y-4">
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-white tracking-wider uppercase leading-tight">
+            {course.overview.headline}
+          </h2>
+          {course.overview.paragraphs.map((p) => (
+            <p class="font-mono text-xs sm:text-sm text-zinc-100 leading-relaxed">
+              {p}
+            </p>
+          ))}
+        </div>
+
+        <!-- Kolom 3: Spesifikasi Mata Kuliah -->
+        <div class="border border-[#262626] bg-black p-4 font-mono text-xs space-y-3">
+          <div class="text-white font-bold tracking-wider text-[11px] pb-2 border-b border-[#262626]">
+            // SPESIFIKASI MATA KULIAH
+          </div>
+          <div>
+            <span class="text-[#737373] block text-[10px]">INSTITUSI & PRODI</span>
+            <span class="text-white font-bold">{course.prodi} &bull; {course.faculty} {course.institution}</span>
+          </div>
+          <div>
+            <span class="text-[#737373] block text-[10px]">COURSE CODE</span>
+            <span class="text-white font-bold">{course.code} // {course.name.toUpperCase()}</span>
+          </div>
+          <div>
+            <span class="text-[#737373] block text-[10px]">CREDIT WEIGHT</span>
+            <span class="text-white font-bold">{course.creditWeight}</span>
+          </div>
+          <div>
+            <span class="text-[#737373] block text-[10px]">CORE COMPETENCIES</span>
+            <span class="text-white">{course.coreCompetencies.join(', ')}</span>
+          </div>
+          <div>
+            <span class="text-[#737373] block text-[10px]">FINAL DELIVERABLE</span>
+            <span class="text-white">{course.finalDeliverable}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

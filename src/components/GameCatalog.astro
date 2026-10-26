@@ -1,0 +1,373 @@
+---
+import type { Game } from '../types';
+import GameCard from './GameCard.astro';
+import FilterMatrix from './FilterMatrix.astro';
+import SearchBar from './SearchBar.astro';
+
+interface Props {
+  games: Game[];
+  engines: string[];
+  genres: string[];
+  batches: number[];
+}
+
+const { games, engines, genres, batches } = Astro.props;
+---
+
+<!-- Filter Matrix Component -->
+<FilterMatrix
+  engines={engines}
+  genres={genres}
+  batches={batches}
+  totalResults={games.length}
+/>
+
+<!-- Live Search Bar Component -->
+<SearchBar initialQuery="" />
+
+<!-- High-Density Catalog Grid -->
+<div id="games-grid-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  {games.map((game) => (
+    <div
+      class="game-card-wrapper h-full"
+      data-title={game.title.toLowerCase()}
+      data-engine={game.engine.toLowerCase()}
+      data-genre={game.genre.map((g) => g.toLowerCase()).join(' ')}
+      data-tagline={game.tagline.toLowerCase()}
+      data-batch={String(game.batchYear)}
+    >
+      <GameCard game={game} />
+    </div>
+  ))}
+</div>
+
+<!-- Dynamic Empty State Box -->
+<div
+  id="catalog-empty-state"
+  class="hidden border border-[#262626] bg-[#0A0A0A] p-12 text-center font-mono my-6"
+>
+  <div class="text-white font-bold text-base mb-2 uppercase tracking-widest">
+    // NO MATCHING GAMES FOUND
+  </div>
+  <p id="empty-state-desc" class="text-xs text-[#737373] mb-6 max-w-md mx-auto leading-relaxed">
+    Kombinasi filter yang kamu pilih belum memiliki proyek game. Coba ubah opsi filter di atas atau reset untuk melihat semua game yang tersedia.
+  </p>
+  <button
+    id="reset-empty-btn"
+    type="button"
+    class="inline-block px-4 py-2 bg-white text-black text-xs font-bold uppercase tracking-wider border border-white hover:bg-black hover:text-white transition-colors cursor-pointer"
+  >
+    [RESET ALL FILTERS & VIEW ALL]
+  </button>
+</div>
+
+<!-- Pagination Controls for Games Grid (Limit: 10 per page) -->
+<div
+  id="games-pagination"
+  class="mt-8 border border-[#262626] bg-[#0A0A0A] p-3 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs"
+>
+  <div class="text-[#737373] text-[11px] flex items-center gap-2">
+    <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+    <span>PAGE <span id="games-page-current" class="text-white font-bold">1</span> / <span id="games-page-total" class="text-white font-bold">1</span></span>
+    <span class="text-[#444444]">//</span>
+    <span id="games-page-range" class="text-[#A3A3A3]">VIEWING 1-10</span>
+  </div>
+
+  <div class="flex items-center gap-1.5">
+    <button
+      id="games-page-prev"
+      type="button"
+      class="px-3 py-1.5 border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors uppercase font-bold text-xs cursor-pointer"
+    >
+      &larr; PREV
+    </button>
+
+    <div id="games-page-numbers" class="flex items-center gap-1">
+      <!-- Injected via JS -->
+    </div>
+
+    <button
+      id="games-page-next"
+      type="button"
+      class="px-3 py-1.5 border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors uppercase font-bold text-xs cursor-pointer"
+    >
+      NEXT &rarr;
+    </button>
+  </div>
+</div>
+
+<!-- Client-side Unified Filter & Search Engine with Pagination -->
+<script is:inline>
+  function setupCatalogFilterSystem() {
+    const PAGE_SIZE = 10;
+    let currentPage = 1;
+
+    const searchInput = document.getElementById('catalog-search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const resetMatrixBtn = document.getElementById('reset-matrix-btn');
+    const resetEmptyBtn = document.getElementById('reset-empty-btn');
+    const gridContainer = document.getElementById('games-grid-container');
+    const emptyStateBox = document.getElementById('catalog-empty-state');
+    const emptyStateDesc = document.getElementById('empty-state-desc');
+    const headerTotalCount = document.getElementById('header-total-count');
+    const liveVisibleCount = document.getElementById('live-visible-count');
+    const matrixMatchCount = document.getElementById('matrix-match-count');
+
+    const paginationBox = document.getElementById('games-pagination');
+    const pageCurrentEl = document.getElementById('games-page-current');
+    const pageTotalEl = document.getElementById('games-page-total');
+    const pageRangeEl = document.getElementById('games-page-range');
+    const pagePrevBtn = document.getElementById('games-page-prev');
+    const pageNextBtn = document.getElementById('games-page-next');
+    const pageNumbersEl = document.getElementById('games-page-numbers');
+
+    const badgeActiveEngine = document.getElementById('badge-active-engine');
+    const badgeActiveBatch = document.getElementById('badge-active-batch');
+    const badgeActiveGenre = document.getElementById('badge-active-genre');
+
+    const cards = Array.from(document.querySelectorAll('.game-card-wrapper'));
+    const filterBtns = document.querySelectorAll('.matrix-filter-btn');
+
+    if (!cards.length) return;
+    const totalCards = cards.length;
+
+    // Active state storage
+    const state = {
+      engine: '',
+      batch: '',
+      genre: '',
+      query: '',
+    };
+
+    // Read initial parameters from URL
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('engine')) state.engine = urlParams.get('engine').toLowerCase();
+      if (urlParams.get('batch')) state.batch = urlParams.get('batch').trim();
+      if (urlParams.get('genre')) state.genre = urlParams.get('genre').toLowerCase();
+      if (urlParams.get('q')) state.query = urlParams.get('q').toLowerCase().trim();
+      if (urlParams.get('search')) state.query = urlParams.get('search').toLowerCase().trim();
+
+      if (searchInput && state.query) {
+        searchInput.value = state.query;
+      }
+    } catch (e) {}
+
+    function updateButtonStyles() {
+      filterBtns.forEach((btn) => {
+        const group = btn.getAttribute('data-filter-group');
+        const value = btn.getAttribute('data-filter-value') || '';
+        const isActive = state[group] === value;
+
+        if (isActive) {
+          btn.className =
+            'matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white';
+        } else {
+          btn.className =
+            'matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white';
+        }
+      });
+
+      if (badgeActiveEngine) badgeActiveEngine.classList.toggle('hidden', !state.engine);
+      if (badgeActiveBatch) badgeActiveBatch.classList.toggle('hidden', !state.batch);
+      if (badgeActiveGenre) badgeActiveGenre.classList.toggle('hidden', !state.genre);
+
+      const hasActiveFilter = Boolean(state.engine || state.batch || state.genre || state.query);
+      if (resetMatrixBtn) {
+        resetMatrixBtn.classList.toggle('hidden', !hasActiveFilter);
+      }
+      if (clearSearchBtn) {
+        clearSearchBtn.classList.toggle('hidden', !state.query);
+        clearSearchBtn.classList.toggle('block', Boolean(state.query));
+      }
+    }
+
+    function updateURL() {
+      const params = new URLSearchParams();
+      if (state.engine) params.set('engine', state.engine);
+      if (state.batch) params.set('batch', state.batch);
+      if (state.genre) params.set('genre', state.genre);
+      if (state.query) params.set('q', state.query);
+
+      const newQuery = params.toString();
+      const newUrl = newQuery ? `${window.location.pathname}?${newQuery}` : window.location.pathname;
+      window.history.replaceState({}, '', newUrl);
+    }
+
+    function applyFilters(resetPage = true) {
+      if (resetPage) currentPage = 1;
+
+      const q = state.query;
+      const matchedCards = [];
+
+      cards.forEach((card) => {
+        const cardEngine = card.getAttribute('data-engine') || '';
+        const cardBatch = card.getAttribute('data-batch') || '';
+        const cardGenre = card.getAttribute('data-genre') || '';
+        const cardTitle = card.getAttribute('data-title') || '';
+        const cardTagline = card.getAttribute('data-tagline') || '';
+
+        const matchEngine = !state.engine || cardEngine === state.engine;
+        const matchBatch = !state.batch || cardBatch === state.batch;
+        const matchGenre = !state.genre || cardGenre.includes(state.genre);
+
+        const matchQuery =
+          !q ||
+          cardTitle.includes(q) ||
+          cardEngine.includes(q) ||
+          cardGenre.includes(q) ||
+          cardTagline.includes(q) ||
+          cardBatch.includes(q);
+
+        const isMatch = matchEngine && matchBatch && matchGenre && matchQuery;
+        if (isMatch) {
+          matchedCards.push(card);
+        }
+        card.style.display = 'none';
+      });
+
+      const visibleCount = matchedCards.length;
+      const totalPages = Math.max(1, Math.ceil(visibleCount / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      // Slice for pagination
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const endIndex = Math.min(startIndex + PAGE_SIZE, visibleCount);
+      const pagedCards = matchedCards.slice(startIndex, endIndex);
+
+      pagedCards.forEach((card) => {
+        card.style.display = '';
+      });
+
+      // Update count readouts
+      if (headerTotalCount) headerTotalCount.textContent = `${visibleCount} / ${totalCards}`;
+      if (liveVisibleCount) liveVisibleCount.textContent = `${visibleCount} / ${totalCards}`;
+      if (matrixMatchCount) matrixMatchCount.textContent = `[${visibleCount} MATCHES]`;
+
+      // Update Empty state & Pagination UI
+      if (visibleCount === 0) {
+        if (gridContainer) gridContainer.classList.add('hidden');
+        if (emptyStateBox) emptyStateBox.classList.remove('hidden');
+        if (paginationBox) paginationBox.classList.add('hidden');
+
+        if (emptyStateDesc) {
+          const activeConditions = [];
+          if (state.engine) activeConditions.push(`Engine: "${state.engine.toUpperCase()}"`);
+          if (state.batch) activeConditions.push(`Angkatan: ${state.batch}`);
+          if (state.genre) activeConditions.push(`Genre: "${state.genre.toUpperCase()}"`);
+          if (state.query) activeConditions.push(`Pencarian: "${state.query}"`);
+
+          emptyStateDesc.textContent = `Tidak ada game yang cocok dengan kriteria (${activeConditions.join(', ')}). Silakan coba kombinasi lain atau klik tombol reset.`;
+        }
+      } else {
+        if (gridContainer) gridContainer.classList.remove('hidden');
+        if (emptyStateBox) emptyStateBox.classList.add('hidden');
+        if (paginationBox) paginationBox.classList.remove('hidden');
+
+        // Render pagination info
+        if (pageCurrentEl) pageCurrentEl.textContent = String(currentPage);
+        if (pageTotalEl) pageTotalEl.textContent = String(totalPages);
+        if (pageRangeEl) {
+          pageRangeEl.textContent = `VIEWING ${startIndex + 1}-${endIndex} OF ${visibleCount} GAMES`;
+        }
+
+        if (pagePrevBtn) pagePrevBtn.disabled = currentPage <= 1;
+        if (pageNextBtn) pageNextBtn.disabled = currentPage >= totalPages;
+
+        // Render page numbers
+        if (pageNumbersEl) {
+          pageNumbersEl.innerHTML = '';
+          for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = String(i).padStart(2, '0');
+            const isCurrent = i === currentPage;
+            btn.className = isCurrent
+              ? 'px-2.5 py-1 text-xs font-bold border border-white bg-white text-black'
+              : 'px-2.5 py-1 text-xs border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white transition-colors cursor-pointer';
+            btn.addEventListener('click', () => {
+              currentPage = i;
+              applyFilters(false);
+              if (gridContainer) {
+                window.scrollTo({ top: gridContainer.offsetTop - 100, behavior: 'smooth' });
+              }
+            });
+            pageNumbersEl.appendChild(btn);
+          }
+        }
+      }
+
+      updateButtonStyles();
+      updateURL();
+    }
+
+    // Prev & Next handlers
+    pagePrevBtn?.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        applyFilters(false);
+        if (gridContainer) {
+          window.scrollTo({ top: gridContainer.offsetTop - 100, behavior: 'smooth' });
+        }
+      }
+    });
+
+    pageNextBtn?.addEventListener('click', () => {
+      currentPage++;
+      applyFilters(false);
+      if (gridContainer) {
+        window.scrollTo({ top: gridContainer.offsetTop - 100, behavior: 'smooth' });
+      }
+    });
+
+    // Filter button clicks
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const group = btn.getAttribute('data-filter-group');
+        const value = btn.getAttribute('data-filter-value') || '';
+
+        if (state[group] === value && value !== '') {
+          state[group] = '';
+        } else {
+          state[group] = value;
+        }
+
+        applyFilters(true);
+      });
+    });
+
+    // Search input handler
+    searchInput?.addEventListener('input', (e) => {
+      state.query = e.target.value.toLowerCase().trim();
+      applyFilters(true);
+    });
+
+    // Clear search button
+    clearSearchBtn?.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      state.query = '';
+      applyFilters(true);
+      searchInput?.focus();
+    });
+
+    // Reset all buttons handler
+    function resetAll() {
+      state.engine = '';
+      state.batch = '';
+      state.genre = '';
+      state.query = '';
+      if (searchInput) searchInput.value = '';
+      applyFilters(true);
+    }
+
+    resetMatrixBtn?.addEventListener('click', resetAll);
+    resetEmptyBtn?.addEventListener('click', resetAll);
+
+    // Run on initial initialization
+    applyFilters(true);
+  }
+
+  setupCatalogFilterSystem();
+  document.addEventListener('astro:after-swap', setupCatalogFilterSystem);
+</script>

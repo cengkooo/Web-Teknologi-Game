@@ -1,0 +1,62 @@
+---
+// ThemeToggle.astro
+---
+
+<button
+  id="theme-toggle-btn"
+  type="button"
+  aria-label="Toggle Light/Dark Display Mode"
+  class="flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-bold tracking-wider uppercase border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white transition-colors cursor-pointer"
+>
+  <span id="theme-toggle-icon" class="text-xs">◐</span>
+  <span id="theme-toggle-text">MODE: DARK</span>
+</button>
+
+<script is:inline>
+  function setupThemeToggle() {
+    const btn = document.getElementById('theme-toggle-btn');
+    const icon = document.getElementById('theme-toggle-icon');
+    const text = document.getElementById('theme-toggle-text');
+
+    function updateUI(theme) {
+      if (!icon || !text) return;
+      if (theme === 'light') {
+        icon.textContent = '☼';
+        text.textContent = 'MODE: LIGHT';
+        btn?.classList.add('theme-is-light');
+      } else {
+        icon.textContent = '◐';
+        text.textContent = 'MODE: DARK';
+        btn?.classList.remove('theme-is-light');
+      }
+    }
+
+    const currentTheme = document.documentElement.classList.contains('light') ? 'light' : 'dark';
+    updateUI(currentTheme);
+
+    btn?.addEventListener('click', () => {
+      const isCurrentlyLight = document.documentElement.classList.contains('light');
+      const newTheme = isCurrentlyLight ? 'dark' : 'light';
+
+      if (newTheme === 'light') {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      }
+
+      try {
+        localStorage.setItem('theme', newTheme);
+      } catch (e) {
+        // LocalStorage might be restricted in some iframe contexts
+      }
+
+      updateUI(newTheme);
+    });
+  }
+
+  // Setup on initial load and on Astro view transition swaps
+  setupThemeToggle();
+  document.addEventListener('astro:after-swap', setupThemeToggle);
+</script>

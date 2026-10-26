@@ -1,0 +1,67 @@
+---
+import type { Game } from '../types';
+import EngineBadge from './EngineBadge.astro';
+
+interface Props {
+  game: Game;
+}
+
+const { game } = Astro.props;
+---
+
+<a
+  href={`/games/${game.slug}`}
+  data-astro-prefetch="hover"
+  class="group block bg-[#0A0A0A] border border-[#262626] hover:border-white transition-all duration-150 flex flex-col h-full relative"
+>
+  <!-- Top Poster Section with 16:9 Aspect Ratio -->
+  <div class="relative aspect-video w-full overflow-hidden bg-black border-b border-[#262626]">
+    <img
+      src={game.posterImage}
+      alt={game.title}
+      loading="lazy"
+      class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+    />
+    <div class="absolute top-2 left-2 flex gap-1.5 flex-wrap">
+      <EngineBadge engine={game.engine} size="sm" />
+    </div>
+    <div class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] font-mono border border-[#262626] bg-black text-[#A3A3A3]">
+      BATCH // {game.batchYear}
+    </div>
+  </div>
+
+  <!-- Bottom Metadata Section -->
+  <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+    <div>
+      <div class="flex items-start justify-between gap-2 mb-1.5">
+        <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-white group-hover:text-white transition-colors leading-tight">
+          {game.title}
+        </h3>
+        <span class="font-mono text-xs text-[#737373] group-hover:text-white transition-colors">
+          &rarr;
+        </span>
+      </div>
+
+      <p class="font-mono text-xs text-[#737373] line-clamp-2 mb-3 leading-relaxed">
+        {game.tagline}
+      </p>
+    </div>
+
+    <div>
+      <!-- Genre Tags -->
+      <div class="flex flex-wrap gap-1 mb-3">
+        {game.genre.slice(0, 3).map((genre) => (
+          <span class="text-[10px] font-mono text-[#737373] border border-[#1f1f1f] px-1.5 py-0.2 bg-[#050505]">
+            #{genre}
+          </span>
+        ))}
+      </div>
+
+      <!-- Footer Micro Stats -->
+      <div class="pt-2 border-t border-[#1a1a1a] flex items-center justify-between text-[10px] font-mono text-[#737373]">
+        <span>ENGINE: <span class="text-[#A3A3A3]">{game.engineVersion}</span></span>
+        <span class="text-white group-hover:underline">VIEW DETAILS &rarr;</span>
+      </div>
+    </div>
+  </div>
+</a>
