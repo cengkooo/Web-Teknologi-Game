@@ -7,6 +7,10 @@
 
 ---
 
+![Tampilan Landing Page Game Tech Showcase](public/tampilan-landing-page.png)
+
+---
+
 ## 📌 Tentang Proyek
 
 Platform web etalase resmi karya mahasiswa pada Mata Kuliah **Teknologi Game** di Institut Teknologi Sumatera (ITERA). Repositori ini mengarsipkan seluruh proses kreatif dan teknis mahasiswa—mulai dari penyusunan dokumen desain (*Game Design Document*), pengembangan mekanika gameplay (*prototyping*), integrasi aset visual/audio, hingga kompilasi *build* game siap unduh dan mainkan melalui **GitHub**, **itch.io**, maupun **WebGL** langsung di peramban web.
@@ -244,6 +248,31 @@ Website ini menggunakan storage GitHub Keystatic di production, sehingga perubah
 3. **Kelola Konten**:
    - Buka `https://[nama-proyek-anda].vercel.app/keystatic/`.
    - Gunakan panel Keystatic untuk mengedit koleksi konten. Pada mode production, konfigurasi Keystatic menggunakan repositori `cengkooo/Web-Teknologi-Game` pada branch `main`.
+
+---
+
+## 🧪 Hasil Pengujian End-to-End (E2E Testing)
+
+Pengujian fungsionalitas dan integrasi menyeluruh telah dijalankan secara otomatis pada peramban Chrome *headless* (menggunakan Playwright) untuk memvalidasi stabilitas dashboard Git CMS (`/keystatic`), performa tema, serta responsivitas antarmuka:
+
+| No | Skenario Pengujian | Status | Keterangan |
+| :---: | :--- | :---: | :--- |
+| **1** | **Pemuatan Dashboard & HUD Bar (Desktop)** | `PASSED` | Bilah *Engineering HUD* atas termuat dengan sempurna di `/keystatic` |
+| **2** | **Badge & Branding Title** | `PASSED` | Identitas `GIT CMS` dan teks `TEKNOLOGI GAME ITERA` tampil tegas |
+| **3** | **Tombol Tautan Website Publik** | `PASSED` | Navigasi kembali `[← WEBSITE PUBLIK]` berfungsi normal |
+| **4** | **Tombol Logout Sesi GitHub** | `PASSED` | Tombol `[× LOGOUT GITHUB]` aktif dengan konfirmasi keamanan |
+| **5** | **Inisialisasi Tema Awal** | `PASSED` | Tema gelap (*Dark Mode*) termuat secara default tanpa efek kedipan (*zero-flash*) |
+| **6** | **Peralihan Tema: Dark ➔ Light** | `PASSED` | Berhasil mengubah kelas `html.light`, warna HUD, dan tersimpan di `localStorage` |
+| **7** | **Peralihan Tema: Light ➔ Dark** | `PASSED` | Mengembalikan tema ke `html.dark` dan menyinkronkan status ke Keystatic |
+| **8** | **Pemasangan React Mount Root** | `PASSED` | Kontainer `#keystatic-mount-root` ter-mount dan siap menerima interaksi |
+| **9** | **Render Koleksi Game (`02 // GAMES`)** | `PASSED` | Koleksi game termuat tanpa error validasi skema (`award`, `semesterKey`, dll.) |
+| **10**| **Render Koleksi Expo (`03 // EXPO`)** | `PASSED` | Koleksi dokumentasi expo termuat tanpa error validasi kategori (`Dokumentasi`) |
+| **11**| **Responsivitas Layar Mobile (375 &times; 667 px)** | `PASSED` | Dashboard diuji pada viewport ponsel sempit (iPhone SE) |
+| **12**| **Pencegahan Horizontal Overflow** | `PASSED` | Bilah HUD pas 100% dengan lebar layar (`scrollWidth <= clientWidth`), bebas luapan |
+| **13**| **Kompresi Teks Tombol Otomatis** | `PASSED` | Label tombol diringkas rapi di layar sempit (`DARK` / `LIGHT`, `WEB`, `LOGOUT`) |
+| **14**| **Penyembunyian Path Repo Panjang** | `PASSED` | Informasi repositori Git otomatis disembunyikan di mobile agar menghemat ruang |
+
+> **Status Akhir**: 17 dari 17 pengujian berhasil lulus (Tingkat Keberhasilan: **100%**).
 
 ---
 
