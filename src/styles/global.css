@@ -9,7 +9,7 @@
   --color-text-main: #FFFFFF;
   --color-text-muted: #737373;
 
-  --font-display: 'Ethnocentric', 'Orbitron', 'Rajdhani', sans-serif;
+  --font-display: 'Rajdhani', 'Ethnocentric', 'Orbitron', sans-serif;
   --font-mono-tech: 'JetBrains Mono', monospace;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 }
