@@ -1,0 +1,67 @@
+{
+  "slug": "rescue-save-the-wildlife",
+  "title": "Rescue: Save The Wildlife",
+  "developer": "MiNOS",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Tower defense tentang menjaga kelestarian hewan langka dan terancam punah di Sumatera, dimana John berniat menyelamatkan mereka dengan ca...",
+  "description": "Tower defense tentang menjaga kelestarian hewan langka dan terancam punah di Sumatera, dimana John berniat menyelamatkan mereka dengan cara membawanya ke hutan marga satwa. Namun dalam perjalanannya ada banyak rintangan yang menghambat, baik oleh manusia maupun hal disekitarnya.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action"
+  ],
+  "platform": [
+    "Windows",
+    "Linux",
+    "Web",
+    "macOS"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODMyMDc3LnBuZw==/original/MyqxnS.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkyOC5qcGc=/original/ysQRzF.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkyOS5qcGc=/original/qqPIrM.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkzMC5qcGc=/original/dSfZKL.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkzMS5qcGc=/original/3r%2FVRZ.jpg"
+  ],
+  "itchUrl": "https://minos-studio.itch.io/rescue-save-the-wildlife",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "ignatius-krisna",
+      "name": "Ignatius Krisna",
+      "nim": "121140037",
+      "role": "Art Designer, Game Designer"
+    },
+    {
+      "id": "benedictus-budhi-dharmawan",
+      "name": "Benedictus Budhi Dharmawan",
+      "nim": "121140098",
+      "role": "Programmer, Game Designer"
+    },
+    {
+      "id": "made-redy-wijaya",
+      "name": "Made Redy Wijaya",
+      "nim": "121140157",
+      "role": "Programmer, Game Designer"
+    },
+    {
+      "id": "farhan-apri-kesuma",
+      "name": "Farhan Apri Kesuma",
+      "nim": "121140179",
+      "role": "Programmer, Game Designer"
+    },
+    {
+      "id": "carlos-piero-parhusip",
+      "name": "Carlos Piero Parhusip",
+      "nim": "121140193",
+      "role": "Game Director, Sound Engineer, Game Designer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

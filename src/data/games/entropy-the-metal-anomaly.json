@@ -1,0 +1,60 @@
+{
+  "slug": "entropy-the-metal-anomaly",
+  "title": "Entropy : The Metal Anomaly",
+  "developer": "Virmar Studio",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Action-adventure 2D side-scroller berlatar Sumatera pasca-apokaliptik tahun 2798 dimana pemain berperan sebagai \"The Anomaly\". Game ini m...",
+  "description": "Action-adventure 2D side-scroller berlatar Sumatera pasca-apokaliptik tahun 2798 dimana pemain berperan sebagai \"The Anomaly\". Game ini memadukan eksplorasi, pertarungan strategis melawan robot, dan mengalahkan boss di setiap wilayah untuk memenangkan game.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "/assets/uploads/games/entropy-the-metal-anomaly.jpg",
+  "screenshots": [],
+  "itchUrl": "https://sinavarasina.itch.io/entropy-the-metal-anomaly",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "jefri-wahyu-fernando-sembiring",
+      "name": "Jefri Wahyu Fernando Sembiring",
+      "nim": "123140206",
+      "role": "Sound Engineer"
+    },
+    {
+      "id": "varasina-farmadani",
+      "name": "Varasina Farmadani",
+      "nim": "123140107",
+      "role": "Programmer"
+    },
+    {
+      "id": "ivan-nandira-mangunang",
+      "name": "Ivan Nandira Mangunang",
+      "nim": "123140094",
+      "role": "Game Designer"
+    },
+    {
+      "id": "michael-mathew",
+      "name": "Michael Mathew",
+      "nim": "123140101",
+      "role": "Director"
+    },
+    {
+      "id": "ribka-hana-josephine-situmorang",
+      "name": "Ribka Hana Josephine Situmorang",
+      "nim": "123140103",
+      "role": "Game Artist"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

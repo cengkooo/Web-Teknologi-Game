@@ -3,14 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import GameCatalog from '../../components/GameCatalog.astro';
 import {
   getAllGames,
-  getEnginesList,
-  getGenresList,
   getBatchYearsList,
 } from '../../lib/data';
 
 const allGames = getAllGames();
-const engines = getEnginesList();
-const genres = getGenresList();
 const batches = getBatchYearsList();
 ---
 
@@ -48,8 +44,6 @@ const batches = getBatchYearsList();
   <!-- Interactive Game Catalog Component -->
   <GameCatalog
     games={allGames}
-    engines={engines}
-    genres={genres}
     batches={batches}
   />
 </Layout>

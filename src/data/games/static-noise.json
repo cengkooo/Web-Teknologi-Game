@@ -1,0 +1,65 @@
+{
+  "slug": "static-noise",
+  "title": "Static Noise",
+  "developer": "NoMon Craftworks",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Turn-based RPG horror tentang seorang pria menaiki kereta api kembali ke kampung halamannya menemukan dirinya tiba-tiba terlempar ke duni...",
+  "description": "Turn-based RPG horror tentang seorang pria menaiki kereta api kembali ke kampung halamannya menemukan dirinya tiba-tiba terlempar ke dunia yang tidak nyata. Pria harus mengungkap rahasia tempat itu dan menemukan jalan keluar.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "RPG",
+    "Horror",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4NzgyMjQyLnBuZw==/original/ROOm31.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMzAwNzM1My8xODgzMzk0My5wbmc=/original/R7Aj4b.png",
+    "https://img.itch.zone/aW1hZ2UvMzAwNzM1My8xODgzMzg5OC5wbmc=/original/xo4Mi8.png",
+    "https://img.itch.zone/aW1hZ2UvMzAwNzM1My8xODgzMzkwMC5wbmc=/original/3hFnrl.png"
+  ],
+  "itchUrl": "https://nomon-craftworks.itch.io/static-noise",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "yusup-pandu-putra-wibowo",
+      "name": "Yusup Pandu Putra Wibowo",
+      "nim": "121140124",
+      "role": "Project Manager"
+    },
+    {
+      "id": "muhamad-rizzky-nopriansyah",
+      "name": "Muhamad Rizzky Nopriansyah",
+      "nim": "121140132",
+      "role": "Art Designer"
+    },
+    {
+      "id": "marchell-aly-kumala",
+      "name": "Marchell Aly Kumala",
+      "nim": "121140145",
+      "role": "Game Designer"
+    },
+    {
+      "id": "winnerson-laia",
+      "name": "Winnerson Laia",
+      "nim": "121140121",
+      "role": "Programmer"
+    },
+    {
+      "id": "solafide-zamili",
+      "name": "Solafide Zamili",
+      "nim": "121140201",
+      "role": "Lead Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

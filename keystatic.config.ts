@@ -11,7 +11,7 @@ export default config({
       name: 'TEKNOLOGI GAME ITERA // CMS',
     },
     navigation: {
-      'MANAJEMEN KONTEN': ['games', 'mahasiswa', 'expo'],
+      'MANAJEMEN KONTEN': ['games', 'expo'],
     },
   },
   collections: {
@@ -31,24 +31,27 @@ export default config({
           },
         }),
         title: fields.text({ label: 'Judul Game', validation: { isRequired: true } }),
+        developer: fields.text({ label: 'Nama Kelompok / Studio Developer (contoh: Chill Guys)' }),
+        semester: fields.select({
+          label: 'Semester Perkuliahan (IF3023)',
+          options: [
+            { label: 'Sem. Ganjil 2025/2026', value: '2025/2026 Ganjil' },
+            { label: 'Sem. Ganjil 2024/2025', value: '2024/2025 Ganjil' },
+            { label: 'Sem. Ganjil 2023/2024', value: '2023/2024 Ganjil' },
+            { label: 'Sem. Genap 2022/2023', value: '2022/2023 Genap' },
+          ],
+          defaultValue: '2025/2026 Ganjil',
+        }),
         tagline: fields.text({ label: 'Tagline Singkat (Gameplay Hook)' }),
         description: fields.text({ label: 'Deskripsi Lengkap Game', multiline: true }),
         engine: fields.select({
           label: 'Game Engine',
           options: [
-            { label: 'Godot', value: 'Godot' },
-            { label: 'Unity', value: 'Unity' },
-            { label: 'Unreal Engine', value: 'Unreal Engine' },
-            { label: 'Bevy', value: 'Bevy' },
-            { label: 'Custom C++', value: 'Custom C++' },
-            { label: 'Pygame', value: 'Pygame' },
-            { label: 'Phaser', value: 'Phaser' },
-            { label: 'Raylib', value: 'Raylib' },
-            { label: 'Monogame', value: 'Monogame' },
+            { label: 'Godot Engine', value: 'Godot' },
           ],
           defaultValue: 'Godot',
         }),
-        engineVersion: fields.text({ label: 'Versi Engine (contoh: Godot 4.3 Stable)' }),
+        engineVersion: fields.text({ label: 'Versi Engine (contoh: Godot 4.3 Stable)', defaultValue: 'Godot 4.3 Stable' }),
         genre: fields.array(fields.text({ label: 'Genre' }), {
           label: 'Genre Game',
           itemLabel: (props) => props.value || 'Genre Baru',
@@ -119,6 +122,7 @@ export default config({
           },
         }),
         name: fields.text({ label: 'Nama Lengkap Mahasiswa', validation: { isRequired: true } }),
+        nim: fields.text({ label: 'NIM Mahasiswa (contoh: 122140217)', validation: { isRequired: false } }),
         batch: fields.integer({
           label: 'Tahun Angkatan (contoh: 2024)',
           validation: { isRequired: true },
@@ -143,7 +147,7 @@ export default config({
     // 04 // EXPO ARCHIVE (FOLDER: src/data/expo/*.json)
     // =========================================================================
     expo: collection({
-      label: '04 // EXPO',
+      label: '03 // EXPO',
       slugField: 'id',
       path: 'src/data/expo/*',
       format: { data: 'json' },

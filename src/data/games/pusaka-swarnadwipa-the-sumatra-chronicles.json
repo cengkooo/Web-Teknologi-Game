@@ -1,0 +1,60 @@
+{
+  "slug": "pusaka-swarnadwipa-the-sumatra-chronicles",
+  "title": "Pusaka Swarnadwipa: The Sumatra Chronicles",
+  "developer": "Piksel Pusaka",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "2D Action-Adventure dengan gaya visual Pixel Art yang terinspirasi langsung dari seni ukir dan kekayaan alam Sumatera. Dalam permainan in...",
+  "description": "2D Action-Adventure dengan gaya visual Pixel Art yang terinspirasi langsung dari seni ukir dan kekayaan alam Sumatera. Dalam permainan ini, pemain diajak untuk berpetualang sebagai \"Sang Penjaga Terakhir\" guna mengumpulkan pusaka suci dan menjaga keseimbangan pulau dari ancaman entitas kegelapan.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Shooter",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzI0MzkzMTM5LnBuZw==/original/WZUon5.png",
+  "screenshots": [],
+  "itchUrl": "https://fadilrifqi.itch.io/pustaka-swarnadwipa",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "martua-kevin-andreas-mual-h-lubis",
+      "name": "Martua Kevin Andreas Mual H. Lubis",
+      "nim": "122140119",
+      "role": "Director"
+    },
+    {
+      "id": "novia-listiani",
+      "name": "Novia Listiani",
+      "nim": "122140192",
+      "role": "Sound Engineer"
+    },
+    {
+      "id": "rizky-abdillah",
+      "name": "Rizky Abdillah",
+      "nim": "122140127",
+      "role": "Game Designer"
+    },
+    {
+      "id": "eichal-elphindo-ginting",
+      "name": "Eichal Elphindo Ginting",
+      "nim": "122140165",
+      "role": "Programmer"
+    },
+    {
+      "id": "muhammad-fadil-ataullah-rifqi",
+      "name": "Muhammad Fadil Ataullah Rifqi",
+      "nim": "122140205",
+      "role": "Game artist"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

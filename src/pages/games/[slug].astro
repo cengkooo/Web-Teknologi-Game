@@ -54,6 +54,16 @@ const contributorsList = game.contributors.map((c) => ({
   <div class="border border-[#262626] bg-[#0A0A0A] p-6 sm:p-8 mb-8">
     <div class="flex flex-wrap items-center gap-2 mb-3">
       <EngineBadge engine={game.engine} size="md" />
+      {game.developer && (
+        <span class="px-2 py-1 text-xs font-mono font-bold border border-[#262626] bg-black text-white">
+          DEV: {game.developer.toUpperCase()}
+        </span>
+      )}
+      {game.semester && (
+        <span class="px-2 py-1 text-xs font-mono font-bold border border-[#262626] bg-[#141414] text-white">
+          SEMESTER: {game.semester}
+        </span>
+      )}
       <span class="px-2 py-1 text-xs font-mono border border-[#262626] bg-black text-[#A3A3A3]">
         VERSION: {game.engineVersion}
       </span>
@@ -77,24 +87,14 @@ const contributorsList = game.contributors.map((c) => ({
 
     <!-- Header Action Links -->
     <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-[#1F1F1F]">
-      <a
-        href={game.githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider border border-white hover:bg-black hover:text-white transition-colors flex items-center gap-2"
-      >
-        <span>[DOWNLOAD / SOURCE ON GITHUB]</span>
-        <span>&nearr;</span>
-      </a>
-
       {game.itchUrl && (
         <a
           href={game.itchUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="px-4 py-2 bg-black text-white font-mono font-bold text-xs uppercase tracking-wider border border-[#262626] hover:bg-white hover:text-black transition-colors flex items-center gap-2"
+          class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider border border-white hover:bg-black hover:text-white transition-colors flex items-center gap-2"
         >
-          <span>[DOWNLOAD ON ITCH.IO]</span>
+          <span>[PLAY / DOWNLOAD ON ITCH.IO]</span>
           <span>&nearr;</span>
         </a>
       )}
@@ -122,28 +122,21 @@ const contributorsList = game.contributors.map((c) => ({
               alt={game.title}
               class="w-full h-full object-cover"
             />
-            <div class="absolute bottom-4 left-4 right-4 p-3 bg-black/90 border border-[#262626] font-mono text-xs text-[#A3A3A3] flex flex-wrap items-center justify-between gap-3">
-              <span>Game build dapat diunduh melalui repositori GitHub atau halaman itch.io.</span>
-              <div class="flex items-center gap-2">
-                <a
-                  href={game.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-white hover:underline font-bold"
-                >
-                  [GITHUB &nearr;]
-                </a>
-                {game.itchUrl && (
+            <div class="absolute bottom-4 left-4 right-4 p-3 bg-black/90 border border-[#262626] font-mono text-xs text-[#FFFFFF] flex flex-wrap items-center justify-between gap-3">
+              <span>Game build dapat diunduh langsung melalui halaman resmi itch.io.</span>
+              {game.itchUrl && (
+                <div class="flex items-center gap-2">
                   <a
                     href={game.itchUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-white hover:underline font-bold"
+                    class="hover:underline font-bold transition-colors hover:text-white"
+                    style="color: #737373 !important;"
                   >
                     [ITCH.IO &nearr;]
                   </a>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -216,13 +209,16 @@ const contributorsList = game.contributors.map((c) => ({
         <div class="p-4 space-y-2.5">
           {contributorsList.map((item) => (
             <div class="border border-[#262626] bg-black p-3 font-mono flex items-center justify-between gap-3">
-              <a
-                href={`/mahasiswa#${item.id}`}
-                data-astro-prefetch="hover"
-                class="text-white font-bold text-xs hover:underline truncate"
-              >
-                {item.student ? item.student.name : item.id}
-              </a>
+              <div class="min-w-0">
+                <span class="text-white font-bold text-xs truncate block">
+                  {item.student ? item.student.name : item.id}
+                </span>
+                {item.student?.nim && (
+                  <span class="text-[#737373] text-[10px] block mt-0.5">
+                    NIM: {item.student.nim}
+                  </span>
+                )}
+              </div>
               <span class="text-[#A3A3A3] text-[11px] border border-[#262626] px-2 py-0.5 bg-[#0F0F0F] shrink-0 font-medium">
                 {item.role}
               </span>

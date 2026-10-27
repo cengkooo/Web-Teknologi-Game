@@ -1,0 +1,65 @@
+{
+  "slug": "wulan",
+  "title": "Wulan",
+  "developer": "Misty Game Studio",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "Wulan adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Misty Game Studio menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjM4OTUyLnBuZw==/original/61TkbU.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg2MC5wbmc=/original/uUVQWz.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg2MS5wbmc=/original/%2Bj%2B3wn.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg2Mi5wbmc=/original/zFqIjO.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg1OS5wbmc=/original/70zD%2Be.png"
+  ],
+  "itchUrl": "https://misty-game-studio.itch.io/wulan-cbt-1",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "alief-arrly-prasetyo",
+      "name": "Alief Arrly Prasetyo",
+      "nim": "120140207",
+      "role": "Programmer"
+    },
+    {
+      "id": "ardhito-saputra",
+      "name": "Ardhito Saputra",
+      "nim": "120140003",
+      "role": "Sound, Programmer"
+    },
+    {
+      "id": "justin-halim",
+      "name": "Justin Halim",
+      "nim": "120140185",
+      "role": "Director, Programmer"
+    },
+    {
+      "id": "rizqi-fiesta-febrianto",
+      "name": "Rizqi Fiesta Febrianto",
+      "nim": "120140171",
+      "role": "Artist, Programmer"
+    },
+    {
+      "id": "sultan-ahmad-alfath",
+      "name": "Sultan Ahmad Alfath",
+      "nim": "120140046",
+      "role": "Designer, Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

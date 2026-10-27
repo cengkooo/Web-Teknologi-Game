@@ -1,0 +1,59 @@
+{
+  "slug": "pedjuang-nusantara",
+  "title": "Pedjuang Nusantara",
+  "developer": "IzinPuhSepuh Production (IPSP)",
+  "semester": "2023/2024 Ganjil",
+  "semesterKey": "23-24-ganjil",
+  "tagline": "\"Pedjuang Nusantara\" adalah sebuah side scroller run and gun game yang menghadirkan pemain dalam peran\nseorang pahlawan Nusantara yang be...",
+  "description": "\"Pedjuang Nusantara\" adalah sebuah side scroller run and gun game yang menghadirkan pemain dalam peran\nseorang pahlawan Nusantara yang berani. Dalam petualangan epik ini, pemain akan menghadapi\npenjajah dengan senjata unik mereka: bambu runcing dan senjata drop item lainnya. Berbekal\nkeberanian dan ketangguhan, Anda akan memimpin pahlawan ini melalui medan perang yang\nberagam di seluruh Nusantara.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Shooter",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE0MjUwMDcwLnBuZw==/original/3ccTf2.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI0OTk3Ny5qcGc=/original/ixuIsz.jpg",
+    "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI0OTk2Ny5qcGc=/original/0ESy68.jpg",
+    "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI1MDExOS5qcGc=/original/bevuzD.jpg",
+    "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI1MDEyMC5qcGc=/original/VKit1T.jpg"
+  ],
+  "itchUrl": "https://ipsp.itch.io/game-2d-pedjuang-nusantara",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "jossy-raya-gopasda-saragih",
+      "name": "Jossy Raya Gopasda Saragih",
+      "nim": "120140073",
+      "role": "Director, Programmer"
+    },
+    {
+      "id": "naufal-rotif-dewanto",
+      "name": "Naufal Rotif Dewanto",
+      "nim": "120140107",
+      "role": "Artist, Programmer"
+    },
+    {
+      "id": "michael-pascalis-simanjuntak",
+      "name": "Michael Pascalis Simanjuntak",
+      "nim": "120140137",
+      "role": "Sound Engineer, Programmer"
+    },
+    {
+      "id": "oloan-soaloon-napitupulu",
+      "name": "Oloan Soaloon Napitupulu",
+      "nim": "120140097",
+      "role": "Artist, Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

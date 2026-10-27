@@ -1,0 +1,67 @@
+{
+  "slug": "kkn-the-lost-village",
+  "title": "KKN: The Lost Village",
+  "developer": "Artemis Production",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Top down adventure tentang seorang mahasiswa yang sedang melakukan KKN di sebuah desa di Sumatera. Mahasiswa tersebut harus membangun hub...",
+  "description": "Top down adventure tentang seorang mahasiswa yang sedang melakukan KKN di sebuah desa di Sumatera. Mahasiswa tersebut harus membangun hubungan dengan penduduk lokal, menyelesaikan berbagai tugas, serta menemukan rahasia tersembunyi yang ada pada desa tersebut.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows",
+    "Web"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODMzMDM0LnBuZw==/original/nnGaEc.png",
+  "screenshots": [],
+  "itchUrl": "https://artemis-production.itch.io/kkn-the-lost-village",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "muhammad-daffa-abiyyu-muhana",
+      "name": "Muhammad Daffa Abiyyu Muhana",
+      "nim": "121140222",
+      "role": "Game Director"
+    },
+    {
+      "id": "farhan-rizky-gunawan",
+      "name": "Farhan Rizky Gunawan",
+      "nim": "121140200",
+      "role": "Designer"
+    },
+    {
+      "id": "dimas-saputra",
+      "name": "Dimas Saputra",
+      "nim": "121140059",
+      "role": "Designer"
+    },
+    {
+      "id": "rizki-esa-fadillah",
+      "name": "Rizki Esa Fadillah",
+      "nim": "121140084",
+      "role": "Programmer"
+    },
+    {
+      "id": "amdhan-anggoro",
+      "name": "Amdhan Anggoro",
+      "nim": "121140226",
+      "role": "Composer"
+    },
+    {
+      "id": "hilmanda-panji-orienski",
+      "name": "Hilmanda Panji Orienski",
+      "nim": "120140130",
+      "role": "Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

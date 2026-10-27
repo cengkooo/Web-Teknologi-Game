@@ -12,18 +12,6 @@ const navItems = siteConfig.navItems;
 ---
 
 <header class="border-b border-[#262626] bg-[#0A0A0A] sticky top-0 z-50">
-  <!-- Top System Bar -->
-  <div class="border-b border-[#262626] px-4 py-1.5 flex items-center justify-between text-[11px] font-mono text-[#737373]">
-    <div class="flex items-center space-x-3">
-      <span class="inline-block w-2 h-2 bg-white"></span>
-      <span class="tracking-wider text-white font-bold">GAME TECH SHOWCASE</span>
-      <span class="hidden sm:inline border-l border-[#262626] pl-3">MATA KULIAH TEKNOLOGI GAME</span>
-    </div>
-    <div class="flex items-center space-x-3 sm:space-x-4">
-      <ThemeToggle />
-    </div>
-  </div>
-
   <!-- Main Navigation Bar -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-stretch justify-between h-14">
@@ -31,13 +19,13 @@ const navItems = siteConfig.navItems;
       <a
         href="/"
         data-astro-prefetch="hover"
-        class="flex items-center gap-3 text-white border-r border-[#262626] pr-6 hover:text-white group"
+        class="flex items-center gap-3 text-white border-r border-[#262626] pr-4 sm:pr-6 hover:text-white group shrink-0"
       >
         <div class="w-8 h-8 bg-white text-black font-display font-black flex items-center justify-center text-sm tracking-tighter">
           TG
         </div>
         <div class="flex flex-col">
-          <span class="font-display font-black text-sm tracking-widest text-white leading-none">
+          <span class="font-display font-black text-xs sm:text-sm tracking-widest text-white leading-none">
             TEKNOLOGI GAME
           </span>
           <span class="font-mono text-[9px] tracking-widest text-[#737373] group-hover:text-white transition-colors">
@@ -46,27 +34,110 @@ const navItems = siteConfig.navItems;
         </div>
       </a>
 
-      <!-- Nav Items Matrix -->
-      <nav class="flex items-stretch overflow-x-auto">
-        {navItems.map((item) => {
-          const isActive = item.href === '/' 
-            ? currentPath === '/' 
-            : currentPath.startsWith(item.href);
-          return (
-            <a
-              href={item.href}
-              data-astro-prefetch="hover"
-              class={`flex items-center px-4 sm:px-6 text-xs sm:text-sm font-mono tracking-wider border-r border-[#262626] transition-colors whitespace-nowrap ${
-                isActive
-                  ? 'bg-white text-black font-bold border-white'
-                  : 'text-[#737373] hover:text-white hover:bg-[#141414]'
-              }`}
-            >
-              {item.label}
-            </a>
-          );
-        })}
-      </nav>
+      <!-- Nav Items & Controls Matrix -->
+      <div class="flex items-stretch">
+        <!-- Desktop Nav Items -->
+        <nav class="hidden md:flex items-stretch">
+          {navItems.map((item) => {
+            const isActive = item.href === '/' 
+              ? currentPath === '/' 
+              : currentPath.startsWith(item.href);
+            return (
+              <a
+                href={item.href}
+                data-astro-prefetch="hover"
+                class={`flex items-center px-4 sm:px-6 text-xs sm:text-sm font-mono tracking-wider border-r border-[#262626] transition-colors whitespace-nowrap ${
+                  isActive
+                    ? 'bg-white text-black font-bold border-white'
+                    : 'text-[#737373] hover:text-white hover:bg-[#141414]'
+                }`}
+              >
+                {item.label}
+              </a>
+            );
+          })}
+        </nav>
+
+        <!-- Right Controls: Light/Dark Mode + Mobile Hamburger -->
+        <div class="flex items-center gap-2 pl-3 sm:pl-4">
+          <ThemeToggle />
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle Mobile Navigation Menu"
+            aria-expanded="false"
+            class="flex md:hidden items-center justify-center w-8 h-8 text-xs font-mono font-bold border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white transition-colors cursor-pointer"
+          >
+            <span id="menu-icon-bars" class="text-sm font-bold">☰</span>
+            <span id="menu-icon-close" class="hidden text-sm font-bold">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-[#262626] bg-[#0A0A0A] font-mono text-xs"
+  >
+    <div class="divide-y divide-[#262626]">
+      {navItems.map((item) => {
+        const isActive = item.href === '/' 
+          ? currentPath === '/' 
+          : currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            data-astro-prefetch="hover"
+            class={`px-5 py-3.5 flex items-center justify-between tracking-wider transition-colors ${
+              isActive
+                ? 'bg-white text-black font-bold'
+                : 'text-[#737373] hover:text-white hover:bg-[#141414]'
+            }`}
+          >
+            <span>{item.label}</span>
+            <span class="text-[10px]">{isActive ? '[AKTIF]' : '→'}</span>
+          </a>
+        );
+      })}
     </div>
   </div>
 </header>
+
+<script is:inline>
+  function setupMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconBars = document.getElementById('menu-icon-bars');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    if (!btn || !menu) return;
+
+    btn.onclick = () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      menu.classList.toggle('hidden');
+      if (iconBars && iconClose) {
+        iconBars.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      }
+    };
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.onclick = () => {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        if (iconBars && iconClose) {
+          iconBars.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      };
+    });
+  }
+
+  setupMobileMenu();
+  document.addEventListener('astro:after-swap', setupMobileMenu);
+</script>

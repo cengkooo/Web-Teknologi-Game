@@ -12,7 +12,6 @@
   "navItems": [
     { "label": "01 // HOME", "href": "/" },
     { "label": "02 // GAMES", "href": "/games" },
-    { "label": "03 // MAHASISWA", "href": "/mahasiswa" },
-    { "label": "04 // EXPO", "href": "/expo" }
+    { "label": "03 // EXPO", "href": "/expo" }
   ]
 }

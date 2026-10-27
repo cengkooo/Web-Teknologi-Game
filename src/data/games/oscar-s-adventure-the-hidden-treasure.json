@@ -1,0 +1,64 @@
+{
+  "slug": "oscar-s-adventure-the-hidden-treasure",
+  "title": "Oscar's Adventure: The Hidden Treasure",
+  "developer": "Meowsterpiece Studios",
+  "semester": "2023/2024 Ganjil",
+  "semesterKey": "23-24-ganjil",
+  "tagline": "Seekor kucing bernama \"Oscar\" adalah kucing yang suka menjelajahi hutan-hutan yang penuh misteri. Suatu hari, Oscar menemukan peta kuno y...",
+  "description": "Seekor kucing bernama \"Oscar\" adalah kucing yang suka menjelajahi hutan-hutan yang penuh misteri. Suatu hari, Oscar menemukan peta kuno yang mengarahkannya ke sebuah hutan yang sangat lebat, dimana legenda menyebutkan terdapat sebuah kuil kuno yang penuh dengan harta karun. Tanpa ragu, Oscar memulai perjalanan seru ini.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE0MjUxMjcxLnBuZw==/original/2w7pYq.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMC5wbmc=/original/43K4bz.png",
+    "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMS5wbmc=/original/F2RRJ8.png",
+    "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMi5wbmc=/original/16J5ph.png",
+    "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMy5wbmc=/original/rc2JG0.png"
+  ],
+  "itchUrl": "https://meowsterpiece-4.itch.io/oscars-adventure-the-hidden-treasure",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "adjie-surya-nugraha",
+      "name": "Adjie Surya Nugraha",
+      "nim": "118140146",
+      "role": "Director"
+    },
+    {
+      "id": "ramadhanu-britan-linardi",
+      "name": "Ramadhanu Britan Linardi",
+      "nim": "118140148",
+      "role": "Artist"
+    },
+    {
+      "id": "erdy-fitriansyah",
+      "name": "Erdy Fitriansyah",
+      "nim": "118140147",
+      "role": "Designer"
+    },
+    {
+      "id": "nestiawan-ferdiyanto",
+      "name": "Nestiawan Ferdiyanto",
+      "nim": "118140190",
+      "role": "Programmer"
+    },
+    {
+      "id": "slamet-nugroho",
+      "name": "Slamet Nugroho",
+      "nim": "118140189",
+      "role": "Sound Engineer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

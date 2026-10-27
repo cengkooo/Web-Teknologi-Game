@@ -1,0 +1,60 @@
+{
+  "slug": "gelud",
+  "title": "Gelud",
+  "developer": "Gabut Game Dev",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "Gelud adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Gabut Game Dev menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjM2Njg4LnBuZw==/original/kIlz5D.png",
+  "screenshots": [],
+  "itchUrl": "https://fitrailyasa12.itch.io/gelud",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "fitra-ilyasa",
+      "name": "Fitra Ilyasa",
+      "nim": "120140048",
+      "role": "Director/Designer"
+    },
+    {
+      "id": "hilmanda-panji-orienski",
+      "name": "Hilmanda",
+      "nim": "120140130",
+      "role": "Programmer"
+    },
+    {
+      "id": "minggus",
+      "name": "Minggus",
+      "nim": "118140122",
+      "role": "Programmer"
+    },
+    {
+      "id": "ryco-afta-gian-aidil",
+      "name": "Ryco Afta Gian Aidil",
+      "nim": "120140159",
+      "role": "Sound"
+    },
+    {
+      "id": "muhammad-rafiif",
+      "name": "M Rafiif",
+      "nim": "120140148",
+      "role": "Artist"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

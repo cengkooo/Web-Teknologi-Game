@@ -1,0 +1,64 @@
+{
+  "slug": "operation-rafflesia-last-hope",
+  "title": "Operation Rafflesia: Last Hope",
+  "developer": "Sigma Skibidi Studio (SSS)",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "2D side-scrolling shooter yang berlatar di Sumatera apokaliptik, di mana pemain mengendalikan Mayor Ghulwanidris, seorang prajurit elit y...",
+  "description": "2D side-scrolling shooter yang berlatar di Sumatera apokaliptik, di mana pemain mengendalikan Mayor Ghulwanidris, seorang prajurit elit yang bertugas menemukan vaksin yang terbuat dari bunga Rafflesia yang langka untuk menyelamatkan umat manusia dari wabah zombie.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Shooter",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODMyMDg1LmpwZw==/original/hkE%2FZc.jpg",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE0My5qcGc=/original/H3Qsor.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE0Mi5qcGc=/original/qup%2BiT.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE1OS5qcGc=/original/3hFXnT.jpg"
+  ],
+  "itchUrl": "https://daffafahreza4.itch.io/operation-rafflesia-last-hope",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "varell-anthonio",
+      "name": "Varell Anthonio",
+      "nim": "121140122",
+      "role": "Game Designer, Director"
+    },
+    {
+      "id": "ihsan-triyadi",
+      "name": "Ihsan Triyadi",
+      "nim": "121140163",
+      "role": "Game Designer / artist"
+    },
+    {
+      "id": "andreas-sihotang",
+      "name": "Andreas Sihotang",
+      "nim": "121140168",
+      "role": "Programmer"
+    },
+    {
+      "id": "m-daffa-fahreza",
+      "name": "M. Daffa Fahreza",
+      "nim": "121140178",
+      "role": "Programmer/ sound Engineer"
+    },
+    {
+      "id": "pandu-putra-mulwanda",
+      "name": "Pandu Putra Mulwanda",
+      "nim": "121140176",
+      "role": "Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

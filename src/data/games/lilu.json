@@ -1,0 +1,64 @@
+{
+  "slug": "lilu",
+  "title": "Lilu",
+  "developer": "Groundhog Studio",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "First-person horror berlatar di Sumatera utara dengan karakter utama seorang pria yang mengalami kejadian tak terduga. Kejadian ini memak...",
+  "description": "First-person horror berlatar di Sumatera utara dengan karakter utama seorang pria yang mengalami kejadian tak terduga. Kejadian ini memaksanya untuk berpindah antar alam, bertujuan untuk mengembalikan roh seorang korban kecelakaan kembali ke alamnya.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Horror"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": true,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODQ4OTM3LmpwZw==/original/7fsCF4.jpg",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTYzNy5qcGc=/original/nplAqb.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTY0MC5qcGc=/original/d6POde.jpg",
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTY1Ni5qcGc=/original/RMJmcz.jpg"
+  ],
+  "itchUrl": "https://groundhogstudioifitera.itch.io/lilu",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "yohanes-christian-panjaitan",
+      "name": "Yohanes Christian Panjaitan",
+      "nim": "122140217",
+      "role": "Game Designer"
+    },
+    {
+      "id": "yossi-afridho",
+      "name": "Yossi Afridho",
+      "nim": "122140211",
+      "role": "Artist, Sound Engineer"
+    },
+    {
+      "id": "muhammad-zahran-albara",
+      "name": "Muhammad Zahran Albara",
+      "nim": "122140240",
+      "role": "Lead Programmer"
+    },
+    {
+      "id": "freddy-harahap",
+      "name": "Freddy Harahap",
+      "nim": "122140018",
+      "role": "Programmer, Artist"
+    },
+    {
+      "id": "dwi-arthur-revangga",
+      "name": "Dwi Arthur Revangga",
+      "nim": "122140144",
+      "role": "Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

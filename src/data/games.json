@@ -1,320 +1,1997 @@
 {
   "games": [
     {
-      "slug": "kinetic-strata",
-    "title": "Kinetic Strata",
-    "tagline": "Game aksi pertempuran mecha 3D dengan lingkungan voxel yang dinamis dan dapat dihancurkan.",
-    "description": "Kinetic Strata dikembangkan sebagai proyek akhir yang menggabungkan elemen aksi taktis dan fisika interaktif. Tim mahasiswa merancang alur gameplay di mana pemain dapat meruntuhkan struktur arena untuk mengecoh lawan. Proses pengembangannya berfokus pada integrasi algoritma voxel marching cubes di Godot, penyesuaian keseimbangan senjata, serta optimasi performa agar tetap mulus saat dimainkan langsung melalui browser.",
-    "engine": "Godot",
-    "engineVersion": "Godot 4.3 Stable",
-    "genre": ["Voxel Action", "Tactical Combat", "Sci-Fi"],
-    "platform": ["Windows", "Linux"],
-    "batchYear": 2024,
-    "featured": true,
-    "posterImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/kinetic-strata",
-    "contributors": [
-      { "id": "alex-reza", "role": "Lead Gameplay & Systems" },
-      { "id": "budi-setiawan", "role": "Physics & Level Interaction" }
-    ],
-    "metrics": {
-      "polygonCount": "1.2M Tris / Frame",
-      "drawCalls": "180 Max",
-      "tickRate": "60 Hz Stable",
-      "buildSize": "38.4 MB"
+      "slug": "sawit-harvester",
+      "title": "Sawit Harvester",
+      "developer": "Chill Guys",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Simulasi Aksi 3D yang menempatkan pemain sebagai pekerja perkebunan kelapa sawit di Sumatera. Tugas utamanya adalah memanen buah sawit ya...",
+      "description": "Simulasi Aksi 3D yang menempatkan pemain sebagai pekerja perkebunan kelapa sawit di Sumatera. Tugas utamanya adalah memanen buah sawit yang sudah matang, mengangkutnya, dan mengumpulkannya untuk mendapatkan skor setinggi mungkin, sambil melawan pencuri sawit.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Simulation"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2025,
+      "featured": true,
+      "posterImage": "https://img.itch.zone/aW1nLzI0NTE3NzA5LmpwZWc=/original/il61Jh.jpeg",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg4OC5wbmc=/original/eZd%2BMq.png",
+        "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg5MS5wbmc=/original/ouScIB.png",
+        "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg5MC5wbmc=/original/XprkgK.png",
+        "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg4OS5wbmc=/original/7V9J5O.png"
+      ],
+      "itchUrl": "https://chillguys.itch.io/sawit-harvester",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "febrian-valentino-nugroho",
+          "name": "Febrian Valentino Nugroho",
+          "nim": "123140034",
+          "role": "Programmer"
+        },
+        {
+          "id": "adi-septriansyah",
+          "name": "Adi Septriansyah",
+          "nim": "123140021",
+          "role": "Game Artist/Programmer"
+        },
+        {
+          "id": "jonathan-nicholaus-damero-sinaga",
+          "name": "Jonathan Nicholaus Damero Sinaga",
+          "nim": "123140153",
+          "role": "Game Designer/Programmer"
+        },
+        {
+          "id": "febrian-valentino-nugroho",
+          "name": "Mario Fransiskus Sitepu",
+          "nim": "123140034",
+          "role": "Director"
+        },
+        {
+          "id": "anselmus-herpin-hasugian",
+          "name": "Anselmus Herpin Hasugian",
+          "nim": "123140020",
+          "role": "Programmer/Sound Engineer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "sumateran-roar",
+      "title": "Sumateran Roar",
+      "developer": "AC Adapter",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Survival Co-op dimana empat manusia yang tersesat di dalam hutan tropis Sumatera, diintai seekor Harimau Sumatera. Pemain berperan sebaga...",
+      "description": "Survival Co-op dimana empat manusia yang tersesat di dalam hutan tropis Sumatera, diintai seekor Harimau Sumatera. Pemain berperan sebagai manusia atau harimau. Tujuan manusia hanya satu: bekerja sama untuk mengaktifkan mesin yang tersembunyi di beberapa titik hutan, untuk keluar dari hutan.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Survival",
+        "Co-Op"
+      ],
+      "platform": [
+        "Windows",
+        "macOS"
+      ],
+      "batchYear": 2025,
+      "featured": true,
+      "posterImage": "https://img.itch.zone/aW1nLzI0NDE0NTc2LmpwZWc=/original/J3w0Av.jpeg",
+      "screenshots": [],
+      "itchUrl": "https://sumateranroar.itch.io/sumateranroar",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "syuhada-rantisi",
+          "name": "Syuhada Rantisi",
+          "nim": "122140092",
+          "role": "Director/Programmer"
+        },
+        {
+          "id": "randy-hendriyawan",
+          "name": "Randy Hendriyawan",
+          "nim": "122140171",
+          "role": "Programmer"
+        },
+        {
+          "id": "daniel-ferryal-zuhri",
+          "name": "Daniel Ferryal Zuhri",
+          "nim": "122140114",
+          "role": "Artist"
+        },
+        {
+          "id": "muhammad-riveldo-hermawan-putra",
+          "name": "Muhammad Riveldo Hermawan Putra",
+          "nim": "122140037",
+          "role": "Designer"
+        },
+        {
+          "id": "elkana-juanro-manullang",
+          "name": "Elkana Juanro Manullang",
+          "nim": "122140168",
+          "role": "Composer/Sound Engineer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "legacy-of-andalas",
+      "title": "Legacy of Andalas",
+      "developer": "ARATERA Studio",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Vampire Survivor-Like dengan sudut pandang kamera Top-Down, permainan ini mengambil tempat di reruntuhan Kerajaan Andalas di Pulau Sumate...",
+      "description": "Vampire Survivor-Like dengan sudut pandang kamera Top-Down, permainan ini mengambil tempat di reruntuhan Kerajaan Andalas di Pulau Sumatera melawan invasi Raja Iblis Durjana. Gunakan senjata tradisional seperti Rencong, Piarik, dan Sumpitan untuk melawan musuh yang diadaptasi dari makhluk mitologi lokal.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2025,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzI0NTE5MDM4LnBuZw==/original/ZK89Tc.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTA0MC5qcGc=/original/VQWG1W.jpg",
+        "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTA0MS5qcGc=/original/wTP4Pr.jpg",
+        "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTIxOC5qcGc=/original/1TYE0r.jpg"
+      ],
+      "itchUrl": "https://juustfinn.itch.io/legacy-of-andalas",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "garland-wijaya",
+          "name": "Garland Wijaya",
+          "nim": "122140001",
+          "role": "Director/Programmer"
+        },
+        {
+          "id": "kenneth-austin-wijaya",
+          "name": "Kenneth Austin Wijaya",
+          "nim": "122140043",
+          "role": "Designer/Programmer"
+        },
+        {
+          "id": "festus-mikhael",
+          "name": "Festus Mikhael",
+          "nim": "122140087",
+          "role": "Game Artist"
+        },
+        {
+          "id": "lucas-hamonangan-simaremare",
+          "name": "Lucas Hamonangan Simaremare",
+          "nim": "122140196",
+          "role": "Programmer"
+        },
+        {
+          "id": "jonathan-jethro",
+          "name": "Jonathan Jethro",
+          "nim": "122140213",
+          "role": "Composer/Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "hollow-tree-another-realm",
+      "title": "Hollow Tree: Another Realm",
+      "developer": "Waku Waku Studio",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Horror Top Down dimana bermain sebagai Arka, yang harus menemukan pecahan-pecahan prasasti kuno yang tersembunyi di dimensi \"Pintu Rimba\"...",
+      "description": "Horror Top Down dimana bermain sebagai Arka, yang harus menemukan pecahan-pecahan prasasti kuno yang tersembunyi di dimensi \"Pintu Rimba\" sambil menghadapi atmosfer yang mistis dan horor.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Horror"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2025,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzI0Mzg0Mjk5LnBuZw==/original/nKR9J%2F.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvNDA5MDk0My8yNDM4NTIwNC5wbmc=/original/p8km4X.png",
+        "https://img.itch.zone/aW1hZ2UvNDA5MDk0My8yNDM4NTIwNS5wbmc=/original/9T4gng.png"
+      ],
+      "itchUrl": "https://wakuwakustudio.itch.io/hollow-tree-another-realm",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "havidz-ridho-pratama",
+          "name": "Havidz Ridho Pratama",
+          "nim": "122140160",
+          "role": "Designer"
+        },
+        {
+          "id": "royfran-roger-valentino",
+          "name": "Royfran Roger Valentino",
+          "nim": "122140239",
+          "role": "Director"
+        },
+        {
+          "id": "hillmy-dyan-nugraha-huda",
+          "name": "Hillmy Dyan Nugraha Huda",
+          "nim": "121140083",
+          "role": "Sound Engineer"
+        },
+        {
+          "id": "jhoel-robert-sugiono-hutagalung",
+          "name": "Jhoel Robert Sugiono Hutagalung",
+          "nim": "122140174",
+          "role": "Programmer"
+        },
+        {
+          "id": "luthfianya-isyathun-rodiyyah",
+          "name": "Luthfianya Isyathun Rodiyyah",
+          "nim": "122140185",
+          "role": "Game Artist"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "bahani-bani",
+      "title": "Bahani Bani",
+      "developer": "YPS Studio",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Typing 2D yang menceritakan Bani, seorang pangeran baik yang mendapatkan kekuatan untuk membuat perkataannya menjadi kenyataan setelah be...",
+      "description": "Typing 2D yang menceritakan Bani, seorang pangeran baik yang mendapatkan kekuatan untuk membuat perkataannya menjadi kenyataan setelah bertapa di hutan bambu. Gameplay dari game ini adalah mengetik kata kata yang ada di atas kepala musuh sebelum musuh melewati pemain.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows",
+        "Web"
+      ],
+      "batchYear": 2025,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzI0MzYxNTA4LnBuZw==/original/dGYJl9.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvNDA4NzA4MS8yNDUyMTIzNy5wbmc=/original/6FQG9n.png",
+        "https://img.itch.zone/aW1hZ2UvNDA4NzA4MS8yNDUyMTE2Ni5wbmc=/original/e0KVzf.png",
+        "https://img.itch.zone/aW1hZ2UvNDA4NzA4MS8yNDUyMTE3MS5wbmc=/original/boNR9v.png"
+      ],
+      "itchUrl": "https://yps-studio.itch.io/bahana-bani",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "m-zahran-dhiyaul-haq",
+          "name": "M. Zahran Dhiyaul Haq",
+          "nim": "123140120",
+          "role": "Director/Programmer"
+        },
+        {
+          "id": "albi-r-suseno",
+          "name": "Albi R. Suseno",
+          "nim": "120140095",
+          "role": "Sound Engineer"
+        },
+        {
+          "id": "m-hafizurrahman-akbar",
+          "name": "M. Hafizurrahman Akbar",
+          "nim": "123140123",
+          "role": "Art Director"
+        },
+        {
+          "id": "jordy-anugrah-akbar",
+          "name": "Jordy Anugrah Akbar",
+          "nim": "123140141",
+          "role": "Designer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "pusaka-swarnadwipa-the-sumatra-chronicles",
+      "title": "Pusaka Swarnadwipa: The Sumatra Chronicles",
+      "developer": "Piksel Pusaka",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "2D Action-Adventure dengan gaya visual Pixel Art yang terinspirasi langsung dari seni ukir dan kekayaan alam Sumatera. Dalam permainan in...",
+      "description": "2D Action-Adventure dengan gaya visual Pixel Art yang terinspirasi langsung dari seni ukir dan kekayaan alam Sumatera. Dalam permainan ini, pemain diajak untuk berpetualang sebagai \"Sang Penjaga Terakhir\" guna mengumpulkan pusaka suci dan menjaga keseimbangan pulau dari ancaman entitas kegelapan.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Shooter",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2025,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzI0MzkzMTM5LnBuZw==/original/WZUon5.png",
+      "screenshots": [],
+      "itchUrl": "https://fadilrifqi.itch.io/pustaka-swarnadwipa",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "martua-kevin-andreas-mual-h-lubis",
+          "name": "Martua Kevin Andreas Mual H. Lubis",
+          "nim": "122140119",
+          "role": "Director"
+        },
+        {
+          "id": "novia-listiani",
+          "name": "Novia Listiani",
+          "nim": "122140192",
+          "role": "Sound Engineer"
+        },
+        {
+          "id": "rizky-abdillah",
+          "name": "Rizky Abdillah",
+          "nim": "122140127",
+          "role": "Game Designer"
+        },
+        {
+          "id": "eichal-elphindo-ginting",
+          "name": "Eichal Elphindo Ginting",
+          "nim": "122140165",
+          "role": "Programmer"
+        },
+        {
+          "id": "muhammad-fadil-ataullah-rifqi",
+          "name": "Muhammad Fadil Ataullah Rifqi",
+          "nim": "122140205",
+          "role": "Game artist"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "entropy-the-metal-anomaly",
+      "title": "Entropy : The Metal Anomaly",
+      "developer": "Virmar Studio",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Action-adventure 2D side-scroller berlatar Sumatera pasca-apokaliptik tahun 2798 dimana pemain berperan sebagai \"The Anomaly\". Game ini m...",
+      "description": "Action-adventure 2D side-scroller berlatar Sumatera pasca-apokaliptik tahun 2798 dimana pemain berperan sebagai \"The Anomaly\". Game ini memadukan eksplorasi, pertarungan strategis melawan robot, dan mengalahkan boss di setiap wilayah untuk memenangkan game.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2025,
+      "featured": false,
+      "posterImage": "/assets/uploads/games/entropy-the-metal-anomaly.jpg",
+      "screenshots": [],
+      "itchUrl": "https://sinavarasina.itch.io/entropy-the-metal-anomaly",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "jefri-wahyu-fernando-sembiring",
+          "name": "Jefri Wahyu Fernando Sembiring",
+          "nim": "123140206",
+          "role": "Sound Engineer"
+        },
+        {
+          "id": "varasina-farmadani",
+          "name": "Varasina Farmadani",
+          "nim": "123140107",
+          "role": "Programmer"
+        },
+        {
+          "id": "ivan-nandira-mangunang",
+          "name": "Ivan Nandira Mangunang",
+          "nim": "123140094",
+          "role": "Game Designer"
+        },
+        {
+          "id": "michael-mathew",
+          "name": "Michael Mathew",
+          "nim": "123140101",
+          "role": "Director"
+        },
+        {
+          "id": "ribka-hana-josephine-situmorang",
+          "name": "Ribka Hana Josephine Situmorang",
+          "nim": "123140103",
+          "role": "Game Artist"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "temple-of-abelii",
+      "title": "Temple of Abelii",
+      "developer": "DoaIbu Games",
+      "semester": "2025/2026 Ganjil",
+      "semesterKey": "25-26-ganjil",
+      "tagline": "Action-platformer 2D yang menceritakan Royhands, pemburu ilegal yang terkutuk menjadi orangutan setelah menyentuh artefak \"Abelii\". Pemai...",
+      "description": "Action-platformer 2D yang menceritakan Royhands, pemburu ilegal yang terkutuk menjadi orangutan setelah menyentuh artefak \"Abelii\". Pemain harus menjelajahi hutan, goa, dan temple mengumpulkan \"Scrap of Abelii\" sambil menghindari jebakan mematikan, melawan monster, serta melarikan diri dari dua teman pemburunya.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows",
+        "Web"
+      ],
+      "batchYear": 2025,
+      "featured": true,
+      "posterImage": "https://img.itch.zone/aW1nLzI0NTIyMDMyLnBuZw==/original/PhV5GH.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0Mi5qcGc=/original/wvMXcj.jpg",
+        "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0NC5qcGc=/original/dsAkFZ.jpg",
+        "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0My5qcGc=/original/VfHUS3.jpg"
+      ],
+      "itchUrl": "https://geastia.itch.io/temple-of-abelii",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "dzaki-gastiadirrijal",
+          "name": "Dzaki Gastiadirrijal",
+          "nim": "122140030",
+          "role": "Director"
+        },
+        {
+          "id": "fawwaz-abhitah-sugiarto",
+          "name": "Fawwaz Abhitah Sugiarto",
+          "nim": "122140014",
+          "role": "Game Artist"
+        },
+        {
+          "id": "deva-ahmad",
+          "name": "Deva Ahmad",
+          "nim": "122140015",
+          "role": "Sound Engineer"
+        },
+        {
+          "id": "bagas-andreanto",
+          "name": "Bagas Andreanto",
+          "nim": "122140017",
+          "role": "Programmer"
+        },
+        {
+          "id": "arkan-hariz-chandrawinata-liem",
+          "name": "Arkan Hariz Chandrawinata Liem",
+          "nim": "122140038",
+          "role": "Game Designer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "lilu",
+      "title": "Lilu",
+      "developer": "Groundhog Studio",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "First-person horror berlatar di Sumatera utara dengan karakter utama seorang pria yang mengalami kejadian tak terduga. Kejadian ini memak...",
+      "description": "First-person horror berlatar di Sumatera utara dengan karakter utama seorang pria yang mengalami kejadian tak terduga. Kejadian ini memaksanya untuk berpindah antar alam, bertujuan untuk mengembalikan roh seorang korban kecelakaan kembali ke alamnya.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Horror"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": true,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODQ4OTM3LmpwZw==/original/7fsCF4.jpg",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTYzNy5qcGc=/original/nplAqb.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTY0MC5qcGc=/original/d6POde.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTY1Ni5qcGc=/original/RMJmcz.jpg"
+      ],
+      "itchUrl": "https://groundhogstudioifitera.itch.io/lilu",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "yohanes-christian-panjaitan",
+          "name": "Yohanes Christian Panjaitan",
+          "nim": "122140217",
+          "role": "Game Designer"
+        },
+        {
+          "id": "yossi-afridho",
+          "name": "Yossi Afridho",
+          "nim": "122140211",
+          "role": "Artist, Sound Engineer"
+        },
+        {
+          "id": "muhammad-zahran-albara",
+          "name": "Muhammad Zahran Albara",
+          "nim": "122140240",
+          "role": "Lead Programmer"
+        },
+        {
+          "id": "freddy-harahap",
+          "name": "Freddy Harahap",
+          "nim": "122140018",
+          "role": "Programmer, Artist"
+        },
+        {
+          "id": "dwi-arthur-revangga",
+          "name": "Dwi Arthur Revangga",
+          "nim": "122140144",
+          "role": "Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "trace",
+      "title": "Trace",
+      "developer": "HORIZONE",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Action hack-and-slash tentang seorang entitas terdampar di Sumatera pasca-apokaliptik Lost Sumatera. Dalam upaya bertahan hidup, ia menje...",
+      "description": "Action hack-and-slash tentang seorang entitas terdampar di Sumatera pasca-apokaliptik Lost Sumatera. Dalam upaya bertahan hidup, ia menjelajahi Lost Sumatera dan mencari tahu rahasia Ancient Sumatera untuk mencari jalan kembali ke dunianya.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODMyOTMyLnBuZw==/original/12Hn6c.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk1MC8xODgzMjkwNy5wbmc=/original/1VcuHB.png",
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk1MC8xODgzMjkxNy5wbmc=/original/zeIR%2FV.png",
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk1MC8xODgzMjkzNy5wbmc=/original/jTJ2vp.png"
+      ],
+      "itchUrl": "https://horizone-techgameif22.itch.io/trace",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "dimas-dharma-wicaksono",
+          "name": "Dimas Dharma Wicaksono",
+          "nim": "122140237",
+          "role": "Director/Designer"
+        },
+        {
+          "id": "jason-surya-padantya",
+          "name": "Jason Surya Padantya",
+          "nim": "122140215",
+          "role": "Programmer"
+        },
+        {
+          "id": "muhammad-sabda-arif",
+          "name": "Muhammad Sabda Arif",
+          "nim": "122140218",
+          "role": "Game Designer/Sound Engineer"
+        },
+        {
+          "id": "abu-bakar-siddiq-siregar",
+          "name": "Abu Bakar Siddiq Siregar",
+          "nim": "122140164",
+          "role": "Programmer/Artist"
+        },
+        {
+          "id": "machzaul-harmansyah",
+          "name": "Machzaul Harmansyah",
+          "nim": "122140172",
+          "role": "Lead Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "static-noise",
+      "title": "Static Noise",
+      "developer": "NoMon Craftworks",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Turn-based RPG horror tentang seorang pria menaiki kereta api kembali ke kampung halamannya menemukan dirinya tiba-tiba terlempar ke duni...",
+      "description": "Turn-based RPG horror tentang seorang pria menaiki kereta api kembali ke kampung halamannya menemukan dirinya tiba-tiba terlempar ke dunia yang tidak nyata. Pria harus mengungkap rahasia tempat itu dan menemukan jalan keluar.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "RPG",
+        "Horror",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4NzgyMjQyLnBuZw==/original/ROOm31.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMzAwNzM1My8xODgzMzk0My5wbmc=/original/R7Aj4b.png",
+        "https://img.itch.zone/aW1hZ2UvMzAwNzM1My8xODgzMzg5OC5wbmc=/original/xo4Mi8.png",
+        "https://img.itch.zone/aW1hZ2UvMzAwNzM1My8xODgzMzkwMC5wbmc=/original/3hFnrl.png"
+      ],
+      "itchUrl": "https://nomon-craftworks.itch.io/static-noise",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "yusup-pandu-putra-wibowo",
+          "name": "Yusup Pandu Putra Wibowo",
+          "nim": "121140124",
+          "role": "Project Manager"
+        },
+        {
+          "id": "muhamad-rizzky-nopriansyah",
+          "name": "Muhamad Rizzky Nopriansyah",
+          "nim": "121140132",
+          "role": "Art Designer"
+        },
+        {
+          "id": "marchell-aly-kumala",
+          "name": "Marchell Aly Kumala",
+          "nim": "121140145",
+          "role": "Game Designer"
+        },
+        {
+          "id": "winnerson-laia",
+          "name": "Winnerson Laia",
+          "nim": "121140121",
+          "role": "Programmer"
+        },
+        {
+          "id": "solafide-zamili",
+          "name": "Solafide Zamili",
+          "nim": "121140201",
+          "role": "Lead Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "legenda-tiga-raja",
+      "title": "Legenda Tiga Raja",
+      "developer": "MANDALA",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Top down 2D hack-and-slash bertema Sumatera di mana kamu berperan sebagai pewaris pendekar kuno yang harus mengalahkan tiga raja terkutuk...",
+      "description": "Top down 2D hack-and-slash bertema Sumatera di mana kamu berperan sebagai pewaris pendekar kuno yang harus mengalahkan tiga raja terkutuk dalam pertempuran epik boss rush, sambil mengumpulkan artefak budaya untuk membebaskan roh-roh alam dan memulihkan keseimbangan dunia.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODMzMTUzLnBuZw==/original/gstBUP.png",
+      "screenshots": [],
+      "itchUrl": "https://ashokatatangs.itch.io/legenda-3-raja",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "marchel-karuna-kwee",
+          "name": "Marchel Karuna Kwee",
+          "nim": "122140065",
+          "role": "Designer, Artist"
+        },
+        {
+          "id": "alma-julio-isnansyah",
+          "name": "Alma Julio Isnansyah",
+          "nim": "122140057",
+          "role": "Programmer"
+        },
+        {
+          "id": "muhammad-narendra-budi-utomo",
+          "name": "Muhammad Narendra Budi Utomo",
+          "nim": "122140050",
+          "role": "Programmer"
+        },
+        {
+          "id": "ashoka-tatang-solihin",
+          "name": "Ashoka Tatang Solihin",
+          "nim": "122140051",
+          "role": "Programmer, Director"
+        },
+        {
+          "id": "pricelia-zulkarnain",
+          "name": "Pricelia Zulkarnain",
+          "nim": "122140075",
+          "role": "Composer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "idle-save-sumatera",
+      "title": "Idle Save Sumatera",
+      "developer": "Geprek Production",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "\"Idle Save Sumatera\" adalah game Idle Simulation Strategy di mana player diharuskan membantu Pulau Sumatera kembali seperti sedia kala de...",
+      "description": "\"Idle Save Sumatera\" adalah game Idle Simulation Strategy di mana player diharuskan membantu Pulau Sumatera kembali seperti sedia kala dengan mengumpulkan currency secara strategis di masing masing wilayah yang ada di pulau sumatera, dan melindungi pulau sumatera dari ancaman para pemberontak yang ingin menghancurkan Pulau Sumatera.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Simulation"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      "screenshots": [],
+      "itchUrl": "https://-",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "dandy-arkandhiya-putra",
+          "name": "Dandy Arkandhiya Putra",
+          "nim": "120140203",
+          "role": "Game Designer, Sound Engineer"
+        },
+        {
+          "id": "muhammad-ridho-sandi-kurniawan",
+          "name": "Muhammad Ridho Sandi Kurniawan",
+          "nim": "121140046",
+          "role": "Programmer, Art Designer"
+        },
+        {
+          "id": "idza-ramaulkim",
+          "name": "Idza Ramaulkim",
+          "nim": "121140152",
+          "role": "Programmer"
+        },
+        {
+          "id": "ignatius-julio-bintang-regen",
+          "name": "Ignatius Julio Bintang Regen",
+          "nim": "121140192",
+          "role": "Composer"
+        },
+        {
+          "id": "robby-bangsawan",
+          "name": "Robby Bangsawan",
+          "nim": "120140190",
+          "role": "Programmer"
+        },
+        {
+          "id": "rama-aldiaksa-supi",
+          "name": "Rama Aldiaksa Supi",
+          "nim": "121140056",
+          "role": "Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "operation-rafflesia-last-hope",
+      "title": "Operation Rafflesia: Last Hope",
+      "developer": "Sigma Skibidi Studio (SSS)",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "2D side-scrolling shooter yang berlatar di Sumatera apokaliptik, di mana pemain mengendalikan Mayor Ghulwanidris, seorang prajurit elit y...",
+      "description": "2D side-scrolling shooter yang berlatar di Sumatera apokaliptik, di mana pemain mengendalikan Mayor Ghulwanidris, seorang prajurit elit yang bertugas menemukan vaksin yang terbuat dari bunga Rafflesia yang langka untuk menyelamatkan umat manusia dari wabah zombie.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Shooter",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODMyMDg1LmpwZw==/original/hkE%2FZc.jpg",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE0My5qcGc=/original/H3Qsor.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE0Mi5qcGc=/original/qup%2BiT.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE1OS5qcGc=/original/3hFXnT.jpg"
+      ],
+      "itchUrl": "https://daffafahreza4.itch.io/operation-rafflesia-last-hope",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "varell-anthonio",
+          "name": "Varell Anthonio",
+          "nim": "121140122",
+          "role": "Game Designer, Director"
+        },
+        {
+          "id": "ihsan-triyadi",
+          "name": "Ihsan Triyadi",
+          "nim": "121140163",
+          "role": "Game Designer / artist"
+        },
+        {
+          "id": "andreas-sihotang",
+          "name": "Andreas Sihotang",
+          "nim": "121140168",
+          "role": "Programmer"
+        },
+        {
+          "id": "m-daffa-fahreza",
+          "name": "M. Daffa Fahreza",
+          "nim": "121140178",
+          "role": "Programmer/ sound Engineer"
+        },
+        {
+          "id": "pandu-putra-mulwanda",
+          "name": "Pandu Putra Mulwanda",
+          "nim": "121140176",
+          "role": "Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "the-forest-keeper",
+      "title": "The Forest Keeper",
+      "developer": "Malas Ngoding",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "First-person shooter horror tentang seorang penjaga hutan yang gagal menjalankan tugasnya untuk melindungi satwa langka di sumatera, dan ...",
+      "description": "First-person shooter horror tentang seorang penjaga hutan yang gagal menjalankan tugasnya untuk melindungi satwa langka di sumatera, dan bangkit kembali untuk menebus kesalahannya dengan menyelamatkan hewan-hewan tersebut.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Horror",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODM2NDU1LmpwZw==/original/UKXZD7.jpg",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMzE1Mjk1OS8xODgzMzAxMS5qcGc=/original/6FXutB.jpg"
+      ],
+      "itchUrl": "https://malasngodingco.itch.io/the-forest-keeper",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "akhdan-arif-prayoga",
+          "name": "Akhdan Arif Prayoga",
+          "nim": "122140099",
+          "role": "Game Director, Artist, Programmer"
+        },
+        {
+          "id": "a-edwin-krisandika-putra",
+          "name": "A. Edwin Krisandika Putra",
+          "nim": "122140003",
+          "role": "Programmer, Game Designer"
+        },
+        {
+          "id": "andreas-alvin-yoga-utama",
+          "name": "Andreas Alvin Yoga Utama",
+          "nim": "122140088",
+          "role": "Programmer, Sound Engineer"
+        },
+        {
+          "id": "fathan-andi-kartagama",
+          "name": "Fathan Andi Kartagama",
+          "nim": "122140055",
+          "role": "Programmer, Game Designer"
+        },
+        {
+          "id": "ramon-riping",
+          "name": "Ramon Riping",
+          "nim": "122140078",
+          "role": "Sound Engineer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "rescue-save-the-wildlife",
+      "title": "Rescue: Save The Wildlife",
+      "developer": "MiNOS",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Tower defense tentang menjaga kelestarian hewan langka dan terancam punah di Sumatera, dimana John berniat menyelamatkan mereka dengan ca...",
+      "description": "Tower defense tentang menjaga kelestarian hewan langka dan terancam punah di Sumatera, dimana John berniat menyelamatkan mereka dengan cara membawanya ke hutan marga satwa. Namun dalam perjalanannya ada banyak rintangan yang menghambat, baik oleh manusia maupun hal disekitarnya.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Web",
+        "macOS"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODMyMDc3LnBuZw==/original/MyqxnS.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkyOC5qcGc=/original/ysQRzF.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkyOS5qcGc=/original/qqPIrM.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkzMC5qcGc=/original/dSfZKL.jpg",
+        "https://img.itch.zone/aW1hZ2UvMzE1MTE3OS8xODgyMjkzMS5qcGc=/original/3r%2FVRZ.jpg"
+      ],
+      "itchUrl": "https://minos-studio.itch.io/rescue-save-the-wildlife",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "ignatius-krisna",
+          "name": "Ignatius Krisna",
+          "nim": "121140037",
+          "role": "Art Designer, Game Designer"
+        },
+        {
+          "id": "benedictus-budhi-dharmawan",
+          "name": "Benedictus Budhi Dharmawan",
+          "nim": "121140098",
+          "role": "Programmer, Game Designer"
+        },
+        {
+          "id": "made-redy-wijaya",
+          "name": "Made Redy Wijaya",
+          "nim": "121140157",
+          "role": "Programmer, Game Designer"
+        },
+        {
+          "id": "farhan-apri-kesuma",
+          "name": "Farhan Apri Kesuma",
+          "nim": "121140179",
+          "role": "Programmer, Game Designer"
+        },
+        {
+          "id": "carlos-piero-parhusip",
+          "name": "Carlos Piero Parhusip",
+          "nim": "121140193",
+          "role": "Game Director, Sound Engineer, Game Designer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "kkn-the-lost-village",
+      "title": "KKN: The Lost Village",
+      "developer": "Artemis Production",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Top down adventure tentang seorang mahasiswa yang sedang melakukan KKN di sebuah desa di Sumatera. Mahasiswa tersebut harus membangun hub...",
+      "description": "Top down adventure tentang seorang mahasiswa yang sedang melakukan KKN di sebuah desa di Sumatera. Mahasiswa tersebut harus membangun hubungan dengan penduduk lokal, menyelesaikan berbagai tugas, serta menemukan rahasia tersembunyi yang ada pada desa tersebut.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows",
+        "Web"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODMzMDM0LnBuZw==/original/nnGaEc.png",
+      "screenshots": [],
+      "itchUrl": "https://artemis-production.itch.io/kkn-the-lost-village",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "muhammad-daffa-abiyyu-muhana",
+          "name": "Muhammad Daffa Abiyyu Muhana",
+          "nim": "121140222",
+          "role": "Game Director"
+        },
+        {
+          "id": "farhan-rizky-gunawan",
+          "name": "Farhan Rizky Gunawan",
+          "nim": "121140200",
+          "role": "Designer"
+        },
+        {
+          "id": "dimas-saputra",
+          "name": "Dimas Saputra",
+          "nim": "121140059",
+          "role": "Designer"
+        },
+        {
+          "id": "rizki-esa-fadillah",
+          "name": "Rizki Esa Fadillah",
+          "nim": "121140084",
+          "role": "Programmer"
+        },
+        {
+          "id": "amdhan-anggoro",
+          "name": "Amdhan Anggoro",
+          "nim": "121140226",
+          "role": "Composer"
+        },
+        {
+          "id": "hilmanda-panji-orienski",
+          "name": "Hilmanda Panji Orienski",
+          "nim": "120140130",
+          "role": "Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "sumatera-survivor",
+      "title": "Sumatera Survivor",
+      "developer": "Nufta Studio",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Roguelike shoot-em-up tentang menyelamatkan bumi dari roh mistis Sumatera dengan menggunakan benda khas tradisi Sumatera.",
+      "description": "Roguelike shoot-em-up tentang menyelamatkan bumi dari roh mistis Sumatera dengan menggunakan benda khas tradisi Sumatera.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows",
+        "Web"
+      ],
+      "batchYear": 2024,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE4ODM1NzI1LmpwZWc=/original/TIWVNl.jpeg",
+      "screenshots": [],
+      "itchUrl": "https://nufta.itch.io/sumatera-survivor",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "fadel-malik",
+          "name": "Fadel Malik",
+          "nim": "121140165",
+          "role": "Programmer"
+        },
+        {
+          "id": "muhammad-taqy-abdullah",
+          "name": "Muhammad Taqy Abdullah",
+          "nim": "121140166",
+          "role": "Programmer"
+        },
+        {
+          "id": "adriel-gideon-benedict-sirait",
+          "name": "Adriel Gideon Benedict Sirait",
+          "nim": "121140196",
+          "role": "Artist, Sound Engineer"
+        },
+        {
+          "id": "natanael-argajova",
+          "name": "Natanael Argajova",
+          "nim": "121140205",
+          "role": "Designer, Artist"
+        },
+        {
+          "id": "muhammad-umar-basyir",
+          "name": "Muhammad Umar Basyir",
+          "nim": "121140221",
+          "role": "Sound Engineer, Designer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "go-ancient",
+      "title": "Go Ancient",
+      "developer": "Desra Group",
+      "semester": "2024/2025 Ganjil",
+      "semesterKey": "24-25-ganjil",
+      "tagline": "Sidescroller puzzle tentang seorang pencari harta karun yang menimbulkan teka-teki dan petualangan menantang.",
+      "description": "Sidescroller puzzle tentang seorang pencari harta karun yang menimbulkan teka-teki dan petualangan menantang.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Puzzle"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2024,
+      "featured": true,
+      "posterImage": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=1200&q=80",
+      "screenshots": [],
+      "itchUrl": "https://github.com/gabrielfico/tubes-tekgem",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "gabriel-fico-darius",
+          "name": "Gabriel Fico Darius",
+          "nim": "121140069",
+          "role": "Game Director"
+        },
+        {
+          "id": "kasyfi-wahyu-hazazi",
+          "name": "Kasyfi Wahyu Hazazi",
+          "nim": "121140220",
+          "role": "Game Artist"
+        },
+        {
+          "id": "fatur-arkan-syawalva",
+          "name": "Fatur Arkan Syawalva",
+          "nim": "121140229",
+          "role": "Game Designer, Game Artist, Programmer"
+        },
+        {
+          "id": "maharani-triza",
+          "name": "Maharani Triza",
+          "nim": "121140071",
+          "role": "Sound Engineer"
+        },
+        {
+          "id": "arof-andestama",
+          "name": "Arof Andestama",
+          "nim": "121140182",
+          "role": "Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "broken-bonds",
+      "title": "Broken Bonds",
+      "developer": "Kentang Production",
+      "semester": "2023/2024 Ganjil",
+      "semesterKey": "23-24-ganjil",
+      "tagline": "Broken Bonds adalah game 2D dengan style pixel dan top-down view, Broken Bonds adalah story-driven game dengan genre RPG dimana kita mema...",
+      "description": "Broken Bonds adalah game 2D dengan style pixel dan top-down view, Broken Bonds adalah story-driven game dengan genre RPG dimana kita memainkan karakter bernama “Caelus”, player dapat menjalankan quest, selesaikan questnya untuk melanjutkan level dan juga cerita nya.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "RPG",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows",
+        "Web"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE0MjU2Mzc1LnBuZw==/original/Uv02ql.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjQwMTQ4NS8xNDI1ODM3MC5wbmc=/original/CbHpmW.png",
+        "https://img.itch.zone/aW1hZ2UvMjQwMTQ4NS8xNDI1ODM3MS5wbmc=/original/9C7Hdw.png",
+        "https://img.itch.zone/aW1hZ2UvMjQwMTQ4NS8xNDI1ODM3Mi5wbmc=/original/90gPO4.png"
+      ],
+      "itchUrl": "https://kentang-production.itch.io/brokenbonds",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "attar-akram-abdillah",
+          "name": "Attar Akram Abdillah",
+          "nim": "121140013",
+          "role": "Director, Artist"
+        },
+        {
+          "id": "daris-fikri-zhalifunnas",
+          "name": "Daris Fikri Zhalifunnas",
+          "nim": "121140067",
+          "role": "Designer, Programmer"
+        },
+        {
+          "id": "dhian-adi-nugraha",
+          "name": "Dhian Adi Nugraha",
+          "nim": "121140055",
+          "role": "Sound"
+        },
+        {
+          "id": "muhammad-aryo-bimo",
+          "name": "Muhammad Aryo Bimo",
+          "nim": "121140149",
+          "role": "Designer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "pedjuang-nusantara",
+      "title": "Pedjuang Nusantara",
+      "developer": "IzinPuhSepuh Production (IPSP)",
+      "semester": "2023/2024 Ganjil",
+      "semesterKey": "23-24-ganjil",
+      "tagline": "\"Pedjuang Nusantara\" adalah sebuah side scroller run and gun game yang menghadirkan pemain dalam peran\nseorang pahlawan Nusantara yang be...",
+      "description": "\"Pedjuang Nusantara\" adalah sebuah side scroller run and gun game yang menghadirkan pemain dalam peran\nseorang pahlawan Nusantara yang berani. Dalam petualangan epik ini, pemain akan menghadapi\npenjajah dengan senjata unik mereka: bambu runcing dan senjata drop item lainnya. Berbekal\nkeberanian dan ketangguhan, Anda akan memimpin pahlawan ini melalui medan perang yang\nberagam di seluruh Nusantara.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Shooter",
+        "2D Platformer"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE0MjUwMDcwLnBuZw==/original/3ccTf2.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI0OTk3Ny5qcGc=/original/ixuIsz.jpg",
+        "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI0OTk2Ny5qcGc=/original/0ESy68.jpg",
+        "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI1MDExOS5qcGc=/original/bevuzD.jpg",
+        "https://img.itch.zone/aW1hZ2UvMjQwNzM0MC8xNDI1MDEyMC5qcGc=/original/VKit1T.jpg"
+      ],
+      "itchUrl": "https://ipsp.itch.io/game-2d-pedjuang-nusantara",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "jossy-raya-gopasda-saragih",
+          "name": "Jossy Raya Gopasda Saragih",
+          "nim": "120140073",
+          "role": "Director, Programmer"
+        },
+        {
+          "id": "naufal-rotif-dewanto",
+          "name": "Naufal Rotif Dewanto",
+          "nim": "120140107",
+          "role": "Artist, Programmer"
+        },
+        {
+          "id": "michael-pascalis-simanjuntak",
+          "name": "Michael Pascalis Simanjuntak",
+          "nim": "120140137",
+          "role": "Sound Engineer, Programmer"
+        },
+        {
+          "id": "oloan-soaloon-napitupulu",
+          "name": "Oloan Soaloon Napitupulu",
+          "nim": "120140097",
+          "role": "Artist, Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "guardians-of-mystica",
+      "title": "Guardians of Mystica",
+      "developer": "Death Liner's Developer (DL Dev)",
+      "semester": "2023/2024 Ganjil",
+      "semesterKey": "23-24-ganjil",
+      "tagline": "Dalam Guardians of Mystica, pemain memasuki dunia ajaib penuh keajaiban dan petualangan. Cerita berlangsung di desa kecil yang dulu damai...",
+      "description": "Dalam Guardians of Mystica, pemain memasuki dunia ajaib penuh keajaiban dan petualangan. Cerita berlangsung di desa kecil yang dulu damai, kini dihantui kegelapan misterius. Sebagai pahlawan pemberani, tugasnya membebaskan penduduk dari cengkeraman monster jahat. Petualangan melintasi hutan misterius, gua gelap, dan lembah rahasia. Pertempuran melawan Raja Monster(tujuan akhir) menentukan takdir Mystica.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE0MjUwOTI2LnBuZw==/original/EsXpPz.png",
+      "screenshots": [],
+      "itchUrl": "https://death-liners.itch.io/guardian-of-mystica",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "muhammad-rafiif",
+          "name": "Muhammad Rafiif",
+          "nim": "120140148",
+          "role": "Director, Programmer"
+        },
+        {
+          "id": "dimas-azi-rajab-aizar",
+          "name": "Dimas Azi Rajab Aizar",
+          "nim": "121140135",
+          "role": "Programmer"
+        },
+        {
+          "id": "zeddhy-recca-fitracia",
+          "name": "Zeddhy Recca Fitracia",
+          "nim": "121140199",
+          "role": "Artist"
+        },
+        {
+          "id": "raja-josua-simanungkalit",
+          "name": "Raja Josua Simanungkalit",
+          "nim": "120140134",
+          "role": "Sound"
+        },
+        {
+          "id": "hilmanda-panji-orienski",
+          "name": "Hilmanda Panji Orienski",
+          "nim": "120140130",
+          "role": "Designer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "oscar-s-adventure-the-hidden-treasure",
+      "title": "Oscar's Adventure: The Hidden Treasure",
+      "developer": "Meowsterpiece Studios",
+      "semester": "2023/2024 Ganjil",
+      "semesterKey": "23-24-ganjil",
+      "tagline": "Seekor kucing bernama \"Oscar\" adalah kucing yang suka menjelajahi hutan-hutan yang penuh misteri. Suatu hari, Oscar menemukan peta kuno y...",
+      "description": "Seekor kucing bernama \"Oscar\" adalah kucing yang suka menjelajahi hutan-hutan yang penuh misteri. Suatu hari, Oscar menemukan peta kuno yang mengarahkannya ke sebuah hutan yang sangat lebat, dimana legenda menyebutkan terdapat sebuah kuil kuno yang penuh dengan harta karun. Tanpa ragu, Oscar memulai perjalanan seru ini.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzE0MjUxMjcxLnBuZw==/original/2w7pYq.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMC5wbmc=/original/43K4bz.png",
+        "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMS5wbmc=/original/F2RRJ8.png",
+        "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMi5wbmc=/original/16J5ph.png",
+        "https://img.itch.zone/aW1hZ2UvMjQwNzYwMi8xNDI2NjgyMy5wbmc=/original/rc2JG0.png"
+      ],
+      "itchUrl": "https://meowsterpiece-4.itch.io/oscars-adventure-the-hidden-treasure",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "adjie-surya-nugraha",
+          "name": "Adjie Surya Nugraha",
+          "nim": "118140146",
+          "role": "Director"
+        },
+        {
+          "id": "ramadhanu-britan-linardi",
+          "name": "Ramadhanu Britan Linardi",
+          "nim": "118140148",
+          "role": "Artist"
+        },
+        {
+          "id": "erdy-fitriansyah",
+          "name": "Erdy Fitriansyah",
+          "nim": "118140147",
+          "role": "Designer"
+        },
+        {
+          "id": "nestiawan-ferdiyanto",
+          "name": "Nestiawan Ferdiyanto",
+          "nim": "118140190",
+          "role": "Programmer"
+        },
+        {
+          "id": "slamet-nugroho",
+          "name": "Slamet Nugroho",
+          "nim": "118140189",
+          "role": "Sound Engineer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "gelud",
+      "title": "Gelud",
+      "developer": "Gabut Game Dev",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "Gelud adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Gabut Game Dev menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjM2Njg4LnBuZw==/original/kIlz5D.png",
+      "screenshots": [],
+      "itchUrl": "https://fitrailyasa12.itch.io/gelud",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "fitra-ilyasa",
+          "name": "Fitra Ilyasa",
+          "nim": "120140048",
+          "role": "Director/Designer"
+        },
+        {
+          "id": "hilmanda-panji-orienski",
+          "name": "Hilmanda",
+          "nim": "120140130",
+          "role": "Programmer"
+        },
+        {
+          "id": "minggus",
+          "name": "Minggus",
+          "nim": "118140122",
+          "role": "Programmer"
+        },
+        {
+          "id": "ryco-afta-gian-aidil",
+          "name": "Ryco Afta Gian Aidil",
+          "nim": "120140159",
+          "role": "Sound"
+        },
+        {
+          "id": "muhammad-rafiif",
+          "name": "M Rafiif",
+          "nim": "120140148",
+          "role": "Artist"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "arunika",
+      "title": "Arunika",
+      "developer": "Da TeGa.dev",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "Arunika adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Da TeGa.dev menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": true,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjQzMDg4LnBuZw==/original/OqHFqJ.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA2OC8xMjI0MzMzNS5wbmc=/original/JygjV1.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA2OC8xMjI0MzMzNi5wbmc=/original/7Jwp7q.png"
+      ],
+      "itchUrl": "https://arunikas.itch.io/arunika",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "andri-setiawan",
+          "name": "Andri Setiawan",
+          "nim": "120140191",
+          "role": "Director, Programmer"
+        },
+        {
+          "id": "riyan-khoiri-s",
+          "name": "Riyan Khoiri S",
+          "nim": "120140212",
+          "role": "Director, Programmer"
+        },
+        {
+          "id": "zointa-ras-bangun",
+          "name": "Zointa Ras Bangun",
+          "nim": "120140225",
+          "role": "Artist"
+        },
+        {
+          "id": "afif-syaifullah-f",
+          "name": "Afif Syaifullah F",
+          "nim": "120140229",
+          "role": "Director, Programmer, Artist"
+        },
+        {
+          "id": "dzakkir-latifan-m",
+          "name": "Dzakkir Latifan M",
+          "nim": "120140240",
+          "role": "Sound"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "underwater-uprising",
+      "title": "Underwater Uprising",
+      "developer": "ITer8",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "Underwater Uprising adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok ITer8 menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "/assets/uploads/games/underwater-uprising.jpg",
+      "screenshots": [],
+      "itchUrl": "https://iter8.itch.io/underwate-uprising",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "muhammad-faatih-rizal-auliya",
+          "name": "Muhammad Faatih Rizal Auliya",
+          "nim": "119140212",
+          "role": "Director/Designer"
+        },
+        {
+          "id": "teo-rasyid-prawiranegara",
+          "name": "Teo Rasyid Prawiranegara",
+          "nim": "14117182",
+          "role": "Programmer"
+        },
+        {
+          "id": "fajar-tegar-nugraha",
+          "name": "Fajar Tegar Nugraha",
+          "nim": "119140048",
+          "role": "Artist"
+        },
+        {
+          "id": "christian",
+          "name": "Christian",
+          "nim": "120140056",
+          "role": "Sound"
+        },
+        {
+          "id": "duta-rega-rolindo",
+          "name": "Duta Rega Rolindo",
+          "nim": "120140135",
+          "role": "Tester"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "wulan",
+      "title": "Wulan",
+      "developer": "Misty Game Studio",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "Wulan adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Misty Game Studio menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjM4OTUyLnBuZw==/original/61TkbU.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg2MC5wbmc=/original/uUVQWz.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg2MS5wbmc=/original/%2Bj%2B3wn.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg2Mi5wbmc=/original/zFqIjO.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MDQ2NS8xMjIzODg1OS5wbmc=/original/70zD%2Be.png"
+      ],
+      "itchUrl": "https://misty-game-studio.itch.io/wulan-cbt-1",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "alief-arrly-prasetyo",
+          "name": "Alief Arrly Prasetyo",
+          "nim": "120140207",
+          "role": "Programmer"
+        },
+        {
+          "id": "ardhito-saputra",
+          "name": "Ardhito Saputra",
+          "nim": "120140003",
+          "role": "Sound, Programmer"
+        },
+        {
+          "id": "justin-halim",
+          "name": "Justin Halim",
+          "nim": "120140185",
+          "role": "Director, Programmer"
+        },
+        {
+          "id": "rizqi-fiesta-febrianto",
+          "name": "Rizqi Fiesta Febrianto",
+          "nim": "120140171",
+          "role": "Artist, Programmer"
+        },
+        {
+          "id": "sultan-ahmad-alfath",
+          "name": "Sultan Ahmad Alfath",
+          "nim": "120140046",
+          "role": "Designer, Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "wonder",
+      "title": "Wonder",
+      "developer": "Perguruan Bunglon Beracun",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "Wonder adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Perguruan Bunglon Beracun menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjQyNDg4LnBuZw==/original/yfQaCR.png",
+      "screenshots": [],
+      "itchUrl": "https://perguruanbunglonberacun.itch.io/wonder",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "m-bintang-fitriatuderajat",
+          "name": "M. Bintang Fitriatuderajat",
+          "nim": "120140040",
+          "role": "Designer"
+        },
+        {
+          "id": "naufal-taufiq-ridwan",
+          "name": "Naufal Taufiq Ridwan",
+          "nim": "120140044",
+          "role": "Programmer"
+        },
+        {
+          "id": "m-rizky-fahreza-gusti",
+          "name": "M. Rizky Fahreza Gusti",
+          "nim": "120140071",
+          "role": "Sound"
+        },
+        {
+          "id": "m-herton-amarta-buana",
+          "name": "M.herton Amarta Buana",
+          "nim": "120140182",
+          "role": "Artist"
+        },
+        {
+          "id": "aldian-farhan-p",
+          "name": "Aldian Farhan P",
+          "nim": "119140080",
+          "role": "Tester, Sound"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "slimental",
+      "title": "SLIMENTAL",
+      "developer": "White Rose Studio",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "SLIMENTAL adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok White Rose Studio menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjQyMTY2LnBuZw==/original/TyoKGP.png",
+      "screenshots": [],
+      "itchUrl": "https://whiterosestudios.itch.io/slimental",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "marchell-manurung",
+          "name": "Marchell Manurung",
+          "nim": "120140208",
+          "role": "Sound, Artist"
+        },
+        {
+          "id": "tomu-petra-manogari-nahulae",
+          "name": "Tomu Petra Manogari Nahulae",
+          "nim": "120140209",
+          "role": "Sound, Artist"
+        },
+        {
+          "id": "dhilan-septa-yudha",
+          "name": "Dhilan Septa Yudha",
+          "nim": "120140224",
+          "role": "Programmer"
+        },
+        {
+          "id": "muhammad-khadziq",
+          "name": "Muhammad Khadziq",
+          "nim": "120140233",
+          "role": "Designer"
+        },
+        {
+          "id": "tegar-argie-desmonda",
+          "name": "Tegar Argie Desmonda",
+          "nim": "120140253",
+          "role": "Director, Programmer"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "kaboer",
+      "title": "Kaboer",
+      "developer": "AIRBY Studio",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "Kaboer adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok AIRBY Studio menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjQyODI3LnBuZw==/original/4X%2FW67.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA2Mi8xMjI0MjU2NC5wbmc=/original/BXZlTy.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA2Mi8xMjI0MjU2Ni5wbmc=/original/6xEkrf.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA2Mi8xMjI1MzM5OS5qcGc=/original/3EFOSX.jpg"
+      ],
+      "itchUrl": "https://airby-studio.itch.io/kaboer",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "muhammad-rafi-irfan-lubis",
+          "name": "Muhammad Rafi Irfan Lubis",
+          "nim": "120140219",
+          "role": "Programmer"
+        },
+        {
+          "id": "irwanto-yezekiel-sihotang",
+          "name": "Irwanto Yezekiel Sihotang",
+          "nim": "120140227",
+          "role": "Designer"
+        },
+        {
+          "id": "aaron-noah-kalalo",
+          "name": "Aaron Noah Kalalo",
+          "nim": "120140232",
+          "role": "Sound"
+        },
+        {
+          "id": "yusuf-hafidz",
+          "name": "Yusuf Hafidz",
+          "nim": "120140234",
+          "role": "Director"
+        },
+        {
+          "id": "bagasyah-kusetyoutomo-donanurhakim",
+          "name": "Bagasyah Kusetyoutomo Donanurhakim",
+          "nim": "120140236",
+          "role": "Artist"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "g-l-a-s-s",
+      "title": "G.L.A.S.S",
+      "developer": "Glass Dev",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "",
+      "description": "G.L.A.S.S adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Glass Dev menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "https://img.itch.zone/aW1nLzEyMjQyMDc4LnBuZw==/original/mv75Fh.png",
+      "screenshots": [],
+      "itchUrl": "https://glass-dev.itch.io/glass-tubes-tekgame",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "hafiz-amrullah",
+          "name": "Hafiz Amrullah",
+          "nim": "119140177",
+          "role": "Designer/Director"
+        },
+        {
+          "id": "akbar-maulana",
+          "name": "Akbar Maulana",
+          "nim": "119140151",
+          "role": "Programmer"
+        },
+        {
+          "id": "joyapul-hanscalvin-panjaitan",
+          "name": "Joyapul Hanscalvin Panjaitan",
+          "nim": "119140157",
+          "role": "Sound"
+        },
+        {
+          "id": "orville-figo-el-islami",
+          "name": "Orville Figo El Islami",
+          "nim": "119140194",
+          "role": "Programmer, Artist"
+        },
+        {
+          "id": "yusril-iskandar-harahap",
+          "name": "Yusril Iskandar Harahap",
+          "nim": "119140223",
+          "role": "Artist"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
+    },
+    {
+      "slug": "avernus",
+      "title": "Avernus",
+      "developer": "D2ray Studio",
+      "semester": "2022/2023 Genap",
+      "semesterKey": "22-23-genap",
+      "tagline": "Avernus - Game Action karya D2Ray Studio",
+      "description": "Avernus adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok D2ray Studio menggunakan Godot Engine.",
+      "engine": "Godot",
+      "engineVersion": "Godot 4.3 Stable",
+      "genre": [
+        "Action",
+        "Shooter"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "batchYear": 2023,
+      "featured": false,
+      "posterImage": "/assets/uploads/games/avernus.png",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzNy5wbmc=/original/YFOQDe.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzOC5wbmc=/original/X3Tvtl.png",
+        "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzOS5wbmc=/original/4pcMrg.png"
+      ],
+      "itchUrl": "https://d2ray-studio.itch.io/avernus",
+      "githubUrl": "",
+      "contributors": [
+        {
+          "id": "andhika-wibawa-bhagaskara",
+          "name": "Andhika Wibawa Bhagaskara",
+          "nim": "119140218",
+          "role": "Programmer, Tester"
+        },
+        {
+          "id": "dimas-aqshal-primadaffa",
+          "name": "Dimas Aqshal Primadaffa",
+          "nim": "119140140",
+          "role": "Designer, Artist"
+        },
+        {
+          "id": "rayhan-athalla-ghifary",
+          "name": "Rayhan Athalla Ghifary",
+          "nim": "119140225",
+          "role": "Programmer, Tester"
+        },
+        {
+          "id": "m-iqbal",
+          "name": "M Iqbal",
+          "nim": "118140130",
+          "role": "Programmer, Artist"
+        },
+        {
+          "id": "joy-aloita-sembiring",
+          "name": "Joy Aloita Sembiring",
+          "nim": "119140036",
+          "role": "Sound"
+        }
+      ],
+      "metrics": {
+        "tickRate": "60 Hz Stable",
+        "buildSize": "Godot PC Build"
+      }
     }
-  },
-  {
-    "slug": "chronovector-subzero",
-    "title": "ChronoVector // SubZero",
-    "tagline": "Fast-paced arena shooter dengan mekanika time-dilation dan respons kontrol instan.",
-    "description": "ChronoVector lahir dari eksplorasi mekanik waktu di mana pergerakan proyektil musuh melambat saat pemain bermanuver lincah. Dalam proses pembuatannya, tim merancang state machine karakter dari dasar, menguji kurva akselerasi pemain, dan menerapkan arsitektur rollback agar kontrol terasa responsif tanpa jeda input.",
-    "engine": "Custom C++",
-    "engineVersion": "C++20 / Raylib 5.0",
-    "genre": ["Tactical Shooter", "Time Manipulation", "Arcade"],
-    "platform": ["Windows", "Linux"],
-    "batchYear": 2024,
-    "featured": true,
-    "posterImage": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/chronovector-subzero",
-    "contributors": [
-      { "id": "alex-reza", "role": "Core Framework & Netcode" },
-      { "id": "dian-kartika", "role": "Gameplay Systems" }
-    ],
-    "metrics": {
-      "polygonCount": "420K Tris",
-      "drawCalls": "65 Peak",
-      "tickRate": "120 Hz Deterministic",
-      "buildSize": "14.2 MB"
-    }
-  },
-  {
-    "slug": "lumina-path-tracing",
-    "title": "Lumina: Underwater World",
-    "tagline": "Eksplorasi visual bawah laut interaktif dengan pencahayaan dinamis yang memikat di WebGL.",
-    "description": "Lumina adalah pengalaman eksplorasi bawah laut yang berfokus pada atmosfer menenangkan dan keindahan bias cahaya air. Mahasiswa merancang alur visual melalui pipeline Unity URP, memadukan efek bias caustics dan godrays dengan navigasi kamera yang halus sehingga pengunjung dapat menikmati visual sinematis secara real-time di browser.",
-    "engine": "Unity",
-    "engineVersion": "Unity 6000.0.18f1 (URP)",
-    "genre": ["Exploration", "Interactive Experience"],
-    "platform": ["Windows", "macOS"],
-    "batchYear": 2025,
-    "featured": true,
-    "posterImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/lumina-caustics",
-    "contributors": [
-      { "id": "farhan-nugraha", "role": "Visual & Lighting Designer" },
-      { "id": "maya-indira", "role": "Environment Artist" }
-    ],
-    "metrics": {
-      "polygonCount": "1.8M Dynamic Quads",
-      "drawCalls": "210",
-      "tickRate": "60 Hz Fixed",
-      "buildSize": "42.5 MB"
-    }
-  },
-  {
-    "slug": "aether-weaver-ecs",
-    "title": "Aether Weaver",
-    "tagline": "Game strategi real-time armada antariksa dengan simulasi ribuan unit tempur simultan.",
-    "description": "Aether Weaver menantang kemampuan perancangan arsitektur data mahasiswa untuk menghadirkan perang armada skala masif. Tim mengimplementasikan pola Entity Component System (ECS) di Bevy (Rust), mendesain kecerdasan buatan kawanan (flocking AI), serta menyeimbangkan sistem ekonomi dan mekanik taktis agar tetap seru dimainkan.",
-    "engine": "Bevy",
-    "engineVersion": "Bevy 0.14 (Rust 1.80)",
-    "genre": ["RTS", "Sci-Fi Strategy"],
-    "platform": ["Windows", "Linux", "macOS"],
-    "batchYear": 2025,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/aether-weaver-ecs",
-    "contributors": [
-      { "id": "alex-reza", "role": "Systems Architect" },
-      { "id": "citra-lestari", "role": "Game Balance & UI" }
-    ],
-    "metrics": {
-      "polygonCount": "650K Instanced Meshes",
-      "drawCalls": "12 Instanced Calls",
-      "tickRate": "60 Hz Multi-Threaded",
-      "buildSize": "22.5 MB"
-    }
-  },
-  {
-    "slug": "orbital-decay-protocol",
-    "title": "Orbital Decay Protocol",
-    "tagline": "Teka-teki manuver orbit satelit antariksa dengan mekanika gravitasi riil di Unreal 5.",
-    "description": "Dalam game teka-teki fiksi ilmiah ini, pemain berperan sebagai operator stasiun ruang angkasa yang harus mengoreksi orbit satelit sebelum terbakar di atmosfer. Proses perancangannya mengombinasikan kalkulasi fisika orbit numerik dengan tata suara atmosferik dan visual ruang angkasa fotorealistis di Unreal Engine 5.",
-    "engine": "Unreal Engine",
-    "engineVersion": "Unreal Engine 5.4.3",
-    "genre": ["Puzzle", "Orbital Simulator", "Sci-Fi"],
-    "platform": ["Windows"],
-    "batchYear": 2024,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/orbital-decay",
-    "contributors": [
-      { "id": "budi-setiawan", "role": "Orbital Physics Dev" },
-      { "id": "dian-kartika", "role": "Controls & Camera System" },
-      { "id": "citra-lestari", "role": "Level & Sound Design" }
-    ],
-    "metrics": {
-      "polygonCount": "3.5M Nanite Meshes",
-      "drawCalls": "350",
-      "tickRate": "60 Hz Physics Tick",
-      "buildSize": "3.2 GB"
-    }
-  },
-  {
-    "slug": "cyber-mesh-rigging",
-    "title": "CyberMesh IK",
-    "tagline": "Game petualangan robot berkaki empat dengan animasi prosedural adaptif di medan terjal.",
-    "description": "Proyek ini memamerkan bagaimana mekanika animasi prosedural dapat menggantikan klip animasi statis. Mahasiswa memprogram sistem Inverse Kinematics (IK) yang secara otomatis menyesuaikan pijakan keempat kaki robot dengan kontur tanah, dilengkapi dengan teka-teki rintangan platformer 3D yang seru diuji langsung via browser.",
-    "engine": "Unity",
-    "engineVersion": "Unity 2023.2.14f1",
-    "genre": ["Platformer", "Adventure"],
-    "platform": ["Windows", "Linux"],
-    "batchYear": 2026,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/cyber-mesh-ik",
-    "contributors": [
-      { "id": "dian-kartika", "role": "IK Programmer & Character Dev" },
-      { "id": "farhan-nugraha", "role": "Shaders & Level Art" }
-    ],
-    "metrics": {
-      "polygonCount": "180K Tris",
-      "drawCalls": "45",
-      "tickRate": "60 Hz Fixed Update",
-      "buildSize": "19.8 MB"
-    }
-  },
-  {
-    "slug": "shadow-protocol-neon",
-    "title": "Shadow Protocol // Neon",
-    "tagline": "Stealth action cyberpunk dengan sistem pencahayaan dinamis dan mekanika hacking terminal.",
-    "description": "Shadow Protocol membawa pemain menyusup ke fasilitas bawah tanah megakorporasi. Game ini memadukan mekanika stealth berbasis radius pandang musuh (field-of-view raycasting), integrasi terminal puzzle logika biner, serta visual bernuansa neon retro yang dioptimalkan di Godot 4.",
-    "engine": "Godot",
-    "engineVersion": "Godot 4.3 Stable",
-    "genre": ["Stealth Action", "Cyberpunk", "Tactical"],
-    "platform": ["Windows", "Linux"],
-    "batchYear": 2025,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/shadow-protocol-neon",
-    "contributors": [
-      { "id": "alex-reza", "role": "Lead Gameplay & AI Behavior" },
-      { "id": "maya-indira", "role": "Lighting & Level Artist" }
-    ],
-    "metrics": {
-      "polygonCount": "850K Tris / Frame",
-      "drawCalls": "120 Peak",
-      "tickRate": "60 Hz Fixed",
-      "buildSize": "48.2 MB"
-    }
-  },
-  {
-    "slug": "chronicles-of-krakatoa",
-    "title": "Chronicles of Krakatoa",
-    "tagline": "Game survival eksplorasi pulau vulkanis dengan simulasi erupsi prosedural di Unreal Engine.",
-    "description": "Dikembangkan dengan Unreal Engine 5, pemain dituntut mengumpulkan sumber daya dan membangun tempat perlindungan sebelum siklus erupsi vulkanik melanda. Menampilkan sistem partikel abu dinamis menggunakan Niagara dan simulasi aliran lava menggunakan displacement shader.",
-    "engine": "Unreal Engine",
-    "engineVersion": "Unreal Engine 5.4.3",
-    "genre": ["Survival", "Open World", "Adventure"],
-    "platform": ["Windows"],
-    "batchYear": 2024,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/chronicles-of-krakatoa",
-    "contributors": [
-      { "id": "budi-setiawan", "role": "Terrain Generation & Physics" },
-      { "id": "farhan-nugraha", "role": "Niagara Particle FX & Shaders" }
-    ],
-    "metrics": {
-      "polygonCount": "4.2M Nanite Meshes",
-      "drawCalls": "290 Max",
-      "tickRate": "60 Hz Stable",
-      "buildSize": "2.8 GB"
-    }
-  },
-  {
-    "slug": "nano-swarm-arena",
-    "title": "NanoSwarm Arena",
-    "tagline": "Top-down shooter serba cepat menghadapi ribuan partikel musuh nanobot berbasis compute shader.",
-    "description": "Menantang batas performa render 2D, proyek ini memanfaatkan Unity Compute Shader untuk mensimulasikan pergerakan 15.000 partikel nanobot secara real-time. Pemain dilengkapi persenjataan medan magnet yang dapat membubarkan atau membalikkan arah kawanan musuh.",
-    "engine": "Unity",
-    "engineVersion": "Unity 6000.0.18f1 (URP)",
-    "genre": ["Top-down Shooter", "Bullet Hell", "Arcade"],
-    "platform": ["Windows", "Linux", "macOS"],
-    "batchYear": 2026,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/nano-swarm-arena",
-    "contributors": [
-      { "id": "dian-kartika", "role": "Gameplay Programming & Controls" },
-      { "id": "farhan-nugraha", "role": "Compute Shader Architect" }
-    ],
-    "metrics": {
-      "polygonCount": "320K Instanced Quads",
-      "drawCalls": "18 Instanced Calls",
-      "tickRate": "120 Hz Target",
-      "buildSize": "31.5 MB"
-    }
-  },
-  {
-    "slug": "echoes-of-sumatra",
-    "title": "Echoes of Sumatra",
-    "tagline": "Eksplorasi naratif teka-teki berlatar mitologi dan cagar budaya Sumatera dalam format 2.5D.",
-    "description": "Sebuah permainan petualangan atmosferik yang menggabungkan elemen visual 2D hand-drawn dengan tata cahaya 3D dinamis. Mengangkat tema pelestarian fauna endemik Sumatera melalui alur cerita yang menyentuh dan teka-teki lingkungan.",
-    "engine": "Godot",
-    "engineVersion": "Godot 4.3 Stable",
-    "genre": ["Puzzle", "Narrative", "Adventure"],
-    "platform": ["Windows", "macOS"],
-    "batchYear": 2025,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/echoes-of-sumatra",
-    "contributors": [
-      { "id": "citra-lestari", "role": "Level Designer & Story Writer" },
-      { "id": "alex-reza", "role": "Audio Engine & Systems" }
-    ],
-    "metrics": {
-      "polygonCount": "140K Tris",
-      "drawCalls": "55 Peak",
-      "tickRate": "60 Hz Stable",
-      "buildSize": "26.4 MB"
-    }
-  },
-  {
-    "slug": "void-drifter-zero",
-    "title": "Void Drifter: Zero",
-    "tagline": "Simulasi balap gravitasi nol di sabuk asteroid antariksa berbasis C++ dan Raylib.",
-    "description": "Dikembangkan murni menggunakan C++ modern dan library grafis Raylib tanpa game engine komersial. Berfokus pada kalkulasi inersia gravitasi Newton tanpa gesekan udara, arsitektur data cache-friendly, dan latency input super rendah.",
-    "engine": "Custom C++",
-    "engineVersion": "C++20 / Raylib 5.0",
-    "genre": ["Racing", "Space Sim", "Arcade"],
-    "platform": ["Windows", "Linux"],
-    "batchYear": 2024,
-    "featured": false,
-    "posterImage": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80",
-    "screenshots": [
-      "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1000&q=80"
-    ],
-    "itchUrl": "https://itch.io",
-    "githubUrl": "https://github.com/if-itera/void-drifter-zero",
-    "contributors": [
-      { "id": "budi-setiawan", "role": "Physics Integrator & Netcode" },
-      { "id": "dian-kartika", "role": "Input Handler & HUD" }
-    ],
-    "metrics": {
-      "polygonCount": "210K Tris",
-      "drawCalls": "35",
-      "tickRate": "144 Hz Deterministic",
-      "buildSize": "11.8 MB"
-    }
-  }
   ]
 }
-
-

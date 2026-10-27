@@ -7,46 +7,46 @@
   "location": "Hall Gedung Kuliah Umum (GKU) 1 Lt. 1, ITERA",
   "photos": [
     {
-      "id": "p24-1",
-      "url": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format&fit=crop&q=80",
-      "caption": "Sesi playtest publik: pengunjung mencoba build game 'Kinetic Strata' pada perangkat arcade booth.",
-      "category": "Playtest & Booth",
-      "time": "10:30 WIB"
+      "id": "expo-2024-1",
+      "url": "/assets/expo/expo-2024-1.jpg",
+      "caption": "Suasana pembukaan demo day dan pameran tugas besar mata kuliah Teknologi Game 2024 di GKU ITERA.",
+      "category": "Dokumentasi",
+      "time": "10:00 WIB"
     },
     {
-      "id": "p24-2",
-      "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop&q=80",
-      "caption": "Tim developer mempresentasikan mekanika game dan dokumen Game Design Document (GDD) kepada tim penilai.",
-      "category": "Presentasi Tim",
-      "time": "11:45 WIB"
+      "id": "expo-2024-2",
+      "url": "/assets/expo/expo-2024-2.jpg",
+      "caption": "Sesi playtest publik: pengunjung mencoba langsung karya game mahasiswa pada perangkat pengujian.",
+      "category": "Dokumentasi",
+      "time": "11:15 WIB"
     },
     {
-      "id": "p24-3",
-      "url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&auto=format&fit=crop&q=80",
-      "caption": "Suasana antrean mahasiswa ITERA menjajal turnamen mini game aksi multipemain lokal.",
-      "category": "Suasana Pameran",
-      "time": "13:20 WIB"
+      "id": "expo-2024-3",
+      "url": "/assets/expo/expo-2024-3.jpg",
+      "caption": "Mahasiswa pengembang menjelaskan alur cerita, mekanika kontrol, dan arsitektur teknis game.",
+      "category": "Dokumentasi",
+      "time": "12:30 WIB"
     },
     {
-      "id": "p24-4",
-      "url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&auto=format&fit=crop&q=80",
-      "caption": "Pojok retro & arcade indie: setup dual controller untuk pengujian game platformer 2D.",
-      "category": "Playtest & Booth",
-      "time": "14:10 WIB"
+      "id": "expo-2024-4",
+      "url": "/assets/expo/expo-2024-4.jpg",
+      "caption": "Pengujian respons kontrol dan interaksi visual game karya mahasiswa oleh pengunjung pameran.",
+      "category": "Dokumentasi",
+      "time": "13:45 WIB"
     },
     {
-      "id": "p24-5",
-      "url": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1200&auto=format&fit=crop&q=80",
-      "caption": "Diskusi evaluasi mekanika bersama dosen pengampu Radhinka Bagaskara dan perwakilan praktisi industri.",
-      "category": "Review Dosen",
-      "time": "15:30 WIB"
+      "id": "expo-2024-5",
+      "url": "/assets/expo/expo-2024-5.jpg",
+      "caption": "Diskusi teknis dan pemberian feedback gameplay dari pengunjung kepada tim developer.",
+      "category": "Dokumentasi",
+      "time": "15:00 WIB"
     },
     {
-      "id": "p24-6",
-      "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-      "caption": "Sesi penyerahan apresiasi karya terfavorit pilihan audiens (People's Choice Award).",
-      "category": "Awarding",
-      "time": "16:45 WIB"
+      "id": "expo-2024-6",
+      "url": "/assets/expo/expo-2024-6.jpg",
+      "caption": "Keseruan pengunjung saat menjajal berbagai genre game hasil karya mahasiswa Teknologi Game.",
+      "category": "Dokumentasi",
+      "time": "16:20 WIB"
     }
   ]
 }

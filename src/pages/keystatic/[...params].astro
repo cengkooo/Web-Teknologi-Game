@@ -1,10 +1,7 @@
 ---
-import { makePage } from '@keystatic/astro/ui';
-import config from '../../../keystatic.config';
+import KeystaticApp from '../../components/KeystaticApp';
 
 export const prerender = false;
-
-const KeystaticApp = makePage(config);
 ---
 
 <!doctype html>
@@ -22,6 +19,19 @@ const KeystaticApp = makePage(config);
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@700;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Pre-render Theme Loader to Prevent Flash -->
+    <script is:inline>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme') || localStorage.getItem('keystatic-color-scheme') || 'dark';
+          const isLight = savedTheme === 'light';
+          document.documentElement.classList.toggle('light', isLight);
+          document.documentElement.classList.toggle('dark', !isLight);
+          document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
+        } catch (e) {}
+      })();
+    </script>
 
     <style is:inline>
       /* ==========================================================================
@@ -54,6 +64,7 @@ const KeystaticApp = makePage(config);
         border-bottom: 1px solid #262626;
         font-family: 'JetBrains Mono', monospace;
         font-size: 11px;
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
       }
 
       .hud-left {
@@ -69,12 +80,14 @@ const KeystaticApp = makePage(config);
         padding: 2px 6px;
         font-size: 10px;
         letter-spacing: 0.05em;
+        white-space: nowrap;
       }
 
       .hud-title {
         font-weight: 700;
         letter-spacing: 0.08em;
         color: #FFFFFF;
+        white-space: nowrap;
       }
 
       .hud-repo {
@@ -82,6 +95,7 @@ const KeystaticApp = makePage(config);
         font-size: 10px;
         border-left: 1px solid #262626;
         padding-left: 12px;
+        white-space: nowrap;
       }
 
       .hud-repo strong {
@@ -92,6 +106,7 @@ const KeystaticApp = makePage(config);
         display: flex;
         align-items: center;
         gap: 8px;
+        flex-shrink: 0;
       }
 
       /* Global Form Back Button Banner (dynamically injected in form view) */
@@ -106,6 +121,7 @@ const KeystaticApp = makePage(config);
         position: sticky;
         top: 41px;
         z-index: 99999;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
       }
 
       #custom-form-back-bar.active {
@@ -126,6 +142,7 @@ const KeystaticApp = makePage(config);
         border: 1px solid #404040;
         background-color: #171717;
         color: #FFFFFF;
+        white-space: nowrap;
         transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease;
       }
 
@@ -163,6 +180,143 @@ const KeystaticApp = makePage(config);
       #keystatic-mount-root {
         min-height: calc(100vh - 42px);
       }
+
+      /* ==========================================================================
+         LIGHT MODE THEME OVERRIDES FOR CMS
+         ========================================================================== */
+      html.light,
+      html.light body {
+        background-color: #F4F4F5 !important;
+        color: #09090B !important;
+      }
+
+      html.light #cms-hud-bar {
+        background-color: #FFFFFF !important;
+        border-bottom-color: #D4D4D8 !important;
+        color: #09090B !important;
+      }
+
+      html.light .hud-badge {
+        background-color: #09090B !important;
+        color: #FFFFFF !important;
+      }
+
+      html.light .hud-title {
+        color: #09090B !important;
+      }
+
+      html.light .hud-repo {
+        color: #71717A !important;
+        border-left-color: #D4D4D8 !important;
+      }
+
+      html.light .hud-repo strong {
+        color: #27272A !important;
+      }
+
+      html.light .brutalist-btn {
+        border-color: #D4D4D8 !important;
+        background-color: #FFFFFF !important;
+        color: #09090B !important;
+      }
+
+      html.light .brutalist-btn:hover {
+        background-color: #09090B !important;
+        color: #FFFFFF !important;
+        border-color: #09090B !important;
+      }
+
+      html.light .brutalist-btn-primary {
+        background-color: #09090B !important;
+        color: #FFFFFF !important;
+        border-color: #09090B !important;
+      }
+
+      html.light .brutalist-btn-primary:hover {
+        background-color: #FFFFFF !important;
+        color: #09090B !important;
+        border-color: #09090B !important;
+      }
+
+      html.light .brutalist-btn-danger {
+        border-color: #FECACA !important;
+        background-color: #FEF2F2 !important;
+        color: #DC2626 !important;
+      }
+
+      html.light .brutalist-btn-danger:hover {
+        background-color: #DC2626 !important;
+        color: #FFFFFF !important;
+        border-color: #DC2626 !important;
+      }
+
+      html.light #custom-form-back-bar {
+        background-color: #FFFFFF !important;
+        border-bottom-color: #D4D4D8 !important;
+      }
+
+      html.light #form-context-info {
+        color: #71717A !important;
+      }
+
+      /* ==========================================================================
+         RESPONSIVE BEHAVIOR (Mobile & Tablet)
+         ========================================================================== */
+      @media (max-width: 900px) {
+        .hud-repo {
+          display: none;
+        }
+      }
+
+      @media (max-width: 680px) {
+        #cms-hud-bar {
+          padding: 6px 10px;
+          gap: 6px;
+        }
+        .hud-left {
+          gap: 6px;
+        }
+        .hud-title {
+          font-size: 10px;
+        }
+        .hud-right {
+          gap: 4px;
+        }
+        .brutalist-btn {
+          padding: 4px 8px;
+          font-size: 10px;
+          gap: 4px;
+        }
+        .btn-text-full {
+          display: none;
+        }
+        .btn-text-short {
+          display: inline;
+        }
+        #custom-form-back-bar {
+          padding: 6px 10px;
+          gap: 6px;
+          top: 37px;
+        }
+        #form-context-info {
+          display: none;
+        }
+      }
+
+      @media (min-width: 681px) {
+        .btn-text-short {
+          display: none;
+        }
+        .btn-text-full {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 440px) {
+        .hud-title {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -177,16 +331,31 @@ const KeystaticApp = makePage(config);
       </div>
 
       <div class="hud-right">
+        <!-- Theme Toggle Button -->
+        <button
+          id="cms-theme-toggle-btn"
+          class="brutalist-btn"
+          type="button"
+          aria-label="Ubah Tema Gelap atau Terang"
+          title="Ubah Mode Gelap / Terang"
+        >
+          <span id="cms-theme-icon" style="font-size: 12px;">◐</span>
+          <span id="cms-theme-text" class="btn-text-full">MODE: DARK</span>
+          <span class="btn-text-short" id="cms-theme-text-short">DARK</span>
+        </button>
+
         <!-- Return to Public Web -->
         <a href="/" class="brutalist-btn" title="Kembali ke Halaman Web Utama">
           <span>&larr;</span>
-          <span>WEBSITE PUBLIK</span>
+          <span class="btn-text-full">WEBSITE PUBLIK</span>
+          <span class="btn-text-short">WEB</span>
         </a>
 
         <!-- Logout Button -->
         <button id="cms-logout-btn" class="brutalist-btn brutalist-btn-danger" type="button" title="Keluar dari sesi GitHub">
           <span>&times;</span>
-          <span>LOGOUT GITHUB</span>
+          <span class="btn-text-full">LOGOUT GITHUB</span>
+          <span class="btn-text-short">LOGOUT</span>
         </button>
       </div>
     </header>
@@ -211,9 +380,48 @@ const KeystaticApp = makePage(config);
       <KeystaticApp client:only="react" />
     </main>
 
-    <!-- Client-side script for Logout & Form Back Button injection -->
+    <!-- Client-side script for Logout, Theme Toggle & Form Back Button injection -->
     <script is:inline>
       (function () {
+        // 0. Theme Toggle Handler
+        const themeBtn = document.getElementById('cms-theme-toggle-btn');
+        const themeIcon = document.getElementById('cms-theme-icon');
+        const themeText = document.getElementById('cms-theme-text');
+        const themeTextShort = document.getElementById('cms-theme-text-short');
+
+        function applyTheme(theme) {
+          const isLight = theme === 'light';
+          document.documentElement.classList.toggle('light', isLight);
+          document.documentElement.classList.toggle('dark', !isLight);
+          document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute('data-color-scheme', theme);
+
+          if (document.body) {
+            document.body.setAttribute('data-color-scheme', theme);
+          }
+
+          if (themeIcon) themeIcon.textContent = isLight ? '☼' : '◐';
+          if (themeText) themeText.textContent = isLight ? 'MODE: LIGHT' : 'MODE: DARK';
+          if (themeTextShort) themeTextShort.textContent = isLight ? 'LIGHT' : 'DARK';
+
+          try {
+            localStorage.setItem('theme', theme);
+            localStorage.setItem('keystatic-color-scheme', theme);
+            localStorage.setItem('keystatic-root-color-scheme', theme);
+            window.dispatchEvent(new Event('storage'));
+          } catch (e) {}
+        }
+
+        const initialTheme = document.documentElement.classList.contains('light') ? 'light' : 'dark';
+        applyTheme(initialTheme);
+
+        themeBtn?.addEventListener('click', () => {
+          const isCurrentLight = document.documentElement.classList.contains('light');
+          const newTheme = isCurrentLight ? 'dark' : 'light';
+          applyTheme(newTheme);
+        });
+
         // 1. Logout Handler
         const logoutBtn = document.getElementById('cms-logout-btn');
         logoutBtn?.addEventListener('click', async () => {

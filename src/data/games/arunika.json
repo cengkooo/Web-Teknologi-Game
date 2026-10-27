@@ -1,0 +1,63 @@
+{
+  "slug": "arunika",
+  "title": "Arunika",
+  "developer": "Da TeGa.dev",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "Arunika adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Da TeGa.dev menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": true,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjQzMDg4LnBuZw==/original/OqHFqJ.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA2OC8xMjI0MzMzNS5wbmc=/original/JygjV1.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA2OC8xMjI0MzMzNi5wbmc=/original/7Jwp7q.png"
+  ],
+  "itchUrl": "https://arunikas.itch.io/arunika",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "andri-setiawan",
+      "name": "Andri Setiawan",
+      "nim": "120140191",
+      "role": "Director, Programmer"
+    },
+    {
+      "id": "riyan-khoiri-s",
+      "name": "Riyan Khoiri S",
+      "nim": "120140212",
+      "role": "Director, Programmer"
+    },
+    {
+      "id": "zointa-ras-bangun",
+      "name": "Zointa Ras Bangun",
+      "nim": "120140225",
+      "role": "Artist"
+    },
+    {
+      "id": "afif-syaifullah-f",
+      "name": "Afif Syaifullah F",
+      "nim": "120140229",
+      "role": "Director, Programmer, Artist"
+    },
+    {
+      "id": "dzakkir-latifan-m",
+      "name": "Dzakkir Latifan M",
+      "nim": "120140240",
+      "role": "Sound"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

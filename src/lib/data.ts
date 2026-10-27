@@ -57,9 +57,17 @@ export function getStudentById(id: string): Student | undefined {
 }
 
 export function getGamesByStudentId(studentId: string): Game[] {
+  const student = getStudentById(studentId);
   return getAllGames().filter((game) =>
-    game.contributors.some((c) => c.id === studentId)
+    game.contributors.some(
+      (c) => c.id === studentId || (student?.nim && c.nim && c.nim === student.nim)
+    )
   );
+}
+
+export function getSemestersList(): string[] {
+  const games = getAllGames();
+  return Array.from(new Set(games.map((g) => g.semester).filter(Boolean) as string[])).sort().reverse();
 }
 
 export function getEnginesList(): string[] {

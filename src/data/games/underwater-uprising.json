@@ -1,0 +1,60 @@
+{
+  "slug": "underwater-uprising",
+  "title": "Underwater Uprising",
+  "developer": "ITer8",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "Underwater Uprising adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok ITer8 menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "/assets/uploads/games/underwater-uprising.jpg",
+  "screenshots": [],
+  "itchUrl": "https://iter8.itch.io/underwate-uprising",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "muhammad-faatih-rizal-auliya",
+      "name": "Muhammad Faatih Rizal Auliya",
+      "nim": "119140212",
+      "role": "Director/Designer"
+    },
+    {
+      "id": "teo-rasyid-prawiranegara",
+      "name": "Teo Rasyid Prawiranegara",
+      "nim": "14117182",
+      "role": "Programmer"
+    },
+    {
+      "id": "fajar-tegar-nugraha",
+      "name": "Fajar Tegar Nugraha",
+      "nim": "119140048",
+      "role": "Artist"
+    },
+    {
+      "id": "christian",
+      "name": "Christian",
+      "nim": "120140056",
+      "role": "Sound"
+    },
+    {
+      "id": "duta-rega-rolindo",
+      "name": "Duta Rega Rolindo",
+      "nim": "120140135",
+      "role": "Tester"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

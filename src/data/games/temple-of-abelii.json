@@ -1,0 +1,65 @@
+{
+  "slug": "temple-of-abelii",
+  "title": "Temple of Abelii",
+  "developer": "DoaIbu Games",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Action-platformer 2D yang menceritakan Royhands, pemburu ilegal yang terkutuk menjadi orangutan setelah menyentuh artefak \"Abelii\". Pemai...",
+  "description": "Action-platformer 2D yang menceritakan Royhands, pemburu ilegal yang terkutuk menjadi orangutan setelah menyentuh artefak \"Abelii\". Pemain harus menjelajahi hutan, goa, dan temple mengumpulkan \"Scrap of Abelii\" sambil menghindari jebakan mematikan, melawan monster, serta melarikan diri dari dua teman pemburunya.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows",
+    "Web"
+  ],
+  "batchYear": 2025,
+  "featured": true,
+  "posterImage": "https://img.itch.zone/aW1nLzI0NTIyMDMyLnBuZw==/original/PhV5GH.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0Mi5qcGc=/original/wvMXcj.jpg",
+    "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0NC5qcGc=/original/dsAkFZ.jpg",
+    "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0My5qcGc=/original/VfHUS3.jpg"
+  ],
+  "itchUrl": "https://geastia.itch.io/temple-of-abelii",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "dzaki-gastiadirrijal",
+      "name": "Dzaki Gastiadirrijal",
+      "nim": "122140030",
+      "role": "Director"
+    },
+    {
+      "id": "fawwaz-abhitah-sugiarto",
+      "name": "Fawwaz Abhitah Sugiarto",
+      "nim": "122140014",
+      "role": "Game Artist"
+    },
+    {
+      "id": "deva-ahmad",
+      "name": "Deva Ahmad",
+      "nim": "122140015",
+      "role": "Sound Engineer"
+    },
+    {
+      "id": "bagas-andreanto",
+      "name": "Bagas Andreanto",
+      "nim": "122140017",
+      "role": "Programmer"
+    },
+    {
+      "id": "arkan-hariz-chandrawinata-liem",
+      "name": "Arkan Hariz Chandrawinata Liem",
+      "nim": "122140038",
+      "role": "Game Designer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

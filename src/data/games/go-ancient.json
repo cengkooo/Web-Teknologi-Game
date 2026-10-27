@@ -1,0 +1,60 @@
+{
+  "slug": "go-ancient",
+  "title": "Go Ancient",
+  "developer": "Desra Group",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Sidescroller puzzle tentang seorang pencari harta karun yang menimbulkan teka-teki dan petualangan menantang.",
+  "description": "Sidescroller puzzle tentang seorang pencari harta karun yang menimbulkan teka-teki dan petualangan menantang.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Puzzle"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": true,
+  "posterImage": "/assets/uploads/games/Go-Ancient.JPG",
+  "screenshots": [],
+  "itchUrl": "https://github.com/gabrielfico/tubes-tekgem",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "gabriel-fico-darius",
+      "name": "Gabriel Fico Darius",
+      "nim": "121140069",
+      "role": "Game Director"
+    },
+    {
+      "id": "kasyfi-wahyu-hazazi",
+      "name": "Kasyfi Wahyu Hazazi",
+      "nim": "121140220",
+      "role": "Game Artist"
+    },
+    {
+      "id": "fatur-arkan-syawalva",
+      "name": "Fatur Arkan Syawalva",
+      "nim": "121140229",
+      "role": "Game Designer, Game Artist, Programmer"
+    },
+    {
+      "id": "maharani-triza",
+      "name": "Maharani Triza",
+      "nim": "121140071",
+      "role": "Sound Engineer"
+    },
+    {
+      "id": "arof-andestama",
+      "name": "Arof Andestama",
+      "nim": "121140182",
+      "role": "Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

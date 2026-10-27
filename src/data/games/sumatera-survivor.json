@@ -1,0 +1,61 @@
+{
+  "slug": "sumatera-survivor",
+  "title": "Sumatera Survivor",
+  "developer": "Nufta Studio",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Roguelike shoot-em-up tentang menyelamatkan bumi dari roh mistis Sumatera dengan menggunakan benda khas tradisi Sumatera.",
+  "description": "Roguelike shoot-em-up tentang menyelamatkan bumi dari roh mistis Sumatera dengan menggunakan benda khas tradisi Sumatera.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows",
+    "Web"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODM1NzI1LmpwZWc=/original/TIWVNl.jpeg",
+  "screenshots": [],
+  "itchUrl": "https://nufta.itch.io/sumatera-survivor",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "fadel-malik",
+      "name": "Fadel Malik",
+      "nim": "121140165",
+      "role": "Programmer"
+    },
+    {
+      "id": "muhammad-taqy-abdullah",
+      "name": "Muhammad Taqy Abdullah",
+      "nim": "121140166",
+      "role": "Programmer"
+    },
+    {
+      "id": "adriel-gideon-benedict-sirait",
+      "name": "Adriel Gideon Benedict Sirait",
+      "nim": "121140196",
+      "role": "Artist, Sound Engineer"
+    },
+    {
+      "id": "natanael-argajova",
+      "name": "Natanael Argajova",
+      "nim": "121140205",
+      "role": "Designer, Artist"
+    },
+    {
+      "id": "muhammad-umar-basyir",
+      "name": "Muhammad Umar Basyir",
+      "nim": "121140221",
+      "role": "Sound Engineer, Designer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

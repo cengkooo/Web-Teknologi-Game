@@ -1,0 +1,64 @@
+{
+  "slug": "legacy-of-andalas",
+  "title": "Legacy of Andalas",
+  "developer": "ARATERA Studio",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Vampire Survivor-Like dengan sudut pandang kamera Top-Down, permainan ini mengambil tempat di reruntuhan Kerajaan Andalas di Pulau Sumate...",
+  "description": "Vampire Survivor-Like dengan sudut pandang kamera Top-Down, permainan ini mengambil tempat di reruntuhan Kerajaan Andalas di Pulau Sumatera melawan invasi Raja Iblis Durjana. Gunakan senjata tradisional seperti Rencong, Piarik, dan Sumpitan untuk melawan musuh yang diadaptasi dari makhluk mitologi lokal.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzI0NTE5MDM4LnBuZw==/original/ZK89Tc.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTA0MC5qcGc=/original/VQWG1W.jpg",
+    "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTA0MS5qcGc=/original/wTP4Pr.jpg",
+    "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTIxOC5qcGc=/original/1TYE0r.jpg"
+  ],
+  "itchUrl": "https://juustfinn.itch.io/legacy-of-andalas",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "garland-wijaya",
+      "name": "Garland Wijaya",
+      "nim": "122140001",
+      "role": "Director/Programmer"
+    },
+    {
+      "id": "kenneth-austin-wijaya",
+      "name": "Kenneth Austin Wijaya",
+      "nim": "122140043",
+      "role": "Designer/Programmer"
+    },
+    {
+      "id": "festus-mikhael",
+      "name": "Festus Mikhael",
+      "nim": "122140087",
+      "role": "Game Artist"
+    },
+    {
+      "id": "lucas-hamonangan-simaremare",
+      "name": "Lucas Hamonangan Simaremare",
+      "nim": "122140196",
+      "role": "Programmer"
+    },
+    {
+      "id": "jonathan-jethro",
+      "name": "Jonathan Jethro",
+      "nim": "122140213",
+      "role": "Composer/Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

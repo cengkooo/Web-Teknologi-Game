@@ -1,0 +1,59 @@
+{
+  "slug": "broken-bonds",
+  "title": "Broken Bonds",
+  "developer": "Kentang Production",
+  "semester": "2023/2024 Ganjil",
+  "semesterKey": "23-24-ganjil",
+  "tagline": "Broken Bonds adalah game 2D dengan style pixel dan top-down view, Broken Bonds adalah story-driven game dengan genre RPG dimana kita mema...",
+  "description": "Broken Bonds adalah game 2D dengan style pixel dan top-down view, Broken Bonds adalah story-driven game dengan genre RPG dimana kita memainkan karakter bernama “Caelus”, player dapat menjalankan quest, selesaikan questnya untuk melanjutkan level dan juga cerita nya.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "RPG",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows",
+    "Web"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE0MjU2Mzc1LnBuZw==/original/Uv02ql.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjQwMTQ4NS8xNDI1ODM3MC5wbmc=/original/CbHpmW.png",
+    "https://img.itch.zone/aW1hZ2UvMjQwMTQ4NS8xNDI1ODM3MS5wbmc=/original/9C7Hdw.png",
+    "https://img.itch.zone/aW1hZ2UvMjQwMTQ4NS8xNDI1ODM3Mi5wbmc=/original/90gPO4.png"
+  ],
+  "itchUrl": "https://kentang-production.itch.io/brokenbonds",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "attar-akram-abdillah",
+      "name": "Attar Akram Abdillah",
+      "nim": "121140013",
+      "role": "Director, Artist"
+    },
+    {
+      "id": "daris-fikri-zhalifunnas",
+      "name": "Daris Fikri Zhalifunnas",
+      "nim": "121140067",
+      "role": "Designer, Programmer"
+    },
+    {
+      "id": "dhian-adi-nugraha",
+      "name": "Dhian Adi Nugraha",
+      "nim": "121140055",
+      "role": "Sound"
+    },
+    {
+      "id": "muhammad-aryo-bimo",
+      "name": "Muhammad Aryo Bimo",
+      "nim": "121140149",
+      "role": "Designer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

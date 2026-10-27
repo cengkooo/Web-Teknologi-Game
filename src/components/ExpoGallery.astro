@@ -12,10 +12,9 @@ interface GalleryPhoto extends ExpoPhoto {
 interface Props {
   photos: GalleryPhoto[];
   years: number[];
-  categories: string[];
 }
 
-const { photos, years, categories } = Astro.props;
+const { photos, years } = Astro.props;
 ---
 
 <!-- Photo Gallery Section with Dynamic Filters -->
@@ -32,42 +31,23 @@ const { photos, years, categories } = Astro.props;
     </div>
   </div>
 
-  <!-- Filter Buttons Bar -->
-  <div class="border border-[#262626] bg-[#0A0A0A] p-4 mb-8 font-mono text-xs space-y-4">
+  <!-- Filter Buttons Bar (Hanya Tahun) -->
+  <div class="border border-[#262626] bg-[#0A0A0A] p-4 mb-8 font-mono text-xs">
     <!-- Filter Tahun -->
     <div class="flex flex-wrap items-center gap-2">
       <span class="text-[#737373] text-[10px] uppercase tracking-wider mr-2 font-bold">// TAHUN:</span>
       <button
-        class="year-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors"
+        class="year-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors cursor-pointer"
         data-year="all"
       >
         SEMUA TAHUN
       </button>
       {years.map((year) => (
         <button
-          class="year-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors"
+          class="year-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors cursor-pointer"
           data-year={year.toString()}
         >
           {year}
-        </button>
-      ))}
-    </div>
-
-    <!-- Filter Kategori -->
-    <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-[#1a1a1a]">
-      <span class="text-[#737373] text-[10px] uppercase tracking-wider mr-2 font-bold">// KATEGORI:</span>
-      <button
-        class="cat-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors"
-        data-category="all"
-      >
-        SEMUA KATEGORI
-      </button>
-      {categories.map((cat) => (
-        <button
-          class="cat-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors"
-          data-category={cat}
-        >
-          {cat}
         </button>
       ))}
     </div>
@@ -88,18 +68,24 @@ const { photos, years, categories } = Astro.props;
         data-date={photo.eventDate}
       >
         <div>
-          <div class="relative aspect-4/3 overflow-hidden bg-black border-b border-[#262626]">
+          <div class="relative aspect-video overflow-hidden bg-black border-b border-[#262626]">
             <img
               src={photo.url}
               alt={photo.caption}
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
             />
-            <div class="absolute top-2 left-2 px-2 py-0.5 bg-black/85 backdrop-blur-sm border border-[#262626] text-[10px] font-mono text-white uppercase">
+            <div
+              class="photo-badge absolute top-2 left-2 px-2 py-0.5 border border-[#262626] text-[10px] font-mono font-bold uppercase text-white"
+              style="background-color: rgba(0, 0, 0, 0.85) !important; color: #FFFFFF !important;"
+            >
               {photo.category}
             </div>
             {photo.time && (
-              <div class="absolute top-2 right-2 px-2 py-0.5 bg-black/85 backdrop-blur-sm border border-[#262626] text-[10px] font-mono text-[#a3a3a3]">
+              <div
+                class="photo-badge absolute top-2 right-2 px-2 py-0.5 border border-[#262626] text-[10px] font-mono font-bold text-white"
+                style="background-color: rgba(0, 0, 0, 0.85) !important; color: #FFFFFF !important;"
+              >
                 {photo.time}
               </div>
             )}
@@ -124,11 +110,11 @@ const { photos, years, categories } = Astro.props;
   <div id="gallery-empty-state" class="hidden border border-[#262626] bg-[#0A0A0A] p-12 text-center font-mono">
     <div class="text-[#737373] text-sm uppercase tracking-widest mb-2">[HASIL TIDAK DITEMUKAN]</div>
     <p class="text-xs text-white max-w-md mx-auto mb-4">
-      Tidak ada foto pameran yang cocok dengan kombinasi filter tahun dan kategori yang dipilih.
+      Tidak ada foto pameran yang cocok dengan filter tahun yang dipilih.
     </p>
     <button
       id="reset-filters-btn"
-      class="px-4 py-2 border border-white bg-white text-black font-bold text-xs uppercase hover:bg-black hover:text-white transition-colors"
+      class="px-4 py-2 border border-white bg-white text-black font-bold text-xs uppercase hover:bg-black hover:text-white transition-colors cursor-pointer"
     >
       RESET FILTER
     </button>
@@ -184,7 +170,6 @@ const { photos, years, categories } = Astro.props;
 <script is:inline>
   function setupExpoGallery() {
     const yearButtons = document.querySelectorAll('.year-filter-btn');
-    const catButtons = document.querySelectorAll('.cat-filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
     const counterEl = document.getElementById('gallery-counter');
     const headerPhotoCount = document.getElementById('header-photo-count');
@@ -202,19 +187,15 @@ const { photos, years, categories } = Astro.props;
     const closeLightboxBtn = document.getElementById('close-lightbox-btn');
 
     let selectedYear = 'all';
-    let selectedCategory = 'all';
 
     function applyFilters() {
       let visibleCount = 0;
 
       galleryItems.forEach((item) => {
         const itemYear = item.getAttribute('data-year');
-        const itemCategory = item.getAttribute('data-category');
-
         const matchYear = selectedYear === 'all' || itemYear === selectedYear;
-        const matchCat = selectedCategory === 'all' || itemCategory === selectedCategory;
 
-        if (matchYear && matchCat) {
+        if (matchYear) {
           item.classList.remove('hidden');
           visibleCount++;
         } else {
@@ -238,18 +219,9 @@ const { photos, years, categories } = Astro.props;
       yearButtons.forEach((btn) => {
         const val = btn.getAttribute('data-year');
         if (val === selectedYear) {
-          btn.className = 'year-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors';
+          btn.className = 'year-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors cursor-pointer';
         } else {
-          btn.className = 'year-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors';
-        }
-      });
-
-      catButtons.forEach((btn) => {
-        const val = btn.getAttribute('data-category');
-        if (val === selectedCategory) {
-          btn.className = 'cat-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors';
-        } else {
-          btn.className = 'cat-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors';
+          btn.className = 'year-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors cursor-pointer';
         }
       });
     }
@@ -262,18 +234,9 @@ const { photos, years, categories } = Astro.props;
       });
     });
 
-    catButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        selectedCategory = btn.getAttribute('data-category') || 'all';
-        updateActiveButtons();
-        applyFilters();
-      });
-    });
-
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
         selectedYear = 'all';
-        selectedCategory = 'all';
         updateActiveButtons();
         applyFilters();
       });

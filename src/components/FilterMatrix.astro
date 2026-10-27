@@ -1,21 +1,19 @@
 ---
 interface Props {
-  engines: string[];
-  genres: string[];
   batches: number[];
   totalResults: number;
 }
 
-const { engines, genres, batches, totalResults } = Astro.props;
+const { batches, totalResults } = Astro.props;
 ---
 
 <div id="filter-matrix-box" class="border border-[#262626] bg-[#0A0A0A] p-4 sm:p-5 mb-6 font-mono text-xs">
   <!-- Matrix Title Bar -->
-  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-[#262626] gap-2 mb-4">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#262626] gap-2 mb-4">
     <div class="flex items-center gap-2">
       <span class="inline-block w-2 h-2 bg-white"></span>
       <span class="text-white font-bold tracking-widest uppercase">
-        CATALOG FILTER MATRIX // MULTI-ATTRIBUTE
+        FILTER TAHUN // CLASS BATCH
       </span>
       <span id="matrix-match-count" class="text-[#737373] text-[11px] ml-2">
         [{totalResults} MATCHES]
@@ -27,99 +25,32 @@ const { engines, genres, batches, totalResults } = Astro.props;
       type="button"
       class="hidden text-black bg-white px-2 py-0.5 text-[11px] font-bold tracking-wider uppercase border border-white hover:bg-black hover:text-white transition-colors self-start sm:self-auto cursor-pointer"
     >
-      [RESET ALL FILTERS &times;]
+      [RESET FILTER &times;]
     </button>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-    <!-- Engine Filter Row -->
-    <div>
-      <div class="text-[#737373] uppercase tracking-wider text-[10px] mb-2 font-bold flex items-center justify-between">
-        <span>01 // GAME ENGINE</span>
-        <span id="badge-active-engine" class="hidden text-white font-bold text-[10px] bg-black px-1 border border-[#262626]">
-          [ACTIVE]
-        </span>
-      </div>
-      <div class="flex flex-wrap gap-1" data-filter-group="engine">
-        <button
-          type="button"
-          data-filter-group="engine"
-          data-filter-value=""
-          class="matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white"
-        >
-          ALL
-        </button>
-        {engines.map((eng) => (
-          <button
-            type="button"
-            data-filter-group="engine"
-            data-filter-value={eng.toLowerCase()}
-            class="matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white"
-          >
-            {eng.toUpperCase()}
-          </button>
-        ))}
-      </div>
-    </div>
-
-    <!-- Batch Year Filter Row -->
-    <div>
-      <div class="text-[#737373] uppercase tracking-wider text-[10px] mb-2 font-bold flex items-center justify-between">
-        <span>02 // TAHUN</span>
-        <span id="badge-active-batch" class="hidden text-white font-bold text-[10px] bg-black px-1 border border-[#262626]">
-          [ACTIVE]
-        </span>
-      </div>
-      <div class="flex flex-wrap gap-1" data-filter-group="batch">
-        <button
-          type="button"
-          data-filter-group="batch"
-          data-filter-value=""
-          class="matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white"
-        >
-          ALL
-        </button>
-        {batches.map((batchYear) => (
-          <button
-            type="button"
-            data-filter-group="batch"
-            data-filter-value={String(batchYear)}
-            class="matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white"
-          >
-            {batchYear}
-          </button>
-        ))}
-      </div>
-    </div>
-
-    <!-- Genre Filter Row -->
-    <div>
-      <div class="text-[#737373] uppercase tracking-wider text-[10px] mb-2 font-bold flex items-center justify-between">
-        <span>03 // GENRE & THEME</span>
-        <span id="badge-active-genre" class="hidden text-white font-bold text-[10px] bg-black px-1 border border-[#262626]">
-          [ACTIVE]
-        </span>
-      </div>
-      <div class="flex flex-wrap gap-1" data-filter-group="genre">
-        <button
-          type="button"
-          data-filter-group="genre"
-          data-filter-value=""
-          class="matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white"
-        >
-          ALL
-        </button>
-        {genres.map((g) => (
-          <button
-            type="button"
-            data-filter-group="genre"
-            data-filter-value={g.toLowerCase()}
-            class="matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white"
-          >
-            {g}
-          </button>
-        ))}
-      </div>
-    </div>
+  <!-- Batch Year Filter Row -->
+  <div class="flex flex-wrap items-center gap-1.5" data-filter-group="batch">
+    <span class="text-[#737373] uppercase tracking-wider text-[10px] font-bold mr-2">
+      PILIH TAHUN:
+    </span>
+    <button
+      type="button"
+      data-filter-group="batch"
+      data-filter-value=""
+      class="matrix-filter-btn px-3 py-1.5 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white"
+    >
+      SEMUA TAHUN
+    </button>
+    {batches.map((batchYear) => (
+      <button
+        type="button"
+        data-filter-group="batch"
+        data-filter-value={String(batchYear)}
+        class="matrix-filter-btn px-3 py-1.5 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white font-bold"
+      >
+        {batchYear}
+      </button>
+    ))}
   </div>
 </div>

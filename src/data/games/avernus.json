@@ -1,0 +1,64 @@
+{
+  "slug": "avernus",
+  "title": "Avernus",
+  "developer": "D2ray Studio",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "Avernus - Game Action karya D2Ray Studio",
+  "description": "Avernus adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok D2ray Studio menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "/assets/uploads/games/avernus.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzNy5wbmc=/original/YFOQDe.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzOC5wbmc=/original/X3Tvtl.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzOS5wbmc=/original/4pcMrg.png"
+  ],
+  "itchUrl": "https://d2ray-studio.itch.io/avernus",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "andhika-wibawa-bhagaskara",
+      "name": "Andhika Wibawa Bhagaskara",
+      "nim": "119140218",
+      "role": "Programmer, Tester"
+    },
+    {
+      "id": "dimas-aqshal-primadaffa",
+      "name": "Dimas Aqshal Primadaffa",
+      "nim": "119140140",
+      "role": "Designer, Artist"
+    },
+    {
+      "id": "rayhan-athalla-ghifary",
+      "name": "Rayhan Athalla Ghifary",
+      "nim": "119140225",
+      "role": "Programmer, Tester"
+    },
+    {
+      "id": "m-iqbal",
+      "name": "M Iqbal",
+      "nim": "118140130",
+      "role": "Programmer, Artist"
+    },
+    {
+      "id": "joy-aloita-sembiring",
+      "name": "Joy Aloita Sembiring",
+      "nim": "119140036",
+      "role": "Sound"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

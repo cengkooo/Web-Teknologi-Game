@@ -1,0 +1,60 @@
+{
+  "slug": "wonder",
+  "title": "Wonder",
+  "developer": "Perguruan Bunglon Beracun",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "Wonder adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Perguruan Bunglon Beracun menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjQyNDg4LnBuZw==/original/yfQaCR.png",
+  "screenshots": [],
+  "itchUrl": "https://perguruanbunglonberacun.itch.io/wonder",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "m-bintang-fitriatuderajat",
+      "name": "M. Bintang Fitriatuderajat",
+      "nim": "120140040",
+      "role": "Designer"
+    },
+    {
+      "id": "naufal-taufiq-ridwan",
+      "name": "Naufal Taufiq Ridwan",
+      "nim": "120140044",
+      "role": "Programmer"
+    },
+    {
+      "id": "m-rizky-fahreza-gusti",
+      "name": "M. Rizky Fahreza Gusti",
+      "nim": "120140071",
+      "role": "Sound"
+    },
+    {
+      "id": "m-herton-amarta-buana",
+      "name": "M.herton Amarta Buana",
+      "nim": "120140182",
+      "role": "Artist"
+    },
+    {
+      "id": "aldian-farhan-p",
+      "name": "Aldian Farhan P",
+      "nim": "119140080",
+      "role": "Tester, Sound"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

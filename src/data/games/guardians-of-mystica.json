@@ -1,0 +1,59 @@
+{
+  "slug": "guardians-of-mystica",
+  "title": "Guardians of Mystica",
+  "developer": "Death Liner's Developer (DL Dev)",
+  "semester": "2023/2024 Ganjil",
+  "semesterKey": "23-24-ganjil",
+  "tagline": "Dalam Guardians of Mystica, pemain memasuki dunia ajaib penuh keajaiban dan petualangan. Cerita berlangsung di desa kecil yang dulu damai...",
+  "description": "Dalam Guardians of Mystica, pemain memasuki dunia ajaib penuh keajaiban dan petualangan. Cerita berlangsung di desa kecil yang dulu damai, kini dihantui kegelapan misterius. Sebagai pahlawan pemberani, tugasnya membebaskan penduduk dari cengkeraman monster jahat. Petualangan melintasi hutan misterius, gua gelap, dan lembah rahasia. Pertempuran melawan Raja Monster(tujuan akhir) menentukan takdir Mystica.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE0MjUwOTI2LnBuZw==/original/EsXpPz.png",
+  "screenshots": [],
+  "itchUrl": "https://death-liners.itch.io/guardian-of-mystica",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "muhammad-rafiif",
+      "name": "Muhammad Rafiif",
+      "nim": "120140148",
+      "role": "Director, Programmer"
+    },
+    {
+      "id": "dimas-azi-rajab-aizar",
+      "name": "Dimas Azi Rajab Aizar",
+      "nim": "121140135",
+      "role": "Programmer"
+    },
+    {
+      "id": "zeddhy-recca-fitracia",
+      "name": "Zeddhy Recca Fitracia",
+      "nim": "121140199",
+      "role": "Artist"
+    },
+    {
+      "id": "raja-josua-simanungkalit",
+      "name": "Raja Josua Simanungkalit",
+      "nim": "120140134",
+      "role": "Sound"
+    },
+    {
+      "id": "hilmanda-panji-orienski",
+      "name": "Hilmanda Panji Orienski",
+      "nim": "120140130",
+      "role": "Designer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

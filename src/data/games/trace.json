@@ -1,0 +1,63 @@
+{
+  "slug": "trace",
+  "title": "Trace",
+  "developer": "HORIZONE",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Action hack-and-slash tentang seorang entitas terdampar di Sumatera pasca-apokaliptik Lost Sumatera. Dalam upaya bertahan hidup, ia menje...",
+  "description": "Action hack-and-slash tentang seorang entitas terdampar di Sumatera pasca-apokaliptik Lost Sumatera. Dalam upaya bertahan hidup, ia menjelajahi Lost Sumatera dan mencari tahu rahasia Ancient Sumatera untuk mencari jalan kembali ke dunianya.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODMyOTMyLnBuZw==/original/12Hn6c.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk1MC8xODgzMjkwNy5wbmc=/original/1VcuHB.png",
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk1MC8xODgzMjkxNy5wbmc=/original/zeIR%2FV.png",
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk1MC8xODgzMjkzNy5wbmc=/original/jTJ2vp.png"
+  ],
+  "itchUrl": "https://horizone-techgameif22.itch.io/trace",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "dimas-dharma-wicaksono",
+      "name": "Dimas Dharma Wicaksono",
+      "nim": "122140237",
+      "role": "Director/Designer"
+    },
+    {
+      "id": "jason-surya-padantya",
+      "name": "Jason Surya Padantya",
+      "nim": "122140215",
+      "role": "Programmer"
+    },
+    {
+      "id": "muhammad-sabda-arif",
+      "name": "Muhammad Sabda Arif",
+      "nim": "122140218",
+      "role": "Game Designer/Sound Engineer"
+    },
+    {
+      "id": "abu-bakar-siddiq-siregar",
+      "name": "Abu Bakar Siddiq Siregar",
+      "nim": "122140164",
+      "role": "Programmer/Artist"
+    },
+    {
+      "id": "machzaul-harmansyah",
+      "name": "Machzaul Harmansyah",
+      "nim": "122140172",
+      "role": "Lead Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

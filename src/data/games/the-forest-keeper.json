@@ -1,0 +1,62 @@
+{
+  "slug": "the-forest-keeper",
+  "title": "The Forest Keeper",
+  "developer": "Malas Ngoding",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "First-person shooter horror tentang seorang penjaga hutan yang gagal menjalankan tugasnya untuk melindungi satwa langka di sumatera, dan ...",
+  "description": "First-person shooter horror tentang seorang penjaga hutan yang gagal menjalankan tugasnya untuk melindungi satwa langka di sumatera, dan bangkit kembali untuk menebus kesalahannya dengan menyelamatkan hewan-hewan tersebut.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Horror",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODM2NDU1LmpwZw==/original/UKXZD7.jpg",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMzE1Mjk1OS8xODgzMzAxMS5qcGc=/original/6FXutB.jpg"
+  ],
+  "itchUrl": "https://malasngodingco.itch.io/the-forest-keeper",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "akhdan-arif-prayoga",
+      "name": "Akhdan Arif Prayoga",
+      "nim": "122140099",
+      "role": "Game Director, Artist, Programmer"
+    },
+    {
+      "id": "a-edwin-krisandika-putra",
+      "name": "A. Edwin Krisandika Putra",
+      "nim": "122140003",
+      "role": "Programmer, Game Designer"
+    },
+    {
+      "id": "andreas-alvin-yoga-utama",
+      "name": "Andreas Alvin Yoga Utama",
+      "nim": "122140088",
+      "role": "Programmer, Sound Engineer"
+    },
+    {
+      "id": "fathan-andi-kartagama",
+      "name": "Fathan Andi Kartagama",
+      "nim": "122140055",
+      "role": "Programmer, Game Designer"
+    },
+    {
+      "id": "ramon-riping",
+      "name": "Ramon Riping",
+      "nim": "122140078",
+      "role": "Sound Engineer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

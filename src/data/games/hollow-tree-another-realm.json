@@ -1,0 +1,63 @@
+{
+  "slug": "hollow-tree-another-realm",
+  "title": "Hollow Tree: Another Realm",
+  "developer": "Waku Waku Studio",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Horror Top Down dimana bermain sebagai Arka, yang harus menemukan pecahan-pecahan prasasti kuno yang tersembunyi di dimensi \"Pintu Rimba\"...",
+  "description": "Horror Top Down dimana bermain sebagai Arka, yang harus menemukan pecahan-pecahan prasasti kuno yang tersembunyi di dimensi \"Pintu Rimba\" sambil menghadapi atmosfer yang mistis dan horor.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Horror"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzI0Mzg0Mjk5LnBuZw==/original/nKR9J%2F.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvNDA5MDk0My8yNDM4NTIwNC5wbmc=/original/p8km4X.png",
+    "https://img.itch.zone/aW1hZ2UvNDA5MDk0My8yNDM4NTIwNS5wbmc=/original/9T4gng.png"
+  ],
+  "itchUrl": "https://wakuwakustudio.itch.io/hollow-tree-another-realm",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "havidz-ridho-pratama",
+      "name": "Havidz Ridho Pratama",
+      "nim": "122140160",
+      "role": "Designer"
+    },
+    {
+      "id": "royfran-roger-valentino",
+      "name": "Royfran Roger Valentino",
+      "nim": "122140239",
+      "role": "Director"
+    },
+    {
+      "id": "hillmy-dyan-nugraha-huda",
+      "name": "Hillmy Dyan Nugraha Huda",
+      "nim": "121140083",
+      "role": "Sound Engineer"
+    },
+    {
+      "id": "jhoel-robert-sugiono-hutagalung",
+      "name": "Jhoel Robert Sugiono Hutagalung",
+      "nim": "122140174",
+      "role": "Programmer"
+    },
+    {
+      "id": "luthfianya-isyathun-rodiyyah",
+      "name": "Luthfianya Isyathun Rodiyyah",
+      "nim": "122140185",
+      "role": "Game Artist"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

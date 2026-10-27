@@ -6,7 +6,6 @@ import { getAllExpoEvents, getExpoYearsList, getAllExpoPhotos } from '../../lib/
 const events = getAllExpoEvents();
 const years = getExpoYearsList();
 const allPhotos = getAllExpoPhotos();
-const categories = Array.from(new Set(allPhotos.map((p) => p.category))).sort();
 ---
 
 <Layout
@@ -18,7 +17,7 @@ const categories = Array.from(new Set(allPhotos.map((p) => p.category))).sort();
     <div>
       <div class="flex items-center gap-2 mb-2 font-mono text-xs text-[#737373]">
         <span class="inline-block w-2 h-2 bg-white"></span>
-        <span>INDEX: 04 // PHYSICAL EXHIBITIONS & EXPO GALLERY</span>
+        <span>INDEX: 03 // PHYSICAL EXHIBITIONS & EXPO GALLERY</span>
       </div>
       <h1 class="font-display font-black text-2xl sm:text-4xl text-white tracking-wider uppercase">
         GAME TECH EXPO ARCHIVE
@@ -40,5 +39,5 @@ const categories = Array.from(new Set(allPhotos.map((p) => p.category))).sort();
     </div>
   </div>
 
-  <ExpoGallery photos={allPhotos} years={years} categories={categories} />
+  <ExpoGallery photos={allPhotos} years={years} />
 </Layout>

@@ -74,12 +74,9 @@ const { studentsWithGames, batches, totalStudents } = Astro.props;
     <div class="flex items-center gap-2.5">
       <span class="inline-block w-2 h-2 flex-shrink-0" style="background-color: #FFFFFF !important;"></span>
       <span class="font-display font-bold text-xs sm:text-sm tracking-widest uppercase" style="color: #FFFFFF !important;">
-        ENGINEERING TALENT ROSTER // MASTER LEDGER
+        MAHASISWA
       </span>
     </div>
-    <span class="text-[10px] border border-[#333333] px-2 py-0.5 hidden sm:inline uppercase tracking-wider" style="color: #FFFFFF !important; background-color: #141414 !important; border-color: #333333 !important;">
-      FORMAT: HIGH-DENSITY LEDGER
-    </span>
   </div>
 
   <!-- Scrollable Dense Table Container -->
@@ -88,17 +85,16 @@ const { studentsWithGames, batches, totalStudents } = Astro.props;
       <thead>
         <tr class="border-b border-[#262626] text-[10px] uppercase tracking-wider" style="background-color: #0A0A0A !important;">
           <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-14 text-center" style="color: #FFFFFF !important;">NO</th>
-          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-72" style="color: #FFFFFF !important;">STUDENT NAME & ID</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-72" style="color: #FFFFFF !important;">NAMA MAHASISWA</th>
           <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-24 text-center" style="color: #FFFFFF !important;">TAHUN</th>
-          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-56" style="color: #FFFFFF !important;">CORE SPECIALIZATION</th>
-          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F]" style="color: #FFFFFF !important;">ATTRIBUTED GAMES</th>
-          <th class="py-2.5 px-4 font-bold w-36 text-right" style="color: #FFFFFF !important;">LINKS</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F] w-56" style="color: #FFFFFF !important;">ROLE</th>
+          <th class="py-2.5 px-4 font-bold border-r border-[#1F1F1F]" style="color: #FFFFFF !important;">GAMES</th>
         </tr>
       </thead>
       <tbody id="roster-table-body" class="divide-y divide-[#1A1A1A]">
         {studentsWithGames.map(({ student, games }, index) => {
           const rowNumber = String(index + 1).padStart(2, '0');
-          const searchHaystack = `${student.name} ${student.id} ${student.role} ${games.map((g) => g.title).join(' ')} ${student.batch}`.toLowerCase();
+          const searchHaystack = `${student.name} ${student.nim || ''} ${student.id} ${student.role} ${games.map((g) => g.title).join(' ')} ${student.batch}`.toLowerCase();
           return (
             <tr
               class="roster-student-row hover:bg-[#121212] transition-colors duration-100 group"
@@ -110,14 +106,14 @@ const { studentsWithGames, batches, totalStudents } = Astro.props;
                 {rowNumber}
               </td>
 
-              <!-- Column 2: Name & ID -->
+              <!-- Column 2: Name & NIM -->
               <td class="py-3 px-4 border-r border-[#1F1F1F]">
                 <div class="min-w-0">
                   <div class="font-display font-bold text-xs text-white tracking-wide truncate group-hover:text-white">
                     {student.name}
                   </div>
                   <span class="text-[#737373] text-[10px] font-mono block mt-0.5">
-                    id="{student.id}"
+                    {student.nim ? `NIM: ${student.nim}` : `id="${student.id}"`}
                   </span>
                 </div>
               </td>
@@ -157,44 +153,6 @@ const { studentsWithGames, batches, totalStudents } = Astro.props;
                 )}
               </td>
 
-              <!-- Column 6: External Portfolios & Links -->
-              <td class="py-3 px-4 text-right">
-                <div class="flex items-center justify-end gap-2 text-[10px]">
-                  {student.githubUrl && (
-                    <a
-                      href={student.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-[#737373] hover:text-white border border-[#262626] px-1 py-0.5 bg-black hover:border-white transition-colors"
-                      title="GitHub Profile"
-                    >
-                      [GH&nearr;]
-                    </a>
-                  )}
-                  {student.linkedinUrl && (
-                    <a
-                      href={student.linkedinUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-[#737373] hover:text-white border border-[#262626] px-1 py-0.5 bg-black hover:border-white transition-colors"
-                      title="LinkedIn Profile"
-                    >
-                      [IN&nearr;]
-                    </a>
-                  )}
-                  {student.portfolioUrl && (
-                    <a
-                      href={student.portfolioUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-[#737373] hover:text-white border border-[#262626] px-1 py-0.5 bg-black hover:border-white transition-colors"
-                      title="Portfolio Website"
-                    >
-                      [PF&nearr;]
-                    </a>
-                  )}
-                </div>
-              </td>
             </tr>
           );
         })}

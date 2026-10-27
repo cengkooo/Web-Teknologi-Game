@@ -1,0 +1,60 @@
+{
+  "slug": "slimental",
+  "title": "SLIMENTAL",
+  "developer": "White Rose Studio",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "SLIMENTAL adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok White Rose Studio menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjQyMTY2LnBuZw==/original/TyoKGP.png",
+  "screenshots": [],
+  "itchUrl": "https://whiterosestudios.itch.io/slimental",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "marchell-manurung",
+      "name": "Marchell Manurung",
+      "nim": "120140208",
+      "role": "Sound, Artist"
+    },
+    {
+      "id": "tomu-petra-manogari-nahulae",
+      "name": "Tomu Petra Manogari Nahulae",
+      "nim": "120140209",
+      "role": "Sound, Artist"
+    },
+    {
+      "id": "dhilan-septa-yudha",
+      "name": "Dhilan Septa Yudha",
+      "nim": "120140224",
+      "role": "Programmer"
+    },
+    {
+      "id": "muhammad-khadziq",
+      "name": "Muhammad Khadziq",
+      "nim": "120140233",
+      "role": "Designer"
+    },
+    {
+      "id": "tegar-argie-desmonda",
+      "name": "Tegar Argie Desmonda",
+      "nim": "120140253",
+      "role": "Director, Programmer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

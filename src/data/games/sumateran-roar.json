@@ -1,0 +1,61 @@
+{
+  "slug": "sumateran-roar",
+  "title": "Sumateran Roar",
+  "developer": "AC Adapter",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Survival Co-op dimana empat manusia yang tersesat di dalam hutan tropis Sumatera, diintai seekor Harimau Sumatera. Pemain berperan sebaga...",
+  "description": "Survival Co-op dimana empat manusia yang tersesat di dalam hutan tropis Sumatera, diintai seekor Harimau Sumatera. Pemain berperan sebagai manusia atau harimau. Tujuan manusia hanya satu: bekerja sama untuk mengaktifkan mesin yang tersembunyi di beberapa titik hutan, untuk keluar dari hutan.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Survival",
+    "Co-Op"
+  ],
+  "platform": [
+    "Windows",
+    "macOS"
+  ],
+  "batchYear": 2025,
+  "featured": true,
+  "posterImage": "https://img.itch.zone/aW1nLzI0NDE0NTc2LmpwZWc=/original/J3w0Av.jpeg",
+  "screenshots": [],
+  "itchUrl": "https://sumateranroar.itch.io/sumateranroar",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "syuhada-rantisi",
+      "name": "Syuhada Rantisi",
+      "nim": "122140092",
+      "role": "Director/Programmer"
+    },
+    {
+      "id": "randy-hendriyawan",
+      "name": "Randy Hendriyawan",
+      "nim": "122140171",
+      "role": "Programmer"
+    },
+    {
+      "id": "daniel-ferryal-zuhri",
+      "name": "Daniel Ferryal Zuhri",
+      "nim": "122140114",
+      "role": "Artist"
+    },
+    {
+      "id": "muhammad-riveldo-hermawan-putra",
+      "name": "Muhammad Riveldo Hermawan Putra",
+      "nim": "122140037",
+      "role": "Designer"
+    },
+    {
+      "id": "elkana-juanro-manullang",
+      "name": "Elkana Juanro Manullang",
+      "nim": "122140168",
+      "role": "Composer/Sound Engineer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "kaboer",
+  "title": "Kaboer",
+  "developer": "AIRBY Studio",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "Kaboer adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok AIRBY Studio menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjQyODI3LnBuZw==/original/4X%2FW67.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA2Mi8xMjI0MjU2NC5wbmc=/original/BXZlTy.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA2Mi8xMjI0MjU2Ni5wbmc=/original/6xEkrf.png",
+    "https://img.itch.zone/aW1hZ2UvMjA4MTA2Mi8xMjI1MzM5OS5qcGc=/original/3EFOSX.jpg"
+  ],
+  "itchUrl": "https://airby-studio.itch.io/kaboer",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "muhammad-rafi-irfan-lubis",
+      "name": "Muhammad Rafi Irfan Lubis",
+      "nim": "120140219",
+      "role": "Programmer"
+    },
+    {
+      "id": "irwanto-yezekiel-sihotang",
+      "name": "Irwanto Yezekiel Sihotang",
+      "nim": "120140227",
+      "role": "Designer"
+    },
+    {
+      "id": "aaron-noah-kalalo",
+      "name": "Aaron Noah Kalalo",
+      "nim": "120140232",
+      "role": "Sound"
+    },
+    {
+      "id": "yusuf-hafidz",
+      "name": "Yusuf Hafidz",
+      "nim": "120140234",
+      "role": "Director"
+    },
+    {
+      "id": "bagasyah-kusetyoutomo-donanurhakim",
+      "name": "Bagasyah Kusetyoutomo Donanurhakim",
+      "nim": "120140236",
+      "role": "Artist"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

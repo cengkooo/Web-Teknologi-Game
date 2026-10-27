@@ -24,9 +24,20 @@ const { game } = Astro.props;
     />
     <div class="absolute top-2 left-2 flex gap-1.5 flex-wrap">
       <EngineBadge engine={game.engine} size="sm" />
+      {game.semester && (
+        <span
+          class="px-1.5 py-0.5 text-[9px] font-mono font-bold border border-[#262626]"
+          style="background-color: rgba(10, 10, 10, 0.9) !important; color: #FFFFFF !important;"
+        >
+          {game.semester.replace('20', '').replace('/20', '/')}
+        </span>
+      )}
     </div>
-    <div class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] font-mono border border-[#262626] bg-black text-[#A3A3A3]">
-      BATCH // {game.batchYear}
+    <div
+      class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] font-mono border border-[#262626] font-bold"
+      style="background-color: rgba(0, 0, 0, 0.9) !important; color: #FFFFFF !important;"
+    >
+      {game.developer ? game.developer.toUpperCase() : `BATCH // ${game.batchYear}`}
     </div>
   </div>
 

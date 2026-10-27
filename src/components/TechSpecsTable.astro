@@ -9,11 +9,13 @@ interface Props {
 const { game, contributorsList = [] } = Astro.props;
 
 const rows = [
+  ...(game.developer ? [{ label: 'DEVELOPER / KELOMPOK', value: game.developer }] : []),
+  ...(game.semester ? [{ label: 'SEMESTER PERKULIAHAN', value: game.semester }] : []),
   { label: 'GAME ENGINE', value: game.engine },
   { label: 'ENGINE VERSION', value: game.engineVersion },
   { label: 'GENRE & THEME', value: game.genre.join(', ') },
-  { label: 'TARGET PLATFORMS', value: game.platform.join(' // ') },
-  { label: 'COHORT BATCH', value: `CLASS OF ${game.batchYear}` },
+  { label: 'PLATFORMS', value: game.platform.join(' // ') },
+  { label: 'TAHUN', value: `${game.batchYear}` },
   ...(game.metrics?.polygonCount ? [{ label: 'POLYGON DENSITY', value: game.metrics.polygonCount }] : []),
   ...(game.metrics?.drawCalls ? [{ label: 'TARGET DRAW CALLS', value: game.metrics.drawCalls }] : []),
   ...(game.metrics?.tickRate ? [{ label: 'PHYSICS TICK RATE', value: game.metrics.tickRate }] : []),
@@ -37,22 +39,6 @@ const rows = [
         <span class="sm:col-span-2 text-white font-mono break-all">{row.value}</span>
       </div>
     ))}
-
-    <!-- Source Link Row -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 px-4 py-2.5 hover:bg-[#121212] transition-colors">
-      <span class="text-[#737373] uppercase tracking-wider text-[11px] font-medium">SOURCE CODE</span>
-      <span class="sm:col-span-2">
-        <a
-          href={game.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-white hover:underline underline-offset-4 inline-flex items-center gap-1.5 font-bold"
-        >
-          <span>{game.githubUrl.replace('https://github.com/', '')}</span>
-          <span class="text-[10px] border border-[#262626] px-1 py-0.2 bg-black">[GITHUB REPO &nearr;]</span>
-        </a>
-      </span>
-    </div>
 
     <!-- Itch.io Download Row -->
     {game.itchUrl && (

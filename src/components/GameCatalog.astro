@@ -6,18 +6,14 @@ import SearchBar from './SearchBar.astro';
 
 interface Props {
   games: Game[];
-  engines: string[];
-  genres: string[];
   batches: number[];
 }
 
-const { games, engines, genres, batches } = Astro.props;
+const { games, batches } = Astro.props;
 ---
 
-<!-- Filter Matrix Component -->
+<!-- Filter Matrix Component (Tahun Saja) -->
 <FilterMatrix
-  engines={engines}
-  genres={genres}
   batches={batches}
   totalResults={games.length}
 />
@@ -35,6 +31,8 @@ const { games, engines, genres, batches } = Astro.props;
       data-genre={game.genre.map((g) => g.toLowerCase()).join(' ')}
       data-tagline={game.tagline.toLowerCase()}
       data-batch={String(game.batchYear)}
+      data-developer={game.developer ? game.developer.toLowerCase() : ''}
+      data-semester={game.semester ? game.semester.toLowerCase() : ''}
     >
       <GameCard game={game} />
     </div>
@@ -99,7 +97,7 @@ const { games, engines, genres, batches } = Astro.props;
 <!-- Client-side Unified Filter & Search Engine with Pagination -->
 <script is:inline>
   function setupCatalogFilterSystem() {
-    const PAGE_SIZE = 10;
+    const PAGE_SIZE = 8;
     let currentPage = 1;
 
     const searchInput = document.getElementById('catalog-search-input');
@@ -121,30 +119,22 @@ const { games, engines, genres, batches } = Astro.props;
     const pageNextBtn = document.getElementById('games-page-next');
     const pageNumbersEl = document.getElementById('games-page-numbers');
 
-    const badgeActiveEngine = document.getElementById('badge-active-engine');
-    const badgeActiveBatch = document.getElementById('badge-active-batch');
-    const badgeActiveGenre = document.getElementById('badge-active-genre');
-
     const cards = Array.from(document.querySelectorAll('.game-card-wrapper'));
     const filterBtns = document.querySelectorAll('.matrix-filter-btn');
 
     if (!cards.length) return;
     const totalCards = cards.length;
 
-    // Active state storage
+    // Active state storage (Hanya Tahun dan Search Query)
     const state = {
-      engine: '',
       batch: '',
-      genre: '',
       query: '',
     };
 
     // Read initial parameters from URL
     try {
       const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('engine')) state.engine = urlParams.get('engine').toLowerCase();
       if (urlParams.get('batch')) state.batch = urlParams.get('batch').trim();
-      if (urlParams.get('genre')) state.genre = urlParams.get('genre').toLowerCase();
       if (urlParams.get('q')) state.query = urlParams.get('q').toLowerCase().trim();
       if (urlParams.get('search')) state.query = urlParams.get('search').toLowerCase().trim();
 
@@ -161,18 +151,14 @@ const { games, engines, genres, batches } = Astro.props;
 
         if (isActive) {
           btn.className =
-            'matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white';
+            'matrix-filter-btn px-3 py-1.5 text-[11px] border transition-colors cursor-pointer bg-white text-black font-bold border-white';
         } else {
           btn.className =
-            'matrix-filter-btn px-2 py-1 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white';
+            'matrix-filter-btn px-3 py-1.5 text-[11px] border transition-colors cursor-pointer border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white font-bold';
         }
       });
 
-      if (badgeActiveEngine) badgeActiveEngine.classList.toggle('hidden', !state.engine);
-      if (badgeActiveBatch) badgeActiveBatch.classList.toggle('hidden', !state.batch);
-      if (badgeActiveGenre) badgeActiveGenre.classList.toggle('hidden', !state.genre);
-
-      const hasActiveFilter = Boolean(state.engine || state.batch || state.genre || state.query);
+      const hasActiveFilter = Boolean(state.batch || state.query);
       if (resetMatrixBtn) {
         resetMatrixBtn.classList.toggle('hidden', !hasActiveFilter);
       }
@@ -184,9 +170,7 @@ const { games, engines, genres, batches } = Astro.props;
 
     function updateURL() {
       const params = new URLSearchParams();
-      if (state.engine) params.set('engine', state.engine);
       if (state.batch) params.set('batch', state.batch);
-      if (state.genre) params.set('genre', state.genre);
       if (state.query) params.set('q', state.query);
 
       const newQuery = params.toString();
@@ -201,25 +185,25 @@ const { games, engines, genres, batches } = Astro.props;
       const matchedCards = [];
 
       cards.forEach((card) => {
-        const cardEngine = card.getAttribute('data-engine') || '';
         const cardBatch = card.getAttribute('data-batch') || '';
-        const cardGenre = card.getAttribute('data-genre') || '';
         const cardTitle = card.getAttribute('data-title') || '';
         const cardTagline = card.getAttribute('data-tagline') || '';
+        const cardDeveloper = card.getAttribute('data-developer') || '';
+        const cardSemester = card.getAttribute('data-semester') || '';
+        const cardGenre = card.getAttribute('data-genre') || '';
 
-        const matchEngine = !state.engine || cardEngine === state.engine;
         const matchBatch = !state.batch || cardBatch === state.batch;
-        const matchGenre = !state.genre || cardGenre.includes(state.genre);
 
         const matchQuery =
           !q ||
           cardTitle.includes(q) ||
-          cardEngine.includes(q) ||
           cardGenre.includes(q) ||
           cardTagline.includes(q) ||
-          cardBatch.includes(q);
+          cardBatch.includes(q) ||
+          cardDeveloper.includes(q) ||
+          cardSemester.includes(q);
 
-        const isMatch = matchEngine && matchBatch && matchGenre && matchQuery;
+        const isMatch = matchBatch && matchQuery;
         if (isMatch) {
           matchedCards.push(card);
         }

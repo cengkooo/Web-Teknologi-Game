@@ -1,0 +1,60 @@
+{
+  "slug": "g-l-a-s-s",
+  "title": "G.L.A.S.S",
+  "developer": "Glass Dev",
+  "semester": "2022/2023 Genap",
+  "semesterKey": "22-23-genap",
+  "tagline": "",
+  "description": "G.L.A.S.S adalah game hasil tugas besar matakuliah Teknologi Game (IF3023) ITERA pada semester 2022/2023 Genap yang dikembangkan oleh kelompok Glass Dev menggunakan Godot Engine.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Shooter"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2023,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzEyMjQyMDc4LnBuZw==/original/mv75Fh.png",
+  "screenshots": [],
+  "itchUrl": "https://glass-dev.itch.io/glass-tubes-tekgame",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "hafiz-amrullah",
+      "name": "Hafiz Amrullah",
+      "nim": "119140177",
+      "role": "Designer/Director"
+    },
+    {
+      "id": "akbar-maulana",
+      "name": "Akbar Maulana",
+      "nim": "119140151",
+      "role": "Programmer"
+    },
+    {
+      "id": "joyapul-hanscalvin-panjaitan",
+      "name": "Joyapul Hanscalvin Panjaitan",
+      "nim": "119140157",
+      "role": "Sound"
+    },
+    {
+      "id": "orville-figo-el-islami",
+      "name": "Orville Figo El Islami",
+      "nim": "119140194",
+      "role": "Programmer, Artist"
+    },
+    {
+      "id": "yusril-iskandar-harahap",
+      "name": "Yusril Iskandar Harahap",
+      "nim": "119140223",
+      "role": "Artist"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

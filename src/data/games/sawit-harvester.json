@@ -1,0 +1,65 @@
+{
+  "slug": "sawit-harvester",
+  "title": "Sawit Harvester",
+  "developer": "Chill Guys",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Simulasi Aksi 3D yang menempatkan pemain sebagai pekerja perkebunan kelapa sawit di Sumatera. Tugas utamanya adalah memanen buah sawit ya...",
+  "description": "Simulasi Aksi 3D yang menempatkan pemain sebagai pekerja perkebunan kelapa sawit di Sumatera. Tugas utamanya adalah memanen buah sawit yang sudah matang, mengangkutnya, dan mengumpulkannya untuk mendapatkan skor setinggi mungkin, sambil melawan pencuri sawit.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "Simulation"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2025,
+  "featured": true,
+  "posterImage": "https://img.itch.zone/aW1nLzI0NTE3NzA5LmpwZWc=/original/il61Jh.jpeg",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg4OC5wbmc=/original/eZd%2BMq.png",
+    "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg5MS5wbmc=/original/ouScIB.png",
+    "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg5MC5wbmc=/original/XprkgK.png",
+    "https://img.itch.zone/aW1hZ2UvNDExMzk2OS8yNDUxNzg4OS5wbmc=/original/7V9J5O.png"
+  ],
+  "itchUrl": "https://chillguys.itch.io/sawit-harvester",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "febrian-valentino-nugroho",
+      "name": "Febrian Valentino Nugroho",
+      "nim": "123140034",
+      "role": "Programmer"
+    },
+    {
+      "id": "adi-septriansyah",
+      "name": "Adi Septriansyah",
+      "nim": "123140021",
+      "role": "Game Artist/Programmer"
+    },
+    {
+      "id": "jonathan-nicholaus-damero-sinaga",
+      "name": "Jonathan Nicholaus Damero Sinaga",
+      "nim": "123140153",
+      "role": "Game Designer/Programmer"
+    },
+    {
+      "id": "febrian-valentino-nugroho",
+      "name": "Mario Fransiskus Sitepu",
+      "nim": "123140034",
+      "role": "Director"
+    },
+    {
+      "id": "anselmus-herpin-hasugian",
+      "name": "Anselmus Herpin Hasugian",
+      "nim": "123140020",
+      "role": "Programmer/Sound Engineer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

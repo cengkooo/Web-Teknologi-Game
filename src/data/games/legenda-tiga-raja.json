@@ -1,0 +1,60 @@
+{
+  "slug": "legenda-tiga-raja",
+  "title": "Legenda Tiga Raja",
+  "developer": "MANDALA",
+  "semester": "2024/2025 Ganjil",
+  "semesterKey": "24-25-ganjil",
+  "tagline": "Top down 2D hack-and-slash bertema Sumatera di mana kamu berperan sebagai pewaris pendekar kuno yang harus mengalahkan tiga raja terkutuk...",
+  "description": "Top down 2D hack-and-slash bertema Sumatera di mana kamu berperan sebagai pewaris pendekar kuno yang harus mengalahkan tiga raja terkutuk dalam pertempuran epik boss rush, sambil mengumpulkan artefak budaya untuk membebaskan roh-roh alam dan memulihkan keseimbangan dunia.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows"
+  ],
+  "batchYear": 2024,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzE4ODMzMTUzLnBuZw==/original/gstBUP.png",
+  "screenshots": [],
+  "itchUrl": "https://ashokatatangs.itch.io/legenda-3-raja",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "marchel-karuna-kwee",
+      "name": "Marchel Karuna Kwee",
+      "nim": "122140065",
+      "role": "Designer, Artist"
+    },
+    {
+      "id": "alma-julio-isnansyah",
+      "name": "Alma Julio Isnansyah",
+      "nim": "122140057",
+      "role": "Programmer"
+    },
+    {
+      "id": "muhammad-narendra-budi-utomo",
+      "name": "Muhammad Narendra Budi Utomo",
+      "nim": "122140050",
+      "role": "Programmer"
+    },
+    {
+      "id": "ashoka-tatang-solihin",
+      "name": "Ashoka Tatang Solihin",
+      "nim": "122140051",
+      "role": "Programmer, Director"
+    },
+    {
+      "id": "pricelia-zulkarnain",
+      "name": "Pricelia Zulkarnain",
+      "nim": "122140075",
+      "role": "Composer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}

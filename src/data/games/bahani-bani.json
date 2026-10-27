@@ -1,0 +1,59 @@
+{
+  "slug": "bahani-bani",
+  "title": "Bahani Bani",
+  "developer": "YPS Studio",
+  "semester": "2025/2026 Ganjil",
+  "semesterKey": "25-26-ganjil",
+  "tagline": "Typing 2D yang menceritakan Bani, seorang pangeran baik yang mendapatkan kekuatan untuk membuat perkataannya menjadi kenyataan setelah be...",
+  "description": "Typing 2D yang menceritakan Bani, seorang pangeran baik yang mendapatkan kekuatan untuk membuat perkataannya menjadi kenyataan setelah bertapa di hutan bambu. Gameplay dari game ini adalah mengetik kata kata yang ada di atas kepala musuh sebelum musuh melewati pemain.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Action",
+    "2D Platformer"
+  ],
+  "platform": [
+    "Windows",
+    "Web"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "https://img.itch.zone/aW1nLzI0MzYxNTA4LnBuZw==/original/dGYJl9.png",
+  "screenshots": [
+    "https://img.itch.zone/aW1hZ2UvNDA4NzA4MS8yNDUyMTIzNy5wbmc=/original/6FQG9n.png",
+    "https://img.itch.zone/aW1hZ2UvNDA4NzA4MS8yNDUyMTE2Ni5wbmc=/original/e0KVzf.png",
+    "https://img.itch.zone/aW1hZ2UvNDA4NzA4MS8yNDUyMTE3MS5wbmc=/original/boNR9v.png"
+  ],
+  "itchUrl": "https://yps-studio.itch.io/bahana-bani",
+  "githubUrl": "",
+  "contributors": [
+    {
+      "id": "m-zahran-dhiyaul-haq",
+      "name": "M. Zahran Dhiyaul Haq",
+      "nim": "123140120",
+      "role": "Director/Programmer"
+    },
+    {
+      "id": "albi-r-suseno",
+      "name": "Albi R. Suseno",
+      "nim": "120140095",
+      "role": "Sound Engineer"
+    },
+    {
+      "id": "m-hafizurrahman-akbar",
+      "name": "M. Hafizurrahman Akbar",
+      "nim": "123140123",
+      "role": "Art Director"
+    },
+    {
+      "id": "jordy-anugrah-akbar",
+      "name": "Jordy Anugrah Akbar",
+      "nim": "123140141",
+      "role": "Designer"
+    }
+  ],
+  "metrics": {
+    "tickRate": "60 Hz Stable",
+    "buildSize": "Godot PC Build"
+  }
+}
