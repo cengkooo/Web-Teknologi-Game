@@ -10,16 +10,16 @@
   "estimatedGraduates": 115,
   "coreCompetencies": [
     "Game Design",
-    "Gameplay Programming",
-    "Asset Integration",
-    "Multiplatform QA"
+    "Object Oriented Programming",
+    "Multimedia Integration",
+    "User Experience"
   ],
-  "finalDeliverable": "Playable & Downloadable Game + Dokumentasi Repositori Git",
+  "finalDeliverable": "Playable & Downloadable Game + itch.io Webpage",
   "overview": {
-    "headline": "DARI IDEASI HINGGA RILIS: BELAJAR MEMBUAT GAME SECARA UTUH",
+    "headline": "DARI IDE HINGGA RILIS: BELAJAR MEMBUAT GAME SECARA UTUH",
     "paragraphs": [
-      "Mata Kuliah Teknologi Game diselenggarakan oleh Program Studi Teknik Informatika (IF), Fakultas Teknologi Industri (FTI), Institut Teknologi Sumatera (ITERA). Mata kuliah ini dirancang untuk membekali mahasiswa dengan pemahaman komprehensif mengenai seluruh siklus pengembangan game (game development lifecycle). Di kelas ini, mahasiswa tidak hanya mempelajari konsep teoretis komputasi grafika dan kecerdasan buatan, namun bekerja dalam tim produksi nyata untuk merealisasikan ide dari tahap perancangan konsep hingga menjadi game interaktif yang playable dan berdaya saing.",
-      "Fokus pembelajaran mencakup penyusunan dokumen desain game (Game Design Document), prototyping mekanika gameplay yang adiktif, pemrograman logika interaktif, penyusunan level design yang menantang, hingga pengujian performa agar game dapat dinikmati dengan lancar di berbagai platform dan peramban web."
+      "Teknologi Game merupakan salah satu mata kuliah dari Program Studi Teknik Informatika (IF), Fakultas Teknologi Industri (FTI), Institut Teknologi Sumatera (ITERA). Mata kuliah ini dirancang untuk membekali mahasiswa dengan pemahaman akan teknologi dibalik video game & bagaimana siklus dalam mengembangkan sebuah game (game development lifecycle). Fokus pembelajaran mencakup teori teknologi game, penyusunan dokumen desain game (Game Design Document), prototyping mekanika gameplay, hingga pengujian agar game dapat dinikmati dengan lancar. Selain dari mempelajari konsep teoretis pengembangan rekayasa perangkat lunak, mahasiswa juga belajar bekerja sama dalam sebuah tim produksi untuk merealisasikan ide mereka, dari tahap perancangan konsep hingga prototyping, menjadi game interaktif yang siap dimainkan dan berdaya saing.",
+      "Hasil akhir karya mereka ditampilkan pada sebuah pameran di setiap akhir semester. Saat pameran, mahasiswa dapat merasakan rasa antusias dan timbal balik dari publik secara langsung, serta merasakan euforia atas keberhasilan karya mereka. Karya terbaik akan mendapatkan penghargaan yaitu Game Terbaik dan Game Terpopuler. Kami harap website ini dapat menjadi repositori kreasi mahasiswa kami terdahulu."
     ]
   }
 }
