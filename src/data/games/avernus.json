@@ -16,7 +16,7 @@
     "Windows"
   ],
   "batchYear": 2023,
-  "featured": false,
+  "featured": true,
   "posterImage": "/assets/uploads/games/avernus.png",
   "screenshots": [
     "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzNy5wbmc=/original/YFOQDe.png",
@@ -60,5 +60,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "best_game"
 }

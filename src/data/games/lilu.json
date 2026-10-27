@@ -16,7 +16,7 @@
     "Windows"
   ],
   "batchYear": 2024,
-  "featured": true,
+  "featured": false,
   "posterImage": "https://img.itch.zone/aW1nLzE4ODQ4OTM3LmpwZw==/original/7fsCF4.jpg",
   "screenshots": [
     "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTYzNy5qcGc=/original/nplAqb.jpg",
@@ -60,5 +60,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "none"
 }

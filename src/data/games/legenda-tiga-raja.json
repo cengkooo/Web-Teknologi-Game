@@ -16,7 +16,7 @@
     "Windows"
   ],
   "batchYear": 2024,
-  "featured": false,
+  "featured": true,
   "posterImage": "https://img.itch.zone/aW1nLzE4ODMzMTUzLnBuZw==/original/gstBUP.png",
   "screenshots": [],
   "itchUrl": "https://ashokatatangs.itch.io/legenda-3-raja",
@@ -56,5 +56,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "best_game"
 }

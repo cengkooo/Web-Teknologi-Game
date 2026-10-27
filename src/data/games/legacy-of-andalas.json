@@ -16,7 +16,7 @@
     "Windows"
   ],
   "batchYear": 2025,
-  "featured": false,
+  "featured": true,
   "posterImage": "https://img.itch.zone/aW1nLzI0NTE5MDM4LnBuZw==/original/ZK89Tc.png",
   "screenshots": [
     "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTA0MC5qcGc=/original/VQWG1W.jpg",
@@ -60,5 +60,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "best_game"
 }

@@ -63,7 +63,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "most_popular"
     },
     {
       "slug": "sumateran-roar",
@@ -84,7 +85,7 @@
         "macOS"
       ],
       "batchYear": 2025,
-      "featured": true,
+      "featured": false,
       "posterImage": "https://img.itch.zone/aW1nLzI0NDE0NTc2LmpwZWc=/original/J3w0Av.jpeg",
       "screenshots": [],
       "itchUrl": "https://sumateranroar.itch.io/sumateranroar",
@@ -124,7 +125,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "legacy-of-andalas",
@@ -144,7 +146,7 @@
         "Windows"
       ],
       "batchYear": 2025,
-      "featured": false,
+      "featured": true,
       "posterImage": "https://img.itch.zone/aW1nLzI0NTE5MDM4LnBuZw==/original/ZK89Tc.png",
       "screenshots": [
         "https://img.itch.zone/aW1hZ2UvNDA5MTM0Ni8yNDUxOTA0MC5qcGc=/original/VQWG1W.jpg",
@@ -188,7 +190,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "best_game"
     },
     {
       "slug": "hollow-tree-another-realm",
@@ -251,7 +254,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "bahani-bani",
@@ -310,7 +314,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "pusaka-swarnadwipa-the-sumatra-chronicles",
@@ -370,7 +375,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "entropy-the-metal-anomaly",
@@ -430,7 +436,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "temple-of-abelii",
@@ -451,7 +458,7 @@
         "Web"
       ],
       "batchYear": 2025,
-      "featured": true,
+      "featured": false,
       "posterImage": "https://img.itch.zone/aW1nLzI0NTIyMDMyLnBuZw==/original/PhV5GH.png",
       "screenshots": [
         "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0Mi5qcGc=/original/wvMXcj.jpg",
@@ -495,7 +502,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "lilu",
@@ -515,7 +523,7 @@
         "Windows"
       ],
       "batchYear": 2024,
-      "featured": true,
+      "featured": false,
       "posterImage": "https://img.itch.zone/aW1nLzE4ODQ4OTM3LmpwZw==/original/7fsCF4.jpg",
       "screenshots": [
         "https://img.itch.zone/aW1hZ2UvMzE1Mjk5OS8xODg3MTYzNy5qcGc=/original/nplAqb.jpg",
@@ -559,7 +567,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "trace",
@@ -622,7 +631,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "static-noise",
@@ -687,7 +697,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "legenda-tiga-raja",
@@ -707,7 +718,7 @@
         "Windows"
       ],
       "batchYear": 2024,
-      "featured": false,
+      "featured": true,
       "posterImage": "https://img.itch.zone/aW1nLzE4ODMzMTUzLnBuZw==/original/gstBUP.png",
       "screenshots": [],
       "itchUrl": "https://ashokatatangs.itch.io/legenda-3-raja",
@@ -747,7 +758,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "best_game"
     },
     {
       "slug": "idle-save-sumatera",
@@ -813,7 +825,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "operation-rafflesia-last-hope",
@@ -833,7 +846,7 @@
         "Windows"
       ],
       "batchYear": 2024,
-      "featured": false,
+      "featured": true,
       "posterImage": "https://img.itch.zone/aW1nLzE4ODMyMDg1LmpwZw==/original/hkE%2FZc.jpg",
       "screenshots": [
         "https://img.itch.zone/aW1hZ2UvMzE1MjQyNy8xODgzMjE0My5qcGc=/original/H3Qsor.jpg",
@@ -877,7 +890,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "most_popular"
     },
     {
       "slug": "the-forest-keeper",
@@ -939,7 +953,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "rescue-save-the-wildlife",
@@ -1006,7 +1021,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "kkn-the-lost-village",
@@ -1073,7 +1089,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "sumatera-survivor",
@@ -1134,7 +1151,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "go-ancient",
@@ -1154,7 +1172,7 @@
         "Windows"
       ],
       "batchYear": 2024,
-      "featured": true,
+      "featured": false,
       "posterImage": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=1200&q=80",
       "screenshots": [],
       "itchUrl": "https://github.com/gabrielfico/tubes-tekgem",
@@ -1194,7 +1212,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "broken-bonds",
@@ -1253,7 +1272,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "pedjuang-nusantara",
@@ -1312,7 +1332,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "guardians-of-mystica",
@@ -1331,7 +1352,7 @@
         "Windows"
       ],
       "batchYear": 2023,
-      "featured": false,
+      "featured": true,
       "posterImage": "https://img.itch.zone/aW1nLzE0MjUwOTI2LnBuZw==/original/EsXpPz.png",
       "screenshots": [],
       "itchUrl": "https://death-liners.itch.io/guardian-of-mystica",
@@ -1371,7 +1392,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "best_game"
     },
     {
       "slug": "oscar-s-adventure-the-hidden-treasure",
@@ -1435,7 +1457,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "most_popular"
     },
     {
       "slug": "gelud",
@@ -1495,7 +1518,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "most_popular"
     },
     {
       "slug": "arunika",
@@ -1515,7 +1539,7 @@
         "Windows"
       ],
       "batchYear": 2023,
-      "featured": true,
+      "featured": false,
       "posterImage": "https://img.itch.zone/aW1nLzEyMjQzMDg4LnBuZw==/original/OqHFqJ.png",
       "screenshots": [
         "https://img.itch.zone/aW1hZ2UvMjA4MTA2OC8xMjI0MzMzNS5wbmc=/original/JygjV1.png",
@@ -1558,7 +1582,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "underwater-uprising",
@@ -1618,7 +1643,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "wulan",
@@ -1683,7 +1709,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "wonder",
@@ -1743,7 +1770,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "slimental",
@@ -1803,7 +1831,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "kaboer",
@@ -1867,7 +1896,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "g-l-a-s-s",
@@ -1927,7 +1957,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "none"
     },
     {
       "slug": "avernus",
@@ -1947,7 +1978,7 @@
         "Windows"
       ],
       "batchYear": 2023,
-      "featured": false,
+      "featured": true,
       "posterImage": "/assets/uploads/games/avernus.png",
       "screenshots": [
         "https://img.itch.zone/aW1hZ2UvMjA4MTA5MC8xMjI2MDAzNy5wbmc=/original/YFOQDe.png",
@@ -1991,7 +2022,8 @@
       "metrics": {
         "tickRate": "60 Hz Stable",
         "buildSize": "Godot PC Build"
-      }
+      },
+      "award": "best_game"
     }
   ]
 }

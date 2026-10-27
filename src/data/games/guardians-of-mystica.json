@@ -15,7 +15,7 @@
     "Windows"
   ],
   "batchYear": 2023,
-  "featured": false,
+  "featured": true,
   "posterImage": "https://img.itch.zone/aW1nLzE0MjUwOTI2LnBuZw==/original/EsXpPz.png",
   "screenshots": [],
   "itchUrl": "https://death-liners.itch.io/guardian-of-mystica",
@@ -55,5 +55,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "best_game"
 }

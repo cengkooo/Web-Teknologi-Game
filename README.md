@@ -18,33 +18,42 @@ Situs ini dibangun dengan prinsip arsitektur statis berkinerja tinggi (*Zero-JS 
 ## ✨ Fitur Utama
 
 - 🎮 **Katalog & Repositori Game (`/games`)**
-  - Mesin filter multi-dimensi secara *real-time*: Game Engine (Unity, Godot, Unreal, dll), Genre (Action, Puzzle, RPG, dll), dan Tahun Angkatan (*Batch Year*).
-  - Pencarian langsung (*live search*) berdasarkan judul game, deskripsi, tim pengembang, dan tag mekanika.
-  - Paginasi interaktif 10 item per halaman dengan indikator hitungan hasil arsip.
-- 👤 **Buku Besar Mahasiswa (03 // MAHASISWA - `/mahasiswa`)**
-  - Indeks direktori mahasiswa pengembang game dengan format identitas standar `id="namadepan-namabelakang"`.
-  - Filter per angkatan dan pencarian cepat berdasarkan nama, peran (*role*), atau nama game yang dikembangkan.
-  - Relasi dua arah: klik nama mahasiswa untuk melihat game yang dikerjakannya, atau klik mahasiswa dari halaman game untuk menuju profil terkait.
-  - Paginasi 10 mahasiswa per halaman.
-- 🕹️ **Halaman Showcase Game Spesifik (`/games/[slug]`)**
-  - Galeri tangkapan layar (*screenshots*) dan poster resolusi tinggi.
-  - Matriks spesifikasi teknis (*Technical Specs Table*): jumlah poligon (*Tris*), *Draw Calls*, target *Tick Rate*, dan ukuran kompilasi *build*.
-  - Tautan langsung ke repositori kode sumber Git, halaman itch.io, dan build WebGL peramban.
-  - Daftar tim pengembang lengkap dengan tautan profil kreator.
-- 🌓 **Brutalist Monochromatic UI & Theme Toggle**
-  - Palet warna monokrom bergradasi tajam, tipografi proporsional + monospace, serta garis tepi (*borders*) geometris tegas.
-  - Pengalih tema Gelap/Terang (*Dark/Light Mode*) instan tanpa efek kedipan layar (*Zero-Flash Anti-FOUC Script*).
-- 🤝 **Portal Kolaborasi Industri (`#collaboration`)**
-  - Jalur kerja sama industri untuk kuliah tamu praktisi, peluang magang (*internship*), sesi uji coba (*playtest*), hingga sponsor aset.
-  - Generator formulir interaktif yang secara otomatis menyusun draf pesan email ke `gametech@itera.ac.id`.
-- 📸 **Galeri Pameran Fisik Game Tech Expo (`/expo`)**
-  - Dokumentasi visual pameran fisik, demo day tugas besar, dan sesi playtest langsung di lingkungan kampus ITERA.
-  - Filter interaktif berdasarkan tahun pameran dan kategori foto (*Playtest & Booth*, *Presentasi Tim*, *Suasana Pameran*, *Awarding*).
-  - Tampilan pratinjau modal lightbox beresolusi tinggi dengan informasi waktu, lokasi, dan keterangan acara.
+  - **Fokus Tunggal Godot Engine**: Seluruh kurikulum dan karya tugas besar mahasiswa difokuskan menggunakan Godot Engine.
+  - **Filter Bersih & Terarah**: Menyederhanakan penelusuran dengan menyisakan **Filter Tahun Angkatan / Rilis** dan bilah pencarian langsung (*Live Search Bar*).
+  - **Tanda Penghargaan Khusus (*Award Marks*)**: Penanda visual resmi untuk game unggulan di sudut poster dan header detail:
+    - `[★ BEST GAME]` / `★ BEST GAME OF THE SEMESTER` (Aksen Emas/Amber Brutalist)
+    - `[⚡ MOST POPULAR]` / `⚡ MOST POPULAR GAME OF THE SEMESTER` (Aksen Biru Cyan Cyber)
+  - **Paginasi Efisien**: Mengatur kepadatan tampilan katalog menjadi **8 game per halaman** dengan nomor halaman aktif dan navigasi cepat.
+  - **Akses Langsung itch.io**: Kartu game menampilkan tautan terverifikasi langsung ke halaman build itch.io.
+
+- 🏠 **Beranda & Spotlight Unggulan (`/`)**
+  - Menampilkan ringkasan kurikulum, profil dosen pengampu, metrik arsip, dan portal kerja sama industri.
+  - **Spotlight Games Grid**: Menampilkan 6 karya game terbaik dan terpopuler pilihan semester secara dinamis di halaman utama.
+
+- 🕹️ **Halaman Detail Game Komprehensif (`/games/[slug]`)**
+  - Tampilan poster resolusi tinggi dan tangkapan layar gameplay (*screenshots*).
+  - Matriks spesifikasi teknis (*Technical Specs Table*): kalkulasi *Draw Calls*, *Polygon Count*, target *Tick Rate*, dan ukuran kompilasi build game.
+  - Roster tim pengembang mahasiswa lengkap dengan nama, NIM, dan peran spesifik (*Director*, *Programmer*, *Artist*, *Sound Designer*).
+  - Badge penghargaan semester untuk game berkategori *Best Game* atau *Most Popular*.
+
+- 📸 **Galeri Dokumentasi Pameran Game Tech Expo (`/expo`)**
+  - Arsip visual nyata dari pelaksanaan Demo Day dan pameran tugas besar mahasiswa di lingkungan kampus ITERA (Gedung Kuliah Umum & Labtek).
+  - **Foto Super-Sampled & Enhanced**: 12 foto dokumentasi resolusi tinggi dengan rasio layar lebar (`aspect-video`) yang telah di-upscale dan dipertajam.
+  - **Filter Berdasarkan Tahun**: Navigasi cepat dokumentasi per tahun pelaksanaan (`SEMUA TAHUN`, `2024`, `2023`).
+  - **Modal Lightbox Interaktif**: Pratinjau foto mendalam dengan takarir, keterangan waktu pengujian (WIB), dan tanggal acara.
+  - Proteksi kontras badge foto agar selalu terbaca jelas dalam teks putih pekat (`#FFFFFF`) di semua tema.
+
+- 🌓 **Brutalist UI, Theme Toggle, & Mobile Burger Menu**
+  - Estetika modern industrial brutalist dengan batas geometris monokrom (`#262626`), tipografi display tebal, dan JetBrains Mono.
+  - **Mobile Responsive Drawer**: Navigasi atas otomatis bertransformasi menjadi tombol burger (*hamburger menu* `☰` / `&times;`) pada layar ponsel (`< md`) dengan menu bertumpuk yang mulus.
+  - **Tombol Light/Dark Mode Terintegrasi**: Ditempatkan presisi di samping tautan navigasi utama pada desktop maupun mobile, lengkap dengan skrip anti-kedip (*Zero-Flash FOUC Prevention*).
+  - Penataan footer 2-kolom seimbang dengan kolom direktori tautan yang rapi dan presisi (*right-aligned*).
+
 - ⚡ **Git-based CMS Admin (`/keystatic` & `/admin`)**
-  - Panel pengelola konten visual modern berbasis Git menggunakan **Keystatic** dengan integrasi resmi Astro (`@keystatic/astro`).
-  - Skema data aman berbasis TypeScript (`keystatic.config.ts`) untuk mengelola katalog game, buku besar mahasiswa, dan dokumentasi expo.
-  - Mendukung mode lokal instan tanpa proxy server tambahan dan sinkronisasi commit otomatis ke GitHub di lingkungan produksi.
+  - Panel manajemen konten berbasis Git modern menggunakan **Keystatic** (`@keystatic/astro`).
+  - **Dukungan Dark/Light Mode Penuh**: Bilah instrumen HUD CMS dilengkapi tombol pengalih mode tema yang tersinkronisasi langsung dengan website publik dan storage Keystatic.
+  - **Antarmuka CMS Responsif**: Tata letak HUD bar yang beradaptasi otomatis di perangkat seluler dan tablet (penyingkatan tombol dan penyembunyian teks panjang).
+  - Skema data TypeScript ketat (`keystatic.config.ts`) yang sinkron dengan seluruh koleksi game (termasuk tag `award`, `semesterKey`, dan data tim) serta dokumentasi expo.
 
 ---
 
@@ -64,31 +73,35 @@ Situs ini dibangun dengan prinsip arsitektur statis berkinerja tinggi (*Zero-JS 
 
 ```text
 library-teknologi-game/
-├── public/                     # Aset statis publik (favicon, foto profil, poster game)
-│   ├── assets/games/           # Folder media poster & screenshot game mahasiswa
+├── public/                     # Aset statis publik (favicon, media, poster, foto expo)
+│   ├── assets/
+│   │   ├── expo/               # Arsip 12 foto dokumentasi fisik expo (upscaled & enhanced)
+│   │   └── uploads/            # Media unggahan via Keystatic CMS
 │   └── radhinka-bagaskara.jpg  # Foto dosen pengampu mata kuliah
 ├── src/
-│   ├── components/             # Komponen UI modular (.astro)
+│   ├── components/             # Komponen UI modular (.astro / .ts)
 │   │   ├── CollabSection.astro     # Formulir & kanal ajakan kolaborasi industri
 │   │   ├── CourseCurriculum.astro  # Spesifikasi & narasi mata kuliah
-│   │   ├── EngineBadge.astro       # Badge label game engine
-│   │   ├── ExpoGallery.astro       # Galeri foto pameran + filter & lightbox
-│   │   ├── ExpoTimeline.astro      # Timeline kronologis pameran fisik
-│   │   ├── FilterMatrix.astro      # Tombol filter engine, genre, dan angkatan
-│   │   ├── Footer.astro            # Footer 3-kolom rata kiri-kanan
-│   │   ├── GameCard.astro          # Kartu pratinjau game
-│   │   ├── GameCatalog.astro       # Komponen katalog game + live search & paginasi
+│   │   ├── EngineBadge.astro       # Badge label game engine Godot
+│   │   ├── ExpoGallery.astro       # Galeri foto pameran + filter tahun & lightbox
+│   │   ├── FilterMatrix.astro      # Tombol filter tahun angkatan rilis
+│   │   ├── Footer.astro            # Footer 2-kolom seimbang (info institusi & direktori kanan)
+│   │   ├── GameCard.astro          # Kartu game + badge penghargaan (Best/Popular) & itch.io link
+│   │   ├── GameCatalog.astro       # Komponen katalog game + live search & paginasi (8/page)
 │   │   ├── Hero.astro              # Hero section beranda
 │   │   ├── InstructorCard.astro    # Kartu profil dosen pengampu ITERA
-│   │   ├── MahasiswaLedger.astro   # Tabel direktori mahasiswa + live search & paginasi
-│   │   ├── Navbar.astro            # Navigasi atas & status bar sistem
+│   │   ├── KeystaticApp.ts         # Integrasi runner Keystatic Astro CMS
+│   │   ├── Navbar.astro            # Navigasi utama + burger menu mobile & theme toggle
 │   │   ├── SearchBar.astro         # Input pencarian serbaguna
 │   │   ├── StatsOverview.astro     # Ringkasan metrik statistik dinamis
 │   │   ├── TechSpecsTable.astro    # Tabel spesifikasi teknis game
 │   │   └── ThemeToggle.astro       # Tombol pengalih tema gelap/terang
 │   ├── data/                   # Sumber data terstruktur (Decoupled JSON Engine)
+│   │   ├── expo/                   # Koleksi arsip pameran fisik per acara (*.json)
+│   │   ├── games/                  # Koleksi 28 game mahasiswa lengkap dengan metadata (*.json)
+│   │   ├── mahasiswa/              # Koleksi data profil mahasiswa pengembang (*.json)
 │   │   ├── course.json             # Metadata & kurikulum mata kuliah
-│   │   ├── expo.json               # Dokumentasi pameran & foto galeri fisik
+│   │   ├── expo.json               # Basis data pameran fisik & dokumentasi
 │   │   ├── games.json              # Basis data seluruh game mahasiswa
 │   │   ├── instructors.json        # Data tim dosen pengampu
 │   │   ├── site-config.json        # Konfigurasi branding & navigasi situs
@@ -96,23 +109,24 @@ library-teknologi-game/
 │   ├── layouts/
 │   │   └── Layout.astro        # Layout dasar HTML, anti-FOUC script, dan meta tag
 │   ├── lib/
-│   │   └── data.ts             # Parser Zod, accessor functions, & kalkulasi relasi
+│   │   └── data.ts             # Parser Zod, accessor functions, kalkulasi relasi & awards
 │   ├── pages/
 │   │   ├── admin/
-│   │   │   └── index.astro     # Panel CMS kontrol Decap (/admin)
+│   │   │   └── index.astro     # Redirect / panel CMS kontrol
 │   │   ├── expo/
 │   │   │   └── index.astro     # Galeri pameran fisik & demo day (/expo)
 │   │   ├── games/
 │   │   │   ├── [slug].astro    # Halaman dinamis detail game (/games/[slug])
 │   │   │   └── index.astro     # Halaman katalog game (/games)
-│   │   ├── mahasiswa/
-│   │   │   └── index.astro     # Halaman direktori mahasiswa (/mahasiswa)
-│   │   └── index.astro         # Halaman beranda utama (/)
+│   │   ├── keystatic/
+│   │   │   └── [...params].astro # Panel Git-based CMS dengan HUD instrumen & theme toggle
+│   │   └── index.astro         # Halaman beranda utama dengan Spotlight 6 Game Terbaik (/)
 │   ├── styles/
-│   │   └── global.css          # Konfigurasi Tailwind CSS v4 & variabel warna
+│   │   └── global.css          # Konfigurasi Tailwind CSS v4, variabel tema, & badge colors
 │   └── types/
 │       └── index.ts            # Definisi skema validasi Zod & tipe TypeScript
-├── astro.config.mjs            # Konfigurasi Astro (Tailwind plugin, prefetch)
+├── astro.config.mjs            # Konfigurasi Astro (Tailwind plugin, server host, prefetch)
+├── keystatic.config.ts         # Definisi skema koleksi & konfigurasi GitHub Keystatic CMS
 ├── package.json                # Daftar dependency & scripts
 └── tsconfig.json               # Konfigurasi TypeScript
 ```
@@ -123,22 +137,7 @@ library-teknologi-game/
 
 Untuk memudahkan pemeliharaan berkala (*maintainability*) dan penskalaan (*scalability*), data mahasiswa dan game dipisahkan menjadi 2 file JSON independen:
 
-1. **`src/data/students.json`**  
-   Menyimpan profil mahasiswa pengembang dengan format ID unik `namadepan-namabelakang`:
-   ```json
-   {
-     "id": "alex-pratama",
-     "name": "Alex Pratama",
-     "batch": 2022,
-     "role": "Game Engine Programmer",
-     "avatarUrl": "https://api.dicebear.com/7.x/bottts/svg?seed=alex-pratama",
-     "bio": "Fokus pada arsitektur Entity-Component-System (ECS) dan optimasi memory pool.",
-     "githubUrl": "https://github.com",
-     "linkedinUrl": "https://linkedin.com"
-   }
-   ```
-
-2. **`src/data/games.json`**  
+1. **`src/data/games.json`**  
    Menyimpan metadata karya game yang menghubungkan anggota tim via `contributors[].id`:
    ```json
    {
@@ -214,27 +213,6 @@ npm run preview
 
 ---
 
-## 📝 Panduan Kontribusi Mahasiswa (Submission Workflow)
-
-Setiap mahasiswa atau tim pengembang yang mengambil Mata Kuliah Teknologi Game wajib mendaftarkan karyanya melalui mekanisme **Git Pull Request**:
-
-1. **Fork** repositori ini ke akun GitHub tim Anda.
-2. Buat *branch* baru dengan format: `feat/nama-game-tim`.
-3. **Daftarkan Profil Anggota**:
-   - Buka `src/data/students.json`.
-   - Tambahkan profil setiap anggota tim jika belum terdaftar. Pastikan `id` menggunakan format huruf kecil dipisah tanda hubung (misal: `"budi-santoso"`).
-4. **Daftarkan Data Game**:
-   - Buka `src/data/games.json`.
-   - Tambahkan entri game baru dan pasangkan ID anggota pada array `contributors`.
-5. **Tambahkan Aset Gambar**:
-   - Simpan poster dan screenshot game di `public/assets/games/<slug>/`.
-6. **Uji Coba Build**:
-   - Jalankan `npm run build` di terminal lokal Anda. Jika skema Zod tidak valid (misal ada field yang kurang atau tipe data keliru), proses build akan menampilkan pesan kesalahan yang spesifik.
-7. **Kirimkan Pull Request**:
-   - Lakukan `git push` ke repositori fork Anda dan ajukan Pull Request ke branch `main`.
-
----
-
 ## 🎛️ Panduan Penggunaan Git-based CMS (`/keystatic`)
 
 Website ini dilengkapi dengan Git-based CMS visual (**Keystatic**) yang memungkinkan pengelola memperbarui data game, mahasiswa, dan expo tanpa harus menyentuh kode program.
@@ -275,3 +253,7 @@ Website ini menggunakan storage GitHub Keystatic di production, sehingga perubah
 - **Alamat**: Gedung Labtek / Kuliah Umum ITERA, Jl. Terusan Ryacudu, Way Hui, Jati Agung, Lampung Selatan 35365
 - **Surel Resmi**: [gametech@itera.ac.id](mailto:gametech@itera.ac.id)
 - **Website Prodi**: [https://if.itera.ac.id](https://if.itera.ac.id)
+
+## 🦸 CREDIT:
+Dibuat oleh Andryano Shevchenko Limbong IF'23 https://www.andryanolimbong.my.id/
+Github: https://github.com/cengkooo/Web-Teknologi-Game

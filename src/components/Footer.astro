@@ -19,8 +19,8 @@ const navItems = siteConfig.navItems;
         </p>
       </div>
 
-      <!-- Column 2: Indeks Direktori (Tengah) -->
-      <div class="shrink-0">
+      <!-- Column 2: Indeks Direktori (Kanan) -->
+      <div class="shrink-0 text-right">
         <div class="text-white font-bold tracking-widest uppercase mb-2 font-display text-[11px]">
           // INDEKS DIREKTORI
         </div>
@@ -35,28 +35,19 @@ const navItems = siteConfig.navItems;
         </ul>
       </div>
 
-      <!-- Column 3: Repositori Terbuka (Kanan) -->
-      <div class="max-w-xs md:text-right flex flex-col md:items-end">
-        <div class="text-white font-bold tracking-widest uppercase mb-2 font-display text-[11px]">
-          // REPOSITORI TERBUKA
-        </div>
-        <p class="leading-relaxed text-[11px] mb-3">
-          Repositori terbuka proyek mahasiswa yang dikelola via Git. Setiap entri divalidasi langsung oleh skema Zod otomatis.
-        </p>
-        <a
-          href={siteConfig.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block px-3 py-1.5 border border-[#262626] bg-black text-white hover:bg-white hover:text-black transition-colors"
-        >
-          [LIHAT REPOSITORI GITHUB]
-        </a>
-      </div>
     </div>
 
     <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono text-[#737373] gap-3">
       <div>
-        &copy; 2026 MATA KULIAH TEKNOLOGI GAME
+        &copy; 2026 MATA KULIAH TEKNOLOGI GAME -{' '}
+        <a
+          href="https://www.andryanolimbong.my.id/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-white transition-colors"
+        >
+          MADE BY ANDRYANO LIMBONG
+        </a>
       </div>
       <div>
         TEKNIK INFORMATIKA &bull; FTI ITERA

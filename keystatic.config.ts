@@ -42,6 +42,10 @@ export default config({
           ],
           defaultValue: '2025/2026 Ganjil',
         }),
+        semesterKey: fields.text({
+          label: 'Kode Semester (contoh: 22-23-genap)',
+          defaultValue: '25-26-ganjil',
+        }),
         tagline: fields.text({ label: 'Tagline Singkat (Gameplay Hook)' }),
         description: fields.text({ label: 'Deskripsi Lengkap Game', multiline: true }),
         engine: fields.select({
@@ -68,16 +72,21 @@ export default config({
           label: 'Tampilkan di Spotlight Beranda (Featured)',
           defaultValue: false,
         }),
-        posterImage: fields.image({
-          label: 'Poster Utama (16:9)',
-          directory: 'public/assets/uploads',
-          publicPath: '/assets/uploads',
+        award: fields.select({
+          label: 'Penghargaan / Tanda Khusus Game',
+          options: [
+            { label: 'Biasa (Tanpa Tanda)', value: 'none' },
+            { label: '★ Best Game of the Semester', value: 'best_game' },
+            { label: '⚡ Most Popular Game of the Semester', value: 'most_popular' },
+          ],
+          defaultValue: 'none',
+        }),
+        posterImage: fields.text({
+          label: 'URL / Path Poster Utama',
         }),
         screenshots: fields.array(
-          fields.image({
-            label: 'Screenshot File',
-            directory: 'public/assets/uploads',
-            publicPath: '/assets/uploads',
+          fields.text({
+            label: 'URL / Path Screenshot',
           }),
           {
             label: 'Galeri Tangkapan Layar (Screenshots)',
@@ -89,12 +98,14 @@ export default config({
         contributors: fields.array(
           fields.object({
             id: fields.text({ label: 'ID Mahasiswa (contoh: alex-reza)' }),
+            name: fields.text({ label: 'Nama Lengkap Mahasiswa' }),
+            nim: fields.text({ label: 'NIM Mahasiswa' }),
             role: fields.text({ label: 'Peran dalam Tim' }),
           }),
           {
             label: 'Tim Mahasiswa Pengembang',
             itemLabel: (props) =>
-              `${props.fields.id.value || 'Mahasiswa'} // ${props.fields.role.value || 'Peran'}`,
+              `${props.fields.name.value || props.fields.id.value || 'Mahasiswa'} // ${props.fields.role.value || 'Peran'}`,
           }
         ),
         metrics: fields.object({
@@ -165,30 +176,29 @@ export default config({
         location: fields.text({ label: 'Lokasi Gedung / Ruangan Kampus' }),
         photos: fields.array(
           fields.object({
-            id: fields.text({ label: 'ID Foto (contoh: p24-1)' }),
-            url: fields.image({
-              label: 'Unggah File Foto',
-              directory: 'public/assets/uploads',
-              publicPath: '/assets/uploads',
+            id: fields.text({ label: 'ID Foto (contoh: expo-2024-1)' }),
+            url: fields.text({
+              label: 'Path / URL File Foto (contoh: /assets/expo/expo-2024-1.jpg)',
             }),
             caption: fields.text({ label: 'Takarir / Keterangan Foto', multiline: true }),
             category: fields.select({
               label: 'Kategori Foto',
               options: [
+                { label: 'Dokumentasi', value: 'Dokumentasi' },
                 { label: 'Playtest & Booth', value: 'Playtest & Booth' },
                 { label: 'Presentasi Tim', value: 'Presentasi Tim' },
                 { label: 'Suasana Pameran', value: 'Suasana Pameran' },
                 { label: 'Review Dosen', value: 'Review Dosen' },
                 { label: 'Awarding', value: 'Awarding' },
               ],
-              defaultValue: 'Playtest & Booth',
+              defaultValue: 'Dokumentasi',
             }),
             time: fields.text({ label: 'Waktu Pengambilan (contoh: 10:30 WIB)' }),
           }),
           {
             label: 'Koleksi Foto Dokumentasi Galeri',
             itemLabel: (props) =>
-              `[${props.fields.category.value}] ${props.fields.caption.value || 'Foto Dokumentasi'}`,
+              `[${props.fields.category.value || 'Dokumentasi'}] ${props.fields.caption.value || 'Foto Dokumentasi'}`,
           }
         ),
       },

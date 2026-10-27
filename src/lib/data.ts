@@ -39,6 +39,57 @@ export function getFeaturedGames(): Game[] {
   return getAllGames().filter((game) => game.featured);
 }
 
+export type GameAwardType = 'best_game' | 'most_popular';
+
+export interface GameAwardInfo {
+  type: GameAwardType;
+  icon: string;
+  badgeLabel: string;
+  fullTitle: string;
+  posterBadgeStyle: string;
+  metaBadgeStyle: string;
+}
+
+export function getGameAwardInfo(game: Game): GameAwardInfo | null {
+  const isBest = game.award === 'best_game' || [
+    'legacy-of-andalas',
+    'legenda-tiga-raja',
+    'guardians-of-mystica',
+    'avernus',
+  ].includes(game.slug);
+
+  const isPopular = game.award === 'most_popular' || [
+    'sawit-harvester',
+    'operation-rafflesia-last-hope',
+    'oscar-s-adventure-the-hidden-treasure',
+    'gelud',
+  ].includes(game.slug);
+
+  if (isBest) {
+    return {
+      type: 'best_game',
+      icon: '★',
+      badgeLabel: 'BEST GAME',
+      fullTitle: 'BEST GAME OF THE SEMESTER',
+      posterBadgeStyle: 'background-color: rgba(0, 0, 0, 0.92) !important; color: #FBBF24 !important; border-color: #F59E0B !important;',
+      metaBadgeStyle: 'border-color: #F59E0B; background-color: rgba(245, 158, 11, 0.15); color: #F59E0B;',
+    };
+  }
+
+  if (isPopular) {
+    return {
+      type: 'most_popular',
+      icon: '⚡',
+      badgeLabel: 'MOST POPULAR',
+      fullTitle: 'MOST POPULAR GAME OF THE SEMESTER',
+      posterBadgeStyle: 'background-color: rgba(0, 0, 0, 0.92) !important; color: #38BDF8 !important; border-color: #0EA5E9 !important;',
+      metaBadgeStyle: 'border-color: #0EA5E9; background-color: rgba(14, 165, 233, 0.15); color: #0284C7;',
+    };
+  }
+
+  return null;
+}
+
 export function getGameBySlug(slug: string): Game | undefined {
   return getAllGames().find((game) => game.slug === slug);
 }

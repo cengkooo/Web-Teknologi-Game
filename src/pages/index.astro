@@ -38,7 +38,7 @@ const allGames = getAllGames();
       </a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {featuredGames.map((game) => (
+      {featuredGames.slice(0, 6).map((game) => (
         <GameCard game={game} />
       ))}
     </div>

@@ -21,6 +21,7 @@ export const GameSchema = z.object({
   platform: z.array(z.string()).default(['Windows']),
   batchYear: z.number(),
   featured: z.boolean().default(false),
+  award: z.string().optional(),
   posterImage: z.string().default(''),
   screenshots: z.array(z.string()).default([]),
   webglUrl: z.string().optional(),

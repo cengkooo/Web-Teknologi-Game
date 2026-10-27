@@ -17,7 +17,7 @@
     "Web"
   ],
   "batchYear": 2025,
-  "featured": true,
+  "featured": false,
   "posterImage": "https://img.itch.zone/aW1nLzI0NTIyMDMyLnBuZw==/original/PhV5GH.png",
   "screenshots": [
     "https://img.itch.zone/aW1hZ2UvNDA4NzIwNC8yNDUyMjE0Mi5qcGc=/original/wvMXcj.jpg",
@@ -61,5 +61,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "none"
 }

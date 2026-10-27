@@ -16,7 +16,7 @@
     "Windows"
   ],
   "batchYear": 2024,
-  "featured": true,
+  "featured": false,
   "posterImage": "/assets/uploads/games/Go-Ancient.JPG",
   "screenshots": [],
   "itchUrl": "https://github.com/gabrielfico/tubes-tekgem",
@@ -56,5 +56,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "none"
 }

@@ -17,7 +17,7 @@
     "macOS"
   ],
   "batchYear": 2025,
-  "featured": true,
+  "featured": false,
   "posterImage": "https://img.itch.zone/aW1nLzI0NDE0NTc2LmpwZWc=/original/J3w0Av.jpeg",
   "screenshots": [],
   "itchUrl": "https://sumateranroar.itch.io/sumateranroar",
@@ -57,5 +57,6 @@
   "metrics": {
     "tickRate": "60 Hz Stable",
     "buildSize": "Godot PC Build"
-  }
+  },
+  "award": "none"
 }

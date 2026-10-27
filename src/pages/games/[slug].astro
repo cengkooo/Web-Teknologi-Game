@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import EngineBadge from '../../components/EngineBadge.astro';
 import TechSpecsTable from '../../components/TechSpecsTable.astro';
 import Box from '../../components/Box.astro';
-import { getAllGames, getStudentById, type Game } from '../../lib/data';
+import { getAllGames, getStudentById, getGameAwardInfo, type Game } from '../../lib/data';
 
 export function getStaticPaths() {
   const games = getAllGames();
@@ -18,6 +18,7 @@ interface Props {
 }
 
 const { game } = Astro.props;
+const award = getGameAwardInfo(game);
 
 // Resolve contributors with student data
 const contributorsList = game.contributors.map((c) => ({
@@ -73,6 +74,15 @@ const contributorsList = game.contributors.map((c) => ({
       {game.featured && (
         <span class="px-2 py-1 text-xs font-mono font-bold border border-white bg-white text-black uppercase">
           [FEATURED SPOTLIGHT]
+        </span>
+      )}
+      {award && (
+        <span
+          class="px-2 py-1 text-xs font-mono font-bold border uppercase flex items-center gap-1 shadow-sm"
+          style={award.metaBadgeStyle}
+        >
+          <span>{award.icon}</span>
+          <span>[{award.fullTitle}]</span>
         </span>
       )}
     </div>
