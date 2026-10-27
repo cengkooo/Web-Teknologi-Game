@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import CreatorLedger from '../../components/CreatorLedger.astro';
+import MahasiswaLedger from '../../components/MahasiswaLedger.astro';
 import { getAllStudents, getGamesByStudentId } from '../../lib/data';
 
 const students = getAllStudents();
@@ -24,10 +24,10 @@ const batches = Array.from(new Set(students.map((s) => s.batch))).sort((a, b) =>
     <div>
       <div class="flex items-center gap-2 mb-2 text-xs text-[#737373]">
         <span class="inline-block w-2 h-2 bg-white"></span>
-        <span>INDEX: 03 // MASTER ROSTER LEDGER</span>
+        <span>INDEX: 03 // MAHASISWA</span>
       </div>
       <h1 class="font-display font-black text-2xl sm:text-4xl text-white tracking-wider uppercase">
-        STUDENT CREATORS ROSTER
+        DAFTAR MAHASISWA
       </h1>
       <p class="text-xs text-[#737373] mt-1">
         Tabel induk mahasiswa Mata Kuliah Teknologi Game. Memudahkan pemindaian cepat nama, spesialisasi peran, angkatan, karya game terkait, dan portofolio kode.
@@ -36,7 +36,7 @@ const batches = Array.from(new Set(students.map((s) => s.batch))).sort((a, b) =>
 
     <div class="flex items-center gap-4 text-xs border border-[#262626] p-3 bg-black self-start sm:self-auto">
       <div>
-        <span class="text-[#737373] block text-[10px]">TOTAL CREATORS</span>
+        <span class="text-[#737373] block text-[10px]">TOTAL MAHASISWA</span>
         <span id="roster-total-count" class="text-white font-bold text-lg">{students.length}</span>
       </div>
       <div class="border-l border-[#262626] pl-4">
@@ -47,7 +47,7 @@ const batches = Array.from(new Set(students.map((s) => s.batch))).sort((a, b) =>
   </div>
 
   <!-- Interactive Master Ledger Component -->
-  <CreatorLedger
+  <MahasiswaLedger
     studentsWithGames={studentsWithGames}
     batches={batches}
     totalStudents={students.length}

@@ -1,0 +1,10 @@
+{
+  "id": "farhan-nugraha",
+  "name": "Farhan Nugraha",
+  "batch": 2025,
+  "role": "Technical Artist & Shader Dev",
+  "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+  "bio": "Merancang shader visual interaktif, simulasi efek partikel, dan pipeline pencahayaan WebGL ringan yang tetap memikat di layar monitor.",
+  "githubUrl": "https://github.com",
+  "portfolioUrl": "https://example.com"
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "kinetic-strata",
+  "title": "Kinetic Strata",
+  "tagline": "Game aksi pertempuran mecha 3D dengan lingkungan voxel yang dinamis dan dapat dihancurkan.",
+  "description": "Kinetic Strata dikembangkan sebagai proyek akhir yang menggabungkan elemen aksi taktis dan fisika interaktif. Tim mahasiswa merancang alur gameplay di mana pemain dapat meruntuhkan struktur arena untuk mengecoh lawan. Proses pengembangannya berfokus pada integrasi algoritma voxel marching cubes di Godot, penyesuaian keseimbangan senjata, serta optimasi performa agar tetap mulus saat dimainkan langsung melalui browser.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Voxel Action",
+    "Tactical Combat",
+    "Sci-Fi"
+  ],
+  "platform": [
+    "Windows",
+    "Linux"
+  ],
+  "batchYear": 2024,
+  "featured": true,
+  "posterImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+  "screenshots": [
+    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "itchUrl": "https://itch.io",
+  "githubUrl": "https://github.com/if-itera/kinetic-strata",
+  "contributors": [
+    {
+      "id": "alex-reza",
+      "role": "Lead Gameplay & Systems"
+    },
+    {
+      "id": "budi-setiawan",
+      "role": "Physics & Level Interaction"
+    }
+  ],
+  "metrics": {
+    "polygonCount": "1.2M Tris / Frame",
+    "drawCalls": "180 Max",
+    "tickRate": "60 Hz Stable",
+    "buildSize": "38.4 MB"
+  }
+}

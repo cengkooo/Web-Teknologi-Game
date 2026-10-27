@@ -1,0 +1,42 @@
+{
+  "slug": "chronovector-subzero",
+  "title": "ChronoVector // SubZero",
+  "tagline": "Fast-paced arena shooter dengan mekanika time-dilation dan respons kontrol instan.",
+  "description": "ChronoVector lahir dari eksplorasi mekanik waktu di mana pergerakan proyektil musuh melambat saat pemain bermanuver lincah. Dalam proses pembuatannya, tim merancang state machine karakter dari dasar, menguji kurva akselerasi pemain, dan menerapkan arsitektur rollback agar kontrol terasa responsif tanpa jeda input.",
+  "engine": "Custom C++",
+  "engineVersion": "C++20 / Raylib 5.0",
+  "genre": [
+    "Tactical Shooter",
+    "Time Manipulation",
+    "Arcade"
+  ],
+  "platform": [
+    "Windows",
+    "Linux"
+  ],
+  "batchYear": 2024,
+  "featured": true,
+  "posterImage": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+  "screenshots": [
+    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "itchUrl": "https://itch.io",
+  "githubUrl": "https://github.com/if-itera/chronovector-subzero",
+  "contributors": [
+    {
+      "id": "alex-reza",
+      "role": "Core Framework & Netcode"
+    },
+    {
+      "id": "dian-kartika",
+      "role": "Gameplay Systems"
+    }
+  ],
+  "metrics": {
+    "polygonCount": "420K Tris",
+    "drawCalls": "65 Peak",
+    "tickRate": "120 Hz Deterministic",
+    "buildSize": "14.2 MB"
+  }
+}

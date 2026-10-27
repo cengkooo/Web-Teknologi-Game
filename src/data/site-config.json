@@ -4,7 +4,7 @@
   "institutionBadge": "FTI ITERA // PRODI TEKNIK INFORMATIKA",
   "courseBadge": "MATA KULIAH TEKNOLOGI GAME",
   "contactEmail": "gametech@itera.ac.id",
-  "repoUrl": "https://github.com/itera-official/library-teknologi-game",
+  "repoUrl": "https://github.com/cengkooo/Web-Teknologi-Game",
   "links": {
     "iteraIf": "https://if.itera.ac.id",
     "itchIo": "https://itch.io"
@@ -12,7 +12,7 @@
   "navItems": [
     { "label": "01 // HOME", "href": "/" },
     { "label": "02 // GAMES", "href": "/games" },
-    { "label": "03 // CREATORS", "href": "/creators" },
-    { "label": "04 // GUIDELINES", "href": "/submit" }
+    { "label": "03 // MAHASISWA", "href": "/mahasiswa" },
+    { "label": "04 // EXPO", "href": "/expo" }
   ]
 }

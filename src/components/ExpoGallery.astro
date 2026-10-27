@@ -1,0 +1,336 @@
+---
+import type { ExpoPhoto } from '../types';
+
+interface GalleryPhoto extends ExpoPhoto {
+  eventId: string;
+  eventTitle: string;
+  eventYear: number;
+  eventDate: string;
+  location: string;
+}
+
+interface Props {
+  photos: GalleryPhoto[];
+  years: number[];
+  categories: string[];
+}
+
+const { photos, years, categories } = Astro.props;
+---
+
+<!-- Photo Gallery Section with Dynamic Filters -->
+<section class="mb-14" id="photo-gallery">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-6 border-b border-[#262626] gap-3">
+    <div class="flex items-center gap-2 font-mono text-xs">
+      <span class="inline-block w-2 h-2 bg-white"></span>
+      <h2 class="font-display font-bold text-lg sm:text-xl tracking-wider text-white uppercase">
+        GALERI DOKUMENTASI DUNIA NYATA
+      </h2>
+    </div>
+    <div class="font-mono text-xs text-[#737373]">
+      MENAMPILKAN <span id="gallery-counter" class="text-white font-bold">{photos.length}</span> DARI {photos.length} FOTO
+    </div>
+  </div>
+
+  <!-- Filter Buttons Bar -->
+  <div class="border border-[#262626] bg-[#0A0A0A] p-4 mb-8 font-mono text-xs space-y-4">
+    <!-- Filter Tahun -->
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="text-[#737373] text-[10px] uppercase tracking-wider mr-2 font-bold">// TAHUN:</span>
+      <button
+        class="year-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors"
+        data-year="all"
+      >
+        SEMUA TAHUN
+      </button>
+      {years.map((year) => (
+        <button
+          class="year-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors"
+          data-year={year.toString()}
+        >
+          {year}
+        </button>
+      ))}
+    </div>
+
+    <!-- Filter Kategori -->
+    <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-[#1a1a1a]">
+      <span class="text-[#737373] text-[10px] uppercase tracking-wider mr-2 font-bold">// KATEGORI:</span>
+      <button
+        class="cat-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors"
+        data-category="all"
+      >
+        SEMUA KATEGORI
+      </button>
+      {categories.map((cat) => (
+        <button
+          class="cat-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors"
+          data-category={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {photos.map((photo) => (
+      <div
+        class="gallery-item border border-[#262626] bg-[#0A0A0A] overflow-hidden flex flex-col justify-between hover:border-white transition-colors duration-150 group cursor-pointer"
+        data-year={photo.eventYear.toString()}
+        data-category={photo.category}
+        data-image-url={photo.url}
+        data-caption={photo.caption}
+        data-event-title={photo.eventTitle}
+        data-location={photo.location}
+        data-time={photo.time || ''}
+        data-date={photo.eventDate}
+      >
+        <div>
+          <div class="relative aspect-4/3 overflow-hidden bg-black border-b border-[#262626]">
+            <img
+              src={photo.url}
+              alt={photo.caption}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute top-2 left-2 px-2 py-0.5 bg-black/85 backdrop-blur-sm border border-[#262626] text-[10px] font-mono text-white uppercase">
+              {photo.category}
+            </div>
+            {photo.time && (
+              <div class="absolute top-2 right-2 px-2 py-0.5 bg-black/85 backdrop-blur-sm border border-[#262626] text-[10px] font-mono text-[#a3a3a3]">
+                {photo.time}
+              </div>
+            )}
+          </div>
+
+          <div class="p-4 font-mono">
+            <p class="text-xs text-zinc-100 leading-relaxed mb-3">
+              {photo.caption}
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 pt-0 font-mono text-[10px] text-[#737373] border-t border-[#1a1a1a] flex flex-col gap-1">
+          <span class="text-white font-bold truncate uppercase">{photo.eventTitle}</span>
+          <span class="truncate">{photo.eventDate} &bull; {photo.location}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Empty State -->
+  <div id="gallery-empty-state" class="hidden border border-[#262626] bg-[#0A0A0A] p-12 text-center font-mono">
+    <div class="text-[#737373] text-sm uppercase tracking-widest mb-2">[HASIL TIDAK DITEMUKAN]</div>
+    <p class="text-xs text-white max-w-md mx-auto mb-4">
+      Tidak ada foto pameran yang cocok dengan kombinasi filter tahun dan kategori yang dipilih.
+    </p>
+    <button
+      id="reset-filters-btn"
+      class="px-4 py-2 border border-white bg-white text-black font-bold text-xs uppercase hover:bg-black hover:text-white transition-colors"
+    >
+      RESET FILTER
+    </button>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div
+  id="expo-lightbox"
+  class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8"
+>
+  <div class="relative max-w-5xl w-full border border-[#262626] bg-[#0A0A0A] overflow-hidden flex flex-col max-h-[90vh]">
+    <!-- Modal Header -->
+    <div class="px-4 py-3 border-b border-[#262626] bg-black flex items-center justify-between font-mono text-xs">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 bg-white"></span>
+        <span id="modal-category" class="text-white font-bold uppercase">PREVIEW DOKUMENTASI</span>
+      </div>
+      <button
+        id="close-lightbox-btn"
+        class="px-2 py-1 border border-[#262626] text-[#737373] hover:text-white hover:border-white uppercase text-[11px] transition-colors"
+      >
+        [TUTUP &times;]
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="overflow-y-auto p-4 sm:p-6 space-y-4">
+      <div class="relative w-full aspect-16/10 sm:aspect-video bg-black border border-[#262626] overflow-hidden flex items-center justify-center">
+        <img
+          id="modal-image"
+          src=""
+          alt=""
+          class="max-h-full max-w-full object-contain"
+        />
+      </div>
+
+      <div class="font-mono space-y-2">
+        <h3 id="modal-caption" class="text-sm sm:text-base text-white font-bold leading-relaxed"></h3>
+        <div class="flex flex-wrap items-center gap-3 text-xs text-[#737373] pt-2 border-t border-[#1a1a1a]">
+          <span id="modal-event" class="text-white font-bold uppercase"></span>
+          <span>&bull;</span>
+          <span id="modal-location"></span>
+          <span>&bull;</span>
+          <span id="modal-date"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Interactive Client-side Script for Filtering & Lightbox -->
+<script is:inline>
+  function setupExpoGallery() {
+    const yearButtons = document.querySelectorAll('.year-filter-btn');
+    const catButtons = document.querySelectorAll('.cat-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const counterEl = document.getElementById('gallery-counter');
+    const headerPhotoCount = document.getElementById('header-photo-count');
+    const emptyState = document.getElementById('gallery-empty-state');
+    const resetBtn = document.getElementById('reset-filters-btn');
+
+    // Lightbox elements
+    const lightbox = document.getElementById('expo-lightbox');
+    const modalImage = document.getElementById('modal-image');
+    const modalCaption = document.getElementById('modal-caption');
+    const modalCategory = document.getElementById('modal-category');
+    const modalEvent = document.getElementById('modal-event');
+    const modalLocation = document.getElementById('modal-location');
+    const modalDate = document.getElementById('modal-date');
+    const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+
+    let selectedYear = 'all';
+    let selectedCategory = 'all';
+
+    function applyFilters() {
+      let visibleCount = 0;
+
+      galleryItems.forEach((item) => {
+        const itemYear = item.getAttribute('data-year');
+        const itemCategory = item.getAttribute('data-category');
+
+        const matchYear = selectedYear === 'all' || itemYear === selectedYear;
+        const matchCat = selectedCategory === 'all' || itemCategory === selectedCategory;
+
+        if (matchYear && matchCat) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      if (counterEl) counterEl.textContent = visibleCount.toString();
+      if (headerPhotoCount) headerPhotoCount.textContent = `${visibleCount} DOKUMEN`;
+
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.classList.remove('hidden');
+        } else {
+          emptyState.classList.add('hidden');
+        }
+      }
+    }
+
+    function updateActiveButtons() {
+      yearButtons.forEach((btn) => {
+        const val = btn.getAttribute('data-year');
+        if (val === selectedYear) {
+          btn.className = 'year-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors';
+        } else {
+          btn.className = 'year-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors';
+        }
+      });
+
+      catButtons.forEach((btn) => {
+        const val = btn.getAttribute('data-category');
+        if (val === selectedCategory) {
+          btn.className = 'cat-filter-btn px-3 py-1 text-xs border border-white bg-white text-black font-bold uppercase transition-colors';
+        } else {
+          btn.className = 'cat-filter-btn px-3 py-1 text-xs border border-[#262626] bg-black text-[#737373] hover:text-white hover:border-[#737373] font-bold uppercase transition-colors';
+        }
+      });
+    }
+
+    yearButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        selectedYear = btn.getAttribute('data-year') || 'all';
+        updateActiveButtons();
+        applyFilters();
+      });
+    });
+
+    catButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        selectedCategory = btn.getAttribute('data-category') || 'all';
+        updateActiveButtons();
+        applyFilters();
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        selectedYear = 'all';
+        selectedCategory = 'all';
+        updateActiveButtons();
+        applyFilters();
+      });
+    }
+
+    // Lightbox handlers
+    galleryItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const imgUrl = item.getAttribute('data-image-url') || '';
+        const caption = item.getAttribute('data-caption') || '';
+        const category = item.getAttribute('data-category') || '';
+        const eventTitle = item.getAttribute('data-event-title') || '';
+        const location = item.getAttribute('data-location') || '';
+        const date = item.getAttribute('data-date') || '';
+
+        if (modalImage) modalImage.src = imgUrl;
+        if (modalCaption) modalCaption.textContent = caption;
+        if (modalCategory) modalCategory.textContent = category;
+        if (modalEvent) modalEvent.textContent = eventTitle;
+        if (modalLocation) modalLocation.textContent = location;
+        if (modalDate) modalDate.textContent = date;
+
+        if (lightbox) {
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    function closeLightbox() {
+      if (lightbox) {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (closeLightboxBtn) {
+      closeLightboxBtn.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  }
+
+  setupExpoGallery();
+  document.addEventListener('astro:after-swap', setupExpoGallery);
+</script>

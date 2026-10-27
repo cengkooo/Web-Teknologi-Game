@@ -89,9 +89,29 @@ export const SiteConfigSchema = z.object({
   ),
 });
 
+export const ExpoPhotoSchema = z.object({
+  id: z.string(),
+  url: z.string(),
+  caption: z.string(),
+  category: z.string(),
+  time: z.string().optional(),
+});
+
+export const ExpoEventSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  edition: z.string(),
+  year: z.number(),
+  date: z.string(),
+  location: z.string(),
+  photos: z.array(ExpoPhotoSchema),
+});
+
 export type Game = z.infer<typeof GameSchema>;
 export type Student = z.infer<typeof StudentSchema>;
 export type Contributor = z.infer<typeof ContributorSchema>;
 export type Instructor = z.infer<typeof InstructorSchema>;
 export type Course = z.infer<typeof CourseSchema>;
 export type SiteConfig = z.infer<typeof SiteConfigSchema>;
+export type ExpoPhoto = z.infer<typeof ExpoPhotoSchema>;
+export type ExpoEvent = z.infer<typeof ExpoEventSchema>;

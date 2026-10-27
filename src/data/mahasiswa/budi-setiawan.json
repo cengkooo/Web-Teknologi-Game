@@ -1,0 +1,9 @@
+{
+  "id": "budi-setiawan",
+  "name": "Budi Setiawan",
+  "batch": 2024,
+  "role": "Physics & Simulation Dev",
+  "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+  "bio": "Fokus pada solver integrasi fisika, kalkulasi tabrakan dinamis, dan mekanika kehancuran lingkungan terukur di Godot 4 dan Unreal 5.",
+  "githubUrl": "https://github.com"
+}

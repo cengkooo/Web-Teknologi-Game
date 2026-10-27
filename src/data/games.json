@@ -1,6 +1,7 @@
-[
-  {
-    "slug": "kinetic-strata",
+{
+  "games": [
+    {
+      "slug": "kinetic-strata",
     "title": "Kinetic Strata",
     "tagline": "Game aksi pertempuran mecha 3D dengan lingkungan voxel yang dinamis dan dapat dihancurkan.",
     "description": "Kinetic Strata dikembangkan sebagai proyek akhir yang menggabungkan elemen aksi taktis dan fisika interaktif. Tim mahasiswa merancang alur gameplay di mana pemain dapat meruntuhkan struktur arena untuk mengecoh lawan. Proses pengembangannya berfokus pada integrasi algoritma voxel marching cubes di Godot, penyesuaian keseimbangan senjata, serta optimasi performa agar tetap mulus saat dimainkan langsung melalui browser.",
@@ -313,6 +314,7 @@
       "buildSize": "11.8 MB"
     }
   }
-]
+  ]
+}
 
 

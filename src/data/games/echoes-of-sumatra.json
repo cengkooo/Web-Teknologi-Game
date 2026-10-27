@@ -1,0 +1,41 @@
+{
+  "slug": "echoes-of-sumatra",
+  "title": "Echoes of Sumatra",
+  "tagline": "Eksplorasi naratif teka-teki berlatar mitologi dan cagar budaya Sumatera dalam format 2.5D.",
+  "description": "Sebuah permainan petualangan atmosferik yang menggabungkan elemen visual 2D hand-drawn dengan tata cahaya 3D dinamis. Mengangkat tema pelestarian fauna endemik Sumatera melalui alur cerita yang menyentuh dan teka-teki lingkungan.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Puzzle",
+    "Narrative",
+    "Adventure"
+  ],
+  "platform": [
+    "Windows",
+    "macOS"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+  "screenshots": [
+    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "itchUrl": "https://itch.io",
+  "githubUrl": "https://github.com/if-itera/echoes-of-sumatra",
+  "contributors": [
+    {
+      "id": "citra-lestari",
+      "role": "Level Designer & Story Writer"
+    },
+    {
+      "id": "alex-reza",
+      "role": "Audio Engine & Systems"
+    }
+  ],
+  "metrics": {
+    "polygonCount": "140K Tris",
+    "drawCalls": "55 Peak",
+    "tickRate": "60 Hz Stable",
+    "buildSize": "26.4 MB"
+  }
+}

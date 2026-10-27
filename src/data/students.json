@@ -1,6 +1,7 @@
-[
-  {
-    "id": "alex-reza",
+{
+  "students": [
+    {
+      "id": "alex-reza",
     "name": "Alex Reza Pratama",
     "batch": 2024,
     "role": "Engine & Systems Programmer",
@@ -179,4 +180,5 @@
     "bio": "Pecinta mekanika aksi presisi tinggi: pemrograman hit-box frame-perfect, integrasi ragdoll physics, dan peredam hentakan kamera.",
     "githubUrl": "https://github.com"
   }
-]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "expo-2023-labtek",
+  "title": "ITERA GAME TECH & INTERACTIVE MEDIA EXPO 2023",
+  "edition": "Semester Ganjil 2023/2024",
+  "year": 2023,
+  "date": "14 Desember 2023",
+  "location": "Lobby Gedung Labtek 3 Lantai 1, Kampus ITERA",
+  "photos": [
+    {
+      "id": "p23-1",
+      "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&auto=format&fit=crop&q=80",
+      "caption": "Demonstrasi live coding dan profiling performa render ray-marching di booth grafika.",
+      "category": "Presentasi Tim",
+      "time": "09:30 WIB"
+    },
+    {
+      "id": "p23-2",
+      "url": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&auto=format&fit=crop&q=80",
+      "caption": "Kunjungan siswa SMA mitra ITERA mencoba pengalaman bermain game edukasi sains karya mahasiswa.",
+      "category": "Suasana Pameran",
+      "time": "11:15 WIB"
+    },
+    {
+      "id": "p23-3",
+      "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&auto=format&fit=crop&q=80",
+      "caption": "Penyelarasan shader dan post-processing realtime di laptop development tim Aether Weaver.",
+      "category": "Playtest & Booth",
+      "time": "13:40 WIB"
+    },
+    {
+      "id": "p23-4",
+      "url": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format&fit=crop&q=80",
+      "caption": "Sesi dokumentasi tim pengembang berfoto bersama di booth utama dengan banner mata kuliah.",
+      "category": "Awarding",
+      "time": "15:50 WIB"
+    }
+  ]
+}

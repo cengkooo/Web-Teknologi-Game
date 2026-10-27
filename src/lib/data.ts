@@ -3,22 +3,36 @@ import rawStudents from '../data/students.json';
 import rawInstructors from '../data/instructors.json';
 import rawCourse from '../data/course.json';
 import rawSiteConfig from '../data/site-config.json';
+import rawExpo from '../data/expo.json';
 import {
   GameSchema,
   StudentSchema,
   InstructorSchema,
   CourseSchema,
   SiteConfigSchema,
+  ExpoEventSchema,
   type Game,
   type Student,
   type Instructor,
   type Course,
   type SiteConfig,
+  type ExpoEvent,
+  type ExpoPhoto,
 } from '../types';
+
+// Eagerly glob folder collections for Decap CMS compatibility
+const gameModules = import.meta.glob('../data/games/*.json', { eager: true });
+const studentModules = import.meta.glob('../data/mahasiswa/*.json', { eager: true });
+const expoModules = import.meta.glob('../data/expo/*.json', { eager: true });
 
 // Validate at build/compile time using Zod
 export function getAllGames(): Game[] {
-  return rawGames.map((item) => GameSchema.parse(item));
+  const fileEntries = Object.values(gameModules).map((m: any) => m.default ?? m);
+  if (fileEntries.length > 0) {
+    return fileEntries.map((item: any) => GameSchema.parse(item));
+  }
+  const list = Array.isArray(rawGames) ? rawGames : (rawGames as any).games;
+  return list.map((item: any) => GameSchema.parse(item));
 }
 
 export function getFeaturedGames(): Game[] {
@@ -30,7 +44,12 @@ export function getGameBySlug(slug: string): Game | undefined {
 }
 
 export function getAllStudents(): Student[] {
-  return rawStudents.map((item) => StudentSchema.parse(item));
+  const fileEntries = Object.values(studentModules).map((m: any) => m.default ?? m);
+  if (fileEntries.length > 0) {
+    return fileEntries.map((item: any) => StudentSchema.parse(item));
+  }
+  const list = Array.isArray(rawStudents) ? rawStudents : (rawStudents as any).students;
+  return list.map((item: any) => StudentSchema.parse(item));
 }
 
 export function getStudentById(id: string): Student | undefined {
@@ -71,6 +90,34 @@ export function getSiteConfig(): SiteConfig {
   return SiteConfigSchema.parse(rawSiteConfig);
 }
 
+export function getAllExpoEvents(): ExpoEvent[] {
+  const fileEntries = Object.values(expoModules).map((m: any) => m.default ?? m);
+  if (fileEntries.length > 0) {
+    return fileEntries.map((item: any) => ExpoEventSchema.parse(item));
+  }
+  const list = Array.isArray(rawExpo) ? rawExpo : (rawExpo as any).events;
+  return list.map((item: any) => ExpoEventSchema.parse(item));
+}
+
+export function getExpoYearsList(): number[] {
+  const events = getAllExpoEvents();
+  return Array.from(new Set(events.map((e) => e.year))).sort((a, b) => b - a);
+}
+
+export function getAllExpoPhotos() {
+  const events = getAllExpoEvents();
+  return events.flatMap((event) =>
+    event.photos.map((photo) => ({
+      ...photo,
+      eventId: event.id,
+      eventTitle: event.title,
+      eventYear: event.year,
+      eventDate: event.date,
+      location: event.location,
+    }))
+  );
+}
+
 export function getLibraryStats() {
   const games = getAllGames();
   const students = getAllStudents();
@@ -82,7 +129,7 @@ export function getLibraryStats() {
 
   return {
     totalGames: games.length,
-    activeCreators: students.length,
+    totalMahasiswa: students.length,
     enginesCount: engines.length,
     webglPlayable,
     engines,

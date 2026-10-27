@@ -1,0 +1,41 @@
+{
+  "slug": "lumina-path-tracing",
+  "title": "Lumina: Underwater World",
+  "tagline": "Eksplorasi visual bawah laut interaktif dengan pencahayaan dinamis yang memikat di WebGL.",
+  "description": "Lumina adalah pengalaman eksplorasi bawah laut yang berfokus pada atmosfer menenangkan dan keindahan bias cahaya air. Mahasiswa merancang alur visual melalui pipeline Unity URP, memadukan efek bias caustics dan godrays dengan navigasi kamera yang halus sehingga pengunjung dapat menikmati visual sinematis secara real-time di browser.",
+  "engine": "Unity",
+  "engineVersion": "Unity 6000.0.18f1 (URP)",
+  "genre": [
+    "Exploration",
+    "Interactive Experience"
+  ],
+  "platform": [
+    "Windows",
+    "macOS"
+  ],
+  "batchYear": 2025,
+  "featured": true,
+  "posterImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "screenshots": [
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "itchUrl": "https://itch.io",
+  "githubUrl": "https://github.com/if-itera/lumina-caustics",
+  "contributors": [
+    {
+      "id": "farhan-nugraha",
+      "role": "Visual & Lighting Designer"
+    },
+    {
+      "id": "maya-indira",
+      "role": "Environment Artist"
+    }
+  ],
+  "metrics": {
+    "polygonCount": "1.8M Dynamic Quads",
+    "drawCalls": "210",
+    "tickRate": "60 Hz Fixed",
+    "buildSize": "42.5 MB"
+  }
+}

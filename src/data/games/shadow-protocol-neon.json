@@ -1,0 +1,42 @@
+{
+  "slug": "shadow-protocol-neon",
+  "title": "Shadow Protocol // Neon",
+  "tagline": "Stealth action cyberpunk dengan sistem pencahayaan dinamis dan mekanika hacking terminal.",
+  "description": "Shadow Protocol membawa pemain menyusup ke fasilitas bawah tanah megakorporasi. Game ini memadukan mekanika stealth berbasis radius pandang musuh (field-of-view raycasting), integrasi terminal puzzle logika biner, serta visual bernuansa neon retro yang dioptimalkan di Godot 4.",
+  "engine": "Godot",
+  "engineVersion": "Godot 4.3 Stable",
+  "genre": [
+    "Stealth Action",
+    "Cyberpunk",
+    "Tactical"
+  ],
+  "platform": [
+    "Windows",
+    "Linux"
+  ],
+  "batchYear": 2025,
+  "featured": false,
+  "posterImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+  "screenshots": [
+    "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "itchUrl": "https://itch.io",
+  "githubUrl": "https://github.com/if-itera/shadow-protocol-neon",
+  "contributors": [
+    {
+      "id": "alex-reza",
+      "role": "Lead Gameplay & AI Behavior"
+    },
+    {
+      "id": "maya-indira",
+      "role": "Lighting & Level Artist"
+    }
+  ],
+  "metrics": {
+    "polygonCount": "850K Tris / Frame",
+    "drawCalls": "120 Peak",
+    "tickRate": "60 Hz Fixed",
+    "buildSize": "48.2 MB"
+  }
+}

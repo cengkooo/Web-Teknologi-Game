@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ExpoGallery from '../../components/ExpoGallery.astro';
+import { getAllExpoEvents, getExpoYearsList, getAllExpoPhotos } from '../../lib/data';
+
+const events = getAllExpoEvents();
+const years = getExpoYearsList();
+const allPhotos = getAllExpoPhotos();
+const categories = Array.from(new Set(allPhotos.map((p) => p.category))).sort();
+---
+
+<Layout
+  title="TEKNOLOGI GAME - INFORMATIKA ITERA"
+  description="Dokumentasi arsip pameran fisik, demo day tugas besar, playtest publik, dan showcase karya mahasiswa Mata Kuliah Teknologi Game di kampus ITERA."
+>
+  <!-- Page Header Box -->
+  <div class="border border-[#262626] bg-[#0A0A0A] p-6 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <div class="flex items-center gap-2 mb-2 font-mono text-xs text-[#737373]">
+        <span class="inline-block w-2 h-2 bg-white"></span>
+        <span>INDEX: 04 // PHYSICAL EXHIBITIONS & EXPO GALLERY</span>
+      </div>
+      <h1 class="font-display font-black text-2xl sm:text-4xl text-white tracking-wider uppercase">
+        GAME TECH EXPO ARCHIVE
+      </h1>
+      <p class="font-mono text-xs text-[#737373] mt-1 max-w-2xl leading-relaxed">
+        Dokumentasi visual pameran fisik, sesi playtest publik tugas besar, dan demo arcade interaktif karya mahasiswa Mata Kuliah Teknologi Game di lingkungan kampus Institut Teknologi Sumatera (ITERA).
+      </p>
+    </div>
+
+    <div class="flex items-center gap-4 font-mono text-xs border border-[#262626] p-3 bg-black self-start sm:self-auto shrink-0">
+      <div>
+        <span class="text-[#737373] block text-[10px]">TOTAL EXPOS</span>
+        <span class="text-white font-bold text-lg">{events.length} EDISI</span>
+      </div>
+      <div class="border-l border-[#262626] pl-4">
+        <span class="text-[#737373] block text-[10px]">FOTO ARSIP</span>
+        <span id="header-photo-count" class="text-white font-bold text-lg">{allPhotos.length} DOKUMEN</span>
+      </div>
+    </div>
+  </div>
+
+  <ExpoGallery photos={allPhotos} years={years} categories={categories} />
+</Layout>

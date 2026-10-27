@@ -21,10 +21,10 @@ Situs ini dibangun dengan prinsip arsitektur statis berkinerja tinggi (*Zero-JS 
   - Mesin filter multi-dimensi secara *real-time*: Game Engine (Unity, Godot, Unreal, dll), Genre (Action, Puzzle, RPG, dll), dan Tahun Angkatan (*Batch Year*).
   - Pencarian langsung (*live search*) berdasarkan judul game, deskripsi, tim pengembang, dan tag mekanika.
   - Paginasi interaktif 10 item per halaman dengan indikator hitungan hasil arsip.
-- 👤 **Buku Besar Kreator Mahasiswa (`/creators`)**
+- 👤 **Buku Besar Mahasiswa (03 // MAHASISWA - `/mahasiswa`)**
   - Indeks direktori mahasiswa pengembang game dengan format identitas standar `id="namadepan-namabelakang"`.
   - Filter per angkatan dan pencarian cepat berdasarkan nama, peran (*role*), atau nama game yang dikembangkan.
-  - Relasi dua arah: klik nama kreator untuk melihat game yang dikerjakannya, atau klik kreator dari halaman game untuk menuju profil mahasiswa terkait.
+  - Relasi dua arah: klik nama mahasiswa untuk melihat game yang dikerjakannya, atau klik mahasiswa dari halaman game untuk menuju profil terkait.
   - Paginasi 10 mahasiswa per halaman.
 - 🕹️ **Halaman Showcase Game Spesifik (`/games/[slug]`)**
   - Galeri tangkapan layar (*screenshots*) dan poster resolusi tinggi.
@@ -37,8 +37,14 @@ Situs ini dibangun dengan prinsip arsitektur statis berkinerja tinggi (*Zero-JS 
 - 🤝 **Portal Kolaborasi Industri (`#collaboration`)**
   - Jalur kerja sama industri untuk kuliah tamu praktisi, peluang magang (*internship*), sesi uji coba (*playtest*), hingga sponsor aset.
   - Generator formulir interaktif yang secara otomatis menyusun draf pesan email ke `gametech@itera.ac.id`.
-- 📋 **Protokol Kontribusi Mahasiswa (`/submit`)**
-  - Panduan baku langkah demi langkah bagi tim mahasiswa untuk mendaftarkan game baru melalui alur Git Pull Request.
+- 📸 **Galeri Pameran Fisik Game Tech Expo (`/expo`)**
+  - Dokumentasi visual pameran fisik, demo day tugas besar, dan sesi playtest langsung di lingkungan kampus ITERA.
+  - Filter interaktif berdasarkan tahun pameran dan kategori foto (*Playtest & Booth*, *Presentasi Tim*, *Suasana Pameran*, *Awarding*).
+  - Tampilan pratinjau modal lightbox beresolusi tinggi dengan informasi waktu, lokasi, dan keterangan acara.
+- ⚡ **Git-based CMS Admin (`/keystatic` & `/admin`)**
+  - Panel pengelola konten visual modern berbasis Git menggunakan **Keystatic** dengan integrasi resmi Astro (`@keystatic/astro`).
+  - Skema data aman berbasis TypeScript (`keystatic.config.ts`) untuk mengelola katalog game, buku besar mahasiswa, dan dokumentasi expo.
+  - Mendukung mode lokal instan tanpa proxy server tambahan dan sinkronisasi commit otomatis ke GitHub di lingkungan produksi.
 
 ---
 
@@ -65,14 +71,16 @@ library-teknologi-game/
 │   ├── components/             # Komponen UI modular (.astro)
 │   │   ├── CollabSection.astro     # Formulir & kanal ajakan kolaborasi industri
 │   │   ├── CourseCurriculum.astro  # Spesifikasi & narasi mata kuliah
-│   │   ├── CreatorLedger.astro     # Tabel direktori mahasiswa + live search & paginasi
 │   │   ├── EngineBadge.astro       # Badge label game engine
+│   │   ├── ExpoGallery.astro       # Galeri foto pameran + filter & lightbox
+│   │   ├── ExpoTimeline.astro      # Timeline kronologis pameran fisik
 │   │   ├── FilterMatrix.astro      # Tombol filter engine, genre, dan angkatan
 │   │   ├── Footer.astro            # Footer 3-kolom rata kiri-kanan
 │   │   ├── GameCard.astro          # Kartu pratinjau game
 │   │   ├── GameCatalog.astro       # Komponen katalog game + live search & paginasi
 │   │   ├── Hero.astro              # Hero section beranda
 │   │   ├── InstructorCard.astro    # Kartu profil dosen pengampu ITERA
+│   │   ├── MahasiswaLedger.astro   # Tabel direktori mahasiswa + live search & paginasi
 │   │   ├── Navbar.astro            # Navigasi atas & status bar sistem
 │   │   ├── SearchBar.astro         # Input pencarian serbaguna
 │   │   ├── StatsOverview.astro     # Ringkasan metrik statistik dinamis
@@ -80,6 +88,7 @@ library-teknologi-game/
 │   │   └── ThemeToggle.astro       # Tombol pengalih tema gelap/terang
 │   ├── data/                   # Sumber data terstruktur (Decoupled JSON Engine)
 │   │   ├── course.json             # Metadata & kurikulum mata kuliah
+│   │   ├── expo.json               # Dokumentasi pameran & foto galeri fisik
 │   │   ├── games.json              # Basis data seluruh game mahasiswa
 │   │   ├── instructors.json        # Data tim dosen pengampu
 │   │   ├── site-config.json        # Konfigurasi branding & navigasi situs
@@ -89,13 +98,16 @@ library-teknologi-game/
 │   ├── lib/
 │   │   └── data.ts             # Parser Zod, accessor functions, & kalkulasi relasi
 │   ├── pages/
-│   │   ├── creators/
-│   │   │   └── index.astro     # Halaman direktori mahasiswa (/creators)
+│   │   ├── admin/
+│   │   │   └── index.astro     # Panel CMS kontrol Decap (/admin)
+│   │   ├── expo/
+│   │   │   └── index.astro     # Galeri pameran fisik & demo day (/expo)
 │   │   ├── games/
 │   │   │   ├── [slug].astro    # Halaman dinamis detail game (/games/[slug])
 │   │   │   └── index.astro     # Halaman katalog game (/games)
-│   │   ├── index.astro         # Halaman beranda utama (/)
-│   │   └── submit.astro        # Panduan Pull Request mahasiswa (/submit)
+│   │   ├── mahasiswa/
+│   │   │   └── index.astro     # Halaman direktori mahasiswa (/mahasiswa)
+│   │   └── index.astro         # Halaman beranda utama (/)
 │   ├── styles/
 │   │   └── global.css          # Konfigurasi Tailwind CSS v4 & variabel warna
 │   └── types/
@@ -171,8 +183,8 @@ Fungsi `getGamesByStudentId()` di `src/lib/data.ts` akan secara otomatis merelas
 
 ### 1. Kloning Repositori & Instalasi
 ```bash
-git clone https://github.com/itera-official/library-teknologi-game.git
-cd library-teknologi-game
+git clone https://github.com/cengkooo/Web-Teknologi-Game.git
+cd Web-Teknologi-Game
 npm install
 ```
 
@@ -220,6 +232,40 @@ Setiap mahasiswa atau tim pengembang yang mengambil Mata Kuliah Teknologi Game w
    - Jalankan `npm run build` di terminal lokal Anda. Jika skema Zod tidak valid (misal ada field yang kurang atau tipe data keliru), proses build akan menampilkan pesan kesalahan yang spesifik.
 7. **Kirimkan Pull Request**:
    - Lakukan `git push` ke repositori fork Anda dan ajukan Pull Request ke branch `main`.
+
+---
+
+## 🎛️ Panduan Penggunaan Git-based CMS (`/keystatic`)
+
+Website ini dilengkapi dengan Git-based CMS visual (**Keystatic**) yang memungkinkan pengelola memperbarui data game, mahasiswa, dan expo tanpa harus menyentuh kode program.
+
+### Cara Penggunaan di Komputer Lokal (Local Development)
+1. Jalankan dev server Astro:
+   ```bash
+   npm run dev
+   ```
+2. Buka panel CMS di [http://localhost:4321/keystatic/](http://localhost:4321/keystatic/).
+3. Keystatic menggunakan mode `local` saat development, jadi tidak diperlukan proxy CMS tambahan. Perubahan disimpan langsung ke file di dalam `src/data/` dan aset yang diunggah ke `public/assets/uploads/`.
+
+### Cara Penggunaan di Vercel (Production dengan Login GitHub Asli)
+
+Website ini menggunakan storage GitHub Keystatic di production, sehingga perubahan CMS dapat disimpan ke repositori GitHub melalui deployment Vercel. Fungsi OAuth bawaan ([`api/auth.js`](file:///D:/library-teknologi-game/api/auth.js) dan [`api/callback.js`](file:///D:/library-teknologi-game/api/callback.js)) tetap tersedia untuk integrasi GitHub lain yang memerlukannya.
+
+1. **Daftarkan GitHub OAuth App (Gratis)**:
+   - Buka GitHub &rarr; **Settings** &rarr; **Developer Settings** &rarr; **OAuth Apps** &rarr; **New OAuth App**.
+   - **Application name**: `Game Tech ITERA CMS`
+   - **Homepage URL**: `https://[nama-proyek-anda].vercel.app`
+   - **Authorization callback URL**: `https://[nama-proyek-anda].vercel.app/api/callback`
+   - Klik **Register application**, lalu buat **Client Secret**. Salin *Client ID* dan *Client Secret*.
+
+2. **Pasang Environment Variables di Vercel**:
+   - Di dashboard Vercel proyek Anda &rarr; **Settings** &rarr; **Environment Variables**, tambahkan:
+     - `OAUTH_GITHUB_CLIENT_ID` = *(Client ID dari GitHub)*
+     - `OAUTH_GITHUB_CLIENT_SECRET` = *(Client Secret dari GitHub)*
+
+3. **Kelola Konten**:
+   - Buka `https://[nama-proyek-anda].vercel.app/keystatic/`.
+   - Gunakan panel Keystatic untuk mengedit koleksi konten. Pada mode production, konfigurasi Keystatic menggunakan repositori `cengkooo/Web-Teknologi-Game` pada branch `main`.
 
 ---
 

@@ -1,0 +1,288 @@
+---
+import { makePage } from '@keystatic/astro/ui';
+import config from '../../../keystatic.config';
+
+export const prerender = false;
+
+const KeystaticApp = makePage(config);
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS CONTROL PANEL // TEKNOLOGI GAME ITERA</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Orbitron & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:inline>
+      /* ==========================================================================
+         INDUSTRIAL BRUTALIST HUD OVERRIDE FOR KEYSTATIC CMS
+         ========================================================================== */
+      *, *::before, *::after {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'JetBrains Mono', monospace;
+        background-color: #050505;
+        color: #EDEDED;
+        min-height: 100vh;
+      }
+
+      /* Persistent Top Engineering HUD Bar */
+      #cms-hud-bar {
+        position: sticky;
+        top: 0;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 16px;
+        background-color: #0A0A0A;
+        border-bottom: 1px solid #262626;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+      }
+
+      .hud-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hud-badge {
+        background-color: #FFFFFF;
+        color: #000000;
+        font-weight: 700;
+        padding: 2px 6px;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+      }
+
+      .hud-title {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #FFFFFF;
+      }
+
+      .hud-repo {
+        color: #737373;
+        font-size: 10px;
+        border-left: 1px solid #262626;
+        padding-left: 12px;
+      }
+
+      .hud-repo strong {
+        color: #A3A3A3;
+      }
+
+      .hud-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* Global Form Back Button Banner (dynamically injected in form view) */
+      #custom-form-back-bar {
+        display: none;
+        background-color: #121212;
+        border-bottom: 1px solid #262626;
+        padding: 8px 16px;
+        align-items: center;
+        gap: 12px;
+        font-size: 11px;
+        position: sticky;
+        top: 41px;
+        z-index: 99999;
+      }
+
+      #custom-form-back-bar.active {
+        display: flex;
+      }
+
+      .brutalist-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #404040;
+        background-color: #171717;
+        color: #FFFFFF;
+        transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+      }
+
+      .brutalist-btn:hover {
+        background-color: #FFFFFF;
+        color: #000000;
+        border-color: #FFFFFF;
+      }
+
+      .brutalist-btn-primary {
+        background-color: #FFFFFF;
+        color: #000000;
+        border-color: #FFFFFF;
+      }
+
+      .brutalist-btn-primary:hover {
+        background-color: #000000;
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+      }
+
+      .brutalist-btn-danger {
+        border-color: #7F1D1D;
+        background-color: #2D0607;
+        color: #F87171;
+      }
+
+      .brutalist-btn-danger:hover {
+        background-color: #EF4444;
+        color: #FFFFFF;
+        border-color: #EF4444;
+      }
+
+      /* Container Keystatic */
+      #keystatic-mount-root {
+        min-height: calc(100vh - 42px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top HUD Instrument Bar -->
+    <header id="cms-hud-bar">
+      <div class="hud-left">
+        <span class="hud-badge">GIT CMS</span>
+        <span class="hud-title">TEKNOLOGI GAME ITERA</span>
+        <span class="hud-repo">
+          REPO: <strong>cengkooo/Web-Teknologi-Game</strong> [branch: main]
+        </span>
+      </div>
+
+      <div class="hud-right">
+        <!-- Return to Public Web -->
+        <a href="/" class="brutalist-btn" title="Kembali ke Halaman Web Utama">
+          <span>&larr;</span>
+          <span>WEBSITE PUBLIK</span>
+        </a>
+
+        <!-- Logout Button -->
+        <button id="cms-logout-btn" class="brutalist-btn brutalist-btn-danger" type="button" title="Keluar dari sesi GitHub">
+          <span>&times;</span>
+          <span>LOGOUT GITHUB</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Contextual Form Back Navigation Bar -->
+    <nav id="custom-form-back-bar" aria-label="Navigasi Form">
+      <a id="form-back-collection-link" href="/keystatic" class="brutalist-btn brutalist-btn-primary">
+        <span>&larr;</span>
+        <span id="form-back-label">KEMBALI KE DAFTAR</span>
+      </a>
+      <button id="form-history-back-btn" type="button" class="brutalist-btn">
+        <span>&larr;</span>
+        <span>BACK</span>
+      </button>
+      <span id="form-context-info" style="color:#737373; font-size:10px;">
+        MODE FORMULIR PENGISIAN // SIMPAN ATAU BATALKAN
+      </span>
+    </nav>
+
+    <!-- Keystatic React App Container -->
+    <main id="keystatic-mount-root">
+      <KeystaticApp client:only="react" />
+    </main>
+
+    <!-- Client-side script for Logout & Form Back Button injection -->
+    <script is:inline>
+      (function () {
+        // 1. Logout Handler
+        const logoutBtn = document.getElementById('cms-logout-btn');
+        logoutBtn?.addEventListener('click', async () => {
+          if (!confirm('Apakah Anda yakin ingin keluar dari sesi GitHub Keystatic?')) {
+            return;
+          }
+          try {
+            // Panggil API logout bawaan Keystatic
+            await fetch('/api/keystatic/github/logout', { method: 'POST' });
+          } catch (e) {
+            console.error('Logout error:', e);
+          }
+          // Redirect ke halaman login keystatic
+          window.location.href = '/keystatic';
+        });
+
+        // 2. Form Back Button Context Handler
+        const backBar = document.getElementById('custom-form-back-bar');
+        const backLink = document.getElementById('form-back-collection-link');
+        const backLabel = document.getElementById('form-back-label');
+        const historyBtn = document.getElementById('form-history-back-btn');
+
+        historyBtn?.addEventListener('click', () => {
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            window.location.href = '/keystatic';
+          }
+        });
+
+        function checkFormRoute() {
+          const path = window.location.pathname;
+          // Cek apakah sedang berada di dalam halaman form entri (item create atau item edit)
+          // Contoh URL: /keystatic/collection/games/item/kinetic-strata atau /keystatic/collection/mahasiswa/create
+          const collectionMatch = path.match(/\/keystatic\/collection\/([^\/]+)\/(item|create)/);
+
+          if (collectionMatch && backBar && backLink && backLabel) {
+            const collectionName = collectionMatch[1];
+            backBar.classList.add('active');
+            backLink.href = '/keystatic/collection/' + collectionName;
+            backLabel.textContent = 'KEMBALI KE DAFTAR ' + collectionName.toUpperCase();
+          } else if (backBar) {
+            backBar.classList.remove('active');
+          }
+        }
+
+        // Jalankan saat navigasi DOM berubah
+        checkFormRoute();
+        window.addEventListener('popstate', checkFormRoute);
+
+        // Amati perubahan pushState & replaceState
+        const originalPushState = history.pushState;
+        history.pushState = function () {
+          originalPushState.apply(this, arguments);
+          setTimeout(checkFormRoute, 50);
+        };
+
+        const originalReplaceState = history.replaceState;
+        history.replaceState = function () {
+          originalReplaceState.apply(this, arguments);
+          setTimeout(checkFormRoute, 50);
+        };
+
+        // MutationObserver untuk deteksi render React SPA
+        const observer = new MutationObserver(() => {
+          checkFormRoute();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      })();
+    </script>
+  </body>
+</html>

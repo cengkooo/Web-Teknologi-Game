@@ -1,0 +1,10 @@
+{
+  "id": "dimas-wahyu",
+  "name": "Dimas Wahyu Pratama",
+  "batch": 2024,
+  "role": "Network & Multiplayer Engineer",
+  "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80",
+  "bio": "Berfokus pada arsitektur client-server netcode, sinkronisasi state deterministik, dan rollback kompensasi lag di Raylib dan C++.",
+  "githubUrl": "https://github.com",
+  "portfolioUrl": "https://example.com"
+}

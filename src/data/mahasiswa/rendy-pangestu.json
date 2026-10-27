@@ -1,0 +1,11 @@
+{
+  "id": "rendy-pangestu",
+  "name": "Rendy Pangestu",
+  "batch": 2025,
+  "role": "AI & Pathfinding Programmer",
+  "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+  "bio": "Spesialis algoritma navigasi cerdas: Hierarchical Pathfinding (HPA*), Decision Tree, dan Behaviour Tree untuk NPC dinamis di Godot 4.",
+  "githubUrl": "https://github.com",
+  "linkedinUrl": "https://linkedin.com",
+  "portfolioUrl": "https://example.com"
+}
