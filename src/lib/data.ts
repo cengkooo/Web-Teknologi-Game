@@ -68,7 +68,7 @@ export function getGameAwardInfo(game: Game): GameAwardInfo | null {
   if (isBest) {
     return {
       type: 'best_game',
-      icon: '★',
+      icon: '👑',
       badgeLabel: 'BEST GAME',
       fullTitle: 'BEST GAME OF THE SEMESTER',
       posterBadgeStyle: 'background-color: rgba(0, 0, 0, 0.92) !important; color: #FBBF24 !important; border-color: #F59E0B !important;',
