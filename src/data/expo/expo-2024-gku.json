@@ -8,45 +8,73 @@
   "photos": [
     {
       "id": "expo-2024-1",
-      "url": "/assets/expo/expo-2024-1.jpg",
+      "url": "/assets/expo/expo-2024-1.webp",
       "caption": "Suasana pembukaan demo day dan pameran tugas besar mata kuliah Teknologi Game 2024 di GKU ITERA.",
       "category": "Dokumentasi",
       "time": "10:00 WIB"
     },
     {
       "id": "expo-2024-2",
-      "url": "/assets/expo/expo-2024-2.jpg",
+      "url": "/assets/expo/expo-2024-2.webp",
       "caption": "Sesi playtest publik: pengunjung mencoba langsung karya game mahasiswa pada perangkat pengujian.",
       "category": "Dokumentasi",
       "time": "11:15 WIB"
     },
     {
       "id": "expo-2024-3",
-      "url": "/assets/expo/expo-2024-3.jpg",
+      "url": "/assets/expo/expo-2024-3.webp",
       "caption": "Mahasiswa pengembang menjelaskan alur cerita, mekanika kontrol, dan arsitektur teknis game.",
       "category": "Dokumentasi",
       "time": "12:30 WIB"
     },
     {
       "id": "expo-2024-4",
-      "url": "/assets/expo/expo-2024-4.jpg",
+      "url": "/assets/expo/expo-2024-4.webp",
       "caption": "Pengujian respons kontrol dan interaksi visual game karya mahasiswa oleh pengunjung pameran.",
       "category": "Dokumentasi",
       "time": "13:45 WIB"
     },
     {
       "id": "expo-2024-5",
-      "url": "/assets/expo/expo-2024-5.jpg",
+      "url": "/assets/expo/expo-2024-5.webp",
       "caption": "Diskusi teknis dan pemberian feedback gameplay dari pengunjung kepada tim developer.",
       "category": "Dokumentasi",
       "time": "15:00 WIB"
     },
     {
       "id": "expo-2024-6",
-      "url": "/assets/expo/expo-2024-6.jpg",
+      "url": "/assets/expo/expo-2024-6.webp",
       "caption": "Keseruan pengunjung saat menjajal berbagai genre game hasil karya mahasiswa Teknologi Game.",
       "category": "Dokumentasi",
       "time": "16:20 WIB"
+    },
+    {
+      "id": "expo-2024-7",
+      "url": "/assets/expo/expo-2024-7.webp",
+      "caption": "Antrean audiens dan mahasiswa yang antusias mencoba build game pada booth showcase.",
+      "category": "Dokumentasi",
+      "time": "16:45 WIB"
+    },
+    {
+      "id": "expo-2024-8",
+      "url": "/assets/expo/expo-2024-8.webp",
+      "caption": "Demonstrasi fitur gameplay dan presentasi mekanika game interaktif di stan pameran.",
+      "category": "Dokumentasi",
+      "time": "17:00 WIB"
+    },
+    {
+      "id": "expo-2024-9",
+      "url": "/assets/expo/expo-2024-9.webp",
+      "caption": "Interaksi interaktif antara developer mahasiswa dan pengunjung selama sesi playtest terbuka.",
+      "category": "Dokumentasi",
+      "time": "17:15 WIB"
+    },
+    {
+      "id": "expo-2024-10",
+      "url": "/assets/expo/expo-2024-10.webp",
+      "caption": "Dokumentasi kebersamaan peserta pameran dan tim pengembang game pada penutupan Expo 2024.",
+      "category": "Dokumentasi",
+      "time": "17:30 WIB"
     }
   ]
 }

@@ -152,10 +152,14 @@ export function getSiteConfig(): SiteConfig {
 export function getAllExpoEvents(): ExpoEvent[] {
   const fileEntries = Object.values(expoModules).map((m: any) => m.default ?? m);
   if (fileEntries.length > 0) {
-    return fileEntries.map((item: any) => ExpoEventSchema.parse(item));
+    return fileEntries
+      .map((item: any) => ExpoEventSchema.parse(item))
+      .sort((a, b) => b.year - a.year);
   }
   const list = Array.isArray(rawExpo) ? rawExpo : (rawExpo as any).events;
-  return list.map((item: any) => ExpoEventSchema.parse(item));
+  return list
+    .map((item: any) => ExpoEventSchema.parse(item))
+    .sort((a, b) => b.year - a.year);
 }
 
 export function getExpoYearsList(): number[] {

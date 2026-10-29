@@ -197,10 +197,50 @@ html.light .photo-badge,
 html.light .photo-badge *,
 html.light .badge-overlay,
 html.light [class*="photo-badge"],
-html.light .text-always-white,
-html.light #expo-lightbox,
-html.light #expo-lightbox * {
+html.light .text-always-white {
   color: #FFFFFF !important;
+}
+
+/* Expo Lightbox Modal Dynamic Light/Dark Mode */
+html.light #expo-lightbox {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+html.light #expo-lightbox > div {
+  background-color: #FFFFFF !important;
+  border-color: #D4D4D8 !important;
+}
+
+html.light #expo-lightbox-header {
+  background-color: #F4F4F5 !important;
+  border-bottom-color: #D4D4D8 !important;
+}
+
+html.light #expo-lightbox .lightbox-dot {
+  background-color: #09090B !important;
+}
+
+html.light #modal-category,
+html.light #modal-caption,
+html.light #modal-event {
+  color: #09090B !important;
+}
+
+html.light #modal-location,
+html.light #modal-date {
+  color: #52525B !important;
+}
+
+html.light #close-lightbox-btn {
+  color: #09090B !important;
+  border-color: #D4D4D8 !important;
+  background-color: transparent !important;
+}
+
+html.light #close-lightbox-btn:hover {
+  background-color: #09090B !important;
+  color: #FFFFFF !important;
+  border-color: #09090B !important;
 }
 
 html.light .text-zinc-100,

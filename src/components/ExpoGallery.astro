@@ -106,6 +106,41 @@ const { photos, years } = Astro.props;
     ))}
   </div>
 
+  <!-- Pagination Controls for Expo Gallery (Limit: 9 per page) -->
+  <div
+    id="gallery-pagination"
+    class="mt-8 border border-[#262626] bg-[#0A0A0A] p-3 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs"
+  >
+    <div class="text-[#737373] text-[11px] flex items-center gap-2">
+      <span class="inline-block w-1.5 h-1.5 bg-white"></span>
+      <span>HALAMAN <span id="gallery-page-current" class="text-white font-bold">1</span> / <span id="gallery-page-total" class="text-white font-bold">1</span></span>
+      <span class="text-[#444444]">//</span>
+      <span id="gallery-page-range" class="text-[#A3A3A3]">MENAMPILKAN 1-9 DARI {photos.length} FOTO</span>
+    </div>
+
+    <div class="flex items-center gap-1.5">
+      <button
+        id="gallery-page-prev"
+        type="button"
+        class="px-3 py-1.5 border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors uppercase font-bold text-xs cursor-pointer"
+      >
+        &larr; PREV
+      </button>
+
+      <div id="gallery-page-numbers" class="flex items-center gap-1">
+        <!-- Injected via JS -->
+      </div>
+
+      <button
+        id="gallery-page-next"
+        type="button"
+        class="px-3 py-1.5 border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors uppercase font-bold text-xs cursor-pointer"
+      >
+        NEXT &rarr;
+      </button>
+    </div>
+  </div>
+
   <!-- Empty State -->
   <div id="gallery-empty-state" class="hidden border border-[#262626] bg-[#0A0A0A] p-12 text-center font-mono">
     <div class="text-[#737373] text-sm uppercase tracking-widest mb-2">[HASIL TIDAK DITEMUKAN]</div>
@@ -128,14 +163,14 @@ const { photos, years } = Astro.props;
 >
   <div class="relative max-w-5xl w-full border border-[#262626] bg-[#0A0A0A] overflow-hidden flex flex-col max-h-[90vh]">
     <!-- Modal Header -->
-    <div class="px-4 py-3 border-b border-[#262626] bg-black flex items-center justify-between font-mono text-xs">
+    <div id="expo-lightbox-header" class="px-4 py-3 border-b border-[#262626] bg-black flex items-center justify-between font-mono text-xs">
       <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 bg-white"></span>
+        <span class="lightbox-dot inline-block w-2 h-2 bg-white"></span>
         <span id="modal-category" class="text-white font-bold uppercase">PREVIEW DOKUMENTASI</span>
       </div>
       <button
         id="close-lightbox-btn"
-        class="px-2 py-1 border border-[#262626] text-[#737373] hover:text-white hover:border-white uppercase text-[11px] transition-colors"
+        class="px-2 py-1 border border-[#262626] text-[#737373] hover:text-white hover:border-white uppercase text-[11px] transition-colors cursor-pointer"
       >
         [TUTUP &times;]
       </button>
@@ -166,15 +201,29 @@ const { photos, years } = Astro.props;
   </div>
 </div>
 
-<!-- Interactive Client-side Script for Filtering & Lightbox -->
+<!-- Interactive Client-side Script for Filtering, Pagination & Lightbox -->
 <script is:inline>
   function setupExpoGallery() {
     const yearButtons = document.querySelectorAll('.year-filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
     const counterEl = document.getElementById('gallery-counter');
     const headerPhotoCount = document.getElementById('header-photo-count');
     const emptyState = document.getElementById('gallery-empty-state');
     const resetBtn = document.getElementById('reset-filters-btn');
+    const galleryGrid = document.getElementById('gallery-grid');
+
+    // Pagination elements
+    const paginationBox = document.getElementById('gallery-pagination');
+    const pageCurrentEl = document.getElementById('gallery-page-current');
+    const pageTotalEl = document.getElementById('gallery-page-total');
+    const pageRangeEl = document.getElementById('gallery-page-range');
+    const pagePrevBtn = document.getElementById('gallery-page-prev');
+    const pageNextBtn = document.getElementById('gallery-page-next');
+    const pageNumbersEl = document.getElementById('gallery-page-numbers');
+
+    const PAGE_SIZE = 9;
+    let currentPage = 1;
+    let selectedYear = 'all';
 
     // Lightbox elements
     const lightbox = document.getElementById('expo-lightbox');
@@ -186,31 +235,85 @@ const { photos, years } = Astro.props;
     const modalDate = document.getElementById('modal-date');
     const closeLightboxBtn = document.getElementById('close-lightbox-btn');
 
-    let selectedYear = 'all';
+    function applyFilters(resetPage = true) {
+      if (resetPage) currentPage = 1;
 
-    function applyFilters() {
-      let visibleCount = 0;
-
-      galleryItems.forEach((item) => {
+      // Filter matching items
+      const matchingItems = galleryItems.filter((item) => {
         const itemYear = item.getAttribute('data-year');
-        const matchYear = selectedYear === 'all' || itemYear === selectedYear;
-
-        if (matchYear) {
-          item.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          item.classList.add('hidden');
-        }
+        return selectedYear === 'all' || itemYear === selectedYear;
       });
 
-      if (counterEl) counterEl.textContent = visibleCount.toString();
-      if (headerPhotoCount) headerPhotoCount.textContent = `${visibleCount} DOKUMEN`;
+      const totalMatching = matchingItems.length;
+      const totalPages = Math.ceil(totalMatching / PAGE_SIZE) || 1;
+
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const endIndex = Math.min(startIndex + PAGE_SIZE, totalMatching);
+
+      // Hide all items first
+      galleryItems.forEach((item) => item.classList.add('hidden'));
+
+      // Show paginated matching items
+      matchingItems.slice(startIndex, endIndex).forEach((item) => {
+        item.classList.remove('hidden');
+      });
+
+      if (counterEl) counterEl.textContent = totalMatching.toString();
+      if (headerPhotoCount) headerPhotoCount.textContent = `${totalMatching} DOKUMEN`;
 
       if (emptyState) {
-        if (visibleCount === 0) {
+        if (totalMatching === 0) {
           emptyState.classList.remove('hidden');
+          if (galleryGrid) galleryGrid.classList.add('hidden');
+          if (paginationBox) paginationBox.classList.add('hidden');
         } else {
           emptyState.classList.add('hidden');
+          if (galleryGrid) galleryGrid.classList.remove('hidden');
+          if (paginationBox) {
+            if (totalPages <= 1) {
+              paginationBox.classList.add('hidden');
+            } else {
+              paginationBox.classList.remove('hidden');
+            }
+          }
+        }
+      }
+
+      // Update pagination readouts
+      if (pageCurrentEl) pageCurrentEl.textContent = String(currentPage);
+      if (pageTotalEl) pageTotalEl.textContent = String(totalPages);
+      if (pageRangeEl) {
+        pageRangeEl.textContent = totalMatching > 0
+          ? `MENAMPILKAN ${startIndex + 1}-${endIndex} DARI ${totalMatching} FOTO`
+          : 'MENAMPILKAN 0 FOTO';
+      }
+
+      if (pagePrevBtn) pagePrevBtn.disabled = currentPage <= 1;
+      if (pageNextBtn) pageNextBtn.disabled = currentPage >= totalPages;
+
+      // Render page numbers
+      if (pageNumbersEl) {
+        pageNumbersEl.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = String(i).padStart(2, '0');
+          const isCurrent = i === currentPage;
+          btn.className = isCurrent
+            ? 'px-2.5 py-1 text-xs font-bold border border-white bg-white text-black'
+            : 'px-2.5 py-1 text-xs border border-[#262626] bg-black text-[#A3A3A3] hover:border-white hover:text-white transition-colors cursor-pointer';
+          btn.addEventListener('click', () => {
+            currentPage = i;
+            applyFilters(false);
+            const section = document.getElementById('photo-gallery');
+            if (section) {
+              window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+            }
+          });
+          pageNumbersEl.appendChild(btn);
         }
       }
     }
@@ -230,7 +333,7 @@ const { photos, years } = Astro.props;
       btn.addEventListener('click', () => {
         selectedYear = btn.getAttribute('data-year') || 'all';
         updateActiveButtons();
-        applyFilters();
+        applyFilters(true);
       });
     });
 
@@ -238,9 +341,39 @@ const { photos, years } = Astro.props;
       resetBtn.addEventListener('click', () => {
         selectedYear = 'all';
         updateActiveButtons();
-        applyFilters();
+        applyFilters(true);
       });
     }
+
+    pagePrevBtn?.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        applyFilters(false);
+        const section = document.getElementById('photo-gallery');
+        if (section) {
+          window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+        }
+      }
+    });
+
+    pageNextBtn?.addEventListener('click', () => {
+      const matchingCount = galleryItems.filter((item) => {
+        const itemYear = item.getAttribute('data-year');
+        return selectedYear === 'all' || itemYear === selectedYear;
+      }).length;
+      const totalPages = Math.ceil(matchingCount / PAGE_SIZE) || 1;
+      if (currentPage < totalPages) {
+        currentPage++;
+        applyFilters(false);
+        const section = document.getElementById('photo-gallery');
+        if (section) {
+          window.scrollTo({ top: section.offsetTop - 80, behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Initial render
+    applyFilters(true);
 
     // Lightbox handlers
     galleryItems.forEach((item) => {
