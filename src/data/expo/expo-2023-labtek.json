@@ -1,50 +1,50 @@
 {
   "id": "expo-2023-labtek",
-  "title": "ITERA GAME TECH & INTERACTIVE MEDIA EXPO 2023",
+  "title": "INFORMATICS GAME EXPO 2023",
   "edition": "Semester Ganjil 2023/2024",
   "year": 2023,
-  "date": "14 Desember 2023",
-  "location": "Lobby Gedung Labtek 3 Lantai 1, Kampus ITERA",
+  "date": "8 Desember 2023",
+  "location": "GK1 Ruang Kelas 118, ITERA",
   "photos": [
     {
       "id": "expo-2023-1",
       "url": "/assets/expo/expo-2023-1.webp",
-      "caption": "Sesi showcase dan demo game interaktif karya mahasiswa pada gelaran Expo Teknologi Game 2023.",
+      "caption": "Suasana saat berjalannya expo.",
       "category": "Dokumentasi",
       "time": "09:30 WIB"
     },
     {
       "id": "expo-2023-2",
       "url": "/assets/expo/expo-2023-2.webp",
-      "caption": "Antusiasme pengunjung dan mahasiswa saat mencoba build game langsung di booth pameran.",
+      "caption": "Pengunjung mencob game dari Meowsterpiece Studios, yaitu Oscar Adventure.",
       "category": "Dokumentasi",
       "time": "10:45 WIB"
     },
     {
       "id": "expo-2023-3",
       "url": "/assets/expo/expo-2023-3.webp",
-      "caption": "Pengujian mekanika game dan interaktivitas gameplay bersama pengunjung pameran.",
+      "caption": "Pengunjung mencoba demo dari salah satu game.",
       "category": "Dokumentasi",
       "time": "11:30 WIB"
     },
     {
       "id": "expo-2023-4",
       "url": "/assets/expo/expo-2023-4.webp",
-      "caption": "Diskusi dan evaluasi perancangan game antara tim pengembang mahasiswa dan audiens.",
+      "caption": "Pengunjung mencoba game dari Kentang Production, yaitu Broken Bonds.",
       "category": "Dokumentasi",
       "time": "13:15 WIB"
     },
     {
       "id": "expo-2023-5",
       "url": "/assets/expo/expo-2023-5.webp",
-      "caption": "Suasana ramai stan pameran game karya mahasiswa Teknik Informatika ITERA.",
+      "caption": "Pengunjung mencoba game dari IzinPuhSepuh Production, yaitu Pedjuang Nusantara.",
       "category": "Dokumentasi",
       "time": "14:20 WIB"
     },
     {
       "id": "expo-2023-6",
       "url": "/assets/expo/expo-2023-6.webp",
-      "caption": "Dokumentasi kebersamaan peserta pameran dan tim pengembang game di akhir sesi expo.",
+      "caption": "Pengunjung mencoba game dari Death Liner's Developer, yaitu Guardian of Mystica.",
       "category": "Dokumentasi",
       "time": "15:45 WIB"
     }
