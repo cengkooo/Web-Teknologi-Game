@@ -1,78 +1,78 @@
 {
   "id": "expo-2025-gku",
-  "title": "GAME TECH DEMO DAY & SHOWCASE 2025",
+  "title": "INFORMATICS EXPO 2025",
   "edition": "Semester Ganjil 2025/2026",
   "year": 2025,
   "date": "04 Desember 2025",
-  "location": "Hall Gedung Kuliah Umum (GKU) 1 Lt. 1, ITERA",
+  "location": "Aula Gedung F, ITERA",
   "photos": [
     {
       "id": "expo-2025-6",
       "url": "/assets/expo/expo-2025-6.webp",
-      "caption": "Suasana ramai stan pameran tugas besar mata kuliah Teknologi Game 2025 di ITERA.",
+      "caption": "Pengunjung mencoba demo game dalam acara Expo.",
       "category": "Dokumentasi",
       "time": "10:00 WIB"
     },
     {
       "id": "expo-2025-8",
       "url": "/assets/expo/expo-2025-8.webp",
-      "caption": "Sesi pengujian publik dan playtest build game karya mahasiswa oleh civitas akademika.",
+      "caption": "Pengunjung memainkan salah satu game yang didemokan pada acara Expo, yaitu Pusaka Swarnadwipa.",
       "category": "Dokumentasi",
       "time": "10:45 WIB"
     },
     {
       "id": "expo-2025-9",
       "url": "/assets/expo/expo-2025-9.webp",
-      "caption": "Mahasiswa tim developer mempresentasikan arsitektur game dan gameplay mechanics kepada pengunjung.",
+      "caption": "Dosen Koordinator Kemahasiswaan Prodi & Pembina HMIF, Ibu Miranti Verdiana, M.Si., membuka acara Expo",
       "category": "Dokumentasi",
       "time": "11:30 WIB"
     },
     {
       "id": "expo-2025-10",
       "url": "/assets/expo/expo-2025-10.webp",
-      "caption": "Evaluasi performa build dan interaktivitas kontrol pada perangkat pengujian booth pameran.",
+      "caption": "Tim Piksel Pusaka & game mereka, Pusaka Swarnadwipa.",
       "category": "Dokumentasi",
       "time": "13:15 WIB"
     },
     {
       "id": "expo-2025-12",
       "url": "/assets/expo/expo-2025-12.webp",
-      "caption": "Diskusi teknis dan sesi tanya jawab seputar pengembangan game menggunakan Godot Engine.",
+      "caption": "Pengunjung memainkan game dari YPS Studio, yaitu Bahana Bani.",
       "category": "Dokumentasi",
       "time": "14:00 WIB"
     },
     {
       "id": "expo-2025-15",
       "url": "/assets/expo/expo-2025-15.webp",
-      "caption": "Antusiasme audiens saat mencoba berbagai genre game buatan mahasiswa Teknik Informatika.",
+      "caption": "Antusiasme audiens saat mengunjungi Expo.",
       "category": "Dokumentasi",
       "time": "14:45 WIB"
     },
     {
       "id": "expo-2025-16",
       "url": "/assets/expo/expo-2025-16.webp",
-      "caption": "Pemberian feedback gameplay dan pengalaman bermain dari audiens kepada tim pengembang.",
+      "caption": "Foto pengunjung dalam salah satu meja stand game.",
       "category": "Dokumentasi",
       "time": "15:30 WIB"
     },
     {
       "id": "expo-2025-17",
       "url": "/assets/expo/expo-2025-17.webp",
-      "caption": "Demonstrasi visual art, desain level, dan implementasi shader game pada booth.",
+      "caption": "Foto bersama dosen serta semua anggota tim Tek Game & matkul lainnya yang ikut serta dalam acara Expo.",
       "category": "Dokumentasi",
       "time": "16:15 WIB"
     },
     {
       "id": "expo-2025-18",
       "url": "/assets/expo/expo-2025-18.webp",
-      "caption": "Dokumentasi kebersamaan tim developer mahasiswa di area stan pameran Game Tech 2025.",
+      "caption": "Pemenang Game Terpopuler, tim Chill Guys dengan game mereka Sawit Harvester.",
       "category": "Dokumentasi",
       "time": "16:45 WIB"
     },
     {
       "id": "expo-2025-19",
       "url": "/assets/expo/expo-2025-19.webp",
-      "caption": "Sesi foto dokumentasi penutupan acara pameran karya Game Technology Showcase 2025.",
+      "caption": "Pemenang Game Terbaik, tim ARATERA Studio dengan game mereka Legacy of Andalas.",
       "category": "Dokumentasi",
       "time": "17:00 WIB"
     }
