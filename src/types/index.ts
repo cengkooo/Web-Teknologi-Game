@@ -9,6 +9,7 @@ export const ContributorSchema = z.object({
 
 export const GameSchema = z.object({
   slug: z.string(),
+  enabled: z.boolean().default(true),
   title: z.string(),
   developer: z.string().optional(),
   semester: z.string().optional(),
@@ -102,7 +103,7 @@ export const ExpoPhotoSchema = z.object({
   url: z.string(),
   caption: z.string(),
   category: z.string(),
-  time: z.string().optional(),
+  enabled: z.boolean().default(true),
 });
 
 export const ExpoEventSchema = z.object({
@@ -112,6 +113,7 @@ export const ExpoEventSchema = z.object({
   year: z.number(),
   date: z.string(),
   location: z.string(),
+  enabled: z.boolean().default(true),
   photos: z.array(ExpoPhotoSchema),
 });
 

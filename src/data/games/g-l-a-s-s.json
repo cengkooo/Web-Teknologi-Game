@@ -1,5 +1,6 @@
 {
   "slug": "g-l-a-s-s",
+  "enabled": true,
   "title": "G.L.A.S.S",
   "developer": "Glass Dev",
   "semester": "2022/2023 Genap",
@@ -53,9 +54,6 @@
       "role": "Artist"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

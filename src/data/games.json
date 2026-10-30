@@ -2,6 +2,7 @@
   "games": [
     {
       "slug": "sawit-harvester",
+      "enabled": true,
       "title": "Sawit Harvester",
       "developer": "Chill Guys",
       "semester": "2025/2026 Ganjil",
@@ -60,14 +61,12 @@
           "role": "Programmer/Sound Engineer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "most_popular"
     },
     {
       "slug": "sumateran-roar",
+      "enabled": true,
       "title": "Sumateran Roar",
       "developer": "AC Adapter",
       "semester": "2025/2026 Ganjil",
@@ -122,14 +121,12 @@
           "role": "Composer/Sound Engineer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "legacy-of-andalas",
+      "enabled": true,
       "title": "Legacy of Andalas",
       "developer": "ARATERA Studio",
       "semester": "2025/2026 Ganjil",
@@ -187,14 +184,12 @@
           "role": "Composer/Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "best_game"
     },
     {
       "slug": "hollow-tree-another-realm",
+      "enabled": true,
       "title": "Hollow Tree: Another Realm",
       "developer": "Waku Waku Studio",
       "semester": "2025/2026 Ganjil",
@@ -251,14 +246,12 @@
           "role": "Game Artist"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "bahani-bani",
+      "enabled": true,
       "title": "Bahani Bani",
       "developer": "YPS Studio",
       "semester": "2025/2026 Ganjil",
@@ -311,14 +304,12 @@
           "role": "Designer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "pusaka-swarnadwipa-the-sumatra-chronicles",
+      "enabled": true,
       "title": "Pusaka Swarnadwipa: The Sumatra Chronicles",
       "developer": "Piksel Pusaka",
       "semester": "2025/2026 Ganjil",
@@ -372,14 +363,12 @@
           "role": "Game artist"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "entropy-the-metal-anomaly",
+      "enabled": true,
       "title": "Entropy : The Metal Anomaly",
       "developer": "Virmar Studio",
       "semester": "2025/2026 Ganjil",
@@ -433,14 +422,12 @@
           "role": "Game Artist"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "temple-of-abelii",
+      "enabled": true,
       "title": "Temple of Abelii",
       "developer": "DoaIbu Games",
       "semester": "2025/2026 Ganjil",
@@ -499,14 +486,12 @@
           "role": "Game Designer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "lilu",
+      "enabled": true,
       "title": "Lilu",
       "developer": "Groundhog Studio",
       "semester": "2024/2025 Ganjil",
@@ -564,14 +549,12 @@
           "role": "Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "trace",
+      "enabled": true,
       "title": "Trace",
       "developer": "HORIZONE",
       "semester": "2024/2025 Ganjil",
@@ -628,14 +611,12 @@
           "role": "Lead Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "static-noise",
+      "enabled": true,
       "title": "Static Noise",
       "developer": "NoMon Craftworks",
       "semester": "2024/2025 Ganjil",
@@ -694,14 +675,12 @@
           "role": "Lead Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "legenda-tiga-raja",
+      "enabled": true,
       "title": "Legenda Tiga Raja",
       "developer": "MANDALA",
       "semester": "2024/2025 Ganjil",
@@ -755,14 +734,12 @@
           "role": "Composer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "best_game"
     },
     {
       "slug": "idle-save-sumatera",
+      "enabled": true,
       "title": "Idle Save Sumatera",
       "developer": "Geprek Production",
       "semester": "2024/2025 Ganjil",
@@ -822,14 +799,12 @@
           "role": "Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "operation-rafflesia-last-hope",
+      "enabled": true,
       "title": "Operation Rafflesia: Last Hope",
       "developer": "Sigma Skibidi Studio (SSS)",
       "semester": "2024/2025 Ganjil",
@@ -887,14 +862,12 @@
           "role": "Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "most_popular"
     },
     {
       "slug": "the-forest-keeper",
+      "enabled": true,
       "title": "The Forest Keeper",
       "developer": "Malas Ngoding",
       "semester": "2024/2025 Ganjil",
@@ -950,14 +923,12 @@
           "role": "Sound Engineer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "rescue-save-the-wildlife",
+      "enabled": true,
       "title": "Rescue: Save The Wildlife",
       "developer": "MiNOS",
       "semester": "2024/2025 Ganjil",
@@ -1018,14 +989,12 @@
           "role": "Game Director, Sound Engineer, Game Designer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "kkn-the-lost-village",
+      "enabled": true,
       "title": "KKN: The Lost Village",
       "developer": "Artemis Production",
       "semester": "2024/2025 Ganjil",
@@ -1086,14 +1055,12 @@
           "role": "Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "sumatera-survivor",
+      "enabled": true,
       "title": "Sumatera Survivor",
       "developer": "Nufta Studio",
       "semester": "2024/2025 Ganjil",
@@ -1148,14 +1115,12 @@
           "role": "Sound Engineer, Designer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "go-ancient",
+      "enabled": true,
       "title": "Go Ancient",
       "developer": "Desra Group",
       "semester": "2024/2025 Ganjil",
@@ -1209,14 +1174,12 @@
           "role": "Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "broken-bonds",
+      "enabled": true,
       "title": "Broken Bonds",
       "developer": "Kentang Production",
       "semester": "2023/2024 Ganjil",
@@ -1269,14 +1232,12 @@
           "role": "Designer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "pedjuang-nusantara",
+      "enabled": true,
       "title": "Pedjuang Nusantara",
       "developer": "IzinPuhSepuh Production (IPSP)",
       "semester": "2023/2024 Ganjil",
@@ -1329,14 +1290,12 @@
           "role": "Artist, Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "guardians-of-mystica",
+      "enabled": true,
       "title": "Guardians of Mystica",
       "developer": "Death Liner's Developer (DL Dev)",
       "semester": "2023/2024 Ganjil",
@@ -1389,14 +1348,12 @@
           "role": "Designer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "best_game"
     },
     {
       "slug": "oscar-s-adventure-the-hidden-treasure",
+      "enabled": true,
       "title": "Oscar's Adventure: The Hidden Treasure",
       "developer": "Meowsterpiece Studios",
       "semester": "2023/2024 Ganjil",
@@ -1454,14 +1411,12 @@
           "role": "Sound Engineer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "most_popular"
     },
     {
       "slug": "gelud",
+      "enabled": true,
       "title": "Gelud",
       "developer": "Gabut Game Dev",
       "semester": "2022/2023 Genap",
@@ -1515,14 +1470,12 @@
           "role": "Artist"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "most_popular"
     },
     {
       "slug": "arunika",
+      "enabled": true,
       "title": "Arunika",
       "developer": "Da TeGa.dev",
       "semester": "2022/2023 Genap",
@@ -1579,14 +1532,12 @@
           "role": "Sound"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "underwater-uprising",
+      "enabled": true,
       "title": "Underwater Uprising",
       "developer": "ITer8",
       "semester": "2022/2023 Genap",
@@ -1640,14 +1591,12 @@
           "role": "Tester"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "wulan",
+      "enabled": true,
       "title": "Wulan",
       "developer": "Misty Game Studio",
       "semester": "2022/2023 Genap",
@@ -1706,14 +1655,12 @@
           "role": "Designer, Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "wonder",
+      "enabled": true,
       "title": "Wonder",
       "developer": "Perguruan Bunglon Beracun",
       "semester": "2022/2023 Genap",
@@ -1767,14 +1714,12 @@
           "role": "Tester, Sound"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "slimental",
+      "enabled": true,
       "title": "SLIMENTAL",
       "developer": "White Rose Studio",
       "semester": "2022/2023 Genap",
@@ -1828,14 +1773,12 @@
           "role": "Director, Programmer"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "kaboer",
+      "enabled": true,
       "title": "Kaboer",
       "developer": "AIRBY Studio",
       "semester": "2022/2023 Genap",
@@ -1893,14 +1836,12 @@
           "role": "Artist"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "g-l-a-s-s",
+      "enabled": true,
       "title": "G.L.A.S.S",
       "developer": "Glass Dev",
       "semester": "2022/2023 Genap",
@@ -1954,14 +1895,12 @@
           "role": "Artist"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "none"
     },
     {
       "slug": "avernus",
+      "enabled": true,
       "title": "Avernus",
       "developer": "D2ray Studio",
       "semester": "2022/2023 Genap",
@@ -2019,10 +1958,7 @@
           "role": "Sound"
         }
       ],
-      "metrics": {
-        "tickRate": "60 Hz Stable",
-        "buildSize": "Godot PC Build"
-      },
+      "metrics": {},
       "award": "best_game"
     }
   ]

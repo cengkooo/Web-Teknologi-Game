@@ -5,76 +5,77 @@
   "year": 2024,
   "date": "4 Desember 2024",
   "location": "Aula Gedung C Lt. 3, ITERA",
+  "enabled": true,
   "photos": [
     {
       "id": "expo-2024-1",
       "url": "/assets/expo/expo-2024-1.webp",
       "caption": "Pengunjung mencoba game dari tim MiNOS, yaitu Rescue: Save The Wildlife.",
       "category": "Dokumentasi",
-      "time": "10:00 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-2",
       "url": "/assets/expo/expo-2024-2.webp",
       "caption": "Serunya antusias pengunjung saat mencoba dan melihat salah satu demo game.",
       "category": "Dokumentasi",
-      "time": "11:15 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-3",
       "url": "/assets/expo/expo-2024-3.webp",
       "caption": "Stand dari tim Groundhog Studio dan game mereka, Lilu.",
       "category": "Dokumentasi",
-      "time": "12:30 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-4",
       "url": "/assets/expo/expo-2024-4.webp",
       "caption": "Founder dari Eternal Dream Studio, Lucky Putra, dan dosen UNILA, Daniel Rinaldi, saat mengunjungi Expo.",
       "category": "Dokumentasi",
-      "time": "13:45 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-5",
       "url": "/assets/expo/expo-2024-5.webp",
       "caption": "Suasana keseruan expo.",
       "category": "Dokumentasi",
-      "time": "15:00 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-6",
       "url": "/assets/expo/expo-2024-6.webp",
       "caption": "Pengunjung mencoba salah satu stand game.",
       "category": "Dokumentasi",
-      "time": "16:20 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-7",
       "url": "/assets/expo/expo-2024-7.webp",
       "caption": "Pemenang Game Terpopuler, tim Sigma Skibidi Studio dengan game Operation Rafflesia.",
       "category": "Dokumentasi",
-      "time": "16:45 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-8",
       "url": "/assets/expo/expo-2024-8.webp",
       "caption": "Pemenang Game Terbaik, tim MANDALA dengan game Legenda Tiga Raja.",
       "category": "Dokumentasi",
-      "time": "17:00 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-9",
       "url": "/assets/expo/expo-2024-9.webp",
       "caption": "Foto bersama dosen & tim Teknologi Game 2024.",
       "category": "Dokumentasi",
-      "time": "17:15 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2024-10",
       "url": "/assets/expo/expo-2024-10.webp",
       "caption": "Foto bersama pihak Bappeda Prov. Lampung & Dosen UNILA, Dr. Dedy Yuliawan.",
       "category": "Dokumentasi",
-      "time": "17:30 WIB"
+      "enabled": true
     }
   ]
 }

@@ -1,5 +1,6 @@
 {
   "slug": "broken-bonds",
+  "enabled": true,
   "title": "Broken Bonds",
   "developer": "Kentang Production",
   "semester": "2023/2024 Ganjil",
@@ -52,9 +53,6 @@
       "role": "Designer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

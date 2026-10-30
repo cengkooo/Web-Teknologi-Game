@@ -1,5 +1,6 @@
 {
   "slug": "legenda-tiga-raja",
+  "enabled": true,
   "title": "Legenda Tiga Raja",
   "developer": "MANDALA",
   "semester": "2024/2025 Ganjil",
@@ -53,9 +54,6 @@
       "role": "Composer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "best_game"
 }

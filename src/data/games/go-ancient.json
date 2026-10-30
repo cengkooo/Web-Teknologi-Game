@@ -1,5 +1,6 @@
 {
   "slug": "go-ancient",
+  "enabled": true,
   "title": "Go Ancient",
   "developer": "Desra Group",
   "semester": "2024/2025 Ganjil",
@@ -53,9 +54,6 @@
       "role": "Programmer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

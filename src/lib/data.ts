@@ -26,13 +26,19 @@ const studentModules = import.meta.glob('../data/mahasiswa/*.json', { eager: tru
 const expoModules = import.meta.glob('../data/expo/*.json', { eager: true });
 
 // Validate at build/compile time using Zod
-export function getAllGames(): Game[] {
+export function getAllGames(includeDisabled = false): Game[] {
   const fileEntries = Object.values(gameModules).map((m: any) => m.default ?? m);
+  let games: Game[];
   if (fileEntries.length > 0) {
-    return fileEntries.map((item: any) => GameSchema.parse(item));
+    games = fileEntries.map((item: any) => GameSchema.parse(item));
+  } else {
+    const list = Array.isArray(rawGames) ? rawGames : (rawGames as any).games;
+    games = list.map((item: any) => GameSchema.parse(item));
   }
-  const list = Array.isArray(rawGames) ? rawGames : (rawGames as any).games;
-  return list.map((item: any) => GameSchema.parse(item));
+  if (includeDisabled) {
+    return games;
+  }
+  return games.filter((game) => game.enabled !== false);
 }
 
 export function getFeaturedGames(): Game[] {
@@ -70,7 +76,7 @@ export function getGameAwardInfo(game: Game): GameAwardInfo | null {
       type: 'best_game',
       icon: '👑',
       badgeLabel: 'BEST GAME',
-      fullTitle: 'BEST GAME OF THE SEMESTER',
+      fullTitle: 'BEST GAME',
       posterBadgeStyle: 'background-color: rgba(0, 0, 0, 0.92) !important; color: #FBBF24 !important; border-color: #F59E0B !important;',
       metaBadgeStyle: 'border-color: #F59E0B; background-color: rgba(245, 158, 11, 0.15); color: #F59E0B;',
     };
@@ -81,7 +87,7 @@ export function getGameAwardInfo(game: Game): GameAwardInfo | null {
       type: 'most_popular',
       icon: '⚡',
       badgeLabel: 'MOST POPULAR',
-      fullTitle: 'MOST POPULAR GAME OF THE SEMESTER',
+      fullTitle: 'MOST POPULAR',
       posterBadgeStyle: 'background-color: rgba(0, 0, 0, 0.92) !important; color: #38BDF8 !important; border-color: #0EA5E9 !important;',
       metaBadgeStyle: 'border-color: #0EA5E9; background-color: rgba(14, 165, 233, 0.15); color: #0284C7;',
     };
@@ -90,8 +96,8 @@ export function getGameAwardInfo(game: Game): GameAwardInfo | null {
   return null;
 }
 
-export function getGameBySlug(slug: string): Game | undefined {
-  return getAllGames().find((game) => game.slug === slug);
+export function getGameBySlug(slug: string, includeDisabled = false): Game | undefined {
+  return getAllGames(includeDisabled).find((game) => game.slug === slug);
 }
 
 export function getAllStudents(): Student[] {
@@ -149,35 +155,54 @@ export function getSiteConfig(): SiteConfig {
   return SiteConfigSchema.parse(rawSiteConfig);
 }
 
-export function getAllExpoEvents(): ExpoEvent[] {
+export function getAllExpoEvents(includeDisabled = false): ExpoEvent[] {
   const fileEntries = Object.values(expoModules).map((m: any) => m.default ?? m);
+  let events: ExpoEvent[];
   if (fileEntries.length > 0) {
-    return fileEntries
+    events = fileEntries
+      .map((item: any) => ExpoEventSchema.parse(item))
+      .sort((a, b) => b.year - a.year);
+  } else {
+    const list = Array.isArray(rawExpo) ? rawExpo : (rawExpo as any).events;
+    events = list
       .map((item: any) => ExpoEventSchema.parse(item))
       .sort((a, b) => b.year - a.year);
   }
-  const list = Array.isArray(rawExpo) ? rawExpo : (rawExpo as any).events;
-  return list
-    .map((item: any) => ExpoEventSchema.parse(item))
-    .sort((a, b) => b.year - a.year);
+
+  if (includeDisabled) {
+    return events;
+  }
+
+  return events
+    .filter((event) => event.enabled !== false)
+    .map((event) => ({
+      ...event,
+      photos: event.photos.filter((photo) => photo.enabled !== false),
+    }));
 }
 
 export function getExpoYearsList(): number[] {
+  const photos = getAllExpoPhotos();
+  if (photos.length > 0) {
+    return Array.from(new Set(photos.map((p) => p.eventYear))).sort((a, b) => b - a);
+  }
   const events = getAllExpoEvents();
   return Array.from(new Set(events.map((e) => e.year))).sort((a, b) => b - a);
 }
 
-export function getAllExpoPhotos() {
-  const events = getAllExpoEvents();
+export function getAllExpoPhotos(includeDisabled = false) {
+  const events = getAllExpoEvents(includeDisabled);
   return events.flatMap((event) =>
-    event.photos.map((photo) => ({
-      ...photo,
-      eventId: event.id,
-      eventTitle: event.title,
-      eventYear: event.year,
-      eventDate: event.date,
-      location: event.location,
-    }))
+    event.photos
+      .filter((photo) => includeDisabled || photo.enabled !== false)
+      .map((photo) => ({
+        ...photo,
+        eventId: event.id,
+        eventTitle: event.title,
+        eventYear: event.year,
+        eventDate: event.date,
+        location: event.location,
+      }))
   );
 }
 

@@ -66,9 +66,6 @@ const contributorsList = game.contributors.map((c) => ({
         </span>
       )}
       <span class="px-2 py-1 text-xs font-mono border border-[#262626] bg-black text-[#A3A3A3]">
-        VERSION: {game.engineVersion}
-      </span>
-      <span class="px-2 py-1 text-xs font-mono border border-[#262626] bg-black text-[#A3A3A3]">
         TAHUN: {game.batchYear}
       </span>
       {game.featured && (
@@ -82,7 +79,7 @@ const contributorsList = game.contributors.map((c) => ({
           style={award.metaBadgeStyle}
         >
           <span>{award.icon}</span>
-          <span>[{award.fullTitle}]</span>
+          <span>[{award.badgeLabel}]</span>
         </span>
       )}
     </div>

@@ -1,5 +1,6 @@
 {
   "slug": "avernus",
+  "enabled": true,
   "title": "Avernus",
   "developer": "D2ray Studio",
   "semester": "2022/2023 Genap",
@@ -57,9 +58,6 @@
       "role": "Sound"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "best_game"
 }

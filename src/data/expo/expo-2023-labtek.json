@@ -5,48 +5,49 @@
   "year": 2023,
   "date": "8 Desember 2023",
   "location": "GK1 Ruang Kelas 118, ITERA",
+  "enabled": true,
   "photos": [
     {
       "id": "expo-2023-1",
       "url": "/assets/expo/expo-2023-1.webp",
       "caption": "Suasana saat berjalannya expo.",
       "category": "Dokumentasi",
-      "time": "09:30 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2023-2",
       "url": "/assets/expo/expo-2023-2.webp",
       "caption": "Pengunjung mencob game dari Meowsterpiece Studios, yaitu Oscar Adventure.",
       "category": "Dokumentasi",
-      "time": "10:45 WIB"
+      "enabled": false
     },
     {
       "id": "expo-2023-3",
       "url": "/assets/expo/expo-2023-3.webp",
       "caption": "Pengunjung mencoba demo dari salah satu game.",
       "category": "Dokumentasi",
-      "time": "11:30 WIB"
+      "enabled": false
     },
     {
       "id": "expo-2023-4",
       "url": "/assets/expo/expo-2023-4.webp",
       "caption": "Pengunjung mencoba game dari Kentang Production, yaitu Broken Bonds.",
       "category": "Dokumentasi",
-      "time": "13:15 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2023-5",
       "url": "/assets/expo/expo-2023-5.webp",
       "caption": "Pengunjung mencoba game dari IzinPuhSepuh Production, yaitu Pedjuang Nusantara.",
       "category": "Dokumentasi",
-      "time": "14:20 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2023-6",
       "url": "/assets/expo/expo-2023-6.webp",
       "caption": "Pengunjung mencoba game dari Death Liner's Developer, yaitu Guardian of Mystica.",
       "category": "Dokumentasi",
-      "time": "15:45 WIB"
+      "enabled": true
     }
   ]
 }

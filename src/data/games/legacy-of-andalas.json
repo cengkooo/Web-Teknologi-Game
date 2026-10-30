@@ -1,5 +1,6 @@
 {
   "slug": "legacy-of-andalas",
+  "enabled": true,
   "title": "Legacy of Andalas",
   "developer": "ARATERA Studio",
   "semester": "2025/2026 Ganjil",
@@ -57,9 +58,6 @@
       "role": "Composer/Programmer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "best_game"
 }

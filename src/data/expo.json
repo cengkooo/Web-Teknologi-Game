@@ -13,72 +13,73 @@
           "url": "/assets/expo/expo-2025-6.webp",
           "caption": "Pengunjung mencoba demo game dalam acara Informatics Expo 2025 ITERA.",
           "category": "Dokumentasi",
-          "time": "10:00 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-8",
           "url": "/assets/expo/expo-2025-8.webp",
           "caption": "Pengunjung memainkan salah satu game yang didemokan pada acara Expo.",
           "category": "Dokumentasi",
-          "time": "10:45 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-9",
           "url": "/assets/expo/expo-2025-9.webp",
           "caption": "Mahasiswa tim developer mempresentasikan arsitektur game dan gameplay mechanics kepada pengunjung.",
           "category": "Dokumentasi",
-          "time": "11:30 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-10",
           "url": "/assets/expo/expo-2025-10.webp",
           "caption": "Evaluasi performa build dan interaktivitas kontrol pada perangkat pengujian booth pameran.",
           "category": "Dokumentasi",
-          "time": "13:15 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-12",
           "url": "/assets/expo/expo-2025-12.webp",
           "caption": "Diskusi teknis dan sesi tanya jawab seputar pengembangan game menggunakan Godot Engine.",
           "category": "Dokumentasi",
-          "time": "14:00 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-15",
           "url": "/assets/expo/expo-2025-15.webp",
           "caption": "Antusiasme audiens saat mencoba berbagai genre game buatan mahasiswa Teknik Informatika.",
           "category": "Dokumentasi",
-          "time": "14:45 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-16",
           "url": "/assets/expo/expo-2025-16.webp",
           "caption": "Pemberian feedback gameplay dan pengalaman bermain dari audiens kepada tim pengembang.",
           "category": "Dokumentasi",
-          "time": "15:30 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-17",
           "url": "/assets/expo/expo-2025-17.webp",
           "caption": "Demonstrasi visual art, desain level, dan implementasi shader game pada booth.",
           "category": "Dokumentasi",
-          "time": "16:15 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-18",
           "url": "/assets/expo/expo-2025-18.webp",
           "caption": "Dokumentasi kebersamaan tim developer mahasiswa di area stan pameran Game Tech 2025.",
           "category": "Dokumentasi",
-          "time": "16:45 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2025-19",
           "url": "/assets/expo/expo-2025-19.webp",
           "caption": "Sesi foto dokumentasi penutupan acara pameran karya Game Technology Showcase 2025.",
           "category": "Dokumentasi",
-          "time": "17:00 WIB"
+          "enabled": true
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "id": "expo-2024-gku",
@@ -93,72 +94,73 @@
           "url": "/assets/expo/expo-2024-1.webp",
           "caption": "Suasana pembukaan demo day dan pameran tugas besar mata kuliah Teknologi Game 2024 di GKU ITERA.",
           "category": "Dokumentasi",
-          "time": "10:00 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-2",
           "url": "/assets/expo/expo-2024-2.webp",
           "caption": "Sesi playtest publik: pengunjung mencoba langsung karya game mahasiswa pada perangkat pengujian.",
           "category": "Dokumentasi",
-          "time": "11:15 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-3",
           "url": "/assets/expo/expo-2024-3.webp",
           "caption": "Mahasiswa pengembang menjelaskan alur cerita, mekanika kontrol, dan arsitektur teknis game.",
           "category": "Dokumentasi",
-          "time": "12:30 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-4",
           "url": "/assets/expo/expo-2024-4.webp",
           "caption": "Pengujian respons kontrol dan interaksi visual game karya mahasiswa oleh pengunjung pameran.",
           "category": "Dokumentasi",
-          "time": "13:45 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-5",
           "url": "/assets/expo/expo-2024-5.webp",
           "caption": "Diskusi teknis dan pemberian feedback gameplay dari pengunjung kepada tim developer.",
           "category": "Dokumentasi",
-          "time": "15:00 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-6",
           "url": "/assets/expo/expo-2024-6.webp",
           "caption": "Keseruan pengunjung saat menjajal berbagai genre game hasil karya mahasiswa Teknologi Game.",
           "category": "Dokumentasi",
-          "time": "16:20 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-7",
           "url": "/assets/expo/expo-2024-7.webp",
           "caption": "Antrean audiens dan mahasiswa yang antusias mencoba build game pada booth showcase.",
           "category": "Dokumentasi",
-          "time": "16:45 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-8",
           "url": "/assets/expo/expo-2024-8.webp",
           "caption": "Demonstrasi fitur gameplay dan presentasi mekanika game interaktif di stan pameran.",
           "category": "Dokumentasi",
-          "time": "17:00 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-9",
           "url": "/assets/expo/expo-2024-9.webp",
           "caption": "Interaksi interaktif antara developer mahasiswa dan pengunjung selama sesi playtest terbuka.",
           "category": "Dokumentasi",
-          "time": "17:15 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2024-10",
           "url": "/assets/expo/expo-2024-10.webp",
           "caption": "Dokumentasi kebersamaan peserta pameran dan tim pengembang game pada penutupan Expo 2024.",
           "category": "Dokumentasi",
-          "time": "17:30 WIB"
+          "enabled": true
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "id": "expo-2023-labtek",
@@ -173,44 +175,45 @@
           "url": "/assets/expo/expo-2023-1.webp",
           "caption": "Sesi showcase dan demo game interaktif karya mahasiswa pada gelaran Expo Teknologi Game 2023.",
           "category": "Dokumentasi",
-          "time": "09:30 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2023-2",
           "url": "/assets/expo/expo-2023-2.webp",
           "caption": "Antusiasme pengunjung dan mahasiswa saat mencoba build game langsung di booth pameran.",
           "category": "Dokumentasi",
-          "time": "10:45 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2023-3",
           "url": "/assets/expo/expo-2023-3.webp",
           "caption": "Pengujian mekanika game dan interaktivitas gameplay bersama pengunjung pameran.",
           "category": "Dokumentasi",
-          "time": "11:30 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2023-4",
           "url": "/assets/expo/expo-2023-4.webp",
           "caption": "Diskusi dan evaluasi perancangan game antara tim pengembang mahasiswa dan audiens.",
           "category": "Dokumentasi",
-          "time": "13:15 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2023-5",
           "url": "/assets/expo/expo-2023-5.webp",
           "caption": "Suasana ramai stan pameran game karya mahasiswa Teknik Informatika ITERA.",
           "category": "Dokumentasi",
-          "time": "14:20 WIB"
+          "enabled": true
         },
         {
           "id": "expo-2023-6",
           "url": "/assets/expo/expo-2023-6.webp",
           "caption": "Dokumentasi kebersamaan peserta pameran dan tim pengembang game di akhir sesi expo.",
           "category": "Dokumentasi",
-          "time": "15:45 WIB"
+          "enabled": true
         }
-      ]
+      ],
+      "enabled": true
     }
   ]
 }

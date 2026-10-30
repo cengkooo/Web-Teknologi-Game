@@ -1,5 +1,6 @@
 {
   "slug": "sumateran-roar",
+  "enabled": true,
   "title": "Sumateran Roar",
   "developer": "AC Adapter",
   "semester": "2025/2026 Ganjil",
@@ -54,9 +55,6 @@
       "role": "Composer/Sound Engineer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

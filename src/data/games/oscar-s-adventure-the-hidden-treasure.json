@@ -1,5 +1,6 @@
 {
   "slug": "oscar-s-adventure-the-hidden-treasure",
+  "enabled": true,
   "title": "Oscar's Adventure: The Hidden Treasure",
   "developer": "Meowsterpiece Studios",
   "semester": "2023/2024 Ganjil",
@@ -57,9 +58,6 @@
       "role": "Sound Engineer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "most_popular"
 }

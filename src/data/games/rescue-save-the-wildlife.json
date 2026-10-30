@@ -1,5 +1,6 @@
 {
   "slug": "rescue-save-the-wildlife",
+  "enabled": true,
   "title": "Rescue: Save The Wildlife",
   "developer": "MiNOS",
   "semester": "2024/2025 Ganjil",
@@ -60,9 +61,6 @@
       "role": "Game Director, Sound Engineer, Game Designer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

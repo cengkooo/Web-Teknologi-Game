@@ -1,5 +1,6 @@
 {
   "slug": "lilu",
+  "enabled": true,
   "title": "Lilu",
   "developer": "Groundhog Studio",
   "semester": "2024/2025 Ganjil",
@@ -57,9 +58,6 @@
       "role": "Programmer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

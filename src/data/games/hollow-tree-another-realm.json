@@ -1,5 +1,6 @@
 {
   "slug": "hollow-tree-another-realm",
+  "enabled": true,
   "title": "Hollow Tree: Another Realm",
   "developer": "Waku Waku Studio",
   "semester": "2025/2026 Ganjil",
@@ -56,9 +57,6 @@
       "role": "Game Artist"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

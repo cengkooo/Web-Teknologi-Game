@@ -1,5 +1,6 @@
 {
   "slug": "wonder",
+  "enabled": true,
   "title": "Wonder",
   "developer": "Perguruan Bunglon Beracun",
   "semester": "2022/2023 Genap",
@@ -53,9 +54,6 @@
       "role": "Tester, Sound"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

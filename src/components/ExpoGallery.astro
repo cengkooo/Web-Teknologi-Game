@@ -64,7 +64,6 @@ const { photos, years } = Astro.props;
         data-caption={photo.caption}
         data-event-title={photo.eventTitle}
         data-location={photo.location}
-        data-time={photo.time || ''}
         data-date={photo.eventDate}
       >
         <div>
@@ -81,14 +80,6 @@ const { photos, years } = Astro.props;
             >
               {photo.category}
             </div>
-            {photo.time && (
-              <div
-                class="photo-badge absolute top-2 right-2 px-2 py-0.5 border border-[#262626] text-[10px] font-mono font-bold text-white"
-                style="background-color: rgba(0, 0, 0, 0.85) !important; color: #FFFFFF !important;"
-              >
-                {photo.time}
-              </div>
-            )}
           </div>
 
           <div class="p-4 font-mono">

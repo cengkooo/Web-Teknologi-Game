@@ -1,5 +1,6 @@
 {
   "slug": "the-forest-keeper",
+  "enabled": true,
   "title": "The Forest Keeper",
   "developer": "Malas Ngoding",
   "semester": "2024/2025 Ganjil",
@@ -55,9 +56,6 @@
       "role": "Sound Engineer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

@@ -1,5 +1,6 @@
 {
   "slug": "sumatera-survivor",
+  "enabled": true,
   "title": "Sumatera Survivor",
   "developer": "Nufta Studio",
   "semester": "2024/2025 Ganjil",
@@ -54,9 +55,6 @@
       "role": "Sound Engineer, Designer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

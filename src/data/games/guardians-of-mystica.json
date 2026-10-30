@@ -1,5 +1,6 @@
 {
   "slug": "guardians-of-mystica",
+  "enabled": true,
   "title": "Guardians of Mystica",
   "developer": "Death Liner's Developer (DL Dev)",
   "semester": "2023/2024 Ganjil",
@@ -52,9 +53,6 @@
       "role": "Designer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "best_game"
 }

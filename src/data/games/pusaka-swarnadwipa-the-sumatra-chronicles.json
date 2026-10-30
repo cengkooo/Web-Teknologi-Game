@@ -1,5 +1,6 @@
 {
   "slug": "pusaka-swarnadwipa-the-sumatra-chronicles",
+  "enabled": true,
   "title": "Pusaka Swarnadwipa: The Sumatra Chronicles",
   "developer": "Piksel Pusaka",
   "semester": "2025/2026 Ganjil",
@@ -53,9 +54,6 @@
       "role": "Game artist"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

@@ -8,18 +8,21 @@ interface Props {
 
 const { game, contributorsList = [] } = Astro.props;
 
+const engineDisplay = game.engineVersion
+  ? (game.engineVersion.toLowerCase().includes(game.engine.toLowerCase())
+      ? game.engineVersion
+      : `${game.engine} ${game.engineVersion}`)
+  : game.engine;
+
 const rows = [
   ...(game.developer ? [{ label: 'DEVELOPER / KELOMPOK', value: game.developer }] : []),
   ...(game.semester ? [{ label: 'SEMESTER PERKULIAHAN', value: game.semester }] : []),
-  { label: 'GAME ENGINE', value: game.engine },
-  { label: 'ENGINE VERSION', value: game.engineVersion },
+  { label: 'GAME ENGINE', value: engineDisplay },
   { label: 'GENRE & THEME', value: game.genre.join(', ') },
   { label: 'PLATFORMS', value: game.platform.join(' // ') },
   { label: 'TAHUN', value: `${game.batchYear}` },
   ...(game.metrics?.polygonCount ? [{ label: 'POLYGON DENSITY', value: game.metrics.polygonCount }] : []),
   ...(game.metrics?.drawCalls ? [{ label: 'TARGET DRAW CALLS', value: game.metrics.drawCalls }] : []),
-  ...(game.metrics?.tickRate ? [{ label: 'PHYSICS TICK RATE', value: game.metrics.tickRate }] : []),
-  ...(game.metrics?.buildSize ? [{ label: 'COMPILED PAYLOAD', value: game.metrics.buildSize }] : []),
 ];
 ---
 

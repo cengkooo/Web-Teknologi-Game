@@ -1,5 +1,6 @@
 {
   "slug": "trace",
+  "enabled": true,
   "title": "Trace",
   "developer": "HORIZONE",
   "semester": "2024/2025 Ganjil",
@@ -56,9 +57,6 @@
       "role": "Lead Programmer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

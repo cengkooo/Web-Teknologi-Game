@@ -1,5 +1,6 @@
 {
   "slug": "slimental",
+  "enabled": true,
   "title": "SLIMENTAL",
   "developer": "White Rose Studio",
   "semester": "2022/2023 Genap",
@@ -53,9 +54,6 @@
       "role": "Director, Programmer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

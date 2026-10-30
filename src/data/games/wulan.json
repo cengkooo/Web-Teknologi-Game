@@ -1,5 +1,6 @@
 {
   "slug": "wulan",
+  "enabled": true,
   "title": "Wulan",
   "developer": "Misty Game Studio",
   "semester": "2022/2023 Genap",
@@ -58,9 +59,6 @@
       "role": "Designer, Programmer"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

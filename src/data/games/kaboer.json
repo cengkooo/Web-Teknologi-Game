@@ -1,5 +1,6 @@
 {
   "slug": "kaboer",
+  "enabled": true,
   "title": "Kaboer",
   "developer": "AIRBY Studio",
   "semester": "2022/2023 Genap",
@@ -57,9 +58,6 @@
       "role": "Artist"
     }
   ],
-  "metrics": {
-    "tickRate": "60 Hz Stable",
-    "buildSize": "Godot PC Build"
-  },
+  "metrics": {},
   "award": "none"
 }

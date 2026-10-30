@@ -30,6 +30,11 @@ export default config({
             description: 'Identifier unik huruf kecil dan strip (contoh: kinetic-strata)',
           },
         }),
+        enabled: fields.checkbox({
+          label: 'Status Aktif / Ditampilkan (Enabled)',
+          description: 'Centang untuk menampilkan game ini di website (uncheck untuk menyembunyikan)',
+          defaultValue: true,
+        }),
         title: fields.text({ label: 'Judul Game', validation: { isRequired: true } }),
         developer: fields.text({ label: 'Nama Kelompok / Studio Developer (contoh: Chill Guys)' }),
         semester: fields.select({
@@ -76,8 +81,8 @@ export default config({
           label: 'Penghargaan / Tanda Khusus Game',
           options: [
             { label: 'Biasa (Tanpa Tanda)', value: 'none' },
-            { label: '★ Best Game of the Semester', value: 'best_game' },
-            { label: '⚡ Most Popular Game of the Semester', value: 'most_popular' },
+            { label: '★ Best Game', value: 'best_game' },
+            { label: '⚡ Most Popular', value: 'most_popular' },
           ],
           defaultValue: 'none',
         }),
@@ -111,8 +116,6 @@ export default config({
         metrics: fields.object({
           polygonCount: fields.text({ label: 'Polygon Count (contoh: 120K Tris)' }),
           drawCalls: fields.text({ label: 'Peak Draw Calls (contoh: 45 Peak)' }),
-          tickRate: fields.text({ label: 'Tick Rate Fisika (contoh: 120 Hz Fixed)' }),
-          buildSize: fields.text({ label: 'Ukuran Build Game (contoh: 48.5 MB)' }),
         }),
       },
     }),
@@ -174,6 +177,11 @@ export default config({
         year: fields.integer({ label: 'Tahun Pelaksanaan (contoh: 2024)', validation: { isRequired: true } }),
         date: fields.text({ label: 'Tanggal (contoh: 18 Juni 2024)' }),
         location: fields.text({ label: 'Lokasi Gedung / Ruangan Kampus' }),
+        enabled: fields.checkbox({
+          label: 'Status Aktif / Ditampilkan (Enabled)',
+          description: 'Centang untuk menampilkan acara expo ini di website (uncheck untuk menyembunyikan)',
+          defaultValue: true,
+        }),
         photos: fields.array(
           fields.object({
             id: fields.text({ label: 'ID Foto (contoh: expo-2024-1)' }),
@@ -193,12 +201,16 @@ export default config({
               ],
               defaultValue: 'Dokumentasi',
             }),
-            time: fields.text({ label: 'Waktu Pengambilan (contoh: 10:30 WIB)' }),
+            enabled: fields.checkbox({
+              label: 'Status Aktif / Ditampilkan (Enabled)',
+              description: 'Centang untuk menampilkan foto ini di galeri expo (uncheck untuk menyembunyikan)',
+              defaultValue: true,
+            }),
           }),
           {
             label: 'Koleksi Foto Dokumentasi Galeri',
             itemLabel: (props) =>
-              `[${props.fields.category.value || 'Dokumentasi'}] ${props.fields.caption.value || 'Foto Dokumentasi'}`,
+              `${props.fields.enabled?.value === false ? '[NONAKTIF] ' : ''}[${props.fields.category.value || 'Dokumentasi'}] ${props.fields.caption.value || 'Foto Dokumentasi'}`,
           }
         ),
       },

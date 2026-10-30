@@ -5,76 +5,77 @@
   "year": 2025,
   "date": "04 Desember 2025",
   "location": "Aula Gedung F Lt. 2, ITERA",
+  "enabled": true,
   "photos": [
     {
       "id": "expo-2025-6",
       "url": "/assets/expo/expo-2025-6.webp",
       "caption": "Pengunjung mencoba demo game dalam acara Expo.",
       "category": "Dokumentasi",
-      "time": "10:00 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-8",
       "url": "/assets/expo/expo-2025-8.webp",
       "caption": "Pengunjung memainkan salah satu game yang didemokan pada acara Expo, yaitu Pusaka Swarnadwipa.",
       "category": "Dokumentasi",
-      "time": "10:45 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-9",
       "url": "/assets/expo/expo-2025-9.webp",
       "caption": "Dosen Koordinator Kemahasiswaan Prodi & Pembina HMIF, Ibu Miranti Verdiana, M.Si., membuka acara Expo",
       "category": "Dokumentasi",
-      "time": "11:30 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-10",
       "url": "/assets/expo/expo-2025-10.webp",
       "caption": "Tim Piksel Pusaka & game mereka, Pusaka Swarnadwipa.",
       "category": "Dokumentasi",
-      "time": "13:15 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-12",
       "url": "/assets/expo/expo-2025-12.webp",
       "caption": "Pengunjung memainkan game dari YPS Studio, yaitu Bahana Bani.",
       "category": "Dokumentasi",
-      "time": "14:00 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-15",
       "url": "/assets/expo/expo-2025-15.webp",
       "caption": "Antusiasme audiens saat mengunjungi Expo.",
       "category": "Dokumentasi",
-      "time": "14:45 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-16",
       "url": "/assets/expo/expo-2025-16.webp",
       "caption": "Foto pengunjung dalam salah satu meja stand game.",
       "category": "Dokumentasi",
-      "time": "15:30 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-17",
       "url": "/assets/expo/expo-2025-17.webp",
       "caption": "Foto bersama dosen serta semua anggota tim Tek Game & matkul lainnya yang ikut serta dalam acara Expo.",
       "category": "Dokumentasi",
-      "time": "16:15 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-18",
       "url": "/assets/expo/expo-2025-18.webp",
       "caption": "Pemenang Game Terpopuler, tim Chill Guys dengan game mereka Sawit Harvester.",
       "category": "Dokumentasi",
-      "time": "16:45 WIB"
+      "enabled": true
     },
     {
       "id": "expo-2025-19",
       "url": "/assets/expo/expo-2025-19.webp",
       "caption": "Pemenang Game Terbaik, tim ARATERA Studio dengan game mereka Legacy of Andalas.",
       "category": "Dokumentasi",
-      "time": "17:00 WIB"
+      "enabled": true
     }
   ]
 }
